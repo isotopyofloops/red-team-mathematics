@@ -281,7 +281,7 @@ Current novelty status: **apparently unreported**, pending completion of a full 
 - [x] Corrected Theorem 3.7 candidate.
 - [x] Initial downstream 2019 dependency identified.
 - [ ] Full audit of 2019 worked examples and all claims in Sections 3–6.
-- [ ] Full citation-level blast-radius audit of later papers. *Phase 001-C: initial 6 papers all CLEARED. **REVISED:** Alethon's broader pass found paper #7 (Beshimov–Georgiou–Sereti, CAM 2023) which explicitly calls Alg 3.9 — AFFECTED. Bug propagates to at least 3 papers (2018, 2019, 2023). Broader crawl in progress. See `isotopy-phase-001C-citation-triage.md`.*
+- [x] Full citation-level blast-radius audit of later papers. *Phase 001-C: containment set = {2018 AMC, 2019 CAM, 2023 Beshimov CAM}. Phrase sweep + Semantic Scholar forward cites (7+4) complete — no fourth lattice reprint. 6 initial papers CLEARED, paper #7 AFFECTED. One loose end: Ji–Wang Topol. Appl. 2026 (spaces, likely n/a). See `isotopy-phase-001C-citation-triage.md`.*
 - [x] Search for independent implementations of Algorithms 3.9/5.4 and 2019 Algorithm 4. *Alethon: none found in public code repositories.*
 - [ ] Formalization of repaired Proposition 3.5 / corrected Theorem 3.7 (Lean or comparable), if feasible.
 - [ ] Final novelty search.

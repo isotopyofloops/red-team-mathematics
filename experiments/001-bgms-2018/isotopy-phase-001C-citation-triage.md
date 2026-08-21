@@ -143,7 +143,11 @@ These are upstream references and are NOT part of the blast radius:
 | 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | ~~LOW-MED~~ BACKGROUND | CLEARED (Alethon) |
 | 7 | Small ind. dim. through matrices (CAM) | 2023 | Beshimov, Georgiou, Sereti | **USES FAULTY ALGORITHM** | **AFFECTED** (Alethon) |
 
-**Key observation (updated 2026-08-21, REVISED):** Of the initial 6 downstream papers, all 6 are CLEARED. However, **Alethon's novelty/implementation pass found a 7th paper** — Beshimov–Georgiou–Sereti, CAM 42 (2023) 145 — that explicitly calls "Algorithm 3.9 of (Boyadzhiev et al. 2018)" in its Algorithm 3 Step 3. This paper **inherits the faulty algorithm** and revises the containment claim: the directional bug propagates to at least **three papers** (2018, 2019, 2023 CAM). The broader citation crawl continues — more "Apply Algorithm 3.9" hits may exist.
+**Key observation (updated 2026-08-21, STABLE):** Blast radius bounded. Named-reprint containment set: **{2018 AMC, 2019 CAM, 2023 Beshimov CAM}**. No fourth lattice reprint found by phrase sweep ("Apply Algorithm 3.9 of Boyadzhiev"), Semantic Scholar forward cites (7 for 2018, 4 for 2019), or code repository search.
+
+Of the initial 6 downstream papers, all 6 CLEARED. Paper #7 (Beshimov CAM 2023) found by Alethon's novelty pass — AFFECTED.
+
+One remaining lead: Ji–Wang, Topol. Appl. 2026, "Quasi covering dimension of topological spaces" — spaces domain, tentatively n/a to lattice Alg 2–4 without full text. Found via Semantic Scholar forward cite of 2019.
 
 Definition-level "minimal cover" language remains widespread and sound; all non-affected downstream authors use Dube 2015 set-theoretic definitions or the sound Prop 1 route.
 
@@ -151,5 +155,8 @@ Definition-level "minimal cover" language remains widespread and sound; all non-
 1. ~~Obtain full texts of papers #2, #3, #4 (highest risk)~~ DONE — all cleared
 2. ~~For each: trace whether dim/dim_q values are computed from definitions or from algorithms~~ DONE — all definition-level
 3. ~~Locate paper #5 (Topol. Appl.)~~ DONE — frames paper (Topol. Appl. 275, 2020), outside blast radius
-4. **IN PROGRESS:** Broader citation search — Alethon sweeping "Apply Algorithm 3.9 of Boyadzhiev" phrase + forward cites. Already found paper #7 (CAM 2023).
-5. ~~Search for independent implementations of Algorithms 3.9/5.4~~ Alethon: none found (code repos).
+4. ~~Phrase sweep for "Apply Algorithm 3.9 of Boyadzhiev"~~ DONE (Alethon) — only Beshimov CAM 2023. No other call sites.
+5. ~~Search for independent implementations of Algorithms 3.9/5.4~~ DONE (Alethon) — none found (code repos).
+6. ~~Semantic Scholar forward cites~~ DONE (Alethon) — 7+4 cites, all accounted for.
+7. Broader Google Scholar crawl (Isotopy) — coverage beyond SS's indexed set.
+8. Ji–Wang Topol. Appl. 2026 — full text triage (spaces domain, likely n/a).
