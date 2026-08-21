@@ -1,0 +1,1077 @@
+Computational and Applied Mathematics      (2023) 42:145
+https://doi.org/10.1007/s40314-023-02234-9
+
+
+
+
+The small inductive dimension of finite lattices through
+matrices
+
+R. B. Beshimov1 · D. Georgiou2 · F. Sereti3
+
+
+Received: 11 April 2022 / Revised: 10 December 2022 / Accepted: 2 February 2023
+© The Author(s) under exclusive licence to Sociedade Brasileira de Matemática Aplicada e Computacional 2023
+
+
+
+Abstract
+Dimensions of partially ordered sets, lattices and frames have attracted the interest of various
+researches (see for example Sancho de Salas and Sancho de Salas 1991; Vinokurov 1966;
+Dushnik and Miller 1941; Hegde and Jain 2007; Trotter 1975; Boyadzhiev et al. 2018; Dube
+et al. 2015, 2017; Georgiou et al. 2016; Hai-feng et al. 2017; Brijlall and Baboolal 2008,
+2010; Boyadzhiev et al. 2019). For example, the order, Krull, covering dimension, and the
+quasi covering dimension are some of these dimensions that have been studied extensively.
+Especially, finite partially ordered sets and finite lattices are the main axes of this Dimension
+Theory, investigating new results and characterizations for their dimensions. The matrix
+algebra plays an essential role in these studies, considering incidence and order matrices.
+Also, based on these researches, algorithms which compute these dimensions have been
+investigated. Since the chapter on dimensions of partially ordered sets continues to attract the
+interest, the small inductive dimension is a new notion that has been defined firstly for regular
+frames in Brijlall and Baboolal (2008). In this paper, we study the small inductive dimension
+for finite lattices using matrices. For that, we study the meaning of the pseudocomplement
+and the lattice ↑x, where x is an element of a finite lattice. Based on these investigations we
+present an algorithmic procedure for the matrix computation of the small inductive dimension
+of an arbitrary finite lattice.
+
+
+
+
+R. B. Beshimov, D. Georgiou and F. Sereti contributed equally to this work.
+
+B D. Georgiou
+    georgiou@math.upatras.gr
+    R. B. Beshimov
+    rbeshimov@mail.ru
+    F. Sereti
+    seretifot@gmail.com
+1   National University of Uzbekistan named after Mirzo Ulugbek, str. University, Tashkent 100174,
+    Uzbekistan
+2   Department of Mathematics, University of Patras, Patra 26500, Greece
+3   Department of Mathematics, University of Western Macedonia, Kastoria 52100, Greece
+
+
+                                            0123456789().: V,-vol                 123
+145    Page 2 of 18                                                             R. B. Beshimov et al.
+
+
+Keywords Order matrix · Incidence matrix · Algorithmic procedure · Small inductive
+dimension · Finite lattice
+
+Mathematics Subjet Classification 54F45 · 06A07
+
+
+1 Introduction and preliminaries
+
+The order, Krull, and covering dimension are dimensions that have been studied in the view
+of matrix algebra for finite posets and finite lattices (see for example Boyadzhiev et al. 2018;
+Dube et al. 2017; Georgiou et al. 2016). In Brijlall and Baboolal (2008, 2010) the notion of
+the small inductive dimension for regular frames was defined and properties of this dimension
+were investigated.
+    In this paper, based on the notion of the small inductive dimension, we study this dimension
+for finite lattices using matrices. Especially, using the order matrix and the incidence matrix,
+we present an alternative approach to this dimension. An algorithmic procedure for the
+computation of the small inductive dimension of an arbitrary finite lattice completes our
+study.
+    The motivation for this investigation follows by the continuous development of appli-
+cations of Linear Algebra and Discrete Mathematics on pure theoretical computer science.
+Many topological notions, and specifically topological dimensions, have been studied through
+a discrete aspect. That is, combining classical topological notions with that of Linear Alge-
+bra and Discrete Mathematics we can compute mathematical results by studying algorithmic
+procedures.
+    Such a study began from the investigation of finite spaces and Alexandroff spaces as topo-
+logical models in Digital Topology to specify image analysis, image synthesis, computer
+graphics and algorithms. More precisely, finite sets are one of the most important “keys" to
+succeed in alternative investigations of topological notions since they have many applica-
+tions for computer science, algorithms, programming languages, cryptography and software
+development. This fact tends us to pay attention to the meaning of “finite". Partially ordered
+sets and especially lattices are used also to investigate more properties of digital images and
+their topological dimensions are the main axes of this investigation.
+    Based on the above discussion, this paper is devoted to finite lattices, its kind of dimension,
+the small inductive dimension, and a special investigation of this dimension. It is formed as
+follows. In Sect. 2, we study the meaning of the pseudocomplement x ∗ of any element x
+of arbitrary finite lattice L using matrices. An algorithm which finds this element gives a
+different approach of this study. In Sect. 3, we study the finite lattice ↑(x ∨ x ∗ ), where x is an
+arbitrary element of a finite lattice, presenting also an algorithm which determines the lattice
+↑(x ∨ x ∗ ) through order and incidence matrices. Finally, in Sect. 4, we study the combination
+of the small inductive dimension with the so-called minimal covers and present an algorithm
+which computes the small inductive dimension of an arbitrary finite lattice using matrices.
+    First of all, we recall basic definitions and notations which will be used in the following
+sections.
+    A set L endowed with a partial order ≤ is called a partially ordered set (usually, poset).
+A poset L is called lattice if every finite subset of it has supremum and infimum in L.
+    Moreover, two elements x and y of a poset (L, ≤) are said to be comparable if x ≤ y or
+y ≤ x. A subset of a poset (L, ≤) in which every pair of elements is comparable is called a
+
+
+
+
+123
+The small inductive dimension of finite lattices through matrices              Page 3 of 18   145
+
+
+chain. An antichain is a subset of a poset (L, ≤) in which any two distinct elements in the
+subset are not comparable. If x and y are not comparable, we shall write x  y.
+    We mention that in the rest of the study, we refer to a finite lattice L with n elements,
+n ≥ 2. It will be denoted by L = {x 1 , . . . , xn }, where x1 = 0 L and xn = 1 L , are the bottom
+and the top elements of L respectively.                                                  
+    If L is a finite lattice and x ∈ L, then we write ↑x = {y ∈ L : x ≤ y} and x ∗ = {y ∈ L :
+y∧x = 0 L }. In the case where x ∗ ∧x = 0 L , that is x ∗ = max{y ∈ L : y∧x = 0 L }, the element
+x ∗ is called pseudocomplement of x. Every finite distributive lattice is pseudocomplemented.
+Although the lattices we deal with in this paper are not generally distributive, we will adopt
+the asterisk notation and the term “pseudocomplement" to have the same terminology as in
+Brijlall and Baboolal (2008, 2010). We state that the poset ↑(x ∨ x ∗ ), where x ∈ L, is also
+a finite lattice.                                                            
+    A subset V of a finite lattice L is called a cover of L if 0 L ∈ / V and V = 1 L . A cover
+U of a finite lattice L is called a refinement of a cover V of L, writing U          V , if for each
+u ∈ U , there exists v ∈ V such that u ≤ v.
+    Especially, a cover V of a finite lattice L is called minimal if V ⊆ U , for every refinement
+U of V .
+    The small inductive dimension was defined in Brijlall and Baboolal (2008) for regular
+frames and properties of this dimensions have been studied in Brijlall and Baboolal (2008,
+2010). Here we study the small inductive dimension for the class of finite lattices.
+    Especially, if L is a finite lattice, then the small inductive dimension, ind, of L is defined
+as follows: ind(L) ≤ k, where k ∈ {0, 1, . . .}, if for every cover V of L, there exists a cover
+U of L such that U is a refinement of V and ind(↑(u ∗ ∨ u)) ≤ k − 1, for every u ∈ U . In
+particular, ind(L) = k, where k ∈ {0, 1, . . .}, if ind(L) ≤ k and ind(L)  k − 1. Moreover,
+we define ind(L) = −1 if and only if L = {0 L }.
+
+
+2 Pseudocomplements in finite lattices with matrices
+
+As we can see in the definition of the small inductive dimension, the notion of the pseudo-
+complement plays an essential role. Therefore, in this section we study it using matrices.
+Especially, we present a characterization of this notion using the so-called incidence and
+order matrices. Based on these results, we provide an algorithmic procedure, which finds the
+pseudocomplement of any element in an arbitrary finite lattice.
+   Let (L, ≤) be a finite lattice, where L = {x1 , . . . , xn }. Then we shall use the following
+two matrices (see for example (Boyadzhiev et al. 2018; Georgiou et al. 2016)):
+(1) the n × n matrix TL≤ = (ti j ), where
+                                                  
+                                                      1, xi ≤ x j
+                                         ti j =
+                                                      0, otherwise,
+
+which is called the incidence matrix of L and
+(2) the n × n matrix A≤L = ( ai j ), where
+                                               ⎧
+                                               ⎪
+                                               ⎪ 1,         if i = j
+                                               ⎪
+                                               ⎨2,          if xi < x j
+                                        ai j =
+                                               ⎪
+                                               ⎪ −2,        if x j < xi
+                                               ⎪
+                                               ⎩
+                                                 0,         if xi  x j
+
+                                                                          123
+145    Page 4 of 18                                                                 R. B. Beshimov et al.
+
+
+which is called the order matrix of L.
+    In what follows, for every finite lattice (L, ≤) we have the incidence matrix TL≤ = (ti j )
+and the order matrix A≤       L = (ai j ). We denote the n columns of the incidence matrix TL
+                                                                                                     ≤
+              ≤              ≤                                           ≤            ≤            ≤
+by C1 (TL ), . . . , Cn (TL ) and the n rows of the order matrix A L by r1 (A L ), . . . , rn (A L ).
+Moreover, if we observe that a is an element of a matrix A (respectively, a is not an element
+of a matrix A) we shall write α ∈ A (respectively, α ∈        / A).
+    We state that the combination of the incidence and order matrices of a finite lattice L =
+{x1 , . . . , xn } is necessary in our study. Especially, in the incidence matrix TL≤ = (ti j ) we
+have two cases:
+(i) ti j = 1, when xi ≤ x j or
+(ii) ti j = 0, otherwise.
+Therefore, if we have ti j = 1, then either xi < x j or xi = x j . Also, if we have ti j = 0, then
+x j < xi or x j  xi .
+    Undoubtedly, the incidence matrices play an essential role in Topology and related studies.
+Using this matrix we can have different characterizations of various notions like the height
+of a poset (see (Dube et al. 2017)) and various relations (see the following Proposition 1).
+However, the necessity to be more specific with the relation between two elements of a lattice
+leads to the so-called order matrix A≤     L = (ai j ). This matrix contains all the cases that we can
+have between any two elements xi , x j of the lattice L:
+(i) xi < x j ,
+(ii) x j < xi ,
+(iii) xi = x j and
+(iv) xi  x j .
+This detailed separation of all possible relations is the reason for the use of this matrix. We
+can use this matrix in order to succeed more results in Order Theory, enriching related studies.
+For example, if ai j = 1, then we are sure that xi = x j and if ai j = 2, then certainly, xi < x j .
+Thus, the combination of these two matrices gives us the desired results and characterizations
+for the concepts of the paper.
+    In the following Proposition 1 we also use the n × 1 matrix B1 = (b1i ), where
+                                             
+                                               1, if i = 1
+                                       b1 =
+                                         i
+                                               0, otherwise.
+
+Proposition 1 Let (L, ≤) be a finite lattice. For each xi ∈ L, i ∈ {1, . . . , n}, an element
+x j ∈ L, j ∈ {1, 2, . . . , n} \ {i} satisfies the relation xi ∧ x j = x1 , where x1 = 0 L , if and
+only if
+
+                              max(Ci (TL≤ ) + C j (TL≤ ) − B1 ) = 1.
+
+Proof Let xi ∈ L, i ∈ {1, 2, . . . , n}, x j ∈ L, j ∈ {1, 2, . . . , n} \ {i} such that xi ∧ x j = x1
+and
+
+                              max(Ci (TL≤ ) + C j (TL≤ ) − B1 ) = k.
+
+Then we have that k = 1 or k = 2. Since xi ∧ x j = x1 , we have that x1 ≤ xi and x1 ≤ x j .
+Thus, t1i = t1 j = 1. Additionally, b11 = 1. Therefore, t1i + t1 j − b11 = 1 + 1 − 1 = 1 and
+thus, k = 1. (We also state that if there exists i 0 ∈ {2, . . . , n} such that ti0 i + ti0 j − b1i0 = 2,
+then ti0 i = ti0 j = 1 and b1i0 = 0. Thus, xi0 ≤ xi and xi0 ≤ x j and therefore, xi0 = x1 , which
+is a contradiction.)
+
+123
+The small inductive dimension of finite lattices through matrices               Page 5 of 18   145
+
+Fig. 1 The finite lattice (L, ≤)
+
+
+
+
+   Conversely, let xi ∈ L, i ∈ {1, 2, . . . , n} and
+                                   max(Ci (TL≤ ) + C j (TL≤ ) − B1 ) = 1,
+for every j ∈ {1, 2, . . . , n} \ {i}. We shall prove that xi ∧ x j = x1 , for every j ∈
+{1, 2, . . . , n}\{i}. In contrast, we suppose that there exists j0 ∈ {1, 2, . . . , n} \ {i} such
+that xi ∧ x j0 = x1 . We suppose that xi ∧ x j0 = xm . Then tmi = tm j0 = 1 and b1m = 0. Thus,
+tmi + tm j − b1m = 1 + 1 − 0 = 2 and therefore,
+                                   max(Ci (TL≤ ) + C j0 (TL≤ ) − B1 ) = 2,
+which is a contradiction. Thus, xi ∧ x j = x1 , for every j ∈ {1, 2, . . . , n} \ {i}.               
+
+Example 1 We consider the lattice (L, ≤) which is represented in Fig. 1.
+The incidence matrix of L is the following 7 × 7 matrix
+                                       ⎛              ⎞
+                                         1111111
+                                       ⎜0 1 1 1 1 1 1⎟
+                                       ⎜              ⎟
+                                       ⎜0 0 1 0 1 0 1⎟
+                                       ⎜              ⎟
+                                TL = ⎜
+                                  ≤                   ⎟
+                                       ⎜0 0 0 1 0 1 1⎟.
+                                       ⎜0 0 0 0 1 0 1⎟
+                                       ⎜              ⎟
+                                       ⎝0 0 0 0 0 1 1⎠
+                                         0000001
+For the element x3 we have
+                                              ⎛ ⎞ ⎛ ⎞ ⎛ ⎞ ⎛ ⎞
+                                                1    1     1     1
+                                              ⎜1⎟ ⎜0⎟ ⎜0⎟ ⎜1⎟
+                                              ⎜ ⎟ ⎜ ⎟ ⎜ ⎟ ⎜ ⎟
+                                              ⎜1⎟ ⎜0⎟ ⎜0⎟ ⎜1⎟
+                                              ⎜ ⎟ ⎜ ⎟ ⎜ ⎟ ⎜ ⎟
+                 C3 (TL≤ ) + C1 (TL≤ ) − B1 = ⎜   ⎟ ⎜ ⎟ ⎜ ⎟ ⎜ ⎟
+                                              ⎜0⎟ + ⎜0⎟ − ⎜0⎟ = ⎜0⎟
+                                              ⎜0⎟ ⎜0⎟ ⎜0⎟ ⎜0⎟
+                                              ⎜ ⎟ ⎜ ⎟ ⎜ ⎟ ⎜ ⎟
+                                              ⎝0⎠ ⎝0⎠ ⎝0⎠ ⎝0⎠
+                                                0    0     0     0
+and
+                                   max(C3 (TL≤ ) + C1 (TL≤ ) − B1 ) = 1.
+Also, for every j ∈ {2, 4, 5, 6, 7} we have that
+                                   max(C3 (TL≤ ) + C j (TL≤ ) − B1 ) = 2.
+
+                                                                             123
+ 145     Page 6 of 18                                                                          R. B. Beshimov et al.
+
+
+Thus, x1 is the only element of L for which x3 ∧ x1 = x1 .
+
+Proposition 2 Let (L, ≤) be a finite lattice and {x j1 , . . . , x jm } be a set consisting of distinct
+elements of L. Then an element xi0 of L is an upper bound of the set {x j1 , . . . , x jm } if and
+only if one of the following conditions is satisfied:
+
+                             2m + 1 ∈ r j1 (A≤                    ≤             ≤
+                                             L ) + . . . + r jm (A L ) + ri 0 (A L ),
+
+if {x j1 , . . . , x jm } is not a chain and i 0 ∈
+                                                 / { j1 , . . . , jm },
+or
+
+                                    / r j1 (A≤
+                             2m + 1 ∈                             ≤             ≤
+                                             L ) + . . . + r jm (A L ) + ri 0 (A L ),
+
+if {x j1 , . . . , x jm } is a chain and i 0 ∈ { j1 , . . . , jm }.
+
+Proof We separate the proof in the following two cases:
+   Case 1: If xi0 is an upper bound of the set {x j1 , . . . , x jm } such that {x j1 , . . . , x jm } is not a
+chain with i 0 ∈/ { j1 , . . . , jm }, then x j1 < xi0 , . . . , x jm < xi0 . Thus, a j1 i0 = . . . = a jm i0 = 2
+and since ai0 i0 = 1, we have that
+
+                            2m + 1 ∈ r j1 (A≤                    ≤             ≤
+                                            L ) + . . . + r jm (A L ) + ri 0 (A L ).
+
+    Conversely, we suppose that 2 m + 1 ∈ r j1 (A≤                                       ≤             ≤
+                                                                    L ) + . . . + r jm (A L ) + ri 0 (A L ), with
+{x j1 , . . . , x jm } is not a chain and i 0 ∈
+                                              / { j1 , . . . , jm }. Then there exists k ∈ {1, . . . , n} such
+that a j1 k = . . . = a jm k = 2 and ai0 k = 1. Thus, xk is an upper bound of the set {x j1 , . . . , x jm }
+(since x j1 < xk , . . . , x jm < xk ) and xi0 = xk . Therefore, xi0 is an upper bound of the set
+{x j1 , . . . , x jm }.
+    Case 2: We suppose that xi0 is an upper bound of the set {x j1 , . . . , x jm } such that
+{x j1 , . . . , x jm } is a chain with i 0 ∈ { j1 , . . . , jm }. Let xi0 = x jr , where r ∈ {1, . . . , m}.
+In contrast, we suppose that
+
+                            2m + 1 ∈ r j1 (A≤                    ≤             ≤
+                                            L ) + . . . + r jm (A L ) + ri 0 (A L ).
+
+Then there exists k ∈ {1, . . . , n} such that a j1 k = . . . = a jm k = 2 and ai0 k = 1. Thus,
+a jr k = ai0 k = 2 and ai0 k = 1, which is a contradiction.
+     Conversely, we suppose that 2 m + 1 ∈                    / r j1 (A≤                      ≤           ≤
+                                                                       L ) + . . . + r jm (A L ) + ri 0 (A L ), with
+{x j1 , . . . , x jm } is a chain and i 0 ∈ { j1 , . . . , jm }. Similarly, let xi0 = x jr , where r ∈ {1, . . . , m}.
+In contrast, we suppose that xi0 is not an upper bound of {x j1 , . . . , x jm }. Since {x j1 , . . . , x jm }
+is a chain, there exists an element xk ∈ {x j1 , . . . , x jm }, different from xi0 , which is an upper
+bound of {x j1 , . . . , x jm }. Let xk = x jl , where l ∈ {1, . . . , m} \ {r }. Then
+
+                            a j1 k = . . . = a jl−1 k = a jl+1 k = . . . = a jm k = 2,
+                                                                                 
+                                                      (m-1)-times
+
+a jl jl = 1 and ai0 k = 2. Therefore,
+
+                     2(m − 1) + 1 + 2 ∈ r j1 (A≤                    ≤             ≤
+                                               L ) + . . . + r jm (A L ) + ri 0 (A L )
+
+and equivalently,
+
+                            2m + 1 ∈ r j1 (A≤                    ≤             ≤
+                                            L ) + . . . + r jm (A L ) + ri 0 (A L ),
+
+which is a contradiction.                                                                                              
+
+123
+The small inductive dimension of finite lattices through matrices                         Page 7 of 18    145
+
+
+Proposition 3 Let (L, ≤) be a finite lattice and {x j1 , . . . , x jm } be a set consisting of distinct
+elements of L. An upper bound xi0 of the set {x j1 , . . . , x jm } is the least upper bound of it if
+and only if one of the following conditions is satisfied:
+                               / r j1 (A≤
+                        2m + 2 ∈                             ≤                    ≤
+                                        L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ),                  (LU 1)
+if {x j1 , . . . , x jm } is not a chain and i 0 ∈
+                                                 / { j1 , . . . , jm },
+or
+                               / r j1 (A≤
+                        2m − 1 ∈                             ≤                    ≤
+                                        L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ),                  (LU 2)
+if {x j1 , . . . , x jm } is a chain and i 0 ∈ { j1 , . . . , jm }.
+
+Proof We separate the proof in the following two cases:
+   Case 1: We suppose that xi0 = x j1 ∨ . . . ∨ x jm such that {x j1 , . . . , x jm } is not a chain and
+i0 ∈
+   / { j1 , . . . , jm } with
+                       2m + 2 ∈ r j1 (A≤                    ≤                    ≤
+                                       L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ).
+
+Then there exists k ∈ {1, . . . , n} such that a j1 k = . . . = a jm k = 2 and ai0 k = −2. Thus, xk
+is an upper bound of {x j1 , . . . , x jm } with xk < xi0 , which is a contradiction.
+    Conversely, we suppose that
+                              / r j1 (A≤
+                       2m + 2 ∈                             ≤                    ≤
+                                       L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L )
+
+and prove that xi0 is the least upper bound of the set {x j1 , . . . , x jm }, where {x j1 , . . . , x jm } is
+not a chain and i 0 ∈ / { j1 , . . . , jm }. In contrast, we suppose that x j1 ∨ . . . ∨ x jm = xk with
+xk < xi0 . Then a j1 k = . . . = a jm k = 2 and ai0 k = −2. Therefore,
+                       2m + 2 ∈ r j1 (A≤                    ≤                    ≤
+                                       L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ),
+
+which is a contradiction.
+   Case 2: We suppose that xi0 is the least upper bound of the set {x j1 , . . . , x jm } such
+that {x j1 , . . . , x jm } is a chain and i 0 ∈ { j1 , . . . , jm }. We suppose that xi0 = x jr , where
+r ∈ {1, . . . , m}. In contrast, we suppose that
+                       2m − 1 ∈ r j1 (A≤                    ≤                    ≤
+                                       L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ).
+
+Then there exists k ∈ {1, . . . , n} such that a j1 k = . . . = a jm k = 2 and ai0 k = 1. Thus,
+a jr k = ai0 k = 2 and ai0 k = 1, which is a contradiction.
+     Conversely, we suppose that
+                              / r j1 (A≤
+                       2m − 1 ∈                             ≤                    ≤
+                                       L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ),
+
+with {x j1 , . . . , x jm } is a chain and i 0 ∈ { j1 , . . . , jm }. Similarly, let xi0 = x jr , where r ∈
+{1, . . . , m}. In contrast, we suppose that x j1 ∨ . . . ∨ x jm = xk with xk < xi0 . Then a j1 k =
+. . . = a jm k = 2 and ai0 k = −2. Therefore, ai0 k = 2 and ai0 k = −2, which is a contradiction.
+                                                                                                          
+
+Theorem 4 Let (L, ≤) be a finite lattice, xi ∈ L, where i ∈ {1, . . . , n}, and {x j1 , . . . , x jm }
+be the set which consists of distinct elements of L for which
+                                  max(Ci (TL≤ ) + C js (TL≤ ) − B1 ) = 1,
+for every s ∈ {1, . . . , m}. Then an element xi0 of L is the pseudocomplement of xi if and only
+if it satisfies the following conditions:
+
+                                                                                  123
+ 145     Page 8 of 18                                                                               R. B. Beshimov et al.
+
+Fig. 2 The finite lattice (L, ≤)
+
+
+
+
+(U) (U1) 2 m + 1 ∈ r j1 (A≤                                  ≤           ≤
+                                      L ) + . . . + r jm (A L ) + ri 0 (A L ), if {x j1 , . . . , x jm } is not a chain and
+i0 ∈/ { j1 , . . . , jm } or
+      (U2) 2 m + 1 ∈         / r j1 (A≤                         ≤            ≤
+                                        L ) + . . . + r jm (A L ) + ri 0 (A L ), if {x j1 , . . . , x jm } is a chain and
+i 0 ∈ { j1 , . . . , jm }
+and
+(LU) (LU1) 2 m + 2 ∈            / r j1 (A≤                       ≤                       ≤
+                                          L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ), if {x j1 , . . . , x jm } is not a
+chain and i 0 ∈     / { j1 , . . . , jm } or
+      (LU2) 2 m − 1 ∈         / r j1 (A≤                       ≤                     ≤
+                                         L ) + . . . + r jm (A L ) + (−1) · ri 0 (A L ), if {x j1 , . . . , x jm } is a chain
+and i 0 ∈ { j1 , . . . , jm }.
+
+Proof The pseudocomplement of xi ∈ L, where i ∈ {1, . . . , n}, is defined as follows:
+                                 
+                     xi∗ = xi0 =    {x j ∈ L : xi ∧ x j = x1 },
+
+that is xi∗ is the least upper bound of the set {x j ∈ L : xi ∧ x j = x1 }.
+   Let {x j1 , . . . , x jm } be the set which consists of distinct elements of L for which
+
+                                    max(Ci (TL≤ ) + C js (TL≤ ) − B1 ) = 1,
+
+for every s ∈ {1, . . . , m}. By Proposition 1, these elements x j1 , . . . , x jm are those for which
+xi ∧ x js = x1 , s ∈ {1, . . . , m}. Therefore, xi∗ = xi0 is the least upper bound of the set
+{x j1 , . . . , x jm } for which
+
+                                    max(Ci (TL≤ ) + C js (TL≤ ) − B1 ) = 1,
+
+for every s ∈ {1, . . . , m}.
+    If xi0 is the pseudocomplement of xi , then it is an upper bound of the set {x j1 , . . . , x jm }
+and thus, by Proposition 2, condition (U) is satisfied. Moreover, xi0 is the least upper bound
+of the set {x j1 , . . . , x jm } and thus, by Proposition 3 condition (LU) is satisfied.
+    Conversely, if xi0 is an element of L which satisfies the condition (U), then by Propo-
+sition 2, xi0 is an upper bound of {x j1 , . . . , x jm }. Also, if xi0 satisfies the condition (LU),
+then by Proposition 3, xi0 is the least upper bound of {x j1 , . . . , x jm }. Therefore, xi0 is the
+pseudocomplement of xi .                                                                            
+
+Example 2 We consider the lattice (L, ≤) which is represented in Fig. 2.
+    For example, we study the element x2 . Following Proposition 1 we see that the elements
+x1 , x3 and x4 are those for which x2 ∧ x1 = x1 , x2 ∧ x3 = x1 and x2 ∧ x4 = x1 . Then we
+study the set {x1 , x3 , x4 }, which is a chain and therefore, an upper bound of it is one of the
+elements x1 , x3 or x4 .
+
+123
+The small inductive dimension of finite lattices through matrices                    Page 9 of 18   145
+
+
+   The order matrix of L is the following 6 × 6 matrix
+                                   ⎛                   ⎞
+                                      1 2 2 2 2 2
+                                   ⎜ −2 1 0 0 2 2 ⎟
+                                   ⎜                   ⎟
+                                   ⎜ −2 0 1 2 0 2 ⎟
+                              ≤
+                            AL = ⎜ ⎜                   ⎟.
+                                                       ⎟
+                                   ⎜ −2 0 −2 1 0 2 ⎟
+                                   ⎝ −2 −2 0 0 1 2 ⎠
+                                     −2 −2 −2 −2 −2 1
+   By Proposition 2 we have
+
+                        2 · 3 + 1 ∈ r1 (A≤          ≤           ≤           ≤
+                                         L ) + r3 (A L ) + r4 (A L ) + r1 (A L ),
+
+and thus, x1 is not an upper bound of the set {x1 , x3 , x4 }. Also,
+
+                        2 · 3 + 1 ∈ r1 (A≤          ≤           ≤           ≤
+                                         L ) + r3 (A L ) + r4 (A L ) + r3 (A L ),
+
+and thus, x3 is not an upper bound of the set {x1 , x3 , x4 }. Finally,
+
+                             / r1 (A≤
+                        2·3+1∈                 ≤           ≤           ≤
+                                    L ) + r3 (A L ) + r4 (A L ) + r1 (A L ),
+
+and thus, x4 is an upper bound of the set {x1 , x3 , x4 }.
+   Also, by Proposition 3, since
+
+                         / r1 (A≤
+                    2·3−1∈                 ≤           ≤                  ≤
+                                L ) + r3 (A L ) + r4 (A L ) + (−1) · r4 (A L ),
+
+x4 is the least upper bound of the set {x1 , x3 , x4 }.
+   Therefore, by Theorem 4 we have that x2∗ = x4 .
+
+   The facts of Propositions 1, 2, 3 and Theorem 4 can be presented in a matrix algorithmic
+procedure which can find the pseudocomplement of an arbitrary element xi , i ∈ {1, . . . , n},
+of a finite lattice L = {x1 , . . . , xn }.
+   We state that this algorithm computes the pseudocomplement of each element of L, indi-
+vidually. This idea is based on the fact that in order to compute the small inductive dimension
+(see the corresponding definition of it in Sect. 1) we have to study one-by-one the elements
+and their pseudocomplements of covers. Thus, as we will see in Theorem 8, it is more clear
+to study the pseudocomplement of certain elements, separately.
+   Especially, if L = {x1 , . . . , xn } is a finite lattice with n ≥ 2 and xi , i ∈ {1, . . . , n}, is an
+arbitrary element of L, then this procedure is given as follows, named as Algorithm 1.
+1. Find the incidence matrix TL≤ and the order matrix A≤
+                                                       L of L and go to Step 2.
+2. Set j = 1, with j = i, m = 1 and go to Step 3.
+3. Find the matrix Ci (TL≤ ) + C j (TL≤ ) − B1 . If
+
+                                   max(Ci (TL≤ ) + C j (TL≤ ) − B1 ) = 1,
+
+   then put x j = x jm and go to Step 4. Otherwise, go also to Step 4.
+4. If j < n, then put j → j + 1 (that is, replace the old j with j + 1) and go to Step 3.
+   Otherwise, go to Step 5.
+5. Print the set {x j1 , . . . , x jm } and go to Step 6.
+6. Set l = 1 and go to Step 7.
+7. If {x j1 , . . . , x jm } is not a chain with l ∈
+                                                   / { j1 , . . . , jm } and
+
+                             2m + 1 ∈ r j1 (A≤                    ≤           ≤
+                                             L ) + . . . + r jm (A L ) + rl (A L )
+
+
+                                                                                123
+ 145      Page 10 of 18                                                                    R. B. Beshimov et al.
+
+
+       or
+       if {x j1 , . . . , x jm } is a chain with l ∈ { j1 , . . . , jm } and
+                                       / r j1 (A≤
+                                2m + 1 ∈                             ≤           ≤
+                                                L ) + . . . + r jm (A L ) + rl (A L ),
+    then go to Step 9. Otherwise, go to Step 8.
+ 8. If l < n, then put l → l + 1 (that is, replace the old l with l + 1) and go to Step 7.
+    Otherwise, go to Step 10.
+ 9. If {x j1 , . . . , x jm } is not a chain with l ∈
+                                                    / { j1 , . . . , jm } and
+                                   / r j1 (A≤
+                            2m + 2 ∈                             ≤                  ≤
+                                            L ) + . . . + r jm (A L ) + (−1) · rl (A L )
+       or
+       if {x j1 , . . . , x jm } is a chain with l ∈ { j1 , . . . , jm } and
+                                   / r j1 (A≤
+                            2m − 1 ∈                             ≤                  ≤
+                                            L ) + . . . + r jm (A L ) + (−1) · rl (A L ),
+    then print xi∗ = xl . Otherwise, go to Step 8.
+10. Print xi∗ = xn .
+
+
+3 The lattice ↑(x ∨ x ∗ ) with matrices
+
+According to the definition of the small inductive dimension, it is considered to be necessary
+to study also the lattice ↑(xi ∨ xi∗ ), where i ∈ {1, . . . , n}. Therefore, in this section, based on
+the results of Sect. 2, we study the element xi ∨ xi∗ , where i ∈ {1, . . . , n}, using order matrices
+and then we study the corresponding finite lattice ↑(xi ∨ xi∗ ), through these matrices. An
+algorithm, which collects all these results and provides a way to determine this lattice using
+matrices, is presented also in this section.
+Proposition 5 Let (L, ≤) be a finite lattice, xi ∈ L, where i ∈ {1, . . . , n}, and xi1 = xi∗ the
+pseudocomplement of xi . Then an element xi0 of L is an upper bound of the set {xi , xi1 } if
+and only if one of the following conditions is satisfied:
+                                       5 ∈ ri (A≤            ≤             ≤
+                                                L ) + ri 1 (A L ) + ri 0 (A L ),                         (T U 1)
+
+
+if {xi , xi1 } is an antichain and i 0 ∈
+                                       / {i, i 1 }
+or
+                                        / ri (A≤
+                                       5∈                   ≤             ≤
+                                               L ) + ri 1 (A L ) + ri 0 (A L ),                          (T U 2)
+
+
+if {xi , xi1 } is a chain and i 0 ∈ {i, i 1 }.
+Proof Since the set {xi , xi1 }, that we want to study, consists of two elements, by Proposition
+2 for m = 2 we have that an element xi0 of L is an upper bound of {xi , xi1 } if and only if one
+of the following conditions is satisfied:
+                               5 = 2 · 2 + 1 ∈ ri (A≤            ≤             ≤
+                                                    L ) + ri 1 (A L ) + ri 0 (A L ),                      (TU1)
+if {xi , xi1 } is not a chain (and therefore is an antichain) and i 0 ∈
+                                                                      / {i, i 1 }
+or
+                                       / ri (A≤
+                                5=2·2+1∈                   ≤             ≤
+                                              L ) + ri 1 (A L ) + ri 0 (A L )                             (TU2)
+if {xi , xi1 } is a chain and i 0 ∈ {i, i 1 }.                                                                     
+
+123
+The small inductive dimension of finite lattices through matrices                   Page 11 of 18    145
+
+
+Proposition 6 Let (L, ≤) be a finite lattice, xi ∈ L, where i ∈ {1, . . . , n}, and xi1 = xi∗ the
+pseudocomplement of xi . An upper bound xi0 of the set {xi , xi1 } is the least upper bound of
+it if and only if one of the following conditions is satisfied:
+                                 / ri (A≤
+                                6∈                   ≤                    ≤
+                                        L ) + ri 1 (A L ) + (−1) · ri 0 (A L ),                 (L T U 1)
+
+
+if {xi , xi1 } is an antichain and i 0 ∈
+                                       / {i, i 1 }
+or
+                                 / ri (A≤
+                                3∈                   ≤                    ≤
+                                        L ) + ri 1 (A L ) + (−1) · ri 0 (A L ),                 (L T U 2)
+if {xi , xi1 } is a chain and i 0 ∈ {i, i 1 }.
+
+Proof Since the set {xi , xi1 }, that we want to study, consists of two elements, by Proposition
+3 for m = 2 we have that an upper bound xi0 of the set {xi , xi1 } is the least upper bound of
+it if and only if one of the following conditions is satisfied:
+                               / ri (A≤
+                        6=2·2+2∈                   ≤                    ≤
+                                      L ) + ri 1 (A L ) + (−1) · ri 0 (A L ),                       (LTU1)
+if {xi , xi1 } is not a chain (and therefore is an antichain) and i 0 ∈
+                                                                      / {i, i 1 }
+or
+                               / ri (A≤
+                        3=2·2−1∈                   ≤                    ≤
+                                      L ) + ri 1 (A L ) + (−1) · ri 0 (A L ),                       (LTU2)
+if {xi , xi1 } is a chain and i 0 ∈ {i, i 1 }.                                                             
+
+Proposition 7 Let (L, ≤) be a finite lattice, A≤
+                                               L = (ai j ) its order matrix and x i ∈ L, where
+i ∈ {1, . . . , n}. Then
+                                     ↑xi = {x j ∈ L : ai j ∈ {1, 2}}.
+
+Proof For the element xi ∈ L, i ∈ {1, . . . , n}, we have
+                                        ↑xi = {x j ∈ L : xi ≤ x j }.
+According to the definition of the order matrix A≤L = (ai j ) of L, we have that
+                                       
+                                         ai j = 1, if xi = x j ,
+                           xi ≤ x j ⇔
+                                         ai j = 2, if xi < x j .
+Therefore,
+                                     ↑xi = {x j ∈ L : ai j ∈ {1, 2}}.
+                                                                                                           
+
+Example 3 We consider the lattice (L, ≤) of Fig. 2. We have seen that the pseudocomplement
+of x2 is the element x4 . Since the set {x2 , x4 } is an antichain, an upper bound of it is one of
+the elements x1 , x3 , x5 , x6 .
+   By Proposition 5, since
+                                    / r2 (A≤
+                                   5∈                 ≤           ≤
+                                           L ) + r4 (A L ) + r1 (A L ),
+
+x1 is not an upper bound of the set {x2 , x4 }. Moreover, since
+                                    / r2 (A≤
+                                   5∈                 ≤           ≤
+                                           L ) + r4 (A L ) + r3 (A L ),
+
+
+                                                                                  123
+145      Page 12 of 18                                                            R. B. Beshimov et al.
+
+
+x3 is not an upper bound of the set {x2 , x4 }. Since
+
+                                    / r2 (A≤
+                                   5∈                 ≤           ≤
+                                           L ) + r4 (A L ) + r5 (A L ),
+
+x5 is not an upper bound of the set {x2 , x4 }. Finally, since
+
+                                   5 ∈ r2 (A≤          ≤           ≤
+                                            L ) + r4 (A L ) + r6 (A L ),
+
+x6 is an upper bound of the set {x2 , x4 }.
+   In addition, by Proposition 6, since
+
+                                / r2 (A≤
+                               6∈                 ≤                  ≤
+                                       L ) + r4 (A L ) + (−1) · r6 (A L ),
+
+x6 is the least upper bound of the set {x2 , x4 }.
+   By Proposition 7 we have that
+
+                                   ↑x6 = {x j : a6 j ∈ {1, 2}} = {x6 }.
+
+   Based on the facts of Propositions 5, 6 and 7, we present an algorithm which determines
+the lattice ↑(x ∨ x ∗ ) through incidence and order matrices. Similar to Algorithm 1, it is
+more familiar to study each element x of L, individually. Thus, we can apply it only for
+those elements of minimal covers (see Theorem 8) that are needed for the small inductive
+dimension.
+   Especially, if L = {x1 , . . . , xn } is a finite lattice with n ≥ 2 and xi ∈ L, i ∈ {1, . . . , n},
+then this procedure is given as follows, named as Algorithm 2.
+1. Apply Algorithm 1 in order to find the pseudocomplement xi1 of xi and go to Step 2.
+2. Set l = 1 and go to Step 3.
+3. If {xi , xi1 } is an antichain with l ∈
+                                         / {i, i 1 } and
+
+                                     5 ∈ ri (A≤            ≤           ≤
+                                              L ) + ri 1 (A L ) + rl (A L ),
+
+      or
+      if {xi , xi1 } is a chain with l ∈
+                                       / {i, i 1 } and
+
+                                      / ri (A≤
+                                     5∈                   ≤           ≤
+                                             L ) + ri 1 (A L ) + rl (A L ),
+
+   then go to Step 5. Otherwise, go to Step 4.
+4. If l < n, then put l → l + 1 (that is, replace the old l with l + 1) and go to Step 3.
+   Otherwise, go to Step 7.
+5. If {xi , xi1 } is an antichain with l ∈
+                                         / {i, i 1 } and
+
+                                   / ri (A≤
+                                  6∈                   ≤                  ≤
+                                          L ) + ri 1 (A L ) + (−1) · rl (A L )
+
+      or
+      if {xi , xi1 } is a chain with l ∈ {i, i 1 } and
+
+                                  / ri (A≤
+                                 3∈                   ≤                  ≤
+                                         L ) + ri 1 (A L ) + (−1) · rl (A L ),
+
+   then print xi ∨ xi1 = xl and go to Step 6. Otherwise, go to Step 4.
+6. Find the elements xt ∈ L for which alt ∈ {1, 2} and print
+
+                               ↑(xi ∨ xi1 ) = ↑xl = {xt ∈ L : alt ∈ {1, 2}}.
+
+7. Print ↑(xi ∨ xi1 ) = ↑xn = {xn }.
+
+
+123
+The small inductive dimension of finite lattices through matrices         Page 13 of 18   145
+
+
+4 Algorithmic procedure of the small inductive dimension for finite
+  lattices
+
+In this section, we present the connection of the small inductive dimension with the so-called
+minimal covers. A combination of Algorithms 1 and 2 of the previous sections leads us to
+present an algorithm for the computation of the small inductive dimension of an arbitrary
+finite lattice using matrices.
+
+Theorem 8 If (L, ≤) is a finite lattice, then we have that ind(L) ≤ k, where k ∈ {0, 1, . . .},
+if and only if for every minimal cover V of L, we have
+
+                                        ind(↑(v ∗ ∨ v)) ≤ k − 1,
+
+for every v ∈ V .
+
+Proof Let ind(L) ≤ k, where k ∈ {0, 1, . . .}, V be a minimal cover of L and v ∈ V . We shall
+prove that ind(↑(v ∗ ∨ v)) ≤ k − 1. Since ind(L) ≤ k, there exists a cover U of L, which
+refines V and for every u ∈ U we have that
+
+                                        ind(↑(u ∗ ∨ u)) ≤ k − 1.
+
+Since V is a minimal cover of L, we have that V ⊆ U and thus, v ∈ U . Therefore, ind(↑(v ∗ ∨
+v)) ≤ k − 1.
+   Conversely, we suppose that for every minimal cover V of L, we have
+
+                                        ind(↑(v ∗ ∨ v)) ≤ k − 1,
+
+for every v ∈ V , where k ∈ {0, 1, . . .}, and we shall prove that ind(L) ≤ k. Let U be a cover
+of L. We shall find a cover W of L, which refines U and ind(↑(w ∨ w ∗ )) ≤ k − 1, for every
+w ∈ W . For that, we study the following cases:
+(i) If 1 L ∈ U , then the set W = {1 L } is a cover of L which refines U and
+
+       ind(↑(1∗L ∨ 1 L )) = ind(↑(0 L ∨ 1 L )) = ind(↑1 L ) = ind({1 L }) = −1 ≤ k − 1.
+
+(ii) If 1 L ∈
+            / U , then by ( Dube et al. (2015), Lemma 3.7), there exists a minimal cover W of
+L which refines U and 1 L ∈   / W . By assumption, since W is a minimal cover of L, we have
+that ind(↑(w ∗ ∨ w)) ≤ k − 1, for every w ∈ W .
+    Therefore, in each of the above two cases we have that ind(L) ≤ k.                     
+
+Proposition 9 If (L, ≤) is a finite lattice, then we have that
+
+             ind(L) = max{ind(↑(v ∨ v ∗ )) + 1 : v ∈ V , V minimal cover of L}.
+
+Proof Let k ∈ {0, 1, . . .} and
+
+                max{ind(↑(v ∨ v ∗ )) + 1 : v ∈ V , V minimal cover of L} = k.
+
+We shall prove that ind(L) ≤ k. We have that ind(↑(v ∨ v ∗ )) + 1 ≤ k, for every minimal
+cover V of L and for every v ∈ V . Then ind(↑(v ∨ v ∗ )) ≤ k − 1, for every minimal cover
+V of L and for every v ∈ V and thus, by Theorem 8, ind(L) ≤ k.
+   Conversely, we suppose that ind(L) = k and we prove that
+
+                max{ind(↑(v ∨ v ∗ )) + 1 : v ∈ V , V minimal cover of L} ≤ k.
+
+                                                                       123
+145   Page 14 of 18                                                         R. B. Beshimov et al.
+
+
+Since ind(L) = k, by Theorem 8, for every minimal cover V of L and for every v ∈ V we
+have that ind(↑(v ∨ v ∗ )) ≤ k − 1 or equivalently, for every minimal cover V of L and for
+every v ∈ V we have that ind(↑(v ∨ v ∗ )) + 1 ≤ k. Thus,
+             max{ind(↑(v ∨ v ∗ )) + 1 : v ∈ V , V minimal cover of L} ≤ k.
+                                                                                                    
+
+                    / A≤
+Proposition 10 If 0 ∈  L , then ind(L) = 0.
+
+Proof Since 0 ∈/ A≤L , then by Proposition 3.8 of (Boyadzhiev et al. 2018), {1 L } is a minimal
+cover of L. Thus, every cover of L contains the element 1 L and so the cover {1 L } is a
+refinement of every cover of L with
+          ind(↑(1∗L ∨ 1 L )) = ind(↑(0 L ∨ 1 L )) = ind(↑1 L ) = ind({1 L }) = −1.
+Therefore, ind(L) = 0.                                                                              
+
+Proposition 11 Let (L, ≤) be a finite lattice, V be a minimal cover of L and v ∈ V . Then
+ind(↑(v ∨ v ∗ )) = m, where m ∈ {0, 1, . . .}, if and only if we apply Theorem 8 up to reach
+the lattice {xn } m + 1 times.
+
+Proof Let m ∈ {0, 1, . . .}. To compute the small inductive dimension ind(↑(v ∨ v ∗ )) we
+work in the following manner:
+    First Time: ind(↑(v ∨ v ∗ )) ≤ m ⇔ for every minimal cover V1 of ↑(v ∨ v ∗ ), ind(↑(v1∗ ∨
+v1 )) ≤ m − 1, for every v1 ∈ V1 .
+    Second Time: For every v1 ∈ V1 , ind(↑(v1∗ ∨ v1 )) ≤ m − 1 ⇔ for every minimal cover
+V2 of ↑(v1 ∨ v1∗ ), we have ind(↑(v2∗ ∨ v2 )) ≤ m − 2, for every v2 ∈ V2 .
+    ···
+    ···
+    ···
+    m-Time: For every vm−1 ∈ Vm−1 , ind(↑(vm−1  ∗   ∨ vm−1 )) ≤ 1 ⇔ for every minimal cover
+                    ∗                      ∗
+Vm of ↑(vm−1 ∨ vm−1 ), we have ind(↑(vm ∨ vm )) ≤ 0, for every vm ∈ Vm .
+    m+1-Time: For every vm ∈ Vm , ind(↑(vm    ∗ ∨ v )) ≤ 0 ⇔ for every minimal cover V
+                                                   m                                       m+1
+of ↑(vm ∨ vm ∗ ), we have ind(↑(v      ∨ v ∗
+                                   m+1    m+1 )) = −1, for every vm+1 ∈ Vm+1 . In this step,
+we state that ind(↑(vm+1 ∨ vm+1∗                                     ∗
+                                   )) = −1 if and only if ↑(vm+1 ∨ vm+1    ) = {xn }, for every
+vm+1 ∈ Vm+1 .
+    Therefore, ind(↑(v ∨ v ∗ )) ≤ m if and only if we apply Theorem 8 up to reach the lattice
+{xn } m + 1 times. From Step 1, that we get the result m − 1 for the corresponding small
+inductive dimensions, up to Step m, that we get the result 0 for the corresponding small
+inductive dimensions, we apply Theorem 8 m times. Finally, we apply it one more time to
+succeed to have the lattice {xn }.
+    Moreover, since ind(↑(v ∨ v ∗ ))  m − 1, we have that ind(↑(v ∨ v ∗ )) = m if and only
+if we apply Theorem 8 up to reach the lattice {xn } m + 1 times.                              
+
+   Let (L, ≤) be a finite lattice, V be a minimal cover of L and v ∈ V . In what follows, the
+procedure, which is described in the proof of Proposition 11 in order to compute the small
+inductive dimension ind(↑(v ∨ v ∗ )), will be called minimal cover procedure.
+   In Boyadzhiev et al. (2018), an algorithm which finds the set MCov(L) of all minimal
+covers of an arbitrary finite lattice L is presented. Here, we combine this algorithm with
+Algorithms 1 and 2, Theorem 8, Propositions 9, 10 and 11 in order to succeed a matrix
+computation of the small inductive dimension of a finite lattice L.
+
+123
+The small inductive dimension of finite lattices through matrices                      Page 15 of 18   145
+
+
+   In this algorithm, the individual part of Algorithms 2 and 3 seems to be the most suitable
+choice for our study. To compute the small inductive dimension it suffices to apply these
+algorithms only for the elements of the corresponding minimal covers.
+   Especially, if (L, ≤) is a finite lattice, where L = {x1 , . . . , xn }, with n ≥ 2, then this
+procedure is presented as follows, named as Algorithm 3.
+ 1. Find the order matrix A≤                              ≤
+                              L and the incidence matrix TL of L and go to Step 2.
+            ≤
+         / A L , then print ind(L) = 0. Otherwise, go to Step 3.
+ 2. If 0 ∈
+ 3. Apply Algorithm 3.9 of (Boyadzhiev et al. 2018) to create the set MCov(L).
+      – If MCov(L) = {{xn }}, then print ind(L) = 0.
+      – Otherwise, put
+                          MCov(L) = {C1L , . . . , CrL } and CiL = {x i,L             i,L
+                                                                      ji1 , . . . , x ji f },
+                                                                                         i
+
+    for every i ∈ {1, . . . , r } and go to Step 4.
+ 4. Set i = 1 and go to Step 5.
+ 5. Set s = 1 and go to Step 6.
+ 6. Apply Algorithm 1 in order to find the element (x i,L  ∗
+                                                      jis ) and go to Step 7.
+ 7. Apply Algorithm 2 in order to find the lattice
+                                                        i,L ∗
+                                           ↑(x i,L
+                                               jis ∨ (x jis ) ) = ↑xl .
+
+    If ↑xl = {xn }, then print di,s = ind(↑xl ) = −1 and go to Step 9. Otherwise, go to Step
+    8.
+                                                                   i,L ∗
+ 8. Apply the minimal cover procedure for the lattice ↑(x i,L
+                                                          jis ∨ (x jis ) ) up to reach the lattice
+    {xn }. Print
+                                                         i,L ∗
+                                 di,s = ind(↑(x i,L
+                                                jis ∨ (x jis ) )) = w − 1,
+
+    where w is the number of the iterations that are needed in order to succeed to have the
+    lattice {xn }, and go to Step 9.
+ 9. If s < f i , then put s → s + 1 (that is, replace the old s with s + 1) and go to Step 6.
+    Otherwise, go to Step 10.
+10. If i < r , then put i → i + 1 (that is, replace the old i with i + 1) and go to Step 5.
+    Otherwise, go to Step 11.
+11. Print
+                        ind(L) = max{di,s + 1 : i = 1, . . . , r , s = 1, . . . , f i }.
+
+Example 4 (1) We consider the lattice (L, ≤) which is represented in Fig. 3.
+   The incidence and order matrix of L are respectively
+                  ⎛                ⎞          ⎛                            ⎞
+                    1111111                      1 2 2 2 2 2 2
+                  ⎜0 1 1 1 1 1 1⎟             ⎜ −2 1 2 2 2 2 2 ⎟
+                  ⎜                ⎟          ⎜                            ⎟
+                  ⎜0 0 1 0 1 1 1⎟             ⎜ −2 −2 1 0 2 2 2 ⎟
+                  ⎜                ⎟          ⎜                            ⎟
+            TL≤ = ⎜                ⎟     ≤    ⎜
+                  ⎜ 0 0 0 1 1 1 1 ⎟ , A L = ⎜ −2 −2 0 1 2 2 2 ⎟ .
+                                                                           ⎟
+                  ⎜0 0 0 0 1 0 1⎟             ⎜ −2 −2 −2 −2 1 0 2 ⎟
+                  ⎜                ⎟          ⎜                            ⎟
+                  ⎝0 0 0 0 0 1 1⎠             ⎝ −2 −2 −2 −2 0 1 2 ⎠
+                    0000001                     −2 −2 −2 −2 −2 −2 1
+   Following Algorithm 3 we have that
+                           MCov(L) = {C1L = {x3 , x4 }, C2L = {x5 , x6 }}.
+
+                                                                                   123
+ 145    Page 16 of 18                                                                 R. B. Beshimov et al.
+
+Fig. 3 The finite lattice (L, ≤)
+
+
+
+
+Fig. 4 The finite lattice (M, ≤∗ )
+
+
+
+
+We study the minimal cover C1L = {x3 , x4 }. The set C2L is studied with the same way.
+   Following Algorithm 1 we have that x3∗ = x1 and x4∗ = x1 . Moreover, following Algorithm
+2 we have that
+
+
+               ↑(x3 ∨ x3∗ ) = {x3 , x5 , x6 , x7 } and ↑(x4 ∨ x4∗ ) = {x4 , x5 , x6 , x7 }.
+
+
+   Also, for the lattice ↑(x3 ∨ x3∗ ) we apply only one time the minimal cover procedure and
+therefore, d1,1 = 0. Similarly, for the lattice ↑(x4 ∨ x4∗ ) we apply only one time the minimal
+cover procedure up and therefore, d1,2 = 0. Similarly, for the set C2L , we get d2,1 = d2,2 = 0.
+Therefore,
+
+
+                     ind(L) = max{di,s + 1 : i = 1, 2, 3 and s = 1, 2} = 1.
+
+
+(2) We consider the lattice (M, ≤∗ ) which is represented in Fig. 4.
+   The incidence and order matrix of M are respectively
+
+123
+The small inductive dimension of finite lattices through matrices                    Page 17 of 18   145
+
+                                                ⎛           ⎞
+                                              11111111
+                                            ⎜0 1 1 1 1 1 1 1⎟
+                                            ⎜               ⎟
+                                            ⎜0 0 1 1 1 1 0 1⎟
+                                            ⎜               ⎟
+                                         ∗  ⎜0 0 0 1 1 1 0 1⎟
+                                      TM≤ = ⎜               ⎟
+                                            ⎜0 0 0 0 1 0 0 1⎟
+                                            ⎜               ⎟
+                                            ⎜0 0 0 0 0 1 0 1⎟
+                                            ⎜               ⎟
+                                            ⎝0 0 0 0 0 0 1 1⎠
+                                              00000001
+and
+                                       ⎛                   ⎞
+                                     1 2 2 2 2 2 2 2
+                                  ⎜ −2 1 2 2 2 2 2 2 ⎟
+                                  ⎜                        ⎟
+                                  ⎜ −2 −2 1 2 2 2 0 2 ⎟
+                                  ⎜                        ⎟
+                              ≤∗
+                                  ⎜ −2 −2 −2 1 2 2 0 2 ⎟
+                                  ⎜
+                             AM = ⎜                        ⎟.
+                                                           ⎟
+                                  ⎜ −2 −2 −2 −2 1 0 0 2 ⎟
+                                  ⎜ −2 −2 −2 −2 0 1 0 2 ⎟
+                                  ⎜                        ⎟
+                                  ⎝ −2 −2 0 0 0 0 1 2 ⎠
+                                    −2 −2 −2 −2 −2 −2 −2 1
+   Following Algorithm 3 we have that
+      MCov(M) = {C1M = {x3 , x7 }, C2M = {x5 , x6 }, C3M = {x5 , x7 }, C4M = {x6 , x7 }}.
+We study the minimal cover C1M = {x3 , x7 }. The sets C2M , C3M and C4M are studied with the
+same way.
+   Following Algorithm 1 we have that x3∗ = x1 and x7∗ = x1 . Moreover, following Algorithm
+2 we have that
+                  ↑(x3 ∨ x3∗ ) = {x3 , x4 , x5 , x6 , x8 } and ↑(x7 ∨ x7∗ ) = {x7 , x8 }.
+    Also, for the lattice ↑(x3 ∨ x3∗ ) we apply two times the minimal cover procedure up to the
+lattice {x8 }:
+    – for the first time we consider the minimal cover {x 5 , x6 } of the lattice ↑(x3 ∨ x3∗ ) and
+    – for the second time we consider the minimal cover {x 8 } of the lattices ↑(x5 ∨ x5∗ ) and
+↑(x6 ∨ x6∗ ).
+Therefore, d1,1 = 1.
+    For the lattice ↑(x7 ∨ x7∗ ) we apply only one time the minimal cover procedure up to the
+lattice {x8 } (as the minimal cover of this lattice is {x8 }) and therefore, d1,2 = 0.
+    We continue with the same thinking, studying all the other minimal covers of M. We get
+d2,1 = d2,2 = 0, d3,1 = d3,2 = 0 and d4,1 = d4,2 = 0. Therefore,
+                   ind(M) = max{di,s + 1 : i = 1, 2, 3, 4 and s = 1, 2} = 2.
+
+
+5 Discussion
+
+In this paper, we study the small inductive dimension of finite lattices using matrix algebra.
+Firstly, we investigate the notion of the pseudocomplement x ∗ of an element x of a finite
+lattice through incidence and order matrices and present an algorithm which finds this ele-
+ment. Then we study the lattice ↑(x ∨ x ∗ ) using order matrices and present an algorithm
+which determines this lattice. Moreover, based on the notion of the minimal cover and the
+matrix characterizations of the pseudocomplement and the lattice ↑(x ∨ x ∗ ), we provide an
+
+                                                                                123
+ 145    Page 18 of 18                                                                   R. B. Beshimov et al.
+
+
+algorithmic procedure which computes the small inductive dimension of an arbitrary finite
+lattice.
+
+
+6 Conclusion
+
+In this paper, we present an alternative approach to the small inductive dimension for the
+class of finite lattices using order and incidence matrices and algorithmic matrix procedures.
+Acknowledgements The authors would like to thank the referees for the careful reading of the paper and the
+useful comments.
+
+Data availability All data are mentioned in the paper.
+
+
+Declarations
+
+Conflict of interest Not applicable.
+
+
+References
+Boyadzhiev D, Georgiou DN, Megaritis AC, Sereti F (2018) A study of a covering dimension of finite lattices.
+      Appl Math Comput 333:276–285
+Boyadzhiev D, Georgiou D, Megaritis A, Sereti F (2019) A study of the quasi covering dimension of finite
+      lattices. Comput Appl Math 38(3):109–18
+Brijlall D, Baboolal D (2008) Some aspects of dimension theory of frames. Indian J Pure Appl Math 39(5):375–
+      402
+Brijlall D, Baboolal D (2010) The Katětov-Morita theorem for the dimension of metric frames. Indian J Pure
+      Appl Math 41(3):535–553
+Dube T, Georgiou DN, Megaritis AC, Moshokoa SP (2015) A study of covering dimension for the class of
+      finite lattices. Discr Math 338(7):1096–1110
+Dube T, Georgiou DN, Megaritis AC, Sereti F (2017) Studying the Krull dimension of finite lattices under the
+      prism of matrices. Filomat 31(10):2901–2915
+Dushnik B, Miller E (1941) Partially ordered sets. Am J Math 63:600–610
+Georgiou DN, Megaritis AC, Sereti F (2016) A study of the order dimension of a poset using matrices. Quaest
+      Math 39(6):797–814
+Hai-feng Z, Meng Z, Guang-jun Z (2017) Answer to some open problems on covering dimension for finite
+      lattices. Discr Math 340(5):1086–1091
+Hegde R, Jain K (2007) The hardness of approximating poset dimension. Electron Notes Discr Math 29:435–
+      443
+Sancho de Salas JB, Sancho de Salas MT (1991) Dimension of distributive lattices and universal spaces. Topol
+      Appl 42(1):25–36
+Trotter WT Jr (1975) Inequalities in dimension theory for posets. Proc Am Math Soc 47:311–316
+Vinokurov VG (1966) A lattice method of defining dimension. Soviet Math Dokl 168(3):663–666
+
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under
+a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted
+manuscript version of this article is solely governed by the terms of such publishing agreement and applicable
+law.
+
+
+
+
+123
+

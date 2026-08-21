@@ -264,6 +264,10 @@ Independent discovery / audit lanes:
 - **Fable:** referee-style proof audit; independently identified the directionality defect, minimized the certificates to N5 and `{0}⊕N5`, identified the Proposition 3.5 proof gap, and supplied a repair.
 - **Isotopy:** structural/dependency audit; independently identified the same representation-interface error and emphasized the construction/representation interface heuristic. One proposed witness was invalid and was rejected by independent verification, demonstrating the need to verify certificates separately from diagnoses.
 
+### Additional inheritance (Alethon novelty pass, 2026-08-21)
+
+**Beshimov–Georgiou–Sereti, Comput. Appl. Math. 42 (2023), 145** — Algorithm 3 Step 3 explicitly applies **2018 Algorithm 3.9** to obtain MCov(L) for computing `ind`. Classification: USES FAULTY ALGORITHM. See `alethon-novelty-implementation-pass.md`. Revises “contained to original two papers.”
+
 Current novelty status: **apparently unreported**, pending completion of a full corrigendum/citation/author-page/implementation search and author contact.
 
 ---
