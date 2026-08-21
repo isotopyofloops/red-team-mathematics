@@ -79,3 +79,5 @@ Triage scores without a pass label foam. Going forward, mark each verdict:
 | Filomat 2025 | uses Prop 1 operationally | independent width/J(L); no Alg reprint | sound import, no inheritance |
 | Wang–Ji Order 2025 | uses Dube min-cover def | independent Birkhoff route; no Alg reprint | background / sound |
 | arXiv:2503.22007 | uses min-cover concept | set-theoretic Dube; no matrix MC | background / sound |
+| Order 2024 small Ind | uses min covers for ind | set-theoretic; hand dim | background / sound |
+| AGT 2026 large Ind | uses min covers for Ind | set-theoretic Dube; =arXiv | background / sound |

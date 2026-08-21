@@ -1,0 +1,1087 @@
+Order (2024) 41:437–461
+https://doi.org/10.1007/s11083-023-09638-6
+
+
+
+
+A Study of the Small Inductive Dimension in the Area of Finite
+Lattices
+
+D. Georgiou1 · A. Megaritis2 · G. Prinos1 · F. Sereti3
+
+Received: 1 March 2022 / Accepted: 25 April 2023 / Published online: 17 June 2023
+© The Author(s), under exclusive licence to Springer Nature B.V. 2023
+
+
+
+Abstract
+The Dimension Theory in the class of frames was the base of many researches. Especially,
+the covering dimension, the quasi covering dimension, the small inductive dimension and the
+large inductive dimension for frames have been studied extensively (see (Banaschewski and
+Gilmour J. London Math. Soc. 39(2) 1–8 1989), (Brijlall and Baboolal Indian J. Pure Appl.
+Math. 39(5), 375–402 2008), (Brijlall and Baboolal Indian J. Pure Appl. Math. 41(3), 535–553
+2010), (Charalambous J. London Math. Soc. 8(2), 149–160 1974), (Charalambous Topology
+Proc. 20, 49–66 1995), (Georgiou et al. Topology Appl. 275, 106995–13 2020)). Moreover,
+the study of the meaning of dimension in Order and Lattice Theory tended to the study of
+various dimensions, such as the order dimension for finite posets and the covering dimension
+for finite lattices (see, for example, (Boyadzhiev et al. Appl. Math. Comput. 333, 276–285
+2018), (Dube et al. Discrete Math. 338(7), 1096–1110 2015), (Georgiou et al. Quaest. Math.
+39(6), 797–814 2016)). In this paper, we study the notion of the small inductive dimension,
+ind, in the class of finite lattices. We provide a new characterization of this dimension, using
+the so-called minimal covers, and investigate properties of this dimension. We study the small
+inductive dimension of the linear sum, the Cartesian product, the lexicographic product and
+the rectangular product of two finite lattices and the sublattice property. Also, we present
+various examples, investigating the relation of the small inductive dimension with the Krull
+and covering dimension.
+
+
+
+
+D. Georgiou, A. Megaritis, G. Prinos and F. Sereti are contributed equally to this work.
+
+B D. Georgiou
+    georgiou@math.upatras.gr
+    A. Megaritis
+    amegaritis@uth.gr
+    G. Prinos
+    gprinos161168@yahoo.gr
+    F. Sereti
+    seretifot@gmail.com
+1   Department of Mathematics, University of Patras, Patras 26500, Greece
+2   Department of Physics, University of Thessaly, Lamia 35100, Greece
+3   Department of Mathematics, University of Western Macedonia, Kastoria 52100, Greece
+
+
+                                                                                           123
+438                                                                           Order (2024) 41:437–461
+
+
+Keywords Small inductive dimension · Finite lattice · Linear sum · Cartesian product ·
+Lexicographic product · Rectangular product
+
+
+1 Introduction
+
+The Dimension Theory is a branch of Topology that has been studied extensively, defining
+some of the most known dimensions, the covering dimension, the small inductive dimension
+and the large inductive dimension (see, for example, [10–14]). Moreover, these dimensions
+have been studied in the realm of finite and Alexandroff spaces (see, for example, [15–18]).
+    However, many researchers such as M. Charalambous, G. Gilmour, B. Banaschweski, D.
+Brijlall, D. Baboolal made a significant effort to develop a Frame Dimension Theory, defining
+the covering dimension, the small inductive dimension and the large inductive dimension in
+classes of frames (see [1–5]).
+    Simultaneously, various dimensions have been studied in the realm of finite partially
+ordered sets and lattices. The order dimension, the Krull dimension and the covering dimen-
+sion are examples of such dimensions (see [7–9, 19, 20]).
+    The term finite set is one of the main keys of Discrete Mathematics. Finite sets have many
+important applications to computer science, algorithms, programming languages, cryptogra-
+phy and software development. This fact tends us to pay attention to the meaning of finite. At
+the same time, since Digital Topology studies the topological properties of digital images and
+discrete arrays in two or more dimensions, the notions of dimensions, and more specifically
+topological dimensions, win their own important role. Moreover, partially ordered sets and
+especially lattices are used to investigate more properties of digital images (see for example
+[21]).
+    On the other hand, from a classical topological point of view, topological spaces like
+spectral spaces have been studied under the prism of lattices [22]. This fact led to insert
+definitions of topological notions in terms of lattices and more specifically finite lattices. The
+meaning of dimension is one of these topological notions. As we have mentioned, the order
+dimension, the Krull dimension and the covering dimension have been inserted and studied in
+Lattice Theory. Therefore, a research issue that arises is the study of dimensions for lattices.
+The combination of finite lattices and their dimensions provides new results which develop
+the current research.
+    In this paper, we study the notion of the small inductive dimension, ind, in the class of finite
+lattices, proving characterizations and properties of this dimension. Especially, in Section 2,
+we give a description of the small inductive dimension in details, giving a new characterization
+of this dimension, using the so-called minimal covers and studying the sublattice property. In
+Section 3, we study the small inductive dimension of the linear sum, the Cartesian product,
+the lexicographic product and the rectangular product of two finite lattices and in Section 4,
+we present various examples, investigating the difference between the small inductive dimen-
+sion with the Krull and covering dimension.
+    We remind, firstly, basic definitions and notations which will be used in order to define
+the small inductive dimension. Throughout this paper we suppose that the latticesare finite.
+    If L is a lattice and x ∈ L, then we write ↑x = {y ∈ L : x ⩽ y} and x ∗ = {y ∈ L :
+y∧x = 0 L }. In the case where x ∗ ∧x = 0 L , that is x ∗ = max{y ∈ L : y∧x = 0 L }, the element
+x ∗ is called pseudocomplement of x. Every finite distributive lattice is pseudocomplemented.
+Although the lattices we deal with in this paper are not generally distributive, we will adopt
+
+
+
+
+123
+Order (2024) 41:437–461                                                                        439
+
+
+the asterisk notation and the term “pseudocomplement" in order to have the same terminology
+as in [2]. We denote by 0 L and 1 L the bottom and the top element  of L, respectively.
+    A subset V of a lattice L is called a cover of L if 0 L ∈
+                                                            / V and V = 1 L . A cover U of
+a lattice L is called a refinement of a cover V of L, writing U  V , if for each u ∈ U , there
+exists v ∈ V such that u ⩽ v.
+    A subset B of a lattice L is called a base of L if each element of L can be written as the
+supremum of a subset of B.
+    We state that in the study [2] the authors define and study the small inductive dimension
+for regular frames. Also, more results and properties for the dimension ind can be found in
+[3].
+
+
+2 The Small Inductive Dimension for Finite Lattices
+
+Based on the notion of the small inductive dimension, ind, which is defined for the class of
+all regular frames [2], in this section, we study the small inductive dimension ind in the class
+of finite lattices and we give properties of this dimension.
+    We mention that we define this notion of dimension for the class of finite lattices because
+we can see that this meaning is well defined and more friendly for this class. Clearly, we
+can compute this dimension for regular finite lattices but with our study we realize that this
+dimension behaves well for an arbitrary finite lattice.
+    Since the dimension ind is defined inductively for finite lattices, we remind that a sublattice
+of a lattice L is a subset of L, which is a lattice with the same meet and join operations as L.
+Given a lattice L, every set of the form ↑x, where x ∈ L, is a sublattice of L.
+
+Definition 1 Let L be a finite lattice. The small inductive dimension, ind, of L is defined as
+follows:
+1. ind(L) = −1 if and only if L = {0 L }.
+2. ind(L) ⩽ k, where k ∈ N, if for every cover V of L, there exists a cover U of L such that
+   U is a refinement of V and ind(↑(u ∗ ∨ u)) ⩽ k − 1, for every u ∈ U .
+3. ind(L) = k, where k ∈ N, if ind(L) ⩽ k and ind(L)  k − 1.
+
+   Analogously to Proposition 4.2 of [2], isomorphic lattices have the same small inductive
+dimension.
+
+Example 1 We consider the finite lattices represented by the diagrams of Figure 1. We have
+that ind(L 1 ) = 0 and ind(L 2 ) = 1.
+
+
+Fig. 1 The finite lattices
+(L 1 , ⩽1 ) and (L 2 , ⩽2 )
+
+
+
+
+                                                                                       123
+440                                                                                   Order (2024) 41:437–461
+
+
+   In the study [2] the authors have proved that for any regular frame L, ind(L) ⩽ k, where
+k ∈ N, if and only if there exists a base B of L such that ind(↑(b ∨ b∗ )) ⩽ k − 1, for every
+b ∈ B.
+
+Proposition 1 Let L be a finite lattice and k ∈ N. If there exists a base B of L such that
+ind(↑(b ∨ b∗ )) ⩽ k − 1, for every b ∈ B, then ind(L) ⩽ k.
+
+Proof Let V be a cover of L. Since B is a base of L, there exists a cover B0 = {b j1 , . . . , b jν } ⊆
+B of L, where
+             ν = min{m : {b j1 , . . . , b jm } is a cover of L and {b j1 , . . . , b jm }  V }.
+Also, by assumption, ind(↑(b ∨ b∗ )) ⩽ k − 1, for every b ∈ B0 .
+
+   However, for the class of finite lattices we observe that the converse of Proposition 1 does
+not always hold as the lattice of Figure 2 shows.
+   For the lattice L of Figure 2 we have that ind(L) = 1. Moreover, every base B of L must
+contain the element x3 for which
+                              ind(↑(x3 ∨ x3∗ )) = ind(↑x3 ) = 1  1 − 1.
+
+Fig. 2 The finite lattice (L, ⩽)
+
+
+
+
+123
+Order (2024) 41:437–461                                                                      441
+
+
+   In the next result a new characterization of the small inductive dimension based on the
+notion of minimal cover is given.
+
+Definition 2 [8] In any finite lattice L, a cover V of L is called minimal if V ⊆ U , for every
+refinement U of V .
+
+Theorem 2 Let L be a finite lattice and k ∈ N. Then, ind(L) ⩽ k if and only if for every
+minimal cover V of L, ind(↑(v ∗ ∨ v)) ⩽ k − 1, for every v ∈ V .
+
+Proof Let ind(L) ⩽ k, V be a minimal cover of L and v ∈ V . We shall prove that ind(↑(v ∗ ∨
+v)) ⩽ k − 1. Since ind(L) ⩽ k, there exists a cover U of L, which refines V and ind(↑(u ∗ ∨
+u)) ⩽ k − 1, for every u ∈ U . Since V is a minimal cover of L, we have that V ⊆ U and
+thus, v ∈ U . Therefore, ind(↑(v ∗ ∨ v)) ⩽ k − 1.
+   Conversely, we shall prove that ind(L) ⩽ k. Let W be a cover of L. If 1 L ∈ W , then the
+cover U = {1 L } is a refinement of W and
+
+            ind(↑(1∗L ∨ 1 L )) = ind(↑(0 L ∨ 1 L )) = ind(↑1 L ) = ind({1 L }) = −1.
+
+Otherwise, if 1 L ∈
+                  / W , by [8, Lemma 3.7], there exists a minimal cover V of L which refines
+          / V . By assumption, ind(↑(v ∗ ∨ v)) ⩽ k − 1, for every v ∈ V . Thus, ind(L) ⩽ k.
+W and 1 L ∈
+
+
+Proposition 3 Let L be a finite lattice. Then the following are equivalent:
+1. ind(L) = 0.
+2. For every minimal cover V of L and each v ∈ V , {v, v ∗ } is a cover of L.
+
+Proof By Theorem 2, ind(L) = 0 if and only if for every minimal cover V of L, ind(↑(v ∗ ∨
+v)) = −1, for every v ∈ V . Thus, ind(L) = 0 if and only if for every minimal cover V of L,
+↑(v ∗ ∨ v) = {1 L }, for every v ∈ V , or equivalently, ind(L) = 0 if and only if v ∗ ∨ v = 1 L ,
+for every v ∈ V .
+
+Theorem 4 For every k ∈ {1, 2, 3, . . .} there exists a finite lattice L such that ind(L) = k
+and all x ∈ L \ {0 L } have 0 L as pseudocomplement.
+
+Proof We prove the theorem by induction on k. Firstly, we shall prove that there exists a
+finite lattice L, in which the pseudocomplement of every element of L \ {0 L } is 0 L , with
+ind(L) = 1. Indeed, if we consider the lattice (L 2 , ⩽2 ) of Example 1, we have the desired
+result.
+    We suppose that there exists a finite lattice M, in which the pseudocomplement of every
+element of M \ {0 M } is 0 M , with ind(M) = k − 1, where k > 1 (induction hypothesis), and
+we shall prove that there exists a finite lattice L, in which the pseudocomplement of every
+element of L \ {0 L } is 0 L , with ind(L) = k.
+    We consider the finite lattice L = {0 L , z, y} ∪ M (as represented in Figure 3), which
+partial order ⩽ is defined as follows:
+(1) z ⩽ w, for every w ∈ L\{0 L },
+(2) w y (i.e. neither w ⩽ y nor y ⩽ w holds), for every w ∈ M.
+    We observe that the pseudocomplement of every element of L \ {0 L } is 0 L . We shall
+prove that ind(L) = k. By Theorem 2, we shall prove that for every minimal cover V of L,
+ind(↑(v ∨ v ∗L )) ⩽ k − 1, for every v ∈ V , where v ∗L denotes the pseudocomplement of v in
+L. Let V be a minimal cover of L. According to Figure 3, we study the following cases:
+
+                                                                                       123
+442                                                                           Order (2024) 41:437–461
+
+Fig. 3 The lattice (L, ⩽)
+
+
+
+
+(i) For the minimal cover V = {0 M , y} of L we have that
+          ind(↑((0 M )∗L ∨ 0 M )) = ind(↑(0 L ∨ 0 M )) = ind(↑0 M ) = ind(M) = k − 1,
+where (0 M )∗L denotes the pseudocomplement of 0 M in the lattice L, and
+      ind(↑(y ∗ ∨ y)) = ind(↑(0 L ∨ y)) = ind(↑y) = ind({y, 1 L }) = 0 = 1 − 1 ⩽ k − 1.
+(ii) For the minimal covers of M, we have that ind(↑(v ∨ v ∗L )) ⩽ k − 1, for every v ∈ V ,
+where v ∗L denotes the pseudocomplement of v in L.
+    We state that if V is a minimal cover of M, then it is also a minimal cover of L. First of
+all, since ind(M) > 0, 1 L ∈ / V . Moreover, since V is a cover of M, it is also a cover of L.
+Let U be a cover of L, which refines V . Then y ∈  / U . (If y ∈ U , since U  V , there exists
+v ∈ V such that y ⩽ v. But the only element for which y ⩽ v is the element 1 L which does
+not belong to V .) Since for each u ∈ U \ {z}, 0 M ⩽ u, we have that each u ∈ U \ {z} belongs
+to M. That is, U \ {z} is a cover of M, which refines V . Since V is minimal cover of M, we
+have that V ⊆ U \ {z}. Thus, V ⊆ U and therefore, V is a minimal cover of L.
+    Let v ∈ V , where V is a minimal cover of M. We have that
+                            ind(↑(v ∨ v ∗L )) = ind(↑(v ∨ 0 L )) = ind(↑v).
+Since ind(M) = k − 1, by Theorem 2 we have that
+                    ind(↑(v ∨ v ∗M )) = ind(↑(v ∨ 0 M )) = ind(↑v) ⩽ k − 2,
+where v ∗M denotes the pseudocomplement of v in M. Thus, ind(↑(v ∨ v ∗L )) ⩽ k − 1, for
+every v ∈ V and thus, ind(L) ⩽ k.
+
+123
+Order (2024) 41:437–461                                                                       443
+
+
+    Moreover, we observe that there exists the cover V = {0 M , y} of L such that for every
+refinement U of V (that is, U = {0 M , y} and U = {0 M , y, z}), there exists u = 0 M ∈ U
+such that
+    ind(↑((0 M )∗L ∨ 0 M )) = ind(↑(0 L ∨ 0 M )) = ind(↑0 M ) = ind(M) = k − 1  k − 2.
+Thus, ind(L)  k − 1 and so ind(L) = k.
+
+   We also present a sublattice theorem for the small inductive dimension of finite lattices.
+We remind that a subset S of a lattice L is called down-set if for every x ∈ L with x ⩽ s for
+some s ∈ S, then x ∈ S.
+   As we observe in Figure 4, a corresponding sublattice theorem does not hold without
+mentioning further conditions for the sublattice of a finite lattice.
+   We have that ind(L) = 0 but for the sublattice M = {x2 , x4 , x5 , x6 , 1 L } of L we have that
+ind(M) = 1 and therefore, ind(M)  ind(L).
+
+Proposition 5 Let L be a finite lattice and M be a sublattice of L such that 1 L ∈ M,
+M \ {1 L } is a down-set and the pseudocomplement u ∗M of every element u of M is equal to
+the pseudocomplement u ∗L of u in L. Then, ind(M) ⩽ ind(L).
+
+Proof If ind(L) = −1, then, clearly, ind(M) = −1. As second case we suppose that ind(L) =
+k, where k ∈ N and we will prove that ind(M) ⩽ k. Let V be a cover of M. Since 1 L ∈ M,
+V is a cover of L. Since ind(L) = k, there exists a cover U of L, which is a refinement of V
+and for every u ∈ U , ind(↑(u ∗L ∨ u)) ⩽ k − 1.
+
+
+Fig. 4 The finite lattice (L, ⩽)
+
+
+
+
+                                                                                      123
+444                                                                               Order (2024) 41:437–461
+
+
+   If 1 L ∈ V , then there exists the cover U = {1 L } of L, which is a refinement of V and
+
+                              ind(↑(1∗L ∨ 1 L )) = ind(↑1 L ) = −1 ⩽ k − 1.
+
+   Let 1 L ∈
+           / V . Since M \ {1 L } is a down set, U is a cover of M. By assumption
+
+                                           ind(↑(u ∗M ∨ u)) ⩽ k − 1.
+
+Therefore, in each case ind(M) ⩽ k.
+
+
+3 Properties Concerning Sums and Products
+
+In this section we study properties of the small inductive dimension of different finite lattices.
+Especially, we study the small inductive dimension of the linear sum and three kinds of
+products of finite lattices.
+
+Definition 3 [23] The linear sum L 1 ⊕L 2 of two partially ordered sets (L 1 , ⩽1 ) and (L 2 , ⩽2 ),
+where L 1 ∩ L 2 = ∅, is the partially ordered set (L 1 ∪ L 2 , ⩽), where the relation ⩽ is defined
+as follows:                              ⎧
+                                         ⎪
+                                         ⎨x, y ∈ L 1 and x ⩽1 y
+                             x ⩽ y ⇔ x, y ∈ L 2 and x ⩽2 y
+                                         ⎪
+                                         ⎩
+                                           x ∈ L 1, y ∈ L 2.
+
+Clearly, if (L 1 , ⩽1 ) and (L 2 , ⩽2 ) are lattices, then (L 1 ⊕ L 2 , ⩽) is also a lattice.
+
+Remark 1 (1) The lattices of Figures 1, 5 and 6 verifies the claim
+
+                                        ind(L 1 ⊕ L 3 )  = ind(L 3 ⊕ L 1 ).
+
+  We have that ind(L 3 ) = ind(L 1 ) = 0. Also, ind(L 3 ⊕ L 1 ) = 1 and ind(L 1 ⊕ L 3 ) = 0.
+Thus, ind(L 1 ⊕ L 3 )  = ind(L 3 ⊕ L 1 ).
+(2) The lattices of Figures 5, 7 and 8 verifies that the assertion
+
+                                 ind(L 3 ⊕ L 4 ) ⩽ ind(L 3 ) + ind(L 4 ) + 1
+
+does not hold for all finite lattices L 3 and L 4 .
+  We have that ind(L 3 ) = ind(L 4 ) = 0 and ind(L 3 ⊕ L 4 ) = 2. Thus,
+
+                                 ind(L 3 ⊕ L 4 )  ind(L 3 ) + ind(L 4 ) + 1.
+
+Proposition 6 Let L 1 and L 2 be two finite lattices such that the pseudocomplement of every
+element of L 2 \ {0 L 2 } is 0 L 2 . Then ind(L 2 ) = ind(L 1 ⊕ L 2 ).
+
+
+Fig. 5 The finite lattice (L 3 , ⩽3 )
+
+
+
+
+123
+Order (2024) 41:437–461                                                                     445
+
+
+
+
+Fig. 6 The finite lattices (L 1 ⊕ L 3 , ⩽) and (L 3 ⊕ L 1 , ⩽∗ )
+
+
+
+Proof We prove that one dimension is less than or equal to the other dimension. Firstly, we
+shall prove that ind(L 2 ) ⩽ ind(L 1 ⊕ L 2 ). Let ind(L 1 ⊕ L 2 ) = k, where k ∈ N. We shall
+prove that ind(L 2 ) ⩽ k. Let V be a minimal cover of L 2 and v ∈ V . By [8] V is a minimal
+cover of L 1 ⊕ L 2 . Since ind(L 1 ⊕ L 2 ) = k, by Theorem 2
+
+                                        ind(↑(v ∨ v ∗L 1 ⊕L 2 )) ⩽ k − 1,
+
+where v ∗L 1 ⊕L 2 denotes the pseudocomplement of v in L 1 ⊕ L 2 . Since v ∈ L 2 , v ∗L 1 ⊕L 2 =
+0 L 1 ⊕L 2 and thus, ind(↑v) ⩽ k − 1. Moreover, in the lattice L 2 we have that v ∗L 2 = 0 L 2 ,
+where v ∗L 2 denotes the pseudocomplement of v in L 2 . Therefore,
+
+                                    ind(↑(v ∨ v ∗L 2 )) = ind(↑v) ⩽ k − 1
+
+and thus, ind(L 2 ) ⩽ k.
+   Now, we shall prove that ind(L 1 ⊕ L 2 ) ⩽ ind(L 2 ). Let ind(L 2 ) = k, where k ∈ N. We
+shall prove that ind(L 1 ⊕ L 2 ) ⩽ k. Let V be a minimal cover of L 1 ⊕ L 2 and v ∈ V . Then
+
+
+Fig. 7 The finite lattice (L 4 , ⩽4 )
+
+
+
+
+                                                                                    123
+446                                                                               Order (2024) 41:437–461
+
+Fig. 8 The finite lattice
+(L 3 ⊕ L 4 , ⩽)
+
+
+
+
+V is a minimal cover of L 2 . Since ind(L 2 ) = k, by Theorem 2
+                                      ind(↑(v ∨ v ∗L 2 )) ⩽ k − 1
+and by assumption ind(↑v) ⩽ k − 1. Moreover, v ∗L 1 ⊕L 2 = 0 L 1 ⊕L 2 and thus,
+                              ind(↑v ∨ v ∗L 1 ⊕L 2 ) = ind(↑v) ⩽ k − 1.
+Therefore, ind(L 1 ⊕ L 2 ) ⩽ k.
+
+Definition 4 The Cartesian product of two partially ordered sets (L 1 , ⩽1 ) and (L 2 , ⩽2 ) is
+the partially ordered set (L 1 × L 2 , ⩽), where the relation ⩽ is defined as follows: (x 1 , y1 ) ⩽
+(x2 , y2 ) ⇔ x1 ⩽1 x2 and y1 ⩽2 y2 .
+
+   If (L 1 , ⩽1 ) and (L 2 , ⩽2 ) are finite lattices, then (L 1 × L 2 , ⩽) is also a finite lattice.
+   The following lemma can easily be proved and thus, we omit the proof.
+
+Lemma 7 If L 1 and L 2 are finite lattices and (x, y) ∈ L 1 × L 2 , then the following are
+satisfied:
+1. ↑(x, y) = ↑x × ↑y,
+2. (x, y)∗ = (x ∗ , y ∗ ).
+
+Theorem 8 Let L 1 and L 2 be finite lattices. Then,
+                             ind(L 1 × L 2 ) = max{ind(L 1 ), ind(L 2 )}.
+
+Proof In order to prove the inequality ind(L 1 × L 2 ) ⩽ max{ind(L 1 ), ind(L 2 )}, we shall
+apply induction with respect to the number
+                               k(L 1 , L 2 ) = max{ind(L 1 ), ind(L 2 )}.
+
+123
+Order (2024) 41:437–461                                                                                   447
+
+
+If k(L 1 , L 2 ) = −1, then our inequality holds. Moreover, if ind(L 1 ) = −1 and ind(L 2 ) ⩾ 0
+(respectively, ind(L 2 ) = −1 and ind(L 1 ) ⩾ 0), then the lattices L 1 × L 2 and L 2 (respectively,
+L 1 × L 2 and L 1 ) are isomorphic and therefore, ind(L 1 × L 2 ) = ind(L 2 ) (respectively,
+ind(L 1 × L 2 ) = ind(L 1 )).
+    We assume that the inequality holds for every pair of finite lattices L 1 and L 2 with
+k(L 1 , L 2 ) < k, where k ⩾ 0, and we consider finite lattices L 1 and L 2 such that ind(L 1 ) =
+n ⩾ 0, ind(L 2 ) = m ⩾ 0 and max{n, m} = k. We shall prove that ind(L 1 × L 2 ) ⩽ k.
+    Let V be a minimal cover of L 1 × L 2 . Then for every (a, b) ∈ V we have either a = 0 L 1
+or b = 0 L 2 (see [20]). Thus, V is of the form
+                    V = {(a1 , 0 L 2 ), . . . , (as , 0 L 2 ), (0 L 1 , b1 ), . . . , (0 L 1 , bt )}.
+Then, we observe that the sets V1 = {a1 , . . . , as } and V2 = {b1 , . . . , bt } are minimal covers
+of the lattices L 1 and L 2 , respectively.
+   Since ind(L 1 ) = n, we have that ind(↑(ai∗ ∨ai )) ⩽ n −1, for each ai ∈ V1 , i ∈ {1, . . . , s}.
+Also, since ind(L 2 ) = m, we have that ind(↑(b∗j ∨ b j )) ⩽ m − 1, for each b j ∈ V2 ,
+j ∈ {1, . . . , t}.
+   Let v ∈ V . It suffices to prove that
+                    ind(↑(v ∗ ∨ v)) ⩽ max{n, m} − 1 = max{n − 1, m − 1}.
+We study the following cases:
+(A) Let i ∈ {1, . . . , s} such that v = (ai , 0 L 2 ). In this case we have that v ∗ = (ai∗ , 1 L 2 ) and
+thus,
+                              ind(↑(v ∗ ∨ v)) = ind(↑(ai∗ ∨ ai , 1 L 2 )).
+Then by Lemma 7, ↑(ai∗ ∨ ai , 1 L 2 ) = ↑(ai∗ ∨ ai ) × ↑1 L 2 and thus we have that
+                          ind(↑(ai∗ ∨ ai , 1 L 2 )) = ind(↑(ai∗ ∨ ai ) × ↑1 L 2 ).
+Since ind(↑(ai∗ ∨ ai )) ⩽ n − 1 and ind(↑1 L 2 ) = ind({1 L 2 }) = −1 ⩽ m − 1,
+                  k(↑(ai∗ ∨ ai ), ↑1 L 2 ) ⩽ max{n − 1, −1} = n − 1 < n ⩽ k.
+Therefore, by the induction hypothesis, we have that
+              ind(↑(ai∗ ∨ ai ) × ↑1 L 2 ) ⩽ max{ind(↑(ai∗ ∨ ai )), ind(↑1 L 2 )}
+                                                ⩽ max{n − 1, m − 1} = max{n, m} − 1.
+Thus, ind(↑(v ∗ ∨ v)) ⩽ k − 1.
+(B) Let j ∈ {1, . . . , t} such that v = (0 L 1 , b j ). In this case we have that v ∗ = (1 L 1 , b∗j ) and
+thus,
+                              ind(↑(v ∗ ∨ v)) = ind(↑(1 L 1 , b∗j ∨ b j )).
+As in case (A), we have that
+                          ind(↑(1 L 1 , b∗j ∨ b j )) = ind(↑1 L 1 × ↑(b∗j ∨ b j )).
+Since ind(↑1 L 1 ) = ind({1 L 1 }) = −1 ⩽ n − 1 and ind(↑(b∗j ∨ b j )) ⩽ m − 1,
+                 k(↑1 L 1 , ↑(b∗j ∨ b j )) ⩽ max{−1, m − 1} = m − 1 < m ⩽ k.
+Therefore, by the induction hypothesis, we have that
+              ind(↑1 L 1 × ↑(b∗j ∨ b j )) ⩽ max{ind(↑1 L 1 ), ind(↑(b∗j ∨ b j ))}
+                                                ⩽ max{n − 1, m − 1} = max{n, m} − 1.
+
+                                                                                                        123
+448                                                                                              Order (2024) 41:437–461
+
+
+Thus, ind(↑(v ∗ ∨ v)) ⩽ k − 1.
+  Considering the above cases, we have that ind(L 1 × L 2 ) ⩽ k.
+  It remains to prove the inequality
+                                max{ind(L 1 ), ind(L 2 )} ⩽ ind(L 1 × L 2 ).
+If ind(L 1 × L 2 ) = −1, then L 1 × L 2 = {1 L 1 ×L 2 } and thus, L 1 = {1 L 1 } and L 2 = {1 L 2 } and
+the inequality holds.
+    We suppose that ind(L 1 × L 2 ) = k, where k ∈ N and we shall prove that ind(L 1 ) ⩽ k
+and ind(L 2 ) ⩽ k. Let V1 = {a1 , . . . , as } and V2 = {b1 , . . . , bt } be minimal covers of L 1 and
+L 2 , respectively. We consider the set
+                     W = {(a1 , 0 L 2 ), . . . , (as , 0 L 2 ), (0 L 1 , b1 ), . . . , (0 L 1 , bt )}.
+Then W is a minimal cover of L 1 × L 2 . Indeed, let C = {(x1 , y1 ), . . . , (x p , y p )} be a cover
+of L 1 × L 2 which refines W . Then each (xi , yi ) ∈ C, i ∈ {1, . . . , p}, is of the form (xi , 0 L 2 )
+and (0 L 1 , yi ). Moreover, since {x1 , . . . , x p } and {y1 , . . . , y p } are covers of L 1 and L 2 , which
+refine V1 and V2 respectively, we have that V1 ⊆ {x1 , . . . , x p } and V2 ⊆ {y1 , . . . , y p }.
+Therefore, W ⊆ C.
+    Since ind(L 1 × L 2 ) = k, by Theorem 2 we have that
+                                 ind(↑((ai , 0 L 2 ) ∨ (ai , 0 L 2 )∗ )) ⩽ k − 1,
+for every i ∈ {1, . . . , s} and
+                                ind(↑((0 L 1 , b j ) ∨ (0 L 1 , b j )∗ )) ⩽ k − 1,
+for every j ∈ {1, . . . , t}. Then
+                          ind(↑(ai ∨ ai∗ )) = ind(↑(ai ∨ ai∗ ) × {1 L 2 })
+                                                  = ind(↑(ai ∨ ai∗ , 1 L 2 ))
+                                                  = ind(↑((ai , 0 L 2 ) ∨ (ai , 0 L 2 )∗ ))
+                                                  ⩽ k − 1,
+for every i ∈ {1, . . . , s} and
+                         ind(↑(b j ∨ b∗j )) = ind({1 L 1 } × ↑(b j ∨ b∗j ))
+                                                 = ind(↑(1 L 1 , b j ∨ b∗j ))
+                                                 = ind(↑((0 L 1 , b j ) ∨ (0 L 1 , b j )∗ ))
+                                                 ⩽ k − 1,
+for every j ∈ {1, . . . , t}. Therefore, ind(L 1 ) ⩽ k1 and ind(L 2 ) ⩽ k.
+
+Corollary 9 Let L 1 and L 2 be finite lattices. Then,
+                                ind(L 1 × L 2 ) < ind(L 1 ) + ind(L 2 ) + 1.
+
+Definition 5 For two lattices (L 1 , ⩽1 ) and (L 2 , ⩽2 ) the lexicographic product L 1  L 2 is the
+lattice (L 1 × L 2 , ⩽), where the relation ⩽ is defined as follows:
+                                                  
+                                                    x1 <1 x2 or
+                        (x1 , y1 ) ⩽ (x2 , y2 ) ⇔
+                                                    x1 = x2 and y1 ⩽2 y2 .
+
+
+123
+Order (2024) 41:437–461                                                                                       449
+
+
+By Definition 4.8 of [8] for every (x, y), (x  , y  ) ∈ L 1  L 2 we have that
+                                               ⎧
+                                               ⎪
+                                               ⎪(x, y), if x < x 
+                                               ⎪
+                                               ⎨(x  , y  ), if x  < x
+                       (x, y) ∧ (x  , y  ) =
+                                               ⎪
+                                               ⎪
+                                               ⎪(x, y ∧ y  ), if x = x 
+                                               ⎩
+                                                (x ∧ x  , 1 L 2 ), if x x 
+and                                                ⎧
+                                                   ⎪
+                                                   ⎪ (x, y), if x  < x
+                                                   ⎪  
+                                                   ⎨ (x , y ), if x < x 
+                           (x, y) ∨ (x  , y  ) =
+                                                   ⎪(x, y ∨ y  ), if x = x 
+                                                   ⎪
+                                                   ⎪
+                                                   ⎩
+                                                     (x ∨ x  , 0 L 2 ), if x x  .
+
+Remark 2 The lattices of Figures 5, 7 and 9 verifies that the inequality
+                                ind(L 3  L 4 ) ⩽ ind(L 3 ) + ind(L 4 ) + 1
+does not hold for all finite lattices L 3 and L 4 .
+   For the finite lattices (L 3 , ⩽3 ) and (L 4 , ⩽4 ) of Figures 5 and 7, respectively we have that
+ind(L 3 ) = ind(L 4 ) = 0. The finite lattice (L 3  L 4 , ⩽) is represented by the diagram of
+Figure 9.
+   We have that ind(L 3  L 4 ) = 2. Thus, the inequality
+                                ind(L 3  L 4 ) ⩽ ind(L 3 ) + ind(L 4 ) + 1
+does not hold.
+
+Proposition 10 Let U be a cover of L 1 L 2 that does not contain (1 L 1 , 1 L 2 ). Then, there exists
+a cover W = {(a1 , b1 ), . . . , (am , bm )} of L 1  L 2 such that W ⊆ U , a1 = . . . = am = 1 L 1 ,
+b1 ∨ . . . ∨ bm = 1 L 2 and bi  = 1 L 2 , for every i = 1, . . . , m.
+
+Proof Let U = {(x1 , y1 ), . . . , (x p , y p )} be a cover of L 1 L 2 that does not contain (1 L 1 , 1 L 2 ).
+   If xi  = 1 L 1 , for every i = 1, . . . , p, then (1 L 1 , 0 L 2 ) is an upper bound of U , which is a
+contradiction (since U is a cover of L 1  L 2 ).
+   Let {i : xi = 1 L 1 } = {i 1 , . . . , i m }. Hence xi  = 1 L 1 for every i ∈    / {i 1 , . . . , i m }. Then,
+yi  = 1 L 2 , i = i 1 , . . . , i m . In the case where m = p, then U is the required cover. If
+yi1 ∨ . . . ∨ yim = z  = 1 L 2 , then (1 L 1 , z) is an upper bound of U , which is a contradiction.
+Therefore, yi1 ∨ . . . ∨ yim = 1 L 2 . The cover W = {(xi1 , yi1 ), . . . , (xim , yim )} is the required
+cover.
+
+Corollary 11 Let U = {(a1 , b1 ), . . . , (am , bm )} be a minimal cover of L 1  L 2 that does not
+contain (1 L 1 , 1 L 2 ). Then, a1 = . . . = am = 1 L 1 , b1 ∨ . . . ∨ bm = 1 L 2 and bi  = 1 L 2 , for
+every i = 1, . . . , m. Moreover, the cover {b1 , . . . , bm } of L 2 is minimal.
+
+Proposition 12 Let L 1 and L 2 be two finite lattices such that the pseudocomplement of every
+element of L 2 \ {0 L 2 } is 0 L 2 . Then ind(L 1  L 2 ) ⩽ ind(L 2 ).
+
+Proof Let ind(L 2 ) = k, where k ∈ N. We prove that ind(L 1  L 2 ) ⩽ k. If every cover
+of L 1  L 2 contains (1 L 1 , 1 L 2 ) (that is {(1 L 1 , 1 L 2 )} is a minimal cover of L 1  L 2 ), then
+ind(L 1  L 2 ) = 0 and the inequality holds.
+   We suppose L 1  L 2 has at least one cover that does not contain (1 L 1 , 1 L 2 ). Let V =
+{(a1 , b1 ), . . . , (am , bm )} be a minimal cover of L 1  L 2 (see Lemma 3.7 of [11]) such that
+
+                                                                                                    123
+450                                                                                  Order (2024) 41:437–461
+
+
+
+
+Fig. 9 The finite lattice (L 3  L 4 , ⩽)
+
+
+a1 = . . . = am = 1 L 1 , b1 ∨ . . . ∨ bm = 1 L 2 , bi  = 1 L 2 , for every i = 1, . . . , m and
+{b1 , . . . , bm } is a minimal cover of L 2 (Corollary 11). That is,
+                                      V = {(1 L 1 , b1 ), . . . , (1 L 1 , bm )}.
+By Theorem 2 we shall prove that for every i ∈ {1, . . . , m},
+                                  ind(↑((1 L 1 , bi ) ∨ (1 L 1 , bi )∗ )) ⩽ k − 1
+and since (1 L 1 , bi ) = (0 L 1 , 0 L 2 ), for every i ∈ {1, . . . , m}, it suffices to prove that for every
+i ∈ {1, . . . , m},
+                                           ind(↑(1 L 1 , bi )) ⩽ k − 1.
+
+123
+Order (2024) 41:437–461                                                                               451
+
+
+   Let i ∈ {1, . . . , m}. Since {b1 , . . . , bm } is a minimal cover of L 2 and ind(L 2 ) = k, we
+have that
+                              ind(↑(bi ∨ bi∗ )) = ind(↑bi ) ⩽ k − 1.
+Since ↑(1 L 1 , bi ) = ↑1 L 1 × ↑bi , we have that
+                     ind(↑(1 L 1 , bi )) = ind({1 L 1 } × ↑bi ) = ind(↑bi ) = k − 1.
+
+
+Remark 3 We also have that the small inductive dimension of the Cartesian product L 1 ×L 2 of
+two finite lattices L 1 and L 2 differs from the small inductive dimension of the corresponding
+lexicographic product.
+(1) We consider the finite lattices L 1 and L 3 , which are represented in the diagrams of Figures
+1 and 5, respectively. We have that ind(L 1 ) = ind(L 3 ) = 0. Also, by Theorem 8 we have
+ind(L 3 × L 1 ) = 0. The lexicographic product L 3  L 1 is represented in Figure 10.
+We observe that ind(L 3  L 1 ) = 1  = ind(L 3 × L 1 ) = 0.
+(2) We consider the finite lattice L 2 and L 3 , which are represented in the diagrams of Figures
+1 and 5, respectively. We have that ind(L 2 ) = 1 and ind(L 3 ) = 0. Also, by Theorem 8, we
+have that ind(L 2 × L 3 ) = 1. Moreover, since the cover {(1 L 2 , 1 L 3 )} is a minimal cover of
+L 2  L 3 , we have that ind(L 2  L 3 ) = 0.
+    Indeed, we shall prove that every cover U of L 2  L 3 contains the element (1 L 2 , 1 L 3 ).
+If we suppose that there exists a cover U = {(a1 , b1 ), . . . , (am , bm )} that does not contain
+(1 L 2 , 1 L 3 ), then the least upper bound of U is the element (1 L 2 , 0 L 3 ) and thus, U is not a
+cover of L 2  L 3 .
+
+Definition 6 [24, 25] The rectangular product of two finite lattices (L 1 , ⩽1 ) and (L 2 , ⩽2 ) is
+the lattice (L 1 L 2 , ⩽), where
+              L 1 L 2 = {(x, y) ∈ L 1 × L 2 : x  = 0 L 1 and y  = 0 L 2 } ∪ {(0 L 1 , 0 L 2 )}
+
+Fig. 10 The finite lattice
+(L 3  L 1 , ⩽)
+
+
+
+
+                                                                                                    123
+452                                                                               Order (2024) 41:437–461
+
+
+and the relation ⩽ is defined as follows:
+
+                              (x1 , y1 ) ⩽ (x2 , y2 ) ⇔ x1 ⩽1 x2 and y1 ⩽2 y2 .
+
+   It is known that for every (x1 , y1 ), (x2 , y2 ) ∈ L 1 L 2 (see [8]),
+                               
+                                 (x1 ∧ x2 , y1 ∧ y2 ), if x1 ∧ x2  = 0 L 1 and y1 ∧ y2  = 0 L 2
+     (x1 , y1 ) ∧ (x2 , y2 ) =
+                                 (0 L 1 , 0 L 2 ), otherwise
+
+and (x1 , y1 ) ∨ (x2 , y2 ) = (x1 ∨ x2 , y1 ∨ y2 ).
+   In the case of rectangular product, in Remark 4, we observe that the product theorem of
+the form ind(L 1 L 2 ) ⩽ ind(L 1 ) + ind(L 2 ) does not hold for all finite lattices L 1 and L 2 ,
+with ind(L 1 ) ⩾ 0 and ind(L 2 ) ⩾ 0, respectively. On the other side, there exist finite lattices
+L 1 and L 2 , with ind(L 1 ) ⩾ 0 and ind(L 2 ) ⩾ 0 for which the product theorem of the form
+ind(L 1 L 2 ) ⩽ ind(L 1 ) + ind(L 2 ) + 1 holds. These two facts led to a natural question,
+whether there exists a kind of product theorem for the rectangular product.
+
+Remark 4 (1) The lattices of Figure 11 and Figure 12 verifies that the inequality
+
+                                    ind(L 1 L 2 ) ⩽ ind(L 1 ) + ind(L 2 )
+
+does not hold for all finite lattices L 1 and L 2 .
+  We have that ind(L 1 ) = ind(L 2 ) = 0 but ind(L 1 L 2 ) = 1.
+(2) We consider the finite lattices (L 1 , ⩽1 ) and (L 2 , ⩽2 ) of Figure 1. Then ind(L 1 ) = 0 and
+ind(L 2 ) = 1. The rectangular product L 2 L 1 is represented by the diagram of Figure 13.
+   We have that ind(L 2 L 1 ) = 0 ⩽ ind(L 2 ) + ind(L 1 ) + 1.
+
+   In order to study the relation of the rectangular product of two finite lattices with the small
+inductive dimension, it is necessary to give an investigation of the following facts, which will
+be very useful.
+
+Proposition 13 Let L 1 and L 2 be two finite lattices and (a, b) ∈ L 1 L 2 . Then
+                       ⎧ ∗ ∗                              ∗                ∗
+                       ⎪(a , b ) = (0 L 1 , 0 L 2 ), if a = 0 L 1 and b = 0 L 2
+                       ⎪
+                       ⎪
+                       ⎨(1 , 1 ),                    if a  = 0 L 1 and b∗  = 0 L 2
+                                                          ∗
+             (a, b)∗ =
+                            L1     L2
+                       ⎪
+                       ⎪
+                       ⎪ (1 L 1 , b∗ ),              if a ∗ = 0 L 1 and b∗  = 0 L 2
+                       ⎩ ∗
+                         (a , 1 L 2 ),               if a ∗  = 0 L 1 and b∗ = 0 L 2 .
+
+
+Fig. 11 The finite lattices
+(L 1 , ⩽1 ) and (L 2 , ⩽2 )
+
+
+
+
+123
+Order (2024) 41:437–461                                                                           453
+
+Fig. 12 The finite lattice
+(L 1 L 2 , ⩽)
+
+
+
+
+Proof We have that
+                                 
+                  (a, b)∗ =          {(x, y) ∈ L 1 L 2 : (a, b) ∧ (x, y) = (0 L 1 , 0 L 2 )}
+                                 
+                             =       {(x, y) ∈ L 1 L 2 : a ∧ x = 0 L 1 or b ∧ y = 0 L 2 }.
+
+   Let M = {(x, y) ∈ L 1 L 2 : a ∧ x = 0 L 1 or b ∧ y = 0 L 2 }. Then we have the following
+cases:
+(i) If a ∗ = 0 L 1 and b∗ = 0 L 2 , then M = {(0 L 1 , 0 L 2 )} and therefore
+
+                                      (a, b)∗ = (a ∗ , b∗ ) = (0 L 1 , 0 L 2 ).
+
+
+
+
+Fig. 13 The finite lattice (L 2 L 1 , ⩽)
+
+
+                                                                                                123
+454                                                                                          Order (2024) 41:437–461
+
+
+(ii) If a ∗  = 0 L 1 and b∗  = 0 L 2 , then there exist x  = 0 L 1 and y  = 0 L 2 such that a ∧ x = 0 L 1
+and b ∧ y = 0 L 2 . Therefore (x, 1 L 2 ) ∈ M and (1 L 1 , y) ∈ M. Thus, (1 L 1 , 1 L 2 ) is the least
+upper bound of M and hence
+                                             (a, b)∗ = (1 L 1 , 1 L 2 ).
+
+(iii) If a ∗ = 0 L 1 and b∗  = 0 L 2 , then a ∧ x = 0 L 1 ⇔ x = 0 L 1 and there exists y  = 0 L 2 such
+that b ∧ y = 0 L 2 . Therefore M = {(x, y) ∈ L 1 L 2 : b ∧ y = 0 L 2 }. Hence
+                                            (a, b)∗ = (1 L 1 , b∗ ).
+
+(iv) If b∗ = 0 L 2 and a ∗  = 0 L 1 , then b ∧ y = 0 L 2 ⇔ y = 0 L 2 and there exists x  = 0 L 1 such
+that a ∧ x = 0 L 1 . Therefore M = {(x, y) ∈ L 1 L 2 : a ∧ x = 0 L 1 }. Hence
+                                            (a, b)∗ = (a ∗ , 1 L 2 ).
+
+
+
+Lemma 14 Let L 1 and L 2 be two finite lattices and
+                                  {(1 L 1 , b1 ), (a2 , b2 ), . . . , (am , bm )}
+be a minimal cover of L 1 L 2 , where m ⩾ 2 and ai  = 1 L 1 , for every i ∈ {2, . . . , m}. Then
+{1 L 1 } is a minimal cover of L 1 .
+
+Proof By Lemma 4.18 of [8] we have that bi  = b j , for every i, j ∈ {1, 2, . . . , m} with i  = j.
+Let {x1 , . . . , x p } be a minimal cover of L 1 . Then the set
+                    {(x1 , b1 ), (x2 , b1 ), . . . , (x p , b1 ), (a2 , b2 ), . . . , (am , bm )}
+is a cover of L 1 L 2 which refines the minimal cover
+                                  {(1 L 1 , b1 ), (a2 , b2 ), . . . , (am , bm )}
+of L 1 L 2 . Since {(1 L 1 , b1 ), (a2 , b2 ), . . . , (am , bm )} is minimal, we have that xi = 1 L 1 , for
+some i ∈ {1, . . . , p}. Since {x1 , . . . , x p } is minimal with 1 L 1 ∈ {x1 , . . . , x p }, we have that
+x1 = . . . = x p = 1 L 1 . Therefore, {1 L 1 } is a minimal cover of L 1 .
+
+Lemma 15 Let L 1 and L 2 be two finite lattices and
+                                  {(a1 , 1 L 2 ), (a2 , b2 ), . . . , (am , bm )}
+be a minimal cover of L 1 L 2 , where m ⩾ 2 and bi  = 1 L 2 , for every i ∈ {2, . . . , m}. Then
+{1 L 2 } is a minimal cover of L 2 .
+
+Proof The proof is similar to the proof of Lemma 14.
+
+Lemma 16 Let L 1 and L 2 be two finite lattices and {(a1 , 1 L 2 ), (1 L 1 , b2 )} be a minimal cover
+of L 1 L 2 , where a1  = 1 L 1 and b2  = 1 L 2 . Then {1 L 1 } and {1 L 2 } are minimal covers of L 1
+and L 2 , respectively.
+
+Proof Also this proof is similar to the proof of Lemma 14.
+
+   As we have observed in Remark 4, our goal is to provide a kind of product theorem for
+the case of rectangular product. Therefore, based on the above lemmas, we investigate the
+corresponding rectangular product theorem. However, in order to succeed this result, we
+
+123
+Order (2024) 41:437–461                                                                                         455
+
+
+study the small inductive dimension of the rectangular product of two finite lattices L 1 and
+L 2 in parts.
+   By Theorem 2 we have a characterization of the small inductive dimension using minimal
+covers. Thus, in order to study the small inductive dimension of the rectangular product of
+two finite lattices L 1 and L 2 it suffices to study propositions related to the minimal covers
+of L 1 L 2 . This is succeeded in the following four propositions. In Theorem 21 we have the
+desired result.
+Proposition 17 Let L 1 and L 2 be two finite lattices. For any minimal cover V =
+{(a1 , b1 ), (a2 , b2 )} of L 1 L 2 , which consists of two elements, the following inequality holds
+               ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{ind(L 1 ) − 1, ind(L 2 ) − 1, 0},
+for every i ∈ {1, 2}.
+Proof We suppose that ind(L 1 ) = k1 ⩾ 0, ind(L 2 ) = k2 ⩾ 0. We shall prove that
+                      ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1, 0},
+for every i ∈ {1, 2}. Firstly, by Proposition 13, we observe that for the elements (ai , bi ) ∈ V ,
+i ∈ {1, 2}, one of the following equations is true:
+1) (ai , bi ) ∨ (ai , bi )∗ = (ai , bi ) ∨ (ai∗ , 1 L 2 ) = (ai ∨ ai∗ , 1 L 2 ),
+2) (ai , bi ) ∨ (ai , bi )∗ = (ai , bi ) ∨ (1 L 1 , bi∗ ) = (1 L 1 , bi ∨ bi∗ ),
+3) (ai , bi ) ∨ (ai , bi )∗ = (ai , bi ) ∨ (0 L 1 , 0 L 2 ) = (ai , bi ),
+4) (ai , bi ) ∨ (ai , bi )∗ = (ai , bi ) ∨ (1 L 1 , 1 L 2 ) = (1 L 1 , 1 L 2 ).
+Thus, by Lemma 7 and Theorem 8, in each of these cases we have that
+     ind(↑((ai , bi ) ∨ (ai , bi )∗ )) = max{ind(↑(ai ∨ ai∗ )), ind(↑(bi ∨ bi∗ ))}, i ∈ {1, 2}.
+We have the following cases:
+  (i) 1 L 1 ∈
+            / {a1 , a2 } and 1 L 2 ∈
+                                   / {b1 , b2 },
+ (ii) 1 L 1 ∈ {a1 , a2 } and 1 L 2 ∈
+                                   / {b1 , b2 },
+(iii) 1 L 1 ∈
+            / {a1 , a2 } and 1 L 2 ∈ {b1 , b2 },
+(iv) 1 L 1 ∈ {a1 , a2 } and 1 L 2 ∈ {b1 , b2 }.
+ (i) 1 L 1 ∈
+           / {a1 , a2 } and 1 L 2 ∈
+                                  / {b1 , b2 }: In this case, {a1 , a2 } and {b1 , b2 } are minimal
+     covers of L 1 and L 2 , respectively (see, Lemma 4.13 of [8]). Since ind(L 1 ) = k1 and
+     ind(L 2 ) = k2 , for every i ∈ {1, 2}, we have that ind(↑(ai ∨ ai∗ )) ⩽ k1 − 1 and
+     ind(↑(bi ∨ bi∗ )) ⩽ k2 − 1. Therefore,
+               ind(↑((ai , bi ) ∨ (ai , bi )∗ )) = max{ind(↑(ai ∨ ai∗ )), ind(↑(bi ∨ bi∗ ))}
+                                                    ⩽ max{k1 − 1, k2 − 1}.
+     Thus, ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1, 0}, for every i ∈ {1, 2}.
+ (ii) 1 L 1 ∈ {a1 , a2 } and 1 L 2 ∈   / {b1 , b2 }: Say a2 = 1 L 1 . (If a1 = 1 L 1 , then we work in
+      a similar way.) In this case, {a1 , 1 L 1 } is not a minimal cover of L 1 and {b1 , b2 } is a
+      minimal cover of L 2 . Indeed, let {y1 , . . . , y p } be a cover of L 2 which refines {b1 , b2 }.
+      We shall prove that {b1 , b2 } ⊆ {y1 , . . . , y p }. Since {y1 , . . . , y p } refines {b1 , b2 }, for
+      every i ∈ {1, . . . , p}, there exists j ∈ {1, 2} such that yi ⩽ b j . We observe that there
+      exists i 0 ∈ {1, . . . , p} for which yi0 ⩽ b2 . (If for every i ∈ {1, . . . , p} we have yi ⩽ b1 ,
+      then {y1 , . . . , y p } will not be a cover of L 2 .) We consider the set
+               W = {(a1 , y1 ), . . . , (a1 , yi0 −1 ), (1 L 1 , yi0 ), (a1 , yi0 +1 ), . . . , (a1 , y p )}.
+
+                                                                                                           123
+456                                                                                               Order (2024) 41:437–461
+
+
+      Then W is a cover of L 1 L 2 which refines the minimal cover {(a1 , b1 ), (1 L 1 , b2 )}.
+      Therefore,
+      {(a1 , b1 ), (1 L 1 , b2 )} ⊆ {(a1 , y1 ), . . . , (a1 , yi0 −1 ), (1 L 1 , yi0 ), (a1 , yi0 +1 ), . . . , (a1 , y p )}
+      and thus, b1 = yi , for some i ∈ {1, . . . , p}, i  = i 0 , and b2 = yi0 . Therefore, {b1 , b2 } ⊆
+      {y1 , . . . , y p }. Since ind(L 2 ) = k2 , we have that ind(↑(bi ∨ bi∗ )) ⩽ k2 − 1, for every
+      i ∈ {1, 2} and thus,
+                 ind(↑((ai , bi ) ∨ (ai , bi )∗ )) = max{ind(↑(ai ∨ ai∗ )), ind(↑(bi ∨ bi∗ ))}
+                                                       ⩽ max{ind(↑(ai ∨ ai∗ )), k2 − 1}.
+      By Lemma 14 since {1 L 1 } is a minimal cover of L 1 , we have that ind(L 1 ) = 0 and
+      also since {1 L 1 } is a minimal cover of ↑(a1 ∨ a1∗ ), we have that ind(↑(a1 ∨ a1∗ )) = 0.
+      Moreover, we know that ind(↑(a2 ∨ a2∗ )) = −1 ⩽ k1 − 1. Thus, for every i ∈ {1, 2} we
+      have that
+                           ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1}.
+      Therefore, ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1, 0}, for every i ∈ {1, 2}.
+(iii) 1 L 1 ∈
+            / {a1 , a2 } and 1 L 2 ∈ {b1 , b2 }: This case is similar to (ii), considering Lemma 15.
+(iv) 1 L 1 ∈ {a1 , a2 } and 1 L 2 ∈ {b1 , b2 }: This case is similar to (ii), considering Lemma 16.
+Proposition 18 Let L 1 and L 2 be two finite lattices. For any minimal cover V =
+{(a1 , b1 ), (a2 , b2 ), . . . , (am , bm )}, where m > 2, of L 1 L 2 for which a1 = 1 L 1 , ai  = 1 L 1
+for every i ∈ {2, . . . , m} and {b1 , . . . , bm } is a minimal cover of L 2 the following inequality
+holds
+                ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{ind(L 1 ) − 1, ind(L 2 ) − 1, 0},
+for every i ∈ {1, 2, . . . , m}.
+Proof We suppose that ind(L 1 ) = k1 ⩾ 0 and ind(L 2 ) = k2 ⩾ 0. We shall prove that
+                         ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1, 0},
+for every 1 ∈ {1, 2, . . . , m}. Since {b1 , . . . , bm } is a minimal cover of L 2 , ind(↑(bi ∨ bi∗ )) ⩽
+k2 − 1, for every i ∈ {1, . . . , m}.
+     Also, by Lemma 14, {1 L 1 } is a minimal cover of L 1 and then, every cover of L 1 contains
+1 L 1 and ind(L 1 ) = 0. We know that ind(↑(a1 ∨ a1∗ )) = −1 ⩽ k1 − 1. We shall prove
+that ind(↑(ai ∨ ai∗ )) = 0, for every i ∈ {2, . . . , m}. Indeed, let i ∈ {2, . . . , m}. Since
+{1 L 1 } is a minimal cover of ↑(ai ∨ ai∗ ), we have that ind(↑(ai ∨ ai∗ )) = 0. Thus, for every
+i ∈ {1, 2, . . . , m}, we have
+              ind(↑((ai , bi ) ∨ (ai , bi )∗ )) = max{ind(↑(ai ∨ ai∗ )), ind(↑(bi ∨ bi∗ ))}
+                                                    ⩽ max{k1 − 1, k2 − 1}.
+Altogether, ind(↑((ai , bi )∨(ai , bi )∗ )) ⩽ max{k1 −1, k2 −1, 0}, for every i ∈ {1, 2, . . . , m}.
+
+
+Proposition 19 Let L 1 and L 2 be two finite lattices. For any minimal cover V =
+{(a1 , b1 ), (a2 , b2 ), . . . , (am , bm )}, where m > 2, of L 1 L 2 for which b1 = 1 L 2 , bi  = 1 L 2 ,
+for every i ∈ {2, . . . , m} and {a1 , . . . , am } is a minimal cover of L 1 , the following inequality
+holds
+                ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{ind(L 1 ) − 1, ind(L 2 ) − 1, 0},
+for every i ∈ {1, 2, . . . , m}.
+
+123
+Order (2024) 41:437–461                                                                                 457
+
+
+Proof It is similar to the proof of Proposition 18.
+
+Proposition 20 Let L 1 and L 2 be two finite lattices. For any minimal cover V =
+{(a1 , b1 ), (a2 , b2 ), . . . , (am , bm )}, where m > 2, for which 1 L 1 ∈        / {a1 , . . . , am } and
+1L 2 ∈/ {b1 , . . . , bm } such that {a1 , . . . , am } and {b1 , . . . , bm } are minimal covers of L 1
+and L 2 , respectively, the following inequality holds
+               ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{ind(L 1 ) − 1, ind(L 2 ) − 1, 0},
+for every i ∈ {1, 2, . . . , m}.
+
+Proof We suppose that ind(L 1 ) = k1 ⩾ 0 and ind(L 2 ) = k2 ⩾ 0. We shall prove that
+                     ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1, 0},
+for every 1 ∈ {1, 2, . . . , m}.
+   Since ind(L 1 ) = k1 and ind(L 2 ) = k2 , we have that ind(↑(ai ∨ ai∗ )) ⩽ k1 − 1 and
+ind(↑(bi ∨ bi∗ )) ⩽ k2 − 1, for every i ∈ {1, . . . , m}. Thus, for every i ∈ {1, . . . , m}, we have
+that
+                    ind(↑((ai , bi ) ∨ (ai , bi )∗ )) ⩽ max{k1 − 1, k2 − 1, 0}.
+
+Theorem 21 Let L 1 and L 2 be two finite lattices. If any minimal cover V of L 1 L 2 satisfies
+one of the conditions of Propositions 17, 18, 19 and 20, then the following inequality holds
+                            ind(L 1 L 2 ) ⩽ max{ind(L 1 ), ind(L 2 ), 1}.
+
+Proof It follows by Theorem 2 and Propositions 17, 18, 19 and 20.
+
+Remark 5 We observe that the small inductive dimension of the Cartesian product L 1 × L 2
+of two finite lattices L 1 and L 2 and of their rectangular product are different. In particular,
+both relations
+               ind(L 1 × L 2 ) ⩽ ind(L 1 L 2 ) and ind(L 1 L 2 ) ⩽ ind(L 1 × L 2 )
+does not hold for all finite lattices L 1 and L 2 .
+    We consider the finite lattices, which are represented in Remark 4 (1). Then we have
+that ind(L 1 L 2 ) = 1 and since ind(L 1 ) = ind(L 2 ) = 0, by Theorem 8 we have that
+ind(L 1 × L 2 ) = 0.
+    Moreover, for the lattices of Remark 4 (2) we have that ind(L 2 L 1 ) = 0 and ind(L 2 ×
+L 1 ) = 1.
+
+
+4 Relationship to other Dimensions
+
+In this section, we present some additional remarks for the small inductive dimension ind for
+the class of finite lattices.
+    We remind that the height of a finite lattice L is defined as follows:
+      h(L) = max{k : there exist a0 , . . . , ak ∈ L such that 0 L = a0 < . . . < ak = 1 L }.
+
+Example 2 (1) For the lattice L 1 of Figure 1 we have that ind(L 1 ) = 0 and h(L 2 ) = 2.
+(2) For the totally ordered set L = {x1 , . . . , xn , 0 L , 1 L }, we have that h(L) = n + 1 and
+ind(L) = 0.
+
+
+                                                                                               123
+458                                                                        Order (2024) 41:437–461
+
+
+Proposition 22 For every finite lattice L, ind(L) < h(L).
+
+Proof We prove the inequality by induction on h(L). Clearly if h(L) = 0, then L = {1 L }
+and thus, ind(L) = −1, proving that the relation of the proposition holds.
+   We suppose that the inequality holds for all finite lattices M with h(M) < k, k ⩾ 1, and
+we shall prove it for k. Let L be a finite lattice with h(L) = k, V be a minimal cover of L and
+v ∈ V . By Theorem 2 it suffices to prove that ind(↑(v ∨ v ∗ )) ⩽ k − 2. Since ↑(v ∨ v ∗ )  = L,
+we have that h(↑(v ∨ v ∗ )) < h(L) and thus, h(↑(v ∨ v ∗ )) ⩽ k − 1. By inductive hypothesis
+we have that ind(↑(v ∨v ∗ )) < k −1, proving that ind(L) ⩽ k −1 or equivalently ind(L) < k.
+
+   A non-empty subset F of a lattice (L, ⩽) is called filter if F has the following properties:
+  (i) F  = L,
+ (ii) If x ∈ F and x ⩽ y, then y ∈ F,
+(iii) If x, y ∈ F, then x ∧ y ∈ F.
+A filter F is called prime if for every x, y ∈ L with x ∨ y ∈ F, we have x ∈ F or y ∈ F.
+The set of all prime filters of a lattice L is usually denoted by PF (L).
+   If PF (L)  = ∅, then the Krull dimension (see [26]) of L is defined as follows:
+             Kdim(L) = sup{k : there exist prime filters F0 ⊂ F1 ⊂ · · · ⊂ Fk }.
+Also, in the study [19], the Krull dimension is studied through join prime elements and
+matrices. An element x ∈ L is said to be join prime if it is nonzero and the inequality
+x ⩽ a ∨ b implies x ⩽ a or x ⩽ b, for all a, b ∈ L.
+
+Example 3 We show by examples that the dimensions ind and Kdim for finite lattices are in
+general different.
+(1) The small inductive dimension of both the diamond and the pentagon (see Figure 14) are
+equal to 0, but since they are not Boolean Algebras, their Krull dimensions are both not equal
+to 0 (see [26]).
+(2) We consider the finite lattice (L, ⩽), represented by the diagram of Figure 15.
+   We have that ind(L) = 2 and Kdim(L) = 1. (The join prime elements of L are the
+elements x1 and x2 and thus, by Proposition 4.5 (5) of [19] we have that Kdim(L) = 1.)
+   Let L be a finite lattice. The order of a subset C of L, denoted by ord(C), is defined to
+be k, where k ∈ N if and only if the infimum of any k + 2 distinct elements of C is 0 L and
+there exist k + 1 distinct elements of C whose infimum is not 0 L .
+
+
+
+
+Fig. 14 The pentagon and the diamond
+
+
+123
+Order (2024) 41:437–461                                                                    459
+
+Fig. 15 The finite lattice (L, ⩽)
+
+
+
+
+   The function dim, called covering dimension, with domain the class of all finite lattices
+and range the set N is defined as follows:
+1. dim(L) ⩽ k, where k ∈ N, if and only if for every cover C of L, there exists a cover R of
+   L, refinement of C with ord(R) ⩽ k.
+2. dim(L) = k, where k ∈ N, if dim(L) ⩽ k and dim(L)  k − 1.
+
+Remark 6 We show by examples that the dimensions ind and dim for finite lattices are in
+general different.
+(1) We consider the lattice of Example 3 (2). Then ind(L) = 2 and dim(L) = 1. (For the
+minimal covers V1 = {x2 , x6 } and V2 = {x4 , x5 } we have that ord(V1 ) = ord(V2 ) = 1.)
+(2) We consider the lattice L represented by the diagram of Figure 16.
+We have that the minimal cover of L is the set {x 2 , x3 , x4 }, dim(L) = 2 and ind(L) = 1.
+
+Proposition 23 For every finite lattice L, if dim(L) = 0, then ind(L) = 0.
+
+Proof Let L be a finite lattice, V be a minimal cover of L and v ∈ V . By Theorem 2 it suffices
+to prove that ind(↑(v ∨ v ∗ )) = −1. Since dim(L) = 0, by [8] we have that ord(V ) = 0.
+Therefore, w ∧ v = 0 L , for every w ∈ V \ {v}. Hence,
+                                                      
+                   v∗ =       {y ∈ L : y ∧ v = 0 L } ⩾    {w ∈ V : w  = v}
+
+and                                                          
+                          v∗ ∨ v ⩾    {w ∈ V : w  = v} ∨ v =   V = 1L ,
+
+proving that ind(↑(v ∨ v ∗ )) = −1. Therefore, ind(L) = 0.
+
+
+                                                                                    123
+460                                                                                     Order (2024) 41:437–461
+
+Fig. 16 The finite lattice (L, ⩽)
+
+
+
+
+Acknowledgements The authors would like to thank both reviewers for their comments and suggestions
+
+Data Availability Data sharing not applicable to this article as no datasets were generated or analysed during
+the current study
+
+
+Declarations
+Not applicable
+
+
+References
+ 1. Banaschewski, B., Gilmour, G.: Stone-Čech compactification and dimension theory for regular σ -frames.
+    J. London Math. Soc. 39(2), 1–8 (1989)
+ 2. Brijlall, D., Baboolal, D.: Some aspects of dimension theory of frames. Indian J. Pure Appl. Math. 39(5),
+    375–402 (2008)
+ 3. Brijlall, D., Baboolal, D.: The katětov-morita theorem for the dimension of metric frames. Indian J. Pure
+    Appl. Math. 41(3), 535–553 (2010)
+ 4. Charalambous, M.G.: Dimension theory of σ -frames. J. London Math. Soc. 8(2), 149–160 (1974)
+ 5. Charalambous, M.G.: The dimension of paracompact normal κ-frames. Topology Proc. 20, 49–66 (1995)
+ 6. Georgiou, D.N., Kougias, I., Megaritis, A., Prinos, G., Sereti, F.: A study of a new dimension for frames.
+    Topology Appl. 275, 106995–13 (2020)
+ 7. Boyadzhiev, D., Georgiou, D., Megaritis, A., Sereti, F.: A study of a covering dimension of a finite lattices.
+    Appl. Math. Comput. 333, 276–285 (2018)
+ 8. Dube, T., Georgiou, D.N., Megaritis, A.C., Moshokoa, S.P.: A study of covering dimension for the class
+    of finite lattices. Discrete Math. 338(7), 1096–1110 (2015)
+
+
+123
+Order (2024) 41:437–461                                                                                     461
+
+
+ 9. Georgiou, D.N., Megaritis, A.C., Sereti, F.: A study of the order dimension of a poset using matrices.
+    Quaest. Math. 39(6), 797–814 (2016)
+10. Engelking, R.: Theory of Dimensions Finite and Infinite. Heldermann Verlag, Lemgo (1995)
+11. Pears, A.R.: Dimension Theory of General Spaces. Cambridge University Press, Cambridge, England-
+    New York-Melbourne (1975)
+12. Nagata, J.: Modern Dimension Theory. Heldermann Verlag, Berlin (1983)
+13. Nagami, K.: Dimension Theory. Academic Press, New York-London (1970)
+14. Charalambous, M.G.: Dimension Theory. A Selection of Theorems and Counterexamples. Springer, Cham
+    (2019)
+15. Berghammer, R., Winter, M.: Order- and graph-theoretic investigation of dimensions of finite topological
+    spaces and Alexandroff spaces. Monatsh. Math. 190(1), 33–78 (2019)
+16. Georgiou, D.N., Megaritis, A.C.: An algorithm of polynomial order for computing the covering dimension
+    of a finite space. Appl. Math. Comput. 231, 276–283 (2014)
+17. Georgiou, D.N., Megaritis, A.C.: Covering dimension and finite spaces. Appl. Math. Comput. 218(7),
+    3122–3130 (2011)
+18. Georgiou, D.N., Megaritis, A.C., Moshokoa, S.P.: A computing procedure for the small inductive dimen-
+    sion of a finite T0 -space. Comput. Appl. Math. 34(1), 401–415 (2015)
+19. Dube, T., Georgiou, D.N., Megaritis, A.C., Sereti, F.: Studying the Krull dimension of finite lattices under
+    the prism of matrices. Filomat 31(10), 2901–2915 (2017)
+20. Zhang, H.-f, Zhou, M., Zhang, G..-j: Answer to some open questions on covering dimension for finite
+    lattices. Discrete Math. 340(5), 1086–1091 (2017)
+21. Khalimsky, E., Kopperman, R., Meyer, P.R.: Computer graphics and connected topologies on finite ordered
+    sets. Topology Appl. 36(1), 1–17 (1990)
+22. Johnstone, P.T.: Stone Spaces. Cambridge University Press, Cambridge (1986)
+23. Davey, B.A., Priestley, H.A.: Introduction to Lattices and Order. Cambridge University Press, New York
+    (2002)
+24. Bae, D.R.: Properties of lattices preserved by taking rectangular products. Comm. Korean Math. Soc.
+    9(1), 37–47 (1994)
+25. Bennett, M.K.: Rectangular products of lattices. Discrete Mathematics 79, 235–249 (1990)
+26. Vinokurov, V.G.: Lattice method of defining dimension. Dokl. Akad. Nauk SSSR 168, 504–507 (1966)
+
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under
+a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted
+manuscript version of this article is solely governed by the terms of such publishing agreement and applicable
+law.
+
+
+
+
+                                                                                                   123
+
