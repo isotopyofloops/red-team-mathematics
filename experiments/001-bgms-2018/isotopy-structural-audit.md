@@ -63,7 +63,7 @@ Both parts correctly translate between the cover condition and being a cover. **
 C = {x_{j₁},...,x_{jₘ}} (antichain cover) is minimal iff for every i ∈ {1,...,m}:
 
 **(M1)** C \ {x_{jᵢ}} is not a cover.
-**(M2)** For every k₁, k₂ ∉ C with x_{k₁} ‖ x_{k₂}, x_{k₁}, x_{k₂} ∈ ↓*x_{jᵢ} ∩ Pl(C\{x_{jᵢ}}): (C\{x_{jᵢ}}) ∪ {x_{k₁}, x_{k₂}} **IS a cover.**
+**(M2)** For every k₁, k₂ ∉ C with x_{k₁} ‖ x_{k₂}, x_{k₁}, x_{k₂} ∈ ↓*x_{jᵢ} ∩ Pl(C\{x_{jᵢ}}): (C\{x_{jᵢ}}) ∪ {x_{k₁}, x_{k₂}} is **NOT a cover.**
 **(M3)** For every k ∉ C with x_k ∈ ↓*x_{jᵢ} ∩ Pl(C\{x_{jᵢ}}): (C\{x_{jᵢ}}) ∪ {x_k} is **NOT a cover.**
 
 Where ↓*x_{jᵢ} = {x ∈ X : x ≤ x_{jᵢ}} \ {0_X} requires x_k **< x_{jᵢ}** (strictly below, not above).
@@ -83,11 +83,7 @@ Where ↓*x_{jᵢ} = {x ∈ X : x ≤ x_{jᵢ}} \ {0_X} requires x_k **< x_{jᵢ
 
 then (C\{x_{jᵢ}}) ∪ {x_{k₁}, x_{k₂}} **does NOT satisfy** cover condition.
 
-**Two errors:**
-
-**Error A (direction loss):** The condition "3 ∈ r_{jᵢ}(A) + r_{k₁}(A)" tests comparability (symmetric). The lattice condition (M2) requires x_{k₁} ∈ ↓*x_{jᵢ}, meaning x_{k₁} < x_{jᵢ} (directional). The correct matrix test is "3 ∈ r_{k₁}(A) − r_{jᵢ}(A)" (Proposition 3.1(2)). The addition picks up pairs where x_{jᵢ} < x_{k₁} (above, not below), which should not qualify.
-
-**Error B (reversed conclusion):** (M2) says the double replacement **IS** a cover. (MC2) says it is **NOT** a cover. These are opposite.
+**Error (direction loss):** The condition "3 ∈ r_{jᵢ}(A) + r_{k₁}(A)" tests comparability (symmetric). The lattice condition (M2) requires x_{k₁} ∈ ↓*x_{jᵢ}, meaning x_{k₁} < x_{jᵢ} (directional). The correct matrix test is "3 ∈ r_{k₁}(A) − r_{jᵢ}(A)" (Proposition 3.1(2)). The addition picks up pairs where x_{jᵢ} < x_{k₁} (above, not below), which should not qualify.
 
 **(MC3)** If k satisfies:
 - **3 ∈ r_{jᵢ}(A) + r_k(A)** — tests **comparability**, not x_k < x_{jᵢ}
@@ -95,7 +91,7 @@ then (C\{x_{jᵢ}}) ∪ {x_{k₁}, x_{k₂}} **does NOT satisfy** cover conditio
 
 then (C\{x_{jᵢ}}) ∪ {x_k} does NOT satisfy cover condition.
 
-**Error A again (direction loss):** Same as MC2. The condition should be "3 ∈ r_k(A) − r_{jᵢ}(A)" to test x_k < x_{jᵢ}. With addition, it picks up x_{jᵢ} < x_k (wrong direction).
+**Same error (direction loss):** Same as MC2. The condition should be "3 ∈ r_k(A) − r_{jᵢ}(A)" to test x_k < x_{jᵢ}. With addition, it picks up x_{jᵢ} < x_k (wrong direction).
 
 ---
 
@@ -184,7 +180,7 @@ The paper claims A₂(X) = {{x₂,x₇}, {x₃,x₅}, {x₄,x₆}, {x₅,x₆}, 
 | # | Location | Type | Description |
 |---|----------|------|-------------|
 | 1 | Theorem 3.7, (MC3) | **False intermediate theorem** | Uses "3 ∈ r_{jᵢ}(A) + r_k(A)" (comparability, symmetric) where the lattice condition (M3) requires x_k < x_{jᵢ}, needing "3 ∈ r_k(A) − r_{jᵢ}(A)" (directed, asymmetric). The addition admits pairs where x_{jᵢ} < x_k (wrong direction), producing false conclusions. |
-| 2 | Theorem 3.7, (MC2) | **False intermediate theorem** | Same directional error as #1, AND reversed conclusion: (M2) says the replacement IS a cover; (MC2) says it is NOT. |
+| 2 | Theorem 3.7, (MC2) | **False intermediate theorem** | Same directional error as #1: uses row addition (comparability) where row subtraction (directed order) is needed. |
 | 3 | Example 3.10 | **Computational error** | A₂(X) omits {x₃,x₄} and {x₃,x₇}. MCov(X) given as {{x₂,x₃,x₄}} which is not minimal. |
 
 **Primary defect:** The matrix translation of the ↓*x_{jᵢ} condition (x_k strictly below x_{jᵢ}) uses row addition where it must use row subtraction. Row addition is symmetric and detects comparability; row subtraction is asymmetric and detects directed strict order — exactly the distinction Proposition 3.1 defines. The paper uses the correct operation (subtraction) in Prop 3.1(2) but switches to the wrong operation (addition) in Theorem 3.7's conditions (MC2) and (MC3).
@@ -197,7 +193,7 @@ The paper claims A₂(X) = {{x₂,x₇}, {x₃,x₅}, {x₄,x₆}, {x₅,x₆}, 
 
 ### Directly affected:
 
-- **Algorithm 3.9 (Step 8):** Uses (MC1)+(MC2)+(MC3) to identify minimal covers. The direction error causes it to reject genuine minimal covers (proven by example). May also accept non-minimal covers if (MC2) with reversed conclusion interacts incorrectly with the filter.
+- **Algorithm 3.9 (Step 8):** Uses (MC1)+(MC2)+(MC3) to identify minimal covers. The direction error causes it to reject genuine minimal covers (proven by example).
 
 - **Algorithm 5.4:** Computes dim(X) via Algorithm 3.9. Since 3.9 may produce wrong MCov(X), the computed dimension could be wrong.
 
@@ -274,14 +270,7 @@ This correctly tests x_k < x_{jᵢ} (Proposition 3.1(2) with k₁ = k, k₂ = j�
 ### Fix for (MC2):
 
 1. Replace "3 ∈ r_{jᵢ}(A_X^≤) + r_{k₁}(A_X^≤)" with "3 ∈ r_{k₁}(A_X^≤) − r_{jᵢ}(A_X^≤)" (and similarly for k₂).
-2. Change the conclusion from "does not satisfy the cover condition" to "satisfies the cover condition" (matching M2).
 
-### Verification of repair on the witness:
+### Verification of repair
 
-For C = {x₃, x₄}, i = 1, k = 6:
-
-Repaired (MC3) test: 3 ∈ r₆(A) − r₃(A)?
-r₆ − r₃ = (−2−(−2), −2−0, −2−1, 0−0, 0−0, 1−2, 0−0, 2−2) = (0, −2, −3, 0, 0, −1, 0, 0).
-3 ∉ {0, −2, −3, −1}. Hypothesis fails. ✓ (Correctly rejects k = 6 because x₆ > x₃, not x₆ < x₃.)
-
-No other k satisfies the repaired hypothesis for C = {x₃, x₄}, so (MC3) is vacuously true. Combined with (MC1) (verified) and (MC2) (vacuously true), the repaired Theorem 3.7 correctly identifies {x₃, x₄} as minimal. ✓
+My original {x₃, x₄} witness is invalid (see Correction 1 above — a₃₇ = 2, not 0, so {x₃, x₄} is not a cover). For valid repair verification, see Fable's N₅ certificate (`isotopy-fable-repair-audit.md`) and Alethon's 7-element certificate (`alethon-certificates-n5-l6.md`), both independently verified by `verify_certificates.py`.
