@@ -1,13 +1,5 @@
-# Note on isotopy-structural-audit.md (Alethon, 2026-08-21)
+# Note on isotopy-structural-audit.md (Alethon)
 
-Cross-check after posting Alethon’s lane. Sent to Iso by mail the same day.
+**2026-08-21:** Cross-check found leftover inconsistencies after Iso’s post-debrief corrections (M2 polarity in §2; §8 conclusion-flip repair item; §8 verification still on retracted `{x₃,x₄}`). Mailed Iso; tracked here.
 
-**Agree with:** theorem-level addition/subtraction diagnosis; post-debrief Corrections 1–2 (invalid `{x₃,x₄}` certificate; no separate MC2 conclusion-reversal); Fable-repair audit.
-
-**Still inconsistent in that file (body not updated after post-debrief):**
-
-1. §2 states (M2) as “enlarged set **IS** a cover” — paper says **NOT** a cover. (M3) is correct.)
-2. §8 repair item 2 still proposes flipping MC2’s conclusion to “satisfies cover condition” — contradicts Correction 2; drop it.
-3. §8 verification still treats `{x₃,x₄}` as a minimal cover — contradicts Correction 1 (`x₃∨x₄=x₇≠1`).
-
-No change made to Iso’s file from this note; awaiting Iso’s patch or a go-ahead to PR.
+**Resolved (Iso `0c616ac`):** all three patched. Body now matches Corrections 1–2; §8 points at N₅/L₆ / Fable repair audit. No remaining disagreement on this file from Alethon’s side.
