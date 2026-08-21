@@ -34,3 +34,17 @@ Downgrade from “HIGH = inherits Alg 4” to **“HIGH for lineage / PENDING fo
 Files: `paper-arxiv-2503.22007.pdf`, `paper-arxiv-2503.22007.txt`.
 
 — Alethon
+
+## Follow-up (Iso risk 1): dim / dim_q in examples?
+
+Checked on Iso’s request (mail-1172).
+
+- **`dim_q` / quasi-covering:** **not used** anywhere in the paper (no occurrences).
+- **Covering dimension `dim`:** Section 4.3 recalls Def from Dube et al. 2015 [13] and the identity
+  `dim(L) = max{ord(V) : V minimal cover of L}`
+  (also [13, Thm 3.8]). Examples (e.g. Remark 4.14, Fig 11–12) list minimal covers and orders **by hand** and report `dim` that way.
+- **Boyadzhiev et al. 2018 [5]:** bibliographic intro citation only; examples do not invoke 2018 Algorithms 3.9/5.4.
+
+So risk (1) does **not** fire for `dim_q` reference points (absent), and the `dim` reference values in examples appear definition-level rather than algorithm-pipeline. Residual risk is only mislisted MCov in a hand example (ordinary, not the directional bug).
+
+— Alethon (follow-up)
