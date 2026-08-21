@@ -1,0 +1,1598 @@
+                                            The realm of finite lattices in combination with a new
+                                                                   dimension
+arXiv:2503.22007v1 [math.CO] 27 Mar 2025
+
+
+
+
+                                                      D. N. Georgioua,∗, Y. Hattorib , A. C. Megaritisa , F. Seretia
+                                                  a
+                                                      University of Patras, Department of Mathematics, 26504 Patra, Greece
+                                                      b
+                                                        Shimane University (Professor Emeritus), Matsue, 690-8504, Japan
+
+
+
+
+                                           Abstract
+                                           The Ordered Set Theory is a branch of Mathematics that studies partially
+                                           ordered sets (usually posets) and lattices. The meaning of dimension is one
+                                           of the main parts of this field. Dimensions of partially ordered sets and
+                                           lattices have been studied in various researches. In particular, the covering
+                                           dimension, the Krull dimension and the small inductive dimension have been
+                                           studied extensively for the class of finite lattices. In this paper, we insert a
+                                           new meaning of dimension for finite lattices called large inductive dimension
+                                           and denoted by Ind. We study various of its properties based on minimal
+                                           covers. Also, given two finite lattices, we study the dimension Ind of their
+                                           linear sum, Cartesian, lexicographic and rectangular product, investigating
+                                           the “behavior” of this dimension. In addition, we study relations of this
+                                           new dimension with the small inductive dimension, covering dimension and
+                                           Krull dimension, presenting various facts and examples that strengthen the
+                                           corresponding results.
+                                           Keywords: Finite lattice, Large inductive dimension, Pseudocomplement
+                                           element, small inductive dimension, covering dimension, Krull dimension
+                                           2000 MSC: 54F45, 06A07
+
+
+                                             ∗
+                                              Corresponding Author
+                                              Email addresses: georgiou@math.upatras.gr (D. N. Georgiou),
+                                           hyasu2014@gmail.com (Y. Hattori), acmegaritis@upatras.gr (A. C. Megaritis),
+                                           seretifot@gmail.com (F. Sereti)
+
+
+
+
+                                           Preprint submitted to Indagationes Mathematicae                         March 31, 2025
+1. Introduction
+    Partially ordered sets (in short posets), lattices and frames are the main
+part of many researches. They form a constantly growing chapter which
+attracts the interest of many research teams (see for example [15–17, 28, 31]),
+investigating new properties of posets. Simultaneously, there is no doubt
+that dimensions of topological spaces are the base of many studies. There
+are many results for the covering dimension, the small inductive dimension
+and the large inductive dimension in various classes of topological spaces.
+We refer to [4, 10, 18, 24–26] for more studies on these dimensions.
+    Recently, the covering dimension, the small inductive dimension and the
+large inductive dimension had a particular interest in the class of frames (see
+for example [2, 6, 7, 9, 11]). In addition, several researches are devoted to
+the notion of dimension for finite partially ordered sets and finite lattices (see
+for example [1, 12–14, 21, 22, 27, 29, 30, 32–34]). The order dimension, the
+Krull dimension, the covering dimension and the small inductive dimension
+developed their own significant chapter in Dimension Lattice Theory (see for
+example [5, 21, 29, 34]).
+    In this paper, we study the notion of the large inductive dimension, Ind,
+in the class of finite lattices, proving properties of this dimension, like the
+sublattice, sum and product properties. The motivation of this study is based
+on the fact that posets and lattices are used as models to investigate prop-
+erties of digital images (see for example [19, 23]) and generally, topological
+properties of digital images and discrete arrays in two or more dimensions.
+Thus, the notion of dimension has its special study and a research issue that
+arises is the study of dimensions for finite lattices.
+    The paper is organized as follows. In Section 2, we present definitions
+that are used in the following sections. In Section 3, we present the meaning
+of the large inductive dimension for the class of finite lattices and some
+basic results. In Section 4, we compare the large inductive dimension with
+the small inductive dimension, proving that the large inductive dimension
+is always greater than or equal to the small inductive dimension. Also, we
+study the “gap” between these two dimensions. In addition, we present facts
+and various examples, investigating the relation between the large inductive
+dimension and the covering dimension as well as the Krull dimension and
+the height. Finally, in Section 5, given two finite lattices, we study the large
+inductive dimension of their linear sum, Cartesian product, lexicographic
+product and rectangular product.
+
+                                        2
+2. Preliminaries
+    In this section we recall basic definitions and notations which will be used
+in order to present our study. Throughout this paper we suppose that the
+lattices are finite.
+    Let L be a lattice. We denote by 0L and 1L the bottom and the top
+element of L, respectively. For an element x ∈ L, we use the notation
+↑x = {y ∈ L : x ⩽ y}. Since the dimension Ind is defined inductively
+for finite lattices (see Definition 3.1 below), we remind the reader that a
+sublattice of L is a subset of L, which is a lattice with the same meet and
+join operations as L. Every set ↑x is a sublattice      of L.
+    Moreover, we use the notation x∗ = {y ∈ L : x ∧ y = 0L }. In the case
+                                              W
+where x∗ ∧ x = 0L , that is x∗ = max{y ∈ L : y ∧ x = 0L }, the element x∗ is
+called pseudocomplement of x.
+    It is known that every finite distributive lattice is pseudocomplemented.
+Generally, the above notion of pseudocomplement plays an important role
+in related studies with several properties on such lattices. However, in this
+paper we will adopt only the asterisk notation and the term “pseudocom-
+plement” in order to have the same terminology as in [6]. Since the lattices
+we deal with in this paper are not generally distributive, the use of the term
+“pseudocomplement” will be an agreement
+                                      W          for the following sections, obtain-
+ing that it is an element taking as {y ∈ L : x ∧ y = 0L }.               W
+    A subset V of a lattice L is called a cover of L if 0L ∈    / V and V = 1L .
+A cover U of a lattice L is called a refinement of a cover V of L, writing
+U ≻ V , if for each u ∈ U, there exists v ∈ V such that u ⩽ v. Especially, a
+cover V of L is said to be a minimal cover of L if V ⊆ C for every refinement
+C of V . (We state that in related bibliography (see for example [20]) we
+can find variations of the meaning of minimal covers such as the minimal ≪-
+representations of the top element of L consisting of join-irreducible elements
+of L. However, in our study we keep in mind the first definition of minimal
+covers.)
+    Finally, we remind the reader that a subset S of a lattice L is called
+down-set if for every x ∈ L with x ⩽ s for some s ∈ S, then x ∈ S.
+    In the whole paper we denote by N the set of natural numbers and when-
+ever it is necessary we write {1, 2, . . .} for the set of natural numbers except
+zero.
+
+
+
+
+                                         3
+3. The large inductive dimension and finite lattices
+    In this section, we study the large inductive dimension Ind in the class of
+finite lattices and give basic properties of this dimension.
+
+Definition 3.1. Let L be a finite lattice. The large inductive dimension,
+Ind, of L is defined as follows:
+  1. Ind(L) = −1 if and only if L = {0L }.
+  2. Ind(L) ⩽ k, where k ∈ N, if for every a ∈ L and for every v ∈ L such
+     that a ∨ v = 1L , there exists u ∈ L such that u ⩽ v, a ∨ u = 1L and
+     Ind(↑(u∗ ∨ u)) ⩽ k − 1.
+  3. Ind(L) = k, where k ∈ N, if Ind(L) ⩽ k and Ind(L)                     k − 1.
+
+    Analogously to Proposition 4.6 of [6], isomorphic lattices have the same
+large inductive dimension. Also, the simple lattice L = {0L , 1L } has trivially
+Ind(L) = 0.
+
+Example 3.2. We consider the finite lattices represented by the diagrams
+of Figure 1.
+
+                                                        1 L2
+
+                            1 L1
+                                                y2                 y3
+
+                   x1                 x2                   y1
+
+
+                            0 L1                        0 L2
+
+
+                 Figure 1: The finite lattices (L1 , ⩽1 ) and (L2 , ⩽2 )
+
+   We have that Ind(L1 ) = 0 and Ind(L2 ) = 1. For example, we apply
+Definition 3.1 to see that Ind(L2 ) = 1.
+   (1) For a = 0L2 and for every v ∈ L2 with a ∨ v = 1L2 , that is v = 1L2 ,
+there exists u = v = 1L2 with a ∨ u = 1L2 and
+ Ind(↑((1L2 )∗ ∨ 1L2 )) = Ind(↑(0L2 ∨ 1L2 )) = Ind(↑1L2 ) = Ind({1L2 }) = −1.
+
+                                           4
+   (2) For a = y1 and for every v ∈ L2 with a ∨ v = 1L2 , that is v = 1L2 ,
+there exists u = v = 1L2 with a ∨ u = 1L2 and
+ Ind(↑((1L2 )∗ ∨ 1L2 )) = Ind(↑(0L2 ∨ 1L2 )) = Ind(↑1L2 ) = Ind({1L2 }) = −1.
+   (3) For a = y2 and for every v ∈ L2 with a∨v = 1L2 , that is v ∈ {y3 , 1L2 },
+there exists u = y3 with u ⩽ v, a ∨ u = 1L2 and
+             Ind(↑(y3∗ ∨ y3 )) = Ind(↑(0L3 ∨ y3 )) = Ind(↑y3 ) = 0.
+   (4) For a = y3 and for every v ∈ L2 with a∨v = 1L2 , that is v ∈ {y2 , 1L2 },
+there exists u = y2 with u ⩽ v, a ∨ u = 1L2 and
+             Ind(↑(y2∗ ∨ y2 )) = Ind(↑(0L2 ∨ y2 )) = Ind(↑y2 ) = 0.
+   (5) For a = 1L2 and for every v ∈ L2 with a ∨ v = 1L2 , that is v can be
+any of the elements of L2 , there exists u = 0L2 with u ⩽ v, a ∨ u = 1L2 and
+ Ind(↑((0L2 )∗ ∨ 0L2 )) = Ind(↑(1L2 ∨ 0L2 )) = Ind(↑1L2 ) = Ind({1L2 }) = −1.
+Proposition 3.3. Let L be a finite lattice and k ∈ N with Ind(L) = k. Then
+there exists a finite lattice L′ with Ind(L′ ) = 0.
+Proof. We consider the finite lattice L′ = L ∪ {1L′ } of Figure 2, where
+1L ⩽ 1L′ , that is 1L′ is the top element of L′ . Then Ind(L′ ) = 0. Indeed, for
+every a ∈ L′ and for every v ∈ L′ with a ∨ v = 1L′ , that is v = 1L′ , there
+exists u = v = 1L′ with a ∨ u = 1L′ and
+ Ind(↑((1L′ )∗ ∨ 1L′ )) = Ind(↑(0L′ ∨ 1L′ )) = Ind(↑1L′ ) = Ind({1L′ }) = −1. 
+
+                                       1 L′
+
+
+                                        1L
+
+
+
+                                   Lattice L
+
+
+
+                                        0L
+
+                          Figure 2: The finite lattice L′
+
+
+                                        5
+   A modification of Definition 3.1 (2) is given in the following proposition.
+
+Theorem 3.4. Let L be a finite lattice and k ∈ N. Then Ind(L) ⩽ k if and
+only if for every a ∈ L and every u ∈ min({x ∈ L : a ∨ x = 1L }) we have
+Ind(↑(u∗ ∨ u)) ⩽ k − 1.
+
+Proof. Let Ind(L) ⩽ k, a ∈ L and u ∈ min({x ∈ L : a ∨ x = 1L }). We shall
+prove that Ind(↑(u∗ ∨u)) ⩽ k−1. Clearly, a∨u = 1L . Thus, since Ind(L) ⩽ k,
+there exists w ∈ L such that w ⩽ u, w ∨ a = 1L and Ind(↑(w ∗ ∨ w)) ⩽ k − 1.
+Then u = w and the result is proved.
+    Conversely, we shall prove that Ind(L) ⩽ k. Let a ∈ L and v ∈ L with
+a ∨ v = 1L . Then by assumption, every u ∈ min({x ∈ L : a ∨ x = 1L })
+satisfying u ⩽ v has the properties of a ∨ u = 1L and Ind(↑(u∗ ∨ u)) ⩽ k − 1.
+(The element u always exists since in the worst case we can take u = v.)
+Hence, Ind(L) ⩽ k. 
+
+Theorem 3.5. For any k ∈ {1, 2, . . .}, there exists a finite lattice L with
+Ind(L) = k. Also, the pseudocomplement of every element of L \ {0L } is 0L .
+
+Proof. We prove the theorem by induction on k. Firstly, we shall prove
+that there exists a finite lattice L, in which the pseudocomplement of every
+element of L \ {0L } is 0L , with Ind(L) = 1. Indeed, if we consider the lattice
+(L2 , ⩽2 ) of Example 3.2, we have the desired result.
+    We suppose that there exists a finite lattice M, in which the pseudo-
+complement of every element of M \ {0M } is 0M , with Ind(M) = k − 1,
+where k > 1. We shall prove that there exists a finite lattice L, in which the
+pseudocomplement of every element of L \ {0L } is 0L , with Ind(L) = k.
+    We consider the finite lattice L = {0L , z, y} ∪ M (see Figure 3). The
+partial order ⩽ on L is defined as follows:
+
+  1. z ⩽ w, for every w ∈ L\{0L },
+
+  2. w k y, for every w ∈ M, that is, w      y and y    w.
+
+
+
+
+                                       6
+                              1L
+                                                    y
+
+
+                          Lattice M
+
+
+
+
+                              0M
+                                       z
+
+
+                                     0L
+
+
+                          Figure 3: The lattice (L, ⩽)
+
+
+    We observe that the pseudocomplement of every element of L \ {0L } is
+0L . We shall prove that Ind(L) = k. For that, we consider the following
+cases:
+    (i) For a = 0L (respectively, a = z) we have v = 1L with a ∨ v = 1L and
+thus, there exists the element u = 1L such that u ⩽ v, a ∨ u = 1L and
+
+                       Ind(↑(u∗ ∨ u)) = −1 < k − 1.
+
+   (ii) For a = 1L and v ∈ L with a ∨ v = 1L , there exists the element u = 0L
+such that u ⩽ v, a ∨ u = 1L and
+
+                       Ind(↑(u∗ ∨ u)) = −1 < k − 1.
+
+   (iii) For a = 0M we have v ∈ {y, 1L} with a ∨ v = 1L and thus there exists
+the element u = y such that u ⩽ v, a ∨ u = 1L and
+
+          Ind(↑(y ∗ ∨ y)) = Ind(↑(0L ∨ y)) = Ind(↑y) = 0 < k − 1.
+
+   (iv) Let a = w, where w ∈ M \ {0M , 1M } (we state that 1M = 1L ) and
+v ∈ M ∪ {y} for which a ∨ v = 1L . Then we have the following cases:
+
+
+                                       7
+   (a) Let a = w be any element of M \ {0M , 1M } for which v ∈ {y, 1L }.
+Then we consider the element u = y such that
+            Ind(↑(y ∗ ∨ y)) = Ind(↑(0L ∨ y)) = Ind(↑y) = 0 < k − 1.
+   (b) Let a = w be any element of M \ {0M , 1M } for which v ∈ M. Since
+Ind(M) = k − 1, there exists u ∈ M such that u ⩽ v, a ∨ u = 1L and
+             Ind(↑(u∗M ∨ u)) = Ind(↑(0M ∨ u)) = Ind(↑u) ⩽ k − 2,
+and thus,
+             Ind(↑(u∗L ∨ u)) = Ind(↑(0L ∨ u)) = Ind(↑u) ⩽ k − 2.
+   (v) For a = y we have v ∈ M with a ∨ v = 1L . Then there exists u = 0M
+such that u ⩽ v, a ∨ u = 1L and
+    Ind(↑(0∗M ∨ 0M )) = Ind(↑(0L ∨ 0M )) = Ind(↑0M ) = Ind(M) = k − 1.
+   Therefore, Ind(L) ⩽ k. Moreover, since Ind(L)               k − 1, we have that
+Ind(L) = k. 
+    We complete this section, presenting a sublattice property for the large
+inductive dimension. As we observe in Figure 4, a corresponding sublat-
+tice theorem does not hold without mentioning further conditions for the
+sublattice of a finite lattice.
+    Especially, for the lattice of Figure 4 we have that Ind(L) = 0 but for the
+sublattice M = {x2 , x4 , x5 , x6 , 1L } of L we have that Ind(M) = 1 and thus,
+Ind(M) Ind(L).
+
+                                         1L
+
+
+                                x5                x6
+
+                                             x4
+
+                                x1           x2   x3
+
+
+                                         0L
+
+
+                         Figure 4: The finite lattice (L, ⩽)
+
+
+                                         8
+Proposition 3.6. Let L be a finite lattice and M be a sublattice of L such
+that 1L ∈ M, M \ {1L } is a down-set and the lattice ↑(u∗M ∨ u) of every
+element u of M is isomorphic to the lattice ↑(u∗L ∨ u) of u in L. Then,
+Ind(M) ⩽ Ind(L).
+
+Proof. If Ind(L) = −1, then, obviously, Ind(M) = −1. We suppose that
+Ind(L) = k, where k ∈ N, and we will prove that Ind(M) ⩽ k.
+   Let a ∈ M and v ∈ M with a ∨ v = 1M , that is a ∨ v = 1L . Since
+M ⊆ L, a, v ∈ L. Also, since Ind(L) = k, there exists u ∈ L such that u ⩽ v,
+a ∨ u = 1L and Ind(↑(u∗L ∨ u)) ⩽ k − 1. We consider the following cases:
+   (a) If u = 1L , then clearly u ∈ M and Ind(↑(u∗M ∨u)) = −1 = 0−1 ⩽ k−1.
+   (b) Let u 6= 1L . Since M \ {1L } is a down set and u ⩽ v, u ∈ M. By
+assumption since the lattices ↑(u∗M ∨ u) and ↑(u∗L ∨ u) are isomorphic, we
+have Ind(↑(u∗M ∨ u)) = Ind(↑(u∗L ∨ u)) ⩽ k − 1. Therefore, in each case
+Ind(M) ⩽ k. 
+
+4. Comparing the dimension Ind with other lattice notions
+   In this section, we present relations between the large inductive dimension
+Ind and the small inductive dimension ind, the Krull dimension Kdim, the
+covering dimension dim and the height.
+
+4.1. The small inductive dimension
+    The notion of the small inductive dimension for finite lattices is inserted
+in [21].
+
+Definition 4.1. Let L be a finite lattice. The small inductive dimension,
+ind, of L is defined as follows:
+
+  1. ind(L) = −1 if and only if L = {0L }.
+
+  2. ind(L) ⩽ k, where k ∈ N, if for every cover V of L, there exists a cover
+     U of L such that U is a refinement of V and ind(↑(u∗ ∨ u)) ⩽ k − 1,
+     for every u ∈ U.
+
+  3. ind(L) = k, where k ∈ N, if ind(L) ⩽ k and ind(L)        k − 1.
+
+   The following results will be very useful in our study.
+
+
+                                      9
+Theorem 4.2. [21] Let L be a finite lattice and k ∈ N. Then ind(L) ⩽ k if
+and only if for every minimal cover V of L we have ind(↑(v ∗ ∨ v)) ⩽ k − 1,
+for every v ∈ V .
+
+   However, a modification of Theorem 4.2 is given as follows and can easily
+be proved following Definition 4.1 as well as Theorem 4.2.
+
+Theorem 4.3. Let L be a finite lattice and k ∈ N. Then ind(L) ⩽ k if and
+only if for every v ∈ L such that v belongs to a minimal cover of L we have
+ind(↑(v ∗ ∨ v)) ⩽ k − 1.
+
+Theorem 4.4. If L is a finite lattice, then ind(L) ⩽ Ind(L).
+
+Proof. Clearly, if Ind(L) = −1, the inequality holds. We suppose that the
+inequality holds for all finite lattices M with Ind(M) ⩽ k − 1. Let L be
+a finite lattice such that Ind(L) = k, w ∈ L and W = {w1 , . . . , wm } be a
+minimal cover of L such that w ∈ W . Then w = wi for some i = 1, . . . , m.
+By Theorem 4.3 it suffices to prove that ind(↑(wi ∨ wi∗ )) ⩽ k − 1.
+               _m
+    Let a =         wj and v = wi with a ∨ wi = 1L . Since Ind(L) = k, there
+             j=1,j6=i
+exists u ∈ L such that u ⩽ wi , a ∨ u = 1L and Ind(↑(u ∨ u∗ )) ⩽ k − 1
+and by inductive assumption, ind(↑(u ∨ u∗ )) ⩽ k − 1. Then the set U =
+{w1 , . . . , u, . . . , wm }, where U is the set W replacing wi by u, is a cover of
+L which refines W . Since W is minimal, W ⊆ U. Thus, wi = u and then
+ind(↑(wi ∨ wi∗)) ⩽ k − 1. Thus, ind(L) ⩽ k. 
+
+Remark 4.5. Generally, the small inductive dimension and the large in-
+ductive dimension are different notions of dimensions for finite lattices. For
+example, for the lattice of Figure 5 we have Ind(L) = 1 and ind(L) = 0.
+   Especially, for the large inductive dimension the element which gives us
+that Ind(L) = 1 is the element a = x7 for which v ∈ {x6 , x8 , 1L } with
+a ∨ v = 1L and for u = x6 we have that Ind(↑(x6 ∨ x∗6 )) = 0. For the
+small inductive dimension we observe that for all minimal covers V of L we
+have ind(↑(v ∨ v ∗ )) = −1, for every v ∈ V . Thus, by Theorem 4.2 we have
+ind(L) = 0.
+
+
+
+
+                                        10
+                                         1L
+
+
+                         x8           x9                 x10
+
+                               x7
+
+                                                  x6
+
+                               x4                        x5
+
+                         x1                 x2           x3
+
+
+                                         0L
+
+
+                         Figure 5: The finite lattice (L, ⩽)
+
+   We state that the family
+              MC = {{x7 , x8 }, {x2 , x3 , x7 }, {x2 , x8 }, {x3 , x8 }}
+consists of all the minimal covers of L. The fact that gives us the difference
+between the two dimensions ind and Ind is the study of the element x6 .
+For this element we have Ind(↑(x6 ∨ x∗6 )) = 0 and therefore, Ind(L) = 1.
+Moreover, we can see that ind(↑(x6 ∨ x∗6 )) = 0. Thus, if the element x6
+belongs to a minimal cover of L, then ind(L) = 1 and hence, ind(L) = Ind(L).
+However, we observe that there is no minimal cover V of L with x6 ∈ V and
+thus, x6 does not make the small inductive dimension equal to 1. All minimal
+covers of L and their elements give us that ind(L) = 0.
+   We can generalize Remark 4.5 in order to construct a finite lattice L with
+arbitrary large inductive dimension and Ind(L) = ind(L) + 1.
+Proposition 4.6. Let k ∈ {1, 2, . . .}. Then there exists a finite lattice M
+such that ind(M) = k − 1 and Ind(M) = k.
+Proof. We show the proposition by induction on k. Remark 4.5 proves the
+proposition for the case k = 1. We consider the lattice L of Figure 5. On
+this lattice we replace the sublattice ({x6 , 1L }, ⩽) with a sublattice N such
+that:
+
+                                           11
+  1. Ind(N) = k − 1, where k ∈ {2, 3, . . .},
+  2. x6 = 0N ,
+
+  3. x6 ⩽ w ⩽ 1L , for every w ∈ N,
+  4. the pseudocomplement of every element of N \ {0N } is 0N and
+  5. each u ∈ L \ N ∪ {z ∈ L : z ⩽ x6 } and each element v ∈ N \ {0N , 1N }
+     are incomparable (see Figure 6).
+   We state that the existence of the lattice N follows by Theorem 3.5. We
+write this new lattice as M. Also, for the elements a = x7 and v = x6 , we
+have x7 ∨ x6 = 1M and
+
+                   {u ∈ L : u ⩽ x6 and x7 ∨ u = 1M } = {x6 }.
+
+Since
+
+        Ind(↑(x6 ∨ x∗6 )) = Ind(↑(x6 ∨ 0M )) = Ind(↑x6 ) = Ind(N) = k − 1,
+
+we have Ind(M) ⩾ k. Furthermore, following Definition 3.1 we can see that
+Ind(M) ⩽ k.
+
+                                         1M
+
+
+                          x8           x9                x10
+                                                 Lat.
+                                x7
+                                                  N
+
+                                                   x6
+                                x4                       x5
+
+                          x1                 x2          x3
+
+
+                                         0M
+
+
+                          Figure 6: The finite lattice (M, ⩽)
+
+
+                                            12
+    Moreover, the construction of the lattice M leads us to observe that the
+minimal covers of M are the minimal covers of the family MC of Remark
+4.5, and the minimal covers of N. For each minimal cover V ∈ MC we have
+ind(↑(v ∨ v ∗ )) = −1, for every v ∈ V . Also, since the construction of N
+follows the construction given in [21, Theorem 4], we have ind(N) = k − 1.
+Let U be a minimal cover of N. Since ind(N) ⩽ k − 1, by Theorem 4.2 we
+have
+              ind(↑(u ∨ u∗N )) = ind(↑(u ∨ x6 )) = ind(↑u) ⩽ k − 2,
+for every u ∈ U, where u∗N denotes the pseudocomplement of u in the lattice
+N. Thus,
+
+             ind(↑(u ∨ u∗M )) = ind(↑(u ∨ 0M )) = ind(↑u) ⩽ k − 2,
+
+for every u ∈ U, where u∗M denotes the pseudocomplement of u in the lattice
+M. Therefore, by Theorem 4.2, we have that ind(M) ⩽ k − 1. We prove
+that ind(M) = k − 1. Since ind(N) = k − 1, there exist a minimal cover W
+of N and w ∈ W such that
+                       ∗
+            ind(↑(w ∨ wN )) = ind(↑(w ∨ x6 )) = ind(↑w) = k − 2.
+                   ∗
+Hence, ind(↑(w ∨ wM  )) = ind(↑(w ∨ 0M )) = ind(↑w) = k − 2. By Theorem
+4.2 we conclude that ind(M) = k − 1. 
+
+Remark 4.7. We observe that the “gap” between the dimensions ind and
+Ind can be arbitrarily large. For that, we consider the lattice (Q, ⩽) of Figure
+7. For this lattice we have that Ind(Q) = 3 and ind(Q) = 0.
+    Firstly, we describe the construction of the lattice (Q, ⩽). We consider
+the lattice M of Figure 6, where N = {1M , x6 }∪{w1 , . . . , w6 } is the sublattice
+given in Theorem 3.5 for k = 2, that is Ind(N) = 2. On this lattice M, we
+add the following elements:
+(I) for each w ∈ N \ {1M , x6 } we assign an element xw such that:
+    (1) 0M < xw < w,
+    (2) for every w1 , w2 ∈ N \ {1M , x6 } with w1 6= w2 , xw1 6= xw2 ,
+    (3) xw is incomparable with any other element of M,
+(II) an element s such that:
+    (1) 0M < s < xw , for every xw ,
+(III) elements t, r, u as in Figure 7 in order to succeed that the constructed
+poset is a lattice.
+
+                                        13
+                                                  1Q
+
+
+          x8               x9            w4                 w5        w6         x10
+
+                                                w3
+               x7
+                                                     w2
+
+                                                            w1
+
+                          xw4    xw3    xw2    xw1          x6    xw5      xw6
+
+                                                            r                    u
+
+                    x4                                      t                    x5
+
+          x1                     x2                         s                    x3
+
+
+                                                  0Q
+
+
+                                Figure 7: The finite lattice (Q, ⩽)
+
+    We write this new lattice as Q. Using the same argument as in Proposition
+4.6 we have Ind(Q) = 3, considering the elements a = x7 and v = x6 . Also,
+the minimal covers of Q are the family
+                    MC ′ = {{s, x8 }, {x2 , x3 , x7 }, {x2 , x8 }, {x3 , x8 }}
+and the minimal covers consisting of elements of the set {xw1 , . . . , xw6 }. For
+each minimal cover V ∈ MC ′ we have ind(↑(v ∨ v ∗ )) = −1, for every v ∈ V .
+Also, for each xw ∈ Q we have
+     ind(↑(xw ∨ x∗w )) = ind(↑(xw ∨ 1Q )) = ind(↑1Q ) = ind({1Q }) = −1.
+Therefore, ind(Q) = 0.
+   Now, we can generalize Remark 4.7 in order to construct a finite lattice
+P for which Ind(P ) − ind(P ) is arbitrarily large.
+
+                                                14
+Proposition 4.8. Let k ∈ {1, 2, . . .}. Then there exists a finite lattice P
+such that ind(P ) = 0 and Ind(P ) = k.
+
+Proof. We shall prove the proposition by induction on k. If k = 1, then it
+follows by Proposition 4.6 that we get the desired result. Suppose k ⩾ 2 and
+we have a finite lattice N such that ind(N) = 0 and Ind(N) = k − 1. We
+consider the lattice M of Figure 6. On this lattice M, we add the following
+elements (Figure 8):
+(I) for each w ∈ N \ {1M , x6 } we assign an element xw such that:
+    (1) 0M < xw < w,
+    (2) for every w1 , w2 ∈ N \ {1M , x6 } with w1 6= w2 , xw1 6= xw2 ,
+    (3) xw is incomparable with any other element of M,
+(II) an element s such that:
+    (1) 0M < s < xw , for every xw ,
+(III) elements t, r, u as in Figure 8 in order to succeed that the constructed
+poset is a lattice.
+
+                                                              1P
+
+
+                                             x8          x9                 x10
+                                                                   Lat.
+                                                  x7
+                                                                    N
+       {xw : w ∈ N \ {1P , x6 }}
+                                                                       x6
+                                                              r             u
+                               t                  x4                        x5
+
+                               s             x1                   x2        x3
+
+
+                                                              0P
+
+
+                        Figure 8: The finite lattice (P, ⩽)
+
+
+   We write this new lattice as P . Using the same argument as in Proposition
+4.6 we have Ind(P ) = k. Also, the minimal covers of P are the family
+MC ′ of Remark 4.7 and the minimal covers consisting of elements of the
+
+                                        15
+set {xw : w ∈ N \ {1P , x6 }}. For each minimal cover V ∈ MC ′ we have
+ind(↑(v ∨ v ∗ )) = −1, for every v ∈ V . Also, for each xw ∈ P we have
+
+     ind(↑(xw ∨ x∗w )) = ind(↑(xw ∨ 1P )) = ind(↑1P ) = ind({1P }) = −1.
+
+Therefore, ind(P ) = 0. 
+   However, we observe that if we add some conditions for finite lattices,
+then we can have the equality of these two dimensions.
+
+Lemma 4.9. Let L be a finite lattice and M = ↑x, where x ∈ L. If for every
+minimal cover V of L we have |V | ⩽ 2, then for every minimal cover W of
+M we have also |W | ⩽ 2.
+
+Proof. Let W be a minimal cover of M. We shall prove that |W | ⩽ 2. We
+have that W is a cover of L.
+(1) If W is a minimal cover of L, then by assumption |W | ⩽ 2.
+(2) We suppose that W is not a minimal cover of L. Then we consider the
+following cases:
+    (a) If 1L ∈ W that is 1M ∈ W (as 1L = 1M ), then W = {1M } is the only
+minimal cover of M for which |W | = 1.
+    (b) We state that 1L ∈ / W . By [13, Lemma 3.7], there exists a minimal
+cover R of L which refines W and 1L ∈     / R. By assumption we have that
+|R| = {c, d}. Then c ⩽ a and d ⩽ b, for some a, b ∈ W . Moreover, a ∨ b =
+1L = 1M . Indeed, if a ∨ b = r, where r 6= 1L , then the set {c, d} is not a cover
+of L, which is a contradiction. Thus, {a, b} is a cover of M, which refines W .
+Since W is a minimal cover of M and a, b ∈ W , we have that W = {a, b},
+that is |W | = 2.
+    Therefore, in each case we have that |W | ⩽ 2. 
+
+Proposition 4.10. Let L be a finite lattice. If for every minimal cover V
+of L we have |V | ⩽ 2, then ind(L) = Ind(L).
+
+Proof. By Theorem 4.4 we have that ind(L) ⩽ Ind(L). Thus, it suffices
+to prove that Ind(L) ⩽ ind(L). Clearly, if ind(L) = −1, the inequality
+holds. We suppose that the proposition holds for all finite lattices M with
+ind(M) ⩽ k − 1. Let L be a finite lattice such that ind(L) = k. We shall
+prove that Ind(L) ⩽ k.
+   (1) For a = 1L and any v ∈ L with a ∨ v = 1L , there exists the element
+u = 0L such that u ⩽ v, a ∨ u = 1L and Ind(↑(u ∨ u∗ )) = −1 ⩽ k − 1.
+
+                                       16
+    (2) For a = 0L and v = 1L with a ∨ v = 1L , there exists the element
+u = 1L such that u ⩽ v, a ∨ u = 1L and Ind(↑(u ∨ u∗ )) = −1 ⩽ k − 1.
+    (3) Let a ∈ L \ {0L , 1L } and v ∈ L with a ∨ v = 1L . If v = 1L , we have
+the trivial fact Ind(↑(v ∨ v ∗ )) = −1. Therefore, we suppose that v 6= 1L and
+we study the following cases.
+    (a) If {a, v} is a minimal cover of L, then since ind(L) = k, by Theorem
+4.2 we have ind(↑(v ∨ v ∗ )) ⩽ k − 1. Moreover, by Lemma 4.9, the assumption
+of the proposition also holds for the lattice ↑(v ∨v ∗ ). Therefore, by induction,
+we have that Ind(↑(v ∨ v ∗ )) ⩽ k − 1. Thus, in Definition 3.1, if u = v, then
+u is an element of L for which a ∨ u = 1L and Ind(↑(u ∨ u∗ )) ⩽ k − 1.
+    (b) We suppose that {a, v} is not a minimal cover of L. We state that
+1L ∈ / {a, v}. By [13, Lemma 3.7], there exists a minimal cover R of L
+which refines {a, v} and 1L ∈   / R. By assumption we have that R = {c, d}.
+Then c ⩽ a and d ⩽ v. Also, since ind(L) = k, by Theorem 4.2 we have
+ind(↑(d ∨ d∗ )) ⩽ k − 1 and by induction (as Lemma 4.9 shows that the
+assumption of the proposition also holds for the lattice ↑(d ∨ d∗ )), we have
+that
+                             Ind(↑(d ∨ d∗ )) ⩽ k − 1.
+Moreover, we observe that a ∨ d = 1L . Indeed, if a ∨ d = r, where r 6= 1L ,
+then the set {c, d} is not a cover of L, which is a contradiction. Thus, in
+Definition 3.1, if u = d, then u is an element of L for which u ⩽ v, a ∨ u = 1L
+and Ind(↑(u ∨ u∗ )) ⩽ k − 1.
+   Therefore, in each case we have that Ind(L) ⩽ k. 
+
+4.2. The Krull dimension
+    A non-empty subset F of a lattice (L, ⩽) is called filter if F has the
+following properties:
+(1) F 6= L,
+(2) If x ∈ F and x ⩽ y, then y ∈ F ,
+(3) If x, y ∈ F , then x ∧ y ∈ F .
+    A filter F is called prime if for every x, y ∈ L with x ∨ y ∈ F , we have
+x ∈ F or y ∈ F . The set of all prime filters of a lattice L is usually denoted
+by PF (L).
+
+Definition 4.11. [30] If PF (L) 6= ∅, then the Krull dimension of L is de-
+fined as follows:
+
+     Kdim(L) = sup{k : there exist prime filters F0 ⊂ F1 ⊂ · · · ⊂ Fk }.
+
+                                       17
+Also, in the study [14], the Krull dimension is studied through join prime
+elements and matrices. An element x ∈ L is said to be join prime if it is
+non-zero and the inequality x ⩽ a ∨ b implies x ⩽ a or x ⩽ b, for all a, b ∈ L.
+
+Example 4.12. We show by examples that the dimensions Ind and Kdim
+for finite lattices are in general different.
+(1) The large inductive dimension of the pentagon (see Figure 9) is equal to
+0, but since it is not a Boolean Algebra, its Krull dimension is not equal to
+0 (see [30]).
+
+
+
+
+                             Figure 9: The pentagon
+
+
+(2) We consider the finite lattice (L, ⩽), represented by the diagram of Figure
+10.
+
+                                     1L
+
+
+                            x6                 x7          x8
+
+                     x3                x4            x5
+
+                                       x2
+
+                                       x1
+
+
+                                     0L
+
+
+                        Figure 10: The finite lattice (L, ⩽)
+
+
+                                          18
+    We have that Ind(L) = 2 and Kdim(L) = 1. Indeed, the elements which
+give us that Ind(L) = 2 are a = x8 and v = x2 for which a ∨ v = 1L . Then
+
+                   {u ∈ L : u ⩽ x2 and a ∨ u = 1L } = {x2 }
+
+and Ind(↑(x2 ∨ x∗2 )) = Ind(↑x2 ) = 1. Hence, Ind(L) ⩾ 2. It is easy to show
+that Ind(L) ⩽ 2. Moreover, the join prime elements of L are the elements
+x1 , x2 , x3 and x5 and thus, by Proposition 4.5 (5) of [14] we have that
+Kdim(L) = 1.
+
+4.3. The covering dimension
+    Let L be a finite lattice. The order of a subset C of L, denoted by ord(C),
+is defined to be k, where k ∈ N if and only if the infimum of any k +2 distinct
+elements of C is 0L and there exist k+1 distinct elements of C whose infimum
+is not 0L .
+
+Definition 4.13. [13] The function dim, called covering dimension, with
+domain the class of all finite lattices and range the set N is defined as follows:
+
+   1. dim(L) ⩽ k, where k ∈ N, if and only if for every cover C of L, there
+      exists a cover R of L, refinement of C with ord(R) ⩽ k.
+
+   2. dim(L) = k, where k ∈ N, if dim(L) ⩽ k and dim(L)           k − 1.
+
+   In Theorem 3.8 of [13], it was proved that dim(L) ⩽ k, where k ∈ N, if
+and only if for every minimal cover V of L we have ord(V ) ⩽ k. That is,
+
+              dim(L) = max{ord(V ) : V is minimal cover of L}
+
+(see Corollary 3.9 of [13]).
+
+Remark 4.14. We show by examples that the dimensions Ind and dim for
+finite lattices are in general different.
+(1) We consider the lattice of Figure 11. We have that Ind(L) = 3 and
+dim(L) = 2.
+   Indeed, the elements which give us that Ind(L) = 3 are a = x11 and
+v = x2 for which a ∨ v = 1L . Then
+
+                   {u ∈ L : u ⩽ x2 and a ∨ u = 1L } = {x2 }
+
+                                       19
+and Ind(↑(x2 ∨ x∗2 )) = Ind(↑x2 ) = 2. Hence, Ind(L) ⩾ 3. It is easy to
+show that Ind(L) ⩽ 3. Moreover, for all minimal covers V of L, that is
+V ∈ {{x2 , x11 }, {x4 , x5 , x7 }}, we have ord(V ) ⩽ 2. Thus, dim(L) = 2.
+
+                                   1L
+
+
+                          x8                x9           x10     x11
+
+                    x5               x6            x7
+
+                                     x4
+
+                                     x3
+
+                                     x2
+
+                                     x1
+
+
+                                   0L
+
+
+                          Figure 11: The finite lattice (L, ⩽)
+
+
+(2) For the lattice L of Figure 12 we have dim(L) = 2 and Ind(L) = 1.
+Indeed, let a ∈ L \ {0L , 1L } and v ∈ L with a ∨ v = 1L . It is clear that
+a ∨ x1 = a 6= 1L . Thus, for each u ∈ L with u ⩽ v and a ∨ u = 1L , we have
+u 6= x1 . Further, for each i = 2, . . . , 7 x∗i = 0L and hence ↑(xi ∨ x∗i ) = ↑xi . It
+is easy to show that Ind(↑xi ) = 0. Thus, we have Ind(L) ⩾ 1. Further, we
+notice that x2 ∨ x5 = 1L ,
+
+                   {u ∈ L : u ⩽ x5 and x2 ∨ u = 1L } = {x5 }
+
+and Ind(↑x5 ) = 0. Hence Ind(L) = 1. For the covering dimension, the only
+minimal cover of L is the set V = {x2 , x3 , x4 } for which ord(V ) = 2. Thus,
+dim(L) = 2.
+
+
+
+
+                                          20
+                                         1L
+
+
+                                x5         x6     x7
+
+                                x2         x3     x4
+
+                                           x1
+
+
+                                         0L
+
+
+                         Figure 12: The finite lattice (L, ⩽)
+
+
+4.4. The height
+Definition 4.15. The height of a finite lattice L, denoted by h(L), is defined
+as follows:
+
+h(L) = max{k : there exist a0 , . . . , ak ∈ L such that 0L = a0 < . . . < ak = 1L }.
+
+Example 4.16. (1) For the lattice L1 of Figure 1 we have that Ind(L1 ) = 0
+and h(L1 ) = 2.
+(2) For the totally ordered set L = {x1 , . . . , xn , 0L , 1L } we have that h(L) =
+n + 1 and Ind(L) = 0.
+
+Proposition 4.17. For every finite lattice L, Ind(L) < h(L).
+
+Proof. We prove the inequality by induction on h(L). Clearly if h(L) = 0,
+then L = {1L } and thus, Ind(L) = −1, proving that the relation of the
+proposition holds. We suppose that the inequality holds for all finite lattices
+M with h(M) < k, for k > 1, and we shall prove it for k. Let L be a finite
+lattice with h(L) = k, v ∈ L such that v belongs to a minimal cover V of
+L. By Theorem 4.3 it suffices to prove that Ind(↑(v ∗ ∨ v)) ⩽ k − 2. Since
+↑(v ∗ ∨v) 6= L, we have that h(↑(v ∗ ∨v)) < h(L) and thus, h(↑(v ∗ ∨v)) ⩽ k −1.
+By inductive hypothesis we have that Ind(↑(v ∗ ∨ v)) < k − 1, proving that
+Ind(L) ⩽ k − 1 or equivalently Ind(L) < k. 
+
+
+
+                                         21
+5. Sum and product properties for Ind
+    In this section we study properties of the large inductive dimension. Es-
+pecially, we study the large inductive dimension of the linear sum and kinds
+of products of finite lattices.
+Definition 5.1. The linear sum of two posets (L1 , ⩽1 ) and (L2 , ⩽2 ) such
+that L1 ∩ L2 = ∅, denoted by L1 ⊕ L2 , is the poset (L1 ∪ L2 , ⩽), where the
+relation ⩽ is defined as follows:
+                               
+                               x, y ∈ L1 and x ⩽1 y
+                               
+                     x ⩽ y ⇔ x, y ∈ L2 and x ⩽2 y
+                               
+                                  x ∈ L1 , y ∈ L2 .
+                               
+
+Clearly, if (L1 , ⩽1 ) and (L2 , ⩽2 ) are lattices, then (L1 ⊕L2 , ⩽) is also a lattice.
+Remark 5.2. (1) The lattices (L1 , ⩽1 ) and (L3 , ⩽3 ) of Figures 1 and 13,
+respectively, verifies the claim Ind(L1 ⊕ L3 ) 6= Ind(L3 ⊕ L1 ).
+
+                                            1 L3
+
+
+                                            0 L3
+
+
+                          Figure 13: The finite lattice (L3 , ⩽3 )
+
+
+                             1 L3                         1 L1
+
+
+                                0 L3               x1                x2
+
+                                1 L1                         0 L1
+
+                     x1                x2                    1 L3
+
+
+                             0 L1                         0 L3
+
+
+             Figure 14: The finite lattices (L1 ⊕ L3 , ⩽) and (L3 ⊕ L1 , ⩽∗ )
+
+
+                                            22
+We have Ind(L1 ) = Ind(L3 ) = 0, Ind(L1 ⊕ L3 ) = 0 and Ind(L3 ⊕ L1 ) = 1.
+(2) The lattice (L3 ⊕ L1 , ⩽∗ ) of Figure 14 also verifies that the assertion
+
+                       Ind(L3 ⊕ L1 ) ⩽ Ind(L3 ) + Ind(L1 )
+
+does not hold for all finite lattices L3 and L1 .
+
+Proposition 5.3. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be two finite lattices such that
+the pseudocomplement of every element of L2 \ {0L2 } is 0L2 . Then
+
+                            Ind(L2 ) ⩽ Ind(L1 ⊕ L2 ).
+
+Proof. Let Ind(L1 ⊕ L2 ) = k, where k ∈ N, a ∈ L2 and v ∈ L2 such that
+a ∨ v = 1 L2 .
+   (1) If a = 1L2 and v ∈ L2 , then there exists the element u = 0L2 such
+that u ⩽2 v and Ind(↑(u ∨ u∗L2 )) = −1 ⩽ k − 1, where u∗L2 denotes the
+pseudocomplement of u in the lattice L2 .
+   (2) If a = 0L2 , then the only element v ∈ L2 for which a ∨ v = 1L2 is the
+element 1L2 . Thus, for this element u = 1L2 we have Ind(↑(u ∨ u∗L2 )) = −1 ⩽
+k − 1.
+   (3) Let a ∈ L2 \{1L2 , 0L2 }. Then a, v ∈ L1 ⊕L2 with a∨v = 1L1 ⊕L2 . Since
+Ind(L1 ⊕ L2 ) = k, there exists u ∈ L1 ⊕ L2 such that u ⩽ v, a ∨ u = 1L1 ⊕L2
+(and therefore, a ∨ u = 1L2 ) and Ind(↑(u ∨ u∗L1 ⊕L2 )) ⩽ k − 1, where u∗L1 ⊕L2
+denotes the pseudocomplement of u in the lattice L1 ⊕ L2 .
+   By the definition of the linear sum L1 ⊕ L2 , in order to have a ∨ u = 1L2 ,
+u ∈ L2 and thus,
+                           _
+                 u∗L1 ⊕L2 = {x ∈ L1 ⊕ L2 : x ∧ u = 0L1 ⊕L2 }
+                           _
+                          = {x ∈ L1 ⊕ L2 : x ∧ u = 0L1 }
+                          = 0 L1 .
+
+Therefore,
+
+            Ind(↑(u ∨ u∗L1 ⊕L2 )) = Ind(↑(u ∨ 0L1 )) = Ind(↑u) ⩽ k − 1
+
+and thus,
+
+             Ind(↑(u ∨ u∗L2 )) = Ind(↑(u ∨ 0L2 )) = Ind(↑u) ⩽ k − 1.
+
+Hence, Ind(L2 ) ⩽ k. 
+
+                                       23
+Definition 5.4. If (L1 , ⩽1 ) and (L2 , ⩽2 ) are two posets, then their Cartesian
+product is the poset (L1 × L2 , ⩽), where the relation ⩽ is defined as follows:
+(x1 , y1) ⩽ (x2 , y2 ) ⇔ x1 ⩽1 x2 and y1 ⩽2 y2 .
+
+    If (L1 , ⩽1 ) and (L2 , ⩽2 ) are finite lattices, then (L1 ×L2 , ⩽) is also a finite
+lattice. Also, if (x1 , y1 ), (x2 , y2 ) ∈ L1 × L2 , then:
+(1) (x1 , y1) ∨ (x2 , y2 ) = (x1 ∨ x2 , y1 ∨ y2 ) and
+(2) (x1 , y1) ∧ (x2 , y2 ) = (x1 ∧ x2 , y1 ∧ y2 ).
+
+Lemma 5.5. [8, 21] If L1 and L2 are finite lattices and (x, y) ∈ L1 × L2 ,
+then the following are satisfied:
+   1. ↑(x, y) = ↑x × ↑y,
+
+   2. (x, y)∗ = (x∗ , y ∗ ).
+
+Theorem 5.6. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be finite lattices. Then,
+
+                      Ind(L1 × L2 ) = max{Ind(L1 ), Ind(L2 )}.
+
+Proof. In order to prove the inequality
+
+                      Ind(L1 × L2 ) ⩽ max{Ind(L1 ), Ind(L2 )},
+
+we shall apply induction with respect to the number
+
+                        k(L1 , L2 ) = max{Ind(L1 ), Ind(L2 )}.
+
+If k(L1 , L2 ) = −1, then our inequality holds. Moreover, if Ind(L1 ) = −1 and
+Ind(L2 ) ⩾ 0 (respectively, Ind(L2 ) = −1 and Ind(L1 ) ⩾ 0), then the lattices
+L1 × L2 and L2 (respectively, L1 × L2 and L1 ) are isomorphic and therefore,
+Ind(L1 × L2 ) = Ind(L2 ) (respectively, Ind(L1 × L2 ) = Ind(L1 )).
+    We assume that the inequality holds for every pair of finite lattices L1
+and L2 with k(L1 , L2 ) < k, where k ⩾ 0, and we consider finite lattices L1
+and L2 such that Ind(L1 ) = n ⩾ 0, Ind(L2 ) = m ⩾ 0 and max{n, m} = k.
+We shall prove that Ind(L1 × L2 ) ⩽ k.
+    Let (a, b) ∈ L1 × L2 and (u, v) ∈ L1 × L2 such that (a, b) ∨ (u, v) =
+(1L1 , 1L2 ). Then a, u ∈ L1 with a ∨ u = 1L1 and b, v ∈ L2 with b ∨ v = 1L2 .
+Since Ind(L1 ) = n, there exists x ∈ L1 with x ⩽1 u, x ∨ a = 1L1 and
+
+                               Ind(↑(x ∨ x∗ )) ⩽ n − 1.
+
+                                          24
+Similarly, since Ind(L2 ) = m, there exists y ∈ L2 with y ⩽2 v, y ∨ b = 1L2
+and
+                           Ind(↑(y ∨ y ∗ )) ⩽ m − 1.
+    We consider the element (x, y) ∈ L1 × L2 . Then (x, y) ⩽ (u, v) and
+(a, b) ∨ (x, y) = (1L1 , 1L2 ). We shall prove that
+
+                   Ind(↑((x, y)∗ ∨ (x, y))) ⩽ max{n, m} − 1.
+
+Considering Lemma 5.5 we have that
+
+             Ind(↑((x, y)∗ ∨ (x, y))) = Ind(↑((x∗ , y ∗) ∨ (x, y)))
+                                      = Ind(↑(x∗ ∨ x, y ∗ ∨ y))
+                                      = Ind(↑(x∗ ∨ x) × ↑(y ∗ ∨ y)).
+
+By inductive hypothesis, we have that
+
+      Ind(↑(x∗ ∨ x) × ↑(y ∗ ∨ y)) ⩽ max{Ind(↑(x∗ ∨ x)), Ind(↑(y ∗ ∨ y))}
+                                  ⩽ max{n − 1, m − 1}
+                                  = max{n, m} − 1.
+
+Therefore, Ind(L1 × L2 ) ⩽ max{n, m}.
+   We shall prove the inequality
+
+                    max{Ind(L1 ), Ind(L2 )} ⩽ Ind(L1 × L2 ).
+
+If Ind(L1 × L2 ) = −1, then L1 × L2 = {1L1 ×L2 } and thus, L1 = {1L1 } and
+L2 = {1L2 } and the inequality holds.
+    We suppose that the inequality holds for every pair of finite lattices L1 and
+L2 with Ind(L1 × L2 ) < k and we shall prove it for k. Let Ind(L1 × L2 ) = k.
+We shall prove that Ind(L1 ) ⩽ k and Ind(L2 ) ⩽ k.
+    Let a ∈ L1 and u ∈ L1 with a ∨ u = 1L1 . Let also b ∈ L2 and v ∈ L2
+with b ∨ v = 1L2 . Then (a, b), (u, v) ∈ L1 × L2 with (a, b) ∨ (u, v) = (1L1 , 1L2 ).
+Since Ind(L1 ×L2 ) = k, there exists (x, y) ∈ L1 ×L2 such that (x, y) ⩽ (u, v),
+(a, b) ∨ (x, y) = (1L1 , 1L2 ) and
+
+                         Ind(↑((x, y)∗ ∨ (x, y))) ⩽ k − 1.
+
+That is, x ∈ L1 with x ⩽1 u and a ∨ x = 1L1 and y ∈ L2 with y ⩽2 v
+and b ∨ y = 1L2 . It suffices to prove that Ind(↑(x∗ ∨ x)) ⩽ k − 1 and
+Ind(↑(y ∗ ∨ y)) ⩽ k − 1.
+
+                                         25
+   Considering Lemma 5.5 we have that
+            Ind(↑((x, y)∗ ∨ (x, y))) = Ind(↑((x∗ , y ∗) ∨ (x, y)))
+                                     = Ind(↑(x∗ ∨ x, y ∗ ∨ y))
+                                     = Ind(↑(x∗ ∨ x) × ↑(y ∗ ∨ y)).
+By inductive hypothesis,
+ max{Ind(↑(x∗ ∨ x)), Ind(↑(y ∗ ∨ y))} ⩽ Ind(↑(x∗ ∨ x) × ↑(y ∗ ∨ y)) ⩽ k − 1.
+Therefore, Ind(↑(x∗ ∨x)) ⩽ k −1 and Ind(↑(y ∗ ∨y)) ⩽ k −1. Thus, Ind(L1 ) ⩽
+k and Ind(L2 ) ⩽ k. 
+   Thus, in contrast to Remark 5.2 for the linear sum, Theorem 5.6 tends to
+the following corollaries which show the respect of Ind to a kind of Cartesian
+product theorem and the property of commutativity.
+Corollary 5.7. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be finite lattices. Then,
+  1. Ind(L1 × L2 ) ⩽ Ind(L1 ) + Ind(L2 ),
+  2. Ind(L1 × L2 ) = Ind(L2 × L1 ).
+Definition 5.8. For two lattices (L1 , ⩽1 ) and (L2 , ⩽2 ) the lexicographic prod-
+uct L1 ⋄ L2 is the lattice (L1 × L2 , ⩽), where the relation ⩽ is defined as
+follows:                                (
+                                         x1 <1 x2 or
+              (x1 , y1 ) ⩽ (x2 , y2 ) ⇔
+                                         x1 = x2 and y1 ⩽2 y2 .
+
+By Definition 4.8 of [13] for every (x, y), (x′, y ′) ∈ L1 ⋄ L2 we have that
+                                      
+                                      
+                                       (x, y), if x < x′
+                                      (x′ , y ′ ), if x′ < x
+                                      
+                (x, y) ∧ (x′ , y ′) =
+                                      
+                                      
+                                       (x, y ∧ y ′), if x = x′
+                                        (x ∧ x′ , 1L2 ), if x k x′
+                                      
+
+and                                    
+                                       
+                                       (x, y), if x′ < x
+                                       (x′ , y ′), if x < x′
+                                       
+                 (x, y) ∨ (x′ , y ′) =
+                                       
+                                       
+                                       (x, y ∨ y ′), if x = x′
+                                        (x ∨ x′ , 0L2 ), if x k x′ .
+                                       
+
+
+                                          26
+Remark 5.9. (1) The lattices (L1 , ⩽1 ) and (L3 , ⩽3 ) of Figures 1 and 13,
+respectively, verifies that the inequality
+
+                        Ind(L3 ⋄ L1 ) ⩽ Ind(L3 ) + Ind(L1 )
+
+does not hold for all finite lattices L1 and L3 .
+   We have that Ind(L1 ) = Ind(L3 ) = 0. For the finite lattice (L3 ⋄ L1 , ⩽),
+which is represented by the diagram of Figure 15, we have that Ind(L3 ⋄L1 ) =
+1.
+
+                                        (1L3 , 1L1 )
+
+
+                          (1L3 , x1 )                  (1L3 , x2 )
+
+                                               (1L3 , 0L1 )
+
+                                               (0L3 , 1L1 )
+
+                          (0L3 , x1 )                  (0L3 , x2 )
+
+
+                                        (0L3 , 0L1 )
+
+
+                       Figure 15: The finite lattice (L3 ⋄ L1 , ⩽)
+
+
+(2) The lattices (L1 , ⩽1 ) and (L3 , ⩽3 ) of Figures 1 and 13, respectively, verifies
+that the inequality
+                            Ind(L3 ⋄ L1 ) = Ind(L1 ⋄ L3 )
+does not hold for all finite lattices L1 and L3 .
+    As we have seen in Figure 15, Ind(L3 ⋄L1 ) = 1. However, Ind(L1 ⋄L3 ) = 0.
+Indeed, the diagram of L1 ⋄ L3 is given in Figure 16, from which we can easily
+see that Ind(L1 ⋄ L3 ) = 0.
+
+
+
+
+                                            27
+                                        (1L1 , 1L3 )
+
+
+                                               (1L3 , 0L3 )
+
+                          (x1 , 1L3 )                  (x2 , 1L3 )
+
+                          (x1 , 0L3 )                  (x2 , 0L3 )
+
+                                               (0L1 , 1L3 )
+
+
+                                        (0L1 , 0L3 )
+
+
+                       Figure 16: The finite lattice (L1 ⋄ L3 , ⩽)
+
+
+Proposition 5.10. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be two finite lattices such that
+the pseudocomplement of every element of L2 \ {0L2 } is 0L2 . Then
+
+                             Ind(L2 ) ⩽ Ind(L1 ⋄ L2 ).
+
+Proof. Let Ind(L1 ⋄ L2 ) = k, k ∈ N, a ∈ L2 and v ∈ L2 with a ∨ v = 1L2 .
+    (1) If a = 1L2 , then for every v ∈ L2 we have a ∨ v = 1L2 and thus, there
+exists the element u′ = 0L2 such that u′ ⩽2 v, a ∨ u′ = 1L2 and
+
+                        Ind(↑(u′ ∨ (u′ )∗L2 )) = −1 ⩽ k − 1,
+
+where (u′)∗L2 denotes the pseudocomplement of u′ in L2 .
+   (2) If a = 0L2 , then for the only element v = 1L2 we have a ∨ v = 1L2 .
+Thus, there exists the element u′ = 1L2 such that u′ ⩽2 v, a ∨ u′ = 1L2 and
+
+                        Ind(↑(u′ ∨ (u′ )∗L2 )) = −1 ⩽ k − 1.
+
+    (3) Let a ∈ L2 \ {0L2 , 1L2 }. Then (1L1 , a) and (1L1 , v) belong to L1 ⋄ L2
+and (1L1 , a) ∨ (1L1 , v) = (1L1 , 1L2 ). Since Ind(L1 ⋄ L2 ) = k, there exists
+(u, u′) ∈ L1 ⋄ L2 such that (u, u′) ⩽ (1L1 , v), (u, u′) ∨ (1L1 , a) = (1L1 , 1L2 ) and
+
+                      Ind(↑((u, u′) ∨ (u, u′)∗L1 ⋄L2 )) ⩽ k − 1,
+
+
+                                            28
+where (u, u′)∗L1 ⋄L2 denotes the pseudocomplement of (u, u′) in L1 ⋄ L2 . Since
+(u, u′) ⩽ (1L1 , v), a 6= 1L2 and (u, u′) ∨ (1L1 , a) = (1L1 , 1L2 ), we have that
+u = 1L1 , u′ ⩽2 v and u′ ∨ a = 1L2 . Since (u′ )∗L2 = 0L2 by the assumption of
+the proposition, we have (1L1 , u′)∗L1 ⋄L2 = (0L1 , 0L2 ) and thus,
+
+               Ind(↑(u, u′)) = Ind(↑((u, u′) ∨ (u, u′)∗L1 ⋄L2 )) ⩽ k − 1.
+
+Since ↑(1L1 , u′) = ↑1L1 × ↑u′ , we have that
+
+              Ind(↑u′ ) = Ind({1L1 } × ↑u′ ) = Ind(↑(1L1 , u′)) ⩽ k − 1
+
+and thus,
+
+            Ind(↑(u′ ∨ (u′ )∗L2 )) = Ind(↑(u′ ∨ 0L2 )) = Ind(↑u′ ) ⩽ k − 1.
+
+Therefore, Ind(L2 ) ⩽ k. 
+
+                                                (1L2 , 1L3 )
+
+                                                (1L2 , 0L3 )
+
+                           (y2 , 1L3 )                  (y3 , 1L3 )
+
+                           (y2 , 0L3 )                  (y3 , 0L3 )
+
+                                                (y1 , 1L3 )
+
+                                                (y1 , 0L3 )
+
+                                                (0L2 , 1L3 )
+
+
+                                         (0L2 , 0L3 )
+
+
+                        Figure 17: The finite lattice (L2 ⋄ L3 , ⩽)
+
+
+Remark 5.11. The dimension Ind of the Cartesian product L1 × L2 of two
+finite lattices L1 and L2 differs from the dimension Ind of their lexicographic
+product.
+
+                                             29
+(1) For the lattices (L1 , ⩽1 ) and (L3 , ⩽3 ) of Figures 1 and 13, respectively,
+we have Ind(L1 ) = Ind(L3 ) = 0 and by Theorem 5.6, Ind(L3 × L1 ) = 0. For
+their lexicographic product (see Figure 15) we have Ind(L3 ⋄ L1 ) = 1.
+(2) For the lattices (L2 , ⩽2 ) and (L3 , ⩽3 ) of Figures 1 and 13, respectively,
+we have Ind(L2 ) = 1, Ind(L3 ) = 0 and by Theorem 5.6, Ind(L2 × L3 ) = 1.
+For their lexicographic product (see Figure 17) we have Ind(L2 ⋄ L3 ) = 0.
+
+Definition 5.12. [1, 3] The rectangular product of two lattices (L1 , ⩽1 ) and
+(L2 , ⩽2 ) is the lattice (L1 L2 , ⩽), where
+
+      L1 L2 = {(x, y) ∈ L1 × L2 : x 6= 0L1 and y 6= 0L2 } ∪ {(0L1 , 0L2 )}
+
+and the relation ⩽ is defined as follows:
+
+                  (x1 , y1 ) ⩽ (x2 , y2) ⇔ x1 ⩽1 x2 and y1 ⩽2 y2 .
+
+    That is, L1 L2 is the subset of L1 × L2 obtained by removing the points
+of the form (x, 0L2 ) and (0L1 , y) with x 6= 0L1 and y 6= 0L2 . Also, if
+(x1 , y1), (x2 , y2) ∈ L1 L2 , then:
+(1) (x1 , y1) ∨ (x2 , y2 ) =((x1 ∨ x2 , y1 ∨ y2 ) and
+                              (x1 ∧ x2 , y1 ∧ y2 ), if x1 ∧ x2 6= 0L1 and y1 ∧ y2 6= 0L2
+(2) (x1 , y1 )∧(x2 , y2) =
+                              (0L1 , 0L2 ), otherwise.
+    In order to study the relation of the rectangular product of two finite
+lattices with their large inductive dimension, we recall the following fact.
+
+Proposition 5.13. [21] Let L1 and L2 be two finite lattices and (a, b) ∈
+L1 L2 . Then
+                    ∗ ∗
+                   
+                   (a , b ) = (0L1 , 0L2 ), if a∗ = 0L1 and b∗ = 0L2
+                                             if a∗ 6= 0L1 and b∗ 6= 0L2
+                   
+                   (1 , 1 ),
+                      L1    L2
+         (a, b)∗ =
+                   
+                   
+                   (1L1 , b∗ ),             if a∗ = 0L1 and b∗ 6= 0L2
+                    ∗
+                    (a , 1L2 ),              if a∗ 6= 0L1 and b∗ = 0L2 .
+
+    Up to now, the above discussions related the dimension Ind and the prop-
+erties of linear sum, Cartesian product and lexicographic product tend to
+study the behavior of this dimension without mentioning additional lattice
+properties, verifying that Ind respects such properties. However, this seems
+to fail for the rectangular product.
+
+                                          30
+    Let us observe that in Figure 4 we have seen a finite lattice L for which
+Ind(↑x2 )    Ind(L). This fact leads us to insert a new lattice property as
+follows. This property will be useful in order to succeed a kind of rectangular
+product theorem given in Theorem 5.15.
+
+Definition 5.14. Let L be a finite lattice. If the sublattice property of the
+form Ind(↑x) ⩽ Ind(L) holds for every x ∈ L, then we say that L has the
+SP-property.
+
+Theorem 5.15. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be two finite lattices such that the
+SP-property holds for all ↑κ and ↑λ, where κ ∈ L1 and λ ∈ L2 . Then
+                  Ind(L1 L2 ) ⩽ max{Ind(L1 ), Ind(L2 )} + 1.
+
+Proof. Let Ind(L1 ) = n and Ind(L2 ) = m, where n, m ∈ N. We shall prove
+that Ind(L1 L2 ) ⩽ max{n, m} + 1. Let (a, b) ∈ L1 L2 . Then we study the
+following cases:
+(1) If (a, b) = (0L1 , 0L2 ), then for every (u, v) ∈ L1 L2 with (a, b) ∨ (u, v) =
+(1L1 , 1L2 ) (that is, (u, v) = (1L1 , 1L2 )), there is (x, y) = (1L1 , 1L2 ) ∈ L1 L2
+such that (x, y) ⩽ (u, v), (a, b) ∨ (x, y) = (1L1 , 1L2 ) and
+                  Ind(↑((x, y) ∨ (x, y)∗ )) = −1 < max{n, m}.
+(2) Let a 6= 0L1 , b 6= 0L2 .
+    (2a) If (a, b) = (1L1 , 1L2 ) and (u, v) ∈ L1 L2 such that (a, b) ∨ (u, v) =
+(1L1 , 1L2 ), then there exists (x, y) = (0L1 , 0L2 ) ∈ L1 L2 such that (x, y) ⩽
+(u, v), (a, b) ∨ (x, y) = (1L1 , 1L2 ) and
+                  Ind(↑((x, y) ∨ (x, y)∗ )) = −1 < max{n, m}.
+    (2b) Let (a, b) ∈ (L1 L2 ) \ {(0L1 , 0L2 ), (1L1 , 1L2 )} and (u, v) ∈ L1 L2
+such that (a, b) ∨ (u, v) = (1L1 , 1L2 ). We shall prove that there exists (x, y) ∈
+L1 L2 such that (x, y) ⩽ (u, v), (a, b) ∨ (x, y) = (1L1 , 1L2 ) and
+                      Ind(↑((x, y) ∨ (x, y)∗)) ⩽ max{n, m}.
+We consider as (x, y) the element (u, v). Then by Proposition 5.13 we have
+the following cases:
+    (A) (u, v) ∨ (u, v)∗ = (u, v) ∨ (u∗, 1L2 ) = (u ∨ u∗, 1L2 ) and thus, by Lemma
+5.5 and Theorem 5.6, we have that
+              Ind(↑((u, v) ∨ (u, v)∗)) = max{Ind(↑(u ∨ u∗ )), −1}.
+
+                                         31
+By SP-property for the lattice L1 we also have that Ind(↑(u ∨ u∗ )) ⩽ Ind(L1 )
+and thus,
+                  Ind(↑((u, v) ∨ (u, v)∗ )) ⩽ max{n, −1}.
+    (B) (u, v) ∨ (u, v)∗ = (u, v) ∨ (1L1 , v ∗ ) = (1L1 , v ∨ v ∗ ) and thus, this case
+is similar to Case (A).
+    (C) (u, v) ∨ (u, v)∗ = (u, v) ∨ (0L1 , 0L2 ) = (u, v) and thus, by Lemma 5.5
+and Theorem 5.6, we have that
+
+               Ind(↑((u, v) ∨ (u, v)∗)) = max{Ind(↑u), Ind(↑v)}.
+
+By SP-property for the lattices L1 and L2 we also have Ind(↑u) ⩽ Ind(L1 )
+and Ind(↑v) ⩽ Ind(L2 ). Thus,
+
+                      Ind(↑((u, v) ∨ (u, v)∗)) ⩽ max{n, m}.
+
+   (D) (u, v) ∨ (u, v)∗ = (u, v) ∨ (1L1 , 1L2 ) = (1L1 , 1L2 ) and thus,
+
+                  Ind(↑((u, v) ∨ (u, v)∗)) = −1 < max{n, m}.
+
+Therefore, in each case we have that
+
+                      Ind(↑((u, v) ∨ (u, v)∗)) ⩽ max{n, m}.
+
+Thus,
+                        Ind(L1 L2 ) ⩽ max{n, m} + 1. 
+
+Corollary 5.16. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be two finite lattices such that
+the SP-property holds for all ↑κ and ↑λ, where κ ∈ L1 and λ ∈ L2 . Then
+
+                     Ind(L1 L2 ) ⩽ Ind(L1 ) + Ind(L2 ) + 1.
+
+Theorem 5.17. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be two finite lattices such that the
+pseudocomplement of every w ∈ Li \ {0Li } is 0Li , for i = 1, 2. Then
+
+                           Ind(L1 × L2 ) ⩽ Ind(L1 L2 ).
+
+Proof. By Theorem 5.6, it suffices to prove that
+
+                     max{Ind(L1 ), Ind(L2 )} ⩽ Ind(L1 L2 ).
+
+
+                                          32
+Let Ind(L1 L2 ) = k, where k ∈ N. Then we shall prove that Ind(Li ) ⩽ k,
+for i = 1, 2.
+    Firstly, we shall prove that Ind(L1 ) ⩽ Ind(L1 L2 ). Let a ∈ L1 and
+v ∈ L1 with a ∨ v = 1L1 .
+    (1) If a = 1L1 and v ∈ L1 , we consider on the element u = 0L1 . Then,
+u ⩽1 v, a ∨ u = 1L1 and Ind(↑ (u ∨ u∗ )) = Ind({1L1 }) = −1 ⩽ k − 1.
+    (2) If a = 0L1 , then the only element v ∈ L1 for which a ∨ v = 1L1 is the
+element 1L1 . Thus, for this element u = 1L1 we have Ind(↑(u ∨ u∗ )) = −1 ⩽
+k − 1.
+    (3) Let a ∈ L1 \ {0L1 , 1L1 } and v ∈ L1 with a ∨ v = 1L1 . Then v 6= 0L1
+and thus, (a, 1L2 ), (v, 1L2 ) ∈ L1 L2 with (a, 1L2 )∨(v, 1L2 ) = (1L1 , 1L2 ). Since
+Ind(L1 L2 ) = k, there exists (x, y) ∈ L1 L2 such that (x, y) ⩽ (v, 1L2 ),
+(x, y) ∨ (a, 1L2 ) = (1L1 , 1L2 ) and
+
+                         Ind(↑((x, y) ∨ (x, y)∗)) ⩽ k − 1.
+
+Then x ⩽1 v and x ∨ a = 1L1 . Also, by assumption we have
+
+                  Ind(↑(x ∨ x∗ )) = Ind(↑(x ∨ 0L1 )) = Ind(↑x).
+
+Thus, it suffices to prove that Ind(↑x) ⩽ k − 1. By Proposition 5.13 and our
+assumption we have that
+
+             (x, y) ∨ (x, y)∗ = (x, y) ∨ (x∗ , y ∗) = (x, y) ∨ (0L1 , 0L2 )
+
+and thus, by Lemma 5.5 and Theorem 5.6,
+
+       max{Ind(↑x), Ind(↑y)} = Ind(↑(x, y)) = Ind(↑((x, y) ∨ (x, y)∗ ))
+
+and therefore,
+                        max{Ind(↑x), Ind(↑y))} ⩽ k − 1,
+that is Ind(↑x) ⩽ k − 1. Therefore, Ind(L1 ) ⩽ k.
+   Similarly, we can prove that Ind(L2 ) ⩽ k. Hence,
+
+                           max{Ind(L1 ), Ind(L2 )} ⩽ k
+
+and thus, by Theorem 5.6 we have that Ind(L1 × L2 ) ⩽ k. 
+
+Corollary 5.18. Let (L1 , ⩽1 ) and (L2 , ⩽2 ) be two finite lattices such that:
+
+                                          33
+  1. the SP-property holds for all ↑κ and ↑λ, where κ ∈ L1 and λ ∈ L2 and
+  2. the pseudocomplement of every w ∈ Li \ {0Li } is 0Li , for i = 1, 2.
+Then
+             Ind(L1 × L2 ) ⩽ Ind(L1 L2 ) ⩽ Ind(L1 × L2 ) + 1.
+Proof. By Theorems 5.6 and 5.15, we have Ind(L1 L2 ) ⩽ Ind(L1 × L2 ) + 1.
+Moreover, by Theorem 5.17 we have Ind(L1 × L2 ) ⩽ Ind(L1 L2 ). 
+Remark 5.19. The dimension Ind of the Cartesian product L1 × L2 of two
+finite lattices L1 and L2 differs from the dimension Ind of their rectangular
+product.
+(1) We consider the finite lattices, which are represented in Figures 18 and
+19. We have that Ind(L1 ) = Ind(L2 ) = 0, Ind(L1 L2 ) = 1 and by Theorem
+5.6, Ind(L1 × L2 ) = 0.
+
+                           1 L1                          1 L2
+
+
+                              x                             y
+
+
+                           0 L1                          0 L2
+
+
+                Figure 18: The finite lattices (L1 , ⩽1 ) and (L2 , ⩽2 )
+
+
+
+                                      (1L1 , 1L2 )
+
+
+                          (x, 1L2 )                   (1L1 , y)
+
+                                             (x, y)
+
+
+                                      (0L1 , 0L2 )
+
+
+                      Figure 19: The finite lattice (L1 L2 , ⩽)
+
+
+                                          34
+(2) We consider the finite lattices of Figure 1. Then Ind(L1 ) = 0 and
+Ind(L2 ) = 1 and thus, by Theorem 5.6 we have that Ind(L2 × L1 ) = 1.
+For the rectangular product L2 L1 , which is represented by the diagram of
+Figure 20, we have Ind(L2 L1 ) = 0.
+    Especially, for Ind(L2 L1 ) = 0, we follow the argument (2) of Definition
+3.1. We observe that for every (a, b) ∈ L2 L1 and for every (u.v) ∈ L2 L1
+with (a, b) ∨ (u, v) = (1L2 , 1L1 ) we always find an element (x, y) ∈ L2 L1
+such that (x, y) ⩽ (u, v), (a, b) ∨ (u, v) = (1L2 , 1L1 ) and
+
+                Ind(↑((x, y)∗ ∨ (x, y))) = Ind({(1L2 , 1L1 )}) = −1.
+
+Thus, Ind(L2 L1 ) = 0.
+
+                                             (1L2 , 1L1 )
+
+
+              (1L2 , x1 )      (y2 , 1L1 )                  (y3 , 1L1 )   (1L2 , x2 )
+
+
+
+        (y2 , x1 )    (y3 , x1 )      (y1 , 1L1 )                  (y2 , x2 )    (y3 , x2 )
+
+
+
+               (y1 , x1 )                                                 (y1 , x2 )
+
+
+                                             (0L2 , 0L1 )
+
+
+                            Figure 20: The finite lattice (L2 L1 , ⩽)
+
+Remark 5.20. The dimension Ind of the lexicographic product L1 ⋄L2 of two
+finite lattices L1 and L2 differs from the dimension Ind of their rectangular
+product.
+(1) We consider the finite lattices (L1 , ⩽1 ) and (L3 , ⩽3 ) of Figures 1 and 13,
+respectively. Then as we have seen in Figure 15, we have Ind(L3 ⋄ L1 ) = 1.
+For their rectangular product, the figure of which is isomorphic to the lattice
+(L1 , ⩽1 ) of Figure 1, we have Ind(L3 L1 ) = 0.
+
+                                                 35
+(2) We consider the lattices (L2 , ⩽2 ) and (L3 , ⩽3 ) of Figures 1 and 13, re-
+spectively. As we have seen in Figure 17, we have Ind(L2 ⋄ L3 ) = 0. For their
+rectangular product, the figure of which is isomorphic to the lattice (L2 , ⩽2 )
+of Figure 1, we have Ind(L2 L3 ) = 1.
+
+Results and Discussion
+In this paper, we insert a new dimension, called large inductive dimension,
+in the realm of finite lattices. We investigate several of its properties; sublat-
+tice, linear sum, Cartesian, lexicographic, rectangular product properties. In
+addition, we study its relation with known lattice-notions; the small induc-
+tive dimension, the Krull dimension, the covering dimension and the height,
+proving the independence of this new dimension in the chapter of Lattice
+Dimension Theory.
+
+Declaration of interests
+All authors have nothing to declare.
+
+Declaration of generative AI in scientific writing
+All authors have nothing to declare.
+
+Funding sources
+The authors declare that no funds, grants, or other support were received
+during the preparation of this manuscript.
+
+References
+References
+ [1] Bae, D.R.: Properties of lattices preserved by taking rectangular prod-
+     ucts. Comm. Korean Math. Soc. 9(1), 37–47 (1994)
+
+ [2] Banaschewski, B., Gilmour, G.: Stone-Čech compactification and di-
+     mension theory for regular σ-frames. J. London Math. Soc. (2) 39(1),
+     1–8 (1989)
+
+
+
+                                       36
+ [3] Bennett, M.K.: Rectangular products of lattices. Discrete Math. 79(3),
+     235–249 (1990)
+
+ [4] Berghammer, R., Winter, M.: Order- and graph-theoretic investiga-
+     tion of dimensions of finite topological spaces and Alexandroff spaces.
+     Monatsh. Math. 190(1), 33–78 (2019)
+
+ [5] Boyadzhiev, D., Georgiou, D., Megaritis, A., Sereti, F.: A study of a
+     covering dimension of a finite lattices. Appl. Math. Comput. 333, 276–
+     285 (2018)
+
+ [6] Brijlall, D., Baboolal, D.: Some aspects of dimension theory of frames.
+     Indian J. Pure Appl. Math. 39(5), 375–402 (2008)
+
+ [7] Brijlall, D., Baboolal, D.: The katětov-Morita theorem for the dimension
+     of metric frames. Indian J. Pure Appl. Math. 41(3), 535–553 (2010)
+
+ [8] Chameni-Nambua, C., Monjardet, B.: Les treillis pseudocomple’ mente’
+     s finis. Eur. J. Comb. 13(2), 89–107 (1992)
+
+ [9] Charalambous, M.G.: Dimension theory of σ-frames. J. London Math.
+     Soc. (2) 8, 149–160 (1974)
+
+[10] Charalambous, M.G.: Dimension Theory, A Selection of Theorems and
+     Counterexamples. Springer Nature Switzerland AG, Cham, Switzerland,
+     (2019)
+
+[11] Charalambous, M.G.: The dimension of paracompact normal κ-frames.
+     Topology Proc. 20, 49–66 (1995)
+
+[12] Davey, B.A., Priestley, H.A.: Introduction to Lattices and Order. Cam-
+     bridge University Press (2002)
+
+[13] Dube, T., Georgiou, D.N., Megaritis, A.C., Moshokoa, S.P.: A study of
+     covering dimension for the class of finite lattices. Discrete Math. 338(7),
+     1096–1110 (2015)
+
+[14] Dube, T., Georgiou, D.N., Megaritis, A.C., Sereti, F.: Studying the
+     Krull Dimension of Finite Lattices Under the Prism of Matrices. Filomat
+     31(10), 2901–2915 (2017)
+
+
+
+                                      37
+[15] Dube, T.: Irreducibility in pointfree topology. Quaest. Math. 27(3),
+     231–241 (2004)
+
+[16] Dube, T., Matutu, P.: A few points on pointfree pseudocompactness.
+     Quaest. Math. 30(4), 451–464 (2007)
+
+[17] Dube, T., Mugochi, M.M., Naidoo, I.: Čech-completeness in pointfree
+     topology. Quaest. Math. 37(1), 49–65 (2014)
+
+[18] Engelking, R.: Theory of dimensions, finite and infinite. Sigma Series in
+     Pure Mathematics, 10 Heldermann, Verlag Lemgo (1995)
+
+[19] Evako, A.V., Kopperman, R., Mukhin, Y.V.: Dimensional properties
+     of graphs and digital spaces. J. Math. Imaging Vision 6(2-3), 109–119
+     (1996)
+
+[20] Freese, R., Ježek, J., Nation, J.B.: Free lattices. Amer. Math. Soc. 42,
+     (1995)
+
+[21] Georgiou, D.N., Megaritis, A.C., Prinos, G., Sereti, F.: A study of the
+     small inductive dimension in the area of finite lattices. Order 41(2),
+     437–461 (2024)
+
+[22] Georgiou, D.N., Megaritis, A.C., Sereti, F.: A study of the order dimen-
+     sion of a poset using matrices. Quaest. Math. 39(6), 797–814 (2016)
+
+[23] Khalimsky, E., Kopperman, R., Meyer, P.R.: Computer graphics and
+     connected topologies on finite ordered sets. Topology Appl. 36(1), 1–17
+     (1990)
+
+[24] Nagami, K.: Dimension theory. Pure and Applied Mathematics 37 Aca-
+     demic Press, New York-London (1970)
+
+[25] Nagata, J.: Modern dimension theory (Revised edition). Sigma Series
+     in Pure Mathematics, 2. Heldermann Verlag, Berlin (1983)
+
+[26] Pears, A.R.: Dimension Theory of General Spaces. Cambridge Univer-
+     sity Press, Cambridge, England-New York-Melbourne (1975)
+
+[27] Trotter, W.T.: Combinatorics and partially ordered sets: Dimension
+     Theory. Johns Hopkins Series in the Mathematical Sciences, Johns Hop-
+     kins University Press, Baltimore, (1992)
+
+                                     38
+[28] Trotter, W.T., Moore, J.I.: Characterization problems for graphs, par-
+     tially ordered sets, lattices, and families of sets. Discrete Math. 16(4),
+     361–381 (1976)
+
+[29] Trotter, W.T.: Progress and new directions in dimension theory for
+     finite partially ordered sets. Extremal problems for finite sets (Visegrád,
+     1991). Bolyai Soc. Math. Stud. 3, 457–477. János Bolyai Math. Soc.,
+     Budapest, (1994)
+
+[30] Vinokurov, V.G.: A lattice method of defining dimension. Soviet Math.
+     Dokl. 168(3), 663–666 (1966)
+
+[31] Wang, K., Ji, C.: Covering dimension of finite distributive lattices. Or-
+     der (2024)
+
+[32] Wang, K., Wang, H., Yang, X.: Covering dimension of finite topological
+     spaces. Comp. Appl. Math. 43(212), (2024)
+
+[33] Yáñez, J., Montero, J.: A poset dimension algorithm. J. Algorithms
+     30(1), 185–208 (1999)
+
+[34] Zhang, H., Zhou, M., Zhang, G.: Answer to some open problems on
+     covering dimension for finite lattices. Discrete Math. 340(5), 1086–1091
+     (2017)
+
+
+
+
+                                       39
+
