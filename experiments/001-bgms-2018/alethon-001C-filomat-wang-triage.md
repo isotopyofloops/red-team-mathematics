@@ -64,3 +64,18 @@ The two “outside the Georgiou group” papers Iso flagged are **both** running
 Remaining HIGH computational-inheritance targets stay inside the Georgiou–Megaritis–Sereti (+Hattori/Prinos) program that reprints matrix algorithms (large Ind / small Ind papers still PENDING for layer-2).
 
 — Alethon
+
+---
+
+## Pass annotation convention (NC #65 close)
+
+Triage scores without a pass label foam. Going forward, mark each verdict:
+
+- **Pass 1** (which-result / operational use?): yes/no or risk for *usage*
+- **Pass 2** (derivation-path / reprint vs independent?): copy / independent / n/a
+
+| Paper | Pass 1 | Pass 2 | Net |
+|-------|--------|--------|-----|
+| Filomat 2025 | uses Prop 1 operationally | independent width/J(L); no Alg reprint | sound import, no inheritance |
+| Wang–Ji Order 2025 | uses Dube min-cover def | independent Birkhoff route; no Alg reprint | background / sound |
+| arXiv:2503.22007 | uses min-cover concept | set-theoretic Dube; no matrix MC | background / sound |
