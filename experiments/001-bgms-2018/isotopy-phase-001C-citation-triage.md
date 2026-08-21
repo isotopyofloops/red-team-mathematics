@@ -35,13 +35,15 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 ### 2. Quasi covering dimension of finite distributive lattices (Filomat, 2025)
 
 **Full title:** "Quasi covering dimension of finite distributive lattices"
-**Authors:** (same group, likely Boyadzhiev, Georgiou, Megaritis, Sereti)
-**Journal:** Filomat 39:29, 2025
+**Authors:** Xiaolin Huang, Kaiyun Wang (Xi'an University / Shaanxi Normal — NOT the Georgiou group)
+**Journal:** Filomat 39:29 (2025), 10391–10400. DOI: 10.2298/FIL2529391H
 
-**Risk level:** HIGH
-**Rationale:** Direct extension of the 2019 quasi-covering paper to the distributive lattice case. If it uses Algorithm 4 (or the corrected version) for computational results, it inherits the bug. If it works only from Proposition 1 (the definition-based route), it may be safe. Title and lineage suggest heavy reliance on the 2019 computational pipeline.
+**Risk level:** ~~HIGH~~ → **USES SOUND RESULT / INDEPENDENT**
+**Rationale:** Uses 2019 Prop 1 (sound ground-truth route) + independent width/J(L) formula via Birkhoff for distributive case. Zero occurrences of Algorithm/order-matrix MC/Step-lists. No Alg 2-4 inheritance.
 
-**Status:** PENDING — need full text (available at pmf.ni.ac.rs)
+**Alethon full-text audit (2026-08-21, `alethon-001C-filomat-wang-triage.md`):** Layer 1: uses Prop 1 (sound). Layer 2: no algorithm reprint. Cleared.
+
+**Status:** CLEARED — uses sound result + independent computational route
 
 ### 3. Finite lattices and large inductive dimension (AGT, 2026)
 
@@ -88,10 +90,12 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 **Journal:** Order 42(2):401-416, 2025
 **DOI:** 10.1007/s11083-024-09687-5
 
-**Risk level:** LOW-MEDIUM
-**Rationale:** Different authors. Covering dimension (not quasi-covering) for distributive lattices. May develop independent machinery for the distributive case, or may import the 2018 algorithms. The distributive lattice restriction might avoid the bug (if all relevant lattices are chains or near-chains where the directional bug is inert), but this is not guaranteed.
+**Risk level:** ~~LOW-MEDIUM~~ → **BACKGROUND ONLY / USES SOUND RESULT**
+**Rationale:** Uses Dube 2015 min-cover definition + Birkhoff/J(L) for distributive uniqueness. Cites 2018/2019 in bibliography as literature context. Remark 3.12 references "algorithm in [23]" = Wang–Wang–Yang 2024 on finite T₀ spaces, NOT 2018 Alg 3.9.
 
-**Status:** PENDING — need full text
+**Alethon full-text audit (2026-08-21, `alethon-001C-filomat-wang-triage.md`):** Layer 1: background citation + Dube framework. Layer 2: no reprint of 2018/2019 algorithms. Cleared.
+
+**Status:** CLEARED — background citation + independent Birkhoff route
 
 ---
 
@@ -110,13 +114,13 @@ These are upstream references and are NOT part of the blast radius:
 | # | Paper | Year | Authors | Risk | Status |
 |---|-------|------|---------|------|--------|
 | 1 | Small inductive dimension (Order) | 2024 | Same group + Prinos | MEDIUM | PENDING |
-| 2 | Quasi covering dim, distributive (Filomat) | 2025 | Same group | HIGH | PENDING |
+| 2 | Quasi covering dim, distributive (Filomat) | 2025 | Huang, Wang | ~~HIGH~~ SOUND/INDEP | CLEARED (Alethon) |
 | 3 | Large inductive dimension (AGT) | 2026 | Same group + Hattori | HIGH | PENDING |
 | 4 | Realm of finite lattices (arXiv) | 2025 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
 | 5 | New dimension, Topol. Appl. | 2019 | Same group | MEDIUM | PENDING (locate) |
-| 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | LOW-MEDIUM | PENDING |
+| 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | ~~LOW-MED~~ BACKGROUND | CLEARED (Alethon) |
 
-**Key observation:** The blast radius is concentrated within one research group (Georgiou, Megaritis, Sereti + collaborators) who have built an entire program on these matrix methods for lattice dimensions. At least 3 of the 6 downstream papers explicitly mention "minimal covers," which is the affected machinery. The directional bug (row-sum vs row-difference) is a systematic error in the matrix translation that would propagate to any new dimension defined via the same algorithm template.
+**Key observation (updated 2026-08-21):** Of 6 downstream papers, 3 are now CLEARED (arXiv:2503.22007, Filomat 2025 Huang–Wang, Order 2025 Wang–Ji) — all use definition-level minimal covers or Prop 1 (sound) with independent computational routes. The blast radius has narrowed to the Georgiou–Megaritis–Sereti core group papers that may reprint matrix algorithms: small inductive dimension (Order 2024) and large inductive dimension (AGT 2026, published version). Papers outside the Georgiou group independently developed Birkhoff/J(L) routes that bypass the faulty algorithm entirely.
 
 **Next steps:**
 1. Obtain full texts of papers #2, #3, #4 (highest risk)
