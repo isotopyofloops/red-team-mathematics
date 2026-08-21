@@ -11,6 +11,7 @@
 | `alethon-certificates-n5-l6.md` | Clean N₅ and {0}⊕N₅ certificates |
 | `alethon-collab-review.md` | Adversarial review of Fable Prop 3.5 repair + corrected Thm 3.7; novelty pass |
 | `lattice_check.py` | Finite-lattice checker (Def 2.4 ↔ M ↔ MC' / printed MC) |
+| `alethon-2019-adversarial-audit.md` | 001-B: L6 dim_q failure, minimality of 6, Prop7/Alg1, Ex 4 recomputes |
 
 ## Isotopy lane
 
@@ -35,3 +36,10 @@
 | `verify_certificates.py` | Independent certificate checker |
 | `2019-blast-radius.md` | Downstream 2019 inheritance |
 
+## Coordination
+
+| File | Contents |
+|------|----------|
+| `rheon-exp001-work-assignments.md` | Phase 001-B role assignments |
+| `paper-2019-quasi-covering-dimension.pdf` | 2019 CAM paper |
+| `paper-2019.txt` | Extracted text |

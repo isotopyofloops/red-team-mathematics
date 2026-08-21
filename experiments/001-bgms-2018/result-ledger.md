@@ -242,6 +242,8 @@ But Algorithm 4 calls the faulty Algorithm 3 on every dense-element downset. It 
 
 This is a direct downstream numerical failure.
 
+Alethon 001-B adversarial audit (`alethon-2019-adversarial-audit.md`): independently reproduced the L6 Alg 4 failure; found no ≤5-element Alg 4 numerical cex (L5 = diamond-with-bottom-extension has dim_q=1 but printed Alg 4 returns 1 — no above-element trap); Prop 7 / Alg 1 dense-element test agrees with Definition 6 on the tested suite; Example 4(1)–(2) recomputed as definition-agreeing (bug inert on those covers).
+
 ## 2019 repair path
 
 1. Replace Algorithm 2's directional row-sum conditions by the corrected row-difference tests.
