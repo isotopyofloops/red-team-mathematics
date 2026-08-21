@@ -47,3 +47,4 @@
 | `alethon-001C-filomat-wang-triage.md` | Filomat 2025 + Wang–Ji Order 2025: sound Prop1 / no Alg inheritance |
 | `alethon-001C-ind-papers-triage.md` | Order 2024 small Ind + AGT 2026 large Ind: pass2 clear |
 | `alethon-novelty-implementation-pass.md` | Novelty + code search; Beshimov CAM 2023 inherits Alg 3.9 |
+| `correction-note-alethon-components.md` | Certificates, MC′, Beshimov Ex4 contamination for correction note |
