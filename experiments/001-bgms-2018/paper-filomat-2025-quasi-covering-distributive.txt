@@ -1,0 +1,577 @@
+Filomat 39:29 (2025), 10391–10400                                                  Published by Faculty of Sciences and Mathematics,
+https://doi.org/10.2298/FIL2529391H                                                University of Niš, Serbia
+                                                                                   Available at: http://www.pmf.ni.ac.rs/filomat
+
+
+
+
+              Quasi covering dimension of finite distributive lattices
+
+                                             Xiaolin Huanga , Kaiyun Wangb,∗
+                            a School of Information Engineering, Xi’an University, Xi’an, 710065, P.R. China
+                      b School of Mathematics and Statistics, Shaanxi Normal University, Xi’an, 710119, P.R. China
+
+
+
+
+      Abstract. In this paper, we study the quasi covering dimension dimq of finite distributive lattices. By the
+      join-irreducible elements, we characterize the dense elements of a finite lattice. Based on the notion of the
+      widths of posets, we prove that for every finite distributive lattice L, dimq (L) = max{width(↑a ∩ J(L)) | a ∈
+      Min(J(L))} − 1, where Min(J(L)) is the set of all minimal elements of join-irreducible elements of L. Finally,
+      we study the quasi covering dimension of the linear sum and rectangular product of two finite distributive
+      lattices.
+
+
+
+1. Introduction
+
+    Dimension theory of posets is a branch of order theory that focuses on defining and studying the
+concept of dimension in certain classes of posets. It plays an important role in the study of posets. There are
+dimensions of posets, lattices and frames: order dimension, Krull dimension, small inductive dimension,
+covering dimension, and quasi-covering dimension have been studied in [2, 5–8, 10–18, 22–24]. In [8],
+Charalambous introduced the notion of σ-frames and established a meaningful dimension theory for
+normal σ-frames. In [10], Dube et al. developed the theory of covering dimension dim for finite lattices.
+Especially, they used the notion of minimal covers to characterize the covering dimension for finite lattices.
+In [24], Zhang et al. proved that dim(L1 × L2 ) = max{dim(L1 ), dim(L2 )} for all finite lattices L1 and L2 . They
+gave a negative answer to the question being that whether the relation dim(L1 ◦ L2 ) ≤ dim(L1 ) + dim(L2 ) + 1
+holds for all finite lattices L1 and L2 .
+    In [15], Georgiou et al. introduced and studied a new kind of dimension in the realm of frames, called
+quasi covering dimension. In [6], Boyadzhiev et al. developed the theory for quasi covering dimension
+dimq of finite lattices. In particular, they proved that for every finite lattice L, dimq (L) = max{dim(↓x) |
+x is a dense element of L}. So we can use the dense elements and the covering dimension to study the
+quasi covering dimension for finite lattices. Boyadzhiev et al. also showed in [6] that dimq (X × Y) =
+max{dimq (X), dimq (Y)} for all finite lattices X and Y. So far, we do not obtain the linear sum theorem
+and the rectangular product theorem of the quasi covering dimension of finite lattices.
+
+
+   2020 Mathematics Subject Classification. Primary 06A07; Secondary 06B05, 06D50
+   Keywords. Quasi covering dimension, finite distributive lattice, join-irreducible element, linear sum, rectangular product
+   Received: 30 January 2025; Revised: 02 August 2025; Accepted: 01 September 2025
+   Communicated by Ljubiša D. R. Kočinac
+   This work is supported by the National Natural Science Foundation of China (Grant no. 12471438) and the Fundamental Research
+Funds for the Central Universities (Grant no. GK202501014).
+   * Corresponding author: Kaiyun Wang
+   Email addresses: huangxiaolin1201@163.com (Xiaolin Huang), wangkaiyun@snnu.edu.cn (Kaiyun Wang)
+   ORCID iDs: https://orcid.org/0009-0000-4733-4938 (Xiaolin Huang), https://orcid.org/0000-0001-6460-6990 (Kaiyun
+Wang)
+                             X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                              10392
+
+    The study of finite distributive lattices holds particular importance in the dimension theory of posets
+due to their well-behaved structure and rich connections to algebra, topology, combinatorics, and logic (see
+[4, 9, 19–21]). By Birkhoff’s representation theorem of finite distributive lattices (see [3]), up to isomorphism,
+finite distributive lattices are in a one-to-one correspondence with finite posets via their sets of join-
+irreducible elements, which allows for a combinatorial interpretation of their properties. This makes them
+an ideal setting for investigating dimension-theoretic concepts. It was proved in [22] that for any finite
+distributive lattice L, dim(L) = ordL (Max(J(L))), where Max(J(L)) is the set of all maximal elements of join-
+irreducible elements of L. The sum and product theorems of the covering dimension of finite distributive
+lattices were also obtained in [22]. Additionally, for every finite topological space, its covering dimension
+equals the covering dimension of its open set lattice (see [8]). These findings motivate us to study the quasi
+covering dimension of finite distributive lattices.
+    In this paper, we focus on the quasi covering dimension dimq of finite distributive lattices. By the notion
+of the widths of posets, we prove that for every finite distributive lattice L,
+                              dimq (L) = max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1,
+where Min(J(L)) is the set of all minimal elements of join-irreducible elements of L. Moreover, we give
+the linear sum theorem and the rectangular product theorem of the quasi covering dimension of finite
+distributive lattices.
+
+2. Preliminaries
+    Our references for elementary properties of lattices are [9, 20]. Let P be a poset and Q ⊆ P. Then a ∈ Q
+is a maximal element of Q if a ≤ x and x ∈ Q imply a = x. We denote the set of maximal elements of Q by
+Max(Q). A minimal element of Q ⊆ P and Min(Q) are defined dually. The poset P is an antichain if x ≤ y in P
+only if x = y. The width of a poset P is n if there is an antichain in P of n elements and all antichains in P have
+≤ n elements; in formula, width(P) = n. It is obvious that Max(P) and Min(P)       are antichains. Let P be a poset
+and Q ⊆ P. If for every a ∈ P, there exists a subset A of Q such that a = A, then Q is called join-dense in P.
+                                                                              W
+    Let P be a poset and A ⊆ P. A is called a down-set if, whenever x ∈ A, y ∈ P and y ≤ x, we have y ∈ A.
+For A ⊆ P, we write Al = {y ∈ P | y ≤ x for every x ∈ A} and ↓A = {y ∈ P | there exists x ∈ A such that y ≤ x}.
+Dually, we can define up-sets, Au and ↑A. The set of down-sets of P will be denoted by Down(P). Obviously,
+(Down(P), ⊆) is a frame. For every A ⊆ Down(P),
+                                          _          [      ^        \
+                                               A=       A,      A=       A.
+
+∅ and P are the bottom element and the top element of (Down(P), ⊆), respectively. We use Down(P) to denote
+the down-set lattice (Down(P), ⊆).
+    Let P be a poset and x, y ∈ P. We say that x is covered by y (or x is a lower cover of y), and write x ≺ y, if
+x < y and x ≤ z < y implies z = x. Let L be a lattice with the bottom element 0L . a ∈ L is called an atom if
+0L ≺ a. The set of all atoms of L is denoted by Atom(L).
+    Let L be a bounded lattice. The top element and the bottom element of L will be denoted by 1L and 0L ,
+respectively. L is called prime if x ∧ y = 0L implies that x = 0L or y = 0L for all x, y ∈ L.
+Definition 2.1. ([8]) Let L be a finite lattice. A subset C of L is called a cover of L if C = 1L and 0L < C. A
+                                                                                           W
+cover D of L is called a refinement of a cover C of L if for each d ∈ D, there exists c ∈ C such that d ≤ c.
+Definition 2.2. ([8]) Let L be a finite lattice. The order of a subset C of L, ordL (C), is defined to be k, where
+k ∈ {0, 1, . . . }, if and only if the infimum of any k + 2 distinct elements of L is 0L and there exist k + 1 distinct
+elements of L whose infimum is not 0L .
+Definition 2.3. ([8]) The function dim, called covering dimension, with domain the class of all finite lattices
+and range the set {0, 1, . . . }, is defined as follows:
+    (1) dim(L) ≤ k, where k ∈ {0, 1, . . . }, if and only if for every cover C of L, there exists a cover R of L such
+that R is a refinement of C and ordL (R) ≤ k.
+    (2) dim(L) = k, where k ∈ {1, 2, . . . }, if dim(L) ≤ k and dim(L) ≰ k − 1.
+                              X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                                 10393
+
+Definition 2.4. ([6]) Let L be a finite lattice. A subset C of L is called a quasi cover of L if C = x, where x is
+                                                                                                W
+a dense element of L (that is, x ∧ y , 0W           W y ∈ L \ {0L }). Two quasi covers C1 and C2 of L are called
+                                          L , for every
+similar (in short, we write C1 ∼ C2 ) if C1 = C2 . A quasi cover D of L is called a refinement of a quasi
+cover C of L if for each d ∈ D, there exists c ∈ C such that d ≤ c.
+
+Definition 2.5. ([6]) The function dimq , called quasi covering dimension, with domain the class of all finite
+lattices and range the set {0, 1, . . . }, is defined as follows:
+     (1) dimq (L) ≤ k, where k ∈ {0, 1, . . . }, if and only if for every quasi cover C of L, there exists a quasi cover
+R of L such that C ∼ R, R is a refinement of C and ordL (R) ≤ k.
+     (2) dimq (L) = k, where k ∈ {0, 1, . . . }, if dimq (L) ≤ k and dimq (L) ≰ k − 1.
+
+Proposition 2.6. ([6]) For every finite lattice L, we have
+
+                                  dimq (L) = max{dim(↓x) | x is a dense element of L}.
+
+3. Quasi covering dimension of finite distributive lattices
+
+    In this section, we present an alternative approach of the quasi covering dimension paying attention
+to finite distributive lattices. This goal will be achieved by join-irreducible elements and the meaning of
+width.
+
+Definition 3.1. ([9]) Let L be a lattice. An element x ∈ L is join-irreducible if
+   (1) x , 0L (in case L has the bottom element 0L );
+   (2) x = a ∨ b implies that x = a or x = b for all a, b ∈ L.
+
+   We denote the set of all join-irreducible elements of a lattice L by J(L).
+
+Proposition 3.2. ([9]) Let L be a finite lattice. Then J(L) is join-dense in L.
+
+Proposition 3.3. ([22]) Let L be a finite lattice. Then for every A ⊆ L, A = 0L if and only if Al ∩ J(L) = ∅.
+                                                                         V
+
+Corollary 3.4. Let L be a finite lattice. Then for every a, b ∈ L, a ∧ b = 0L if and only if (↓a ∩ J(L)) ∩ (↓b ∩ J(L)) = ∅.
+
+Proposition 3.5. Let L be a finite lattice. Then x is a dense element of L if and only if Min(J(L)) ⊆ ↓x ∩ J(L).
+
+Proof. Necessity. Assume that Min(J(L)) ⊈ ↓x ∩ J(L). Then there exists m ∈ Min(J(L)) and m < ↓x. By the
+definition of minimal elements, we have that
+
+                                (↓m ∩ J(L)) ∩ (↓x ∩ J(L)) = {m} ∩ (↓x ∩ J(L)) = ∅.
+
+By Corollary 3.4, x ∧ m = 0L . This contradicts with the fact that x is a dense element of L. Thus Min(J(L)) ⊆
+↓x ∩ J(L).
+   Sufficiency. SupposeW that Min(J(L)) ⊆ ↓x ∩ J(L). For every y ∈ L \ {0L }, by Proposition 3.2, there exists
+A ⊆ J(L) such that y = A. Then for every a ∈ A, there exists a′ ∈ Min(J(L)) such that a′ ≤ a. This means
+that ↓ y ∩ Min(J(L)) , ∅. Therefore,
+
+                                            (↓x ∩ J(L)) ∩ (↓ y ∩ J(L)) , ∅.
+
+By Corollary 3.4, x ∧ y , 0L . So x is a dense element of L.
+
+Proposition 3.6. ([3]) (Birkhoff’s representation theorem for finite distributive lattices) Let L be a finite distributive
+lattice. Then the map
+                                                  φ : a 7−→ spec(a)
+is an isomorphism between L and Down(J(L)), where spec(a) = {x ∈ J(L) | x ≤ a} = ↓a ∩ J(L) is the spectrum of a.
+                              X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                               10394
+
+Proposition 3.7. ([22]) Let L be a finite distributive lattice. Then dim(L) = ordL (Max(J(L))).
+
+Lemma 3.8. Let L be a distributive lattice. Then for every sublattice M of L, M is a distributive lattice. In particular,
+for each x ∈ L, ↓x is a distributive lattice.
+
+Proof. Since the join and meet in M coincide with those in L, the proof is straightforward.
+
+Proposition 3.9. Let L be a finite lattice. Then for every x ∈ L, J(↓x) = ↓x ∩ J(L).
+
+Proof. Let a ∈ J(↓x) and a = b ∨ c, where b, c ∈ L. It is obvious that b, c ∈ ↓x. Since a ∈ J(↓x), a = b or a = c.
+Then a ∈ ↓x ∩ J(L). Thus J(↓x) ⊆ ↓x ∩ J(L). Let a ∈ ↓x ∩ J(L) and a = b ∨ c, where b, c ∈ ↓x. Since a ∈ J(L),
+a = b or a = c. Then a ∈ J(↓x). So ↓x ∩ J(L) ⊆ J(↓x).
+   Let L be a finite lattice. We put
+
+                               A(J(L)) = max{ordL (A) | A is an antichain of J(L)}.
+
+Then we have the following proposition.
+
+Proposition 3.10. Let L be a finite lattice. Then
+
+                              A(J(L)) = max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1.
+
+Proof. Let A(J(L)) = k, where k ∈ {0, 1, . . . }. Assume that there exists a ∈ Min(J(L)) such that width(↑a ∩
+J(L))−1 > k. Then there exists an antichainVC ⊆ ↑a∩J(L) such that |C| > k+1, where |C| denote the cardinality
+of C. By Proposition 3.3, we have that C , 0L . Therefore, we find an antichain C of J(L) such that
+ordL (C) > k, which contradicts with the fact that A(J(L)) = k. So max{width(↑a∩J(L)) | a ∈ Min(J(L))}−1 ≤ k.
+   Conversely, let max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1 = k, where k ∈ {0, 1, . . . }. Assume that
+A(J(L)) > k. Then thereV  exists an antichain A of J(L) such that ordL (A) > k. Thus there exists an antichain
+C ⊆ A ⊆ J(L) such that C , 0L and |C| > k + 1. By Proposition 3.3, we have that Cl ∩ J(L) , ∅. Therefore,
+there exists a ∈ Min(J(L)) such that a ∈ Cl . Then C ⊆ ↑a ∩ J(L), and thus width(↑a ∩ J(L)) > k + 1. This
+contradicts with the fact that
+
+                                  max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1 = k.
+
+So A(J(L)) ≤ k.
+
+Lemma 3.11. Let L be a finite lattice, and let M be a sublattice of L with 0L ∈ M. Then for every subset A ⊆ M,
+ordM (A) = ordL (A).
+
+Proof. Since the join and meet in M coincide with those in L, the proof is straightforward.
+
+Theorem 3.12. Let L be a finite distributive lattice. Then
+
+                               dimq (L) = max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1.
+
+Proof. On one hand,
+
+                   dimq (L)
+                  = max{dim(↓x) | x is a dense element of L} (By Proposition 2.6)
+                  = max{ord↓x (Max(J(↓x))) | x is a dense element of L} (By Proposition 3.7)
+                  = max{ord↓x (Max(↓x ∩ J(L))) | x is a dense element of L} (By Proposition 3.9)
+                  = max{ordL (Max(↓x ∩ J(L))) | x is a dense element of L} (By Lemma 3.11)
+                  ≤A(J(L))
+                  = max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1 (By Proposition 3.10).
+                             X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                       10395
+
+On the other hand, suppose that
+
+                                  max{width(↑a ∩ J(L)) | a ∈ Min(J(L))} − 1 = k,
+
+where k ∈ {0, 1, . . . }. It suffices to prove that dimq (L) ≥ k. Let a ∈ Min(J(L)) such that
+
+                                             width(↑a ∩ J(L)) = k + 1.
+
+Then there exists an antichain C ⊆ ↑a ∩ J(L) with |C| = k + 1. Let
+
+                                          P = (↓C ∩ J(L)) ∪ Min(J(L)).
+
+           W that P is a down-set of J(L). By Proposition 3.6, there exists x ∈ L such that spec(x) = ↓x∩J(L) =
+It is obvious
+P and x = P. By Proposition 3.5, x is a dense element of L. As
+
+                                 J(↓x) = ↓x ∩ J(L) = (↓C ∩ J(L)) ∪ Min(J(L)),
+
+we can conclude that
+                              Max(J(↓x)) = C ∪ {m ∈ Min(J(L)) | m < ↓C}.
+Since a ∈ Min(J(L)) and C ⊆ ↑a ∩ J(L), a ∈ Cl ∩ J(L). By Proposition 3.3, C , 0L . Then
+                                                                         V
+
+                                          ordL (Max(J(↓x))) ≥ |C| − 1 = k.
+
+For every subset A of Max(J(↓x)) with k + 2 elements, since |C| = k + 1, there exists b ∈ A ∩ {m ∈ Min(J(L)) |
+m < ↓C}. By Proposition 3.3, we can obtain that A = 0L . Then ordL (Max(J(↓x))) = k. By Proposition 3.7,
+                                                V
+we have that
+                          dim(↓x) = ord↓x (Max(J(↓x))) = ordL (Max(J(↓x))) = k.
+So
+                        k = dim(↓x) ≤ max{dim(↓x) | x is a dense element of L} = dimq (L).
+
+
+Example 3.13. (1) Let L be a finite distributive lattice. The Hasse diagram of L is Fig. 1.
+
+                                                           t 1L
+                                                           @
+                                                             @
+                                               b t                 @t c
+                                                                  @
+                                                 @
+                                                   @
+                                                    @
+                                                        @t a
+
+
+                                                           t 0L
+
+                                               Fig. 1 Hasse diagram of L
+
+     Then the Hasse diagram of J(L) is Fig. 2.
+
+                                               b t                   tc
+                                                 @
+                                                   @
+                                                    @
+                                                        @t a
+
+                                             Fig. 2 Hasse diagram of J(L)
+                           X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400   10396
+
+   We can see that Max(J(L)) = {b, c} and Min(J(L)) = {a}. Then
+
+                                        dim(L) = ordL (Max(J(L))) = 1.
+
+Since width(↑a ∩ J(L)) = 2, we have that
+
+                                 dimq (L) = width(↑a ∩ J(L)) − 1 = 2 − 1 = 1.
+
+   (2) Let L be a finite distributive lattice. The Hasse diagram of L is Fig. 3.
+
+                                                         t 1L
+
+
+                                                         th
+                                                         @
+                                                          @
+                                            e t     tf   @t 1
+                                                        @
+                                              @     @ 
+                                                @  @
+
+                                              t    @t c  @t d
+                                                 @     @
+                                            b 
+                                              @
+                                                @
+                                                 @
+                                                   @t a
+
+
+                                                         t 0L
+
+                                            Fig. 3 Hasse diagram of L
+
+   Then the Hasse diagram of J(L) is Fig. 4.
+
+                                                         t 1L
+                                                         @
+                                                            @
+                                            b t          tc    @t d
+                                                              @
+                                              @
+                                                @
+                                                    @
+                                                     @t a
+
+                                           Fig. 4 Hasse diagram of J(L)
+
+   We can obtain that Max(J(L)) = {1L } and Min(J(L)) = {a}. Then
+
+                                        dim(L) = ordL (Max(J(L))) = 0.
+
+Since width(↑a ∩ J(L)) = 3, we have that
+
+                                 dimq (L) = width(↑a ∩ J(L)) − 1 = 3 − 1 = 2.
+
+   (3) Let L be a finite distributive lattice. The Hasse diagram of L is Fig. 5.
+                               X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                               10397
+                                                                t 1L
+                                                                @
+                                                                  @
+                                                                     @
+                                                  i at          tj     @t k
+                                                    AaaaA             A
+                                                    A        aAa  A
+                                                       A        A aa A
+                                             e t       f At      At 1 aa   At h
+                                                Q
+                                                AQ        QQ        A      
+                                                 A Q          Q      A 
+                                                  A QQ           Q A 
+                                                    At b       tc      At d
+                                                                  Q
+                                                              Q       Q
+                                                      @
+                                                        @
+                                                           @
+                                                              @t a
+
+
+                                                                t 0L
+
+                                                   Fig. 5 Hasse diagram of L
+
+    Then the Hasse diagram of J(L) is Fig. 6.
+                                                                   u1
+                                                                   A
+                                                                    A
+                                                                     A
+                                                   b u          uc    Au d
+                                                     @
+                                                       @
+                                                           @
+                                                            @u a
+
+                                                  Fig. 6 Hasse diagram of J(L)
+
+    We can conclude that Max(J(L)) = {b, c, 1} and Min(J(L)) = {a}. Then
+
+                                             dim(L) = ordL (Max(J(L))) = 2.
+
+Since width(↑a ∩ J(L)) = 3,
+                                      dimq (L) = width(↑a ∩ J(L)) − 1 = 3 − 1 = 2.
+
+4. Sum and product theorems
+
+Definition 4.1. ([9]) Let (L1 , ≤1 ) and (L2 , ≤2 ) be disjoint posets. The linear sum L1 ⊕ L2 is the poset (L1 ∪ L2 , ≤),
+where the relation ≤ is defined as follows:
+                                                      
+                                                      
+                                                      
+                                                       x, y ∈ L1 and x ≤1 y or
+                                                      
+                                        x ≤ y ⇐⇒       x, y ∈ L2 and x ≤2 y or
+                                                      
+                                                      
+                                                      x ∈ L1 , y ∈ L2 .
+                                                      
+                                                      
+
+    It is easy to see that if (L1 , ≤1 ) and (L2 , ≤2 ) are lattices, then L1 ⊕ L2 is a lattice.
+
+Proposition 4.2. ([22]) Let L1 and L2 be distributive lattices. Then L1 ⊕ L2 is a distributive lattice.
+
+Lemma 4.3. Let P1 , P2 , . . . , Pn be posets. Then
+                                            n
+                                    width( ⊕ Pi ) = max{width(Pi ) | i ∈ {1, 2, . . . , n}}.
+                                            i=1
+                                  X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                      10398
+
+Proof. By Definition 4.1, the proof is straightforward.
+
+Proposition 4.4. ([22]) Let L1 and L2 be bounded lattices. Then J(L1 ⊕ L2 ) = {0L2 } ∪ J(L1 ) ∪ J(L2 ).
+
+Theorem 4.5. Let L1 and L2 be finite distributive lattices. Then
+
+                                      dimq (L1 ⊕ L2 ) = max{dimq (L1 ), width(J(L2 )) − 1}.
+
+Proof. By Theorem 3.12, we have that
+
+                        dimq (L1 ⊕ L2 ) = max{width(↑a ∩ J(L1 ⊕ L2 )) | a ∈ Min(J(L1 ⊕ L2 ))} − 1.
+
+By Definition 4.1 and Proposition 4.4, we conclude that
+
+                                                   Min(J(L1 ⊕ L2 )) = Min(J(L1 )).
+
+Then
+                           dimq (L1 ⊕ L2 ) = max{width(↑a ∩ J(L1 ⊕ L2 )) | a ∈ Min(J(L1 ))} − 1.
+For every a ∈ Min(J(L1 )), by Proposition 4.4,
+
+                                       ↑a ∩ J(L1 ⊕ L2 ) = (↑a ∩ J(L1 )) ∪ {0L2 } ∪ J(L2 ).
+
+For every a ∈ Min(J(L1 )), by Lemma 4.3, we can obtain that
+
+                            width(↑a ∩ J(L1 ⊕ L2 )) = max{width(↑a ∩ J(L1 )), width(J(L2 ))}.
+
+Therefore,
+                        dimq (L1 ⊕ L2 )
+                      = max{max{width(↑a ∩ J(L1 )), width(J(L2 ))} | a ∈ Min(J(L1 ))} − 1
+                      = max{max{width(↑a ∩ J(L1 )) | a ∈ Min(J(L1 ))} − 1, width(J(L2 )) − 1}
+                      = max{dimq (L1 ), width(J(L2 )) − 1}.
+
+
+Definition 4.6. ([1]) Let (L1 , ≤1 ) and (L2 , ≤2 ) be bounded lattices. The rectangular product L1 □L2 is the poset
+(L1 □L2 , ≤), where
+                           L1 □L2 = {(x, y) ∈ L1 × L2 | x , 0L1 and y , 0L2 } ∪ {(0L1 , 0L2 )}
+and the relation ≤ is defined as follows:
+
+                                          (x1 , x2 ) ≤ (y1 , y2 ) ⇐⇒ x1 ≤1 y1 and x2 ≤2 y2 ,
+
+for every (x1 , x2 ), (y1 , y2 ) ∈ (L1 □L2 , ≤).
+
+    It is easy to see that
+                                                
+                                                (x1 ∧ y1 , x2 ∧ y2 ), if x1 ∧ y1 , 0L1 and x2 ∧ y2 , 0L2
+                                                
+                      (x1 , x2 ) ∧ (y1 , y2 ) = 
+                                                
+                                                (0L1 , 0L2 ), otherwise
+                                                
+
+and (x1 , x2 ) ∨ (y1 , y2 ) = (x1 ∨ y1 , x2 ∨ y2 ).
+
+Remark 4.7. It follows from Definition 4.6 that when L1 (resp., L2 ) is isomorphic to 2 (2 is a chain with two
+elements), L1 □L2 is isomorphic to L2 (resp., L1 ). We have that
+                                              
+                                              dimq (L2 ), if L1 is isomorphic 2
+                                              
+                            dimq (L1 □L2 ) = 
+                                              
+                                              dimq (L1 ), if L2 is isomorphic 2.
+                                              
+                             X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                                10399
+
+Proposition 4.8. ([22]) Let L1 and L2 be finite lattices. Then
+
+                 J(L1 □L2 ) = {(x, b) | x ∈ J(L1 ), b ∈ Atom(L2 )} ∪ {(a, y) | a ∈ Atom(L1 ), y ∈ J(L2 )}.
+
+Proposition 4.9. ([1]) Let L1 and L2 be bounded lattices. Then the following statements are equivalent:
+   (1) L1 □L2 is distributive.
+   (2) L1 and L2 are distributive and
+      (a) L1 or L2 is isomorphic to 2 or
+      (b) L1 and L2 are prime.
+
+Proposition 4.10. ([22]) Let L be a finite lattice. Then L is prime if and only if |Atom(L)| = 1.
+
+Theorem 4.11. Let L1 , L2 be finite prime distributive lattices. If neither L1 nor L2 are isomorphic to 2, then
+
+                                  dimq (L1 □L2 ) = width(J(L1 )) + width(J(L2 )) − 1.
+
+Proof. If neither L1 nor L2 are isomorphic to 2, by Proposition 3.2, we have that |J(L1 )| > 1 and |J(L2 )| > 1.
+By Proposition 4.10, |Atom(L1 )| = |Atom(L2 )| = 1. Let a1 and a2 be the atoms of L1 and L2 , respectively. By
+Proposition 4.8,
+                              J(L1 □L2 ) = {(x, a2 ) | x ∈ J(L1 )} ∪ {(a1 , y) | y ∈ J(L2 )}.
+Since an atom is a join-irreducible element, (a1 , a2 ) is the bottom element of J(L1 □L2 ). Then
+
+                                               Min(J(L1 □L2 )) = (a1 , a2 ).
+
+Let width(J(L1 )) = k1 and width(J(L2 )) = k2 . By Theorem 3.12, it suffices to prove that
+
+                                        width(↑(a1 , a2 ) ∩ J(L1 □L2 )) = k1 + k2 .
+
+Since a1 and a2 are the atoms of L1 and L2 , respectively, a1 and a2 are the bottom elements of J(L1 ) and
+J(L2 ), respectively. As |J(L1 )| > 1 and |J(L2 )| > 1, there exists an antichain A ⊆ J(L1 ) \ {a1 } and an
+antichain B ⊆ J(L2 ) \ {a2 } such that |A| = k1 and |B| = k2 . By Definition 4.6, we can conclude that for every
+a ∈ {(x, a2 ) | x ∈ J(L1 )} and every b ∈ {(a1 , y) | y ∈ J(L2 )}, if a, b , (a1 , a2 ), a and b are incomparable. Then
+{(a1 , b) | b ∈ B} ∪ {(a, a2 ) | a ∈ A} is an antichain of ↑(a1 , a2 ) ∩ J(L1 □L2 ) such that
+
+                                      |{(a1 , b) | b ∈ B} ∪ {(a, a2 ) | a ∈ A}| = k1 + k2 .
+
+Assume that there exists an antichain C ⊆ ↑(a1 , a2 ) ∩ J(L1 □L2 ) such that |C| > k1 + k2 . It is obvious that
+|C| > 2. We can conclude that (a1 , a2 ) < C. Take C1 = {(x, y) ∈ C | x = a1 } and C2 = {(x, y) ∈ C | y = a2 }. Since
+C1 ∩ C2 = ∅ and C1 ∪ C2 = C, |C1 | > k2 or |C2 | > k1 . Without loss of generality, suppose that |C1 | > k2 . Then
+{y ∈ L2 | (a1 , y) ∈ C1 } is an antichain of J(L2 ) such that
+
+                                               |{y ∈ L2 | (a1 , y) ∈ C1 }| > k2 .
+
+This contradicts with the fact that width(J(L2 )) = k2 . So
+
+                                        width(↑(a1 , a2 ) ∩ J(L1 □L2 )) = k1 + k2 .
+
+Therefore, dimq (L1 □L2 ) = width(J(L1 )) + width(J(L2 )) − 1.
+
+
+Acknowledgements
+
+   The authors would like to thank the Section Editor, Professor Ljubiša Kočinac, and the anonymous
+reviewer for their valuable comments and suggestions.
+                                   X. Huang, K. Wang / Filomat 39:29 (2025), 10391–10400                                               10400
+
+References
+ [1] M. K. Bennett, Rectangular products of lattices, Discret. Math. 79 (1990), 235–249.
+ [2] R. B. Beshimov, D. N. Georgiou, F. Sereti, The small inductive dimension of finite lattices through matrices, Comput. Appl. Math. 42(4)
+     (2023), 145.
+ [3] G. Birkhoff, Rings of sets, Duke Math. J. 3(3) (1937), 443–454.
+ [4] G. Birkhoff, Lattice Theory, (3rd edition), American Mathematical Society Colloquium Publications, vol. 25, American Mathemat-
+     ical Society, Providence, RI, 1967.
+ [5] D. Boyadzhiev, D. N. Georgiou, A. C. Megaritis, F. Sereti, A study of a covering dimension of finite lattices, Appl. Math. Comput. 333
+     (2018), 276–285.
+ [6] D. Boyadzhiev, D. N. Georgiou, A. C. Megaritis, F. Sereti, A study of the quasi covering dimension of finite lattices, Comput. Appl.
+     Math. 38 (2019), 109.
+ [7] D. Brijlall, D. Baboolal, Some aspects of dimension theory of frames, Indian Journal of. Pure Appl. Math. 39(5) (2008), 375–402.
+ [8] M. G. Charalambous, Dimension theory for σ-frames, J. Lond. Math. Soc. 2(1) (1974), 149–160.
+ [9] B. A. Davey, H. A. Priestley, Introduction to Lattices and Order, (2nd edition), Cambridge University Press, Cambridge, 2002.
+[10] T. Dube, D. N. Georgiou, A. C. Megaritis, S. P. Moshokoa, A study of covering dimension for the class of finite lattices, Discret. Math.
+     338(7) (2015), 1096–1110.
+[11] T. Dube, D. N. Georgiou, A. C. Megaritis, F. Sereti, Studying the Krull dimension of finite lattices under the prism of matrices, Filomat,
+     31(10) (2017), 2901–2915.
+[12] T. Dube, D. N. Georgiou, A. C. Megaritis, I. Naidoo, F. Sereti, Covering dimension and universality property on frames, Order, 39
+     (2022), 187–208.
+[13] D. N. Georgiou, A. C. Megaritis, F. Sereti, A study of the order dimension of a poset using matrices, Quaest. Math. 39(6) (2016), 797–814.
+[14] D. N. Georgiou, S. D. Iliadis, A. C. Megaritis, F. Sereti, Small inductive dimension and universality on frames, Algebra Universalis,
+     80(2) (2019), 21.
+[15] D. N. Georgiou, I. Kougias, A. C. Megaritis, G. Prinos, F. Sereti, A study of a new dimension for frames, Topology Appl. 275 (2020),
+     106995.
+[16] D. N. Georgiou, S. D. Iliadis, A. C. Megaritis, F. Sereti, Universality property and dimension for frames, Order, 37 (2020), 427–444.
+[17] D. N. Georgiou, A. C. Megaritis, G. Prinos, F. Sereti, A study of the small inductive dimension in the area of finite lattices, Order, 41
+     (2024), 437–461.
+[18] D. N. Georgiou, Y. Hattori, A. Megaritis, F. Sereti, Universal elements in classes of bases of frames, Topology Appl. 329 (2023), 108367.
+[19] G. Gierz, K. H. Hofmann, K. Keimel, J. D. Lawson, M. W. Mislove, D. S. Scott, Continuous Lattices and Domains, Encyclopedia of
+     Mathematics and its Applications, vol. 93, Cambridge University Press, Cambridge, 2003.
+[20] G. Grätzer, Lattice Theory: Foundation, Springer, Heidelberg, 2011.
+[21] R. P. Stanley, Enumerative Combinatorics, vol. 1, (2nd edition), Cambridge University Press, Cambridge, 2011.
+[22] K. Wang, C. Ji, Covering dimension of finite distributive lattices, Order, 42 (2025), 401–416.
+[23] H. F. Zhang, M. Zhou, G. J. Zhang, Correction to “A study of covering dimension for the class of finite lattices”[Discrete Mathematics 338
+     (2015) 1096-1110], Discret. Math. 339(6) (2016), 1722–1723.
+[24] H. F. Zhang, M. Zhou, G. J. Zhang, Answer to some open questions on covering dimension for finite lattices, Discret. Math. 340(5) (2017),
+     1086–1091.
+

@@ -44,3 +44,4 @@
 | `paper-2019-quasi-covering-dimension.pdf` | 2019 CAM paper |
 | `paper-2019.txt` | Extracted text |
 | `alethon-001C-arxiv-2503.22007-triage.md` | Spot-check: Ind paper likely def-level min covers, not Alg 3.9 |
+| `alethon-001C-filomat-wang-triage.md` | Filomat 2025 + Wang–Ji Order 2025: sound Prop1 / no Alg inheritance |

@@ -1,0 +1,864 @@
+Order (2025) 42:401–416
+https://doi.org/10.1007/s11083-024-09687-5
+
+RESEARCH
+
+
+
+Covering Dimension of Finite Distributive Lattices
+
+Kaiyun Wang1 · Chunxu Ji1
+
+Received: 5 June 2024 / Accepted: 8 October 2024 / Published online: 15 October 2024
+© The Author(s), under exclusive licence to Springer Nature B.V. 2024
+
+
+
+Abstract
+In this paper, we study the covering dimension dim L of finite distributive lattices. By the
+Birkhoff’s representation theorem for finite distributive lattices, we prove that for any finite
+distributive lattice L, dim L (L) = or dL (Max(J (L))), where Max(J (L)) is the set of all
+maximal elements of join-irreducible elements of L. Based on the relationships between the
+covering dimension of topological spaces and that of bounded distributive lattices, we char-
+acterize the covering dimension of finite T0 spaces. Finally, we study the covering dimension
+of the linear sum, Cartesian product, lexicographic product and rectangular product of two
+finite distributive lattices.
+
+Keywords Covering dimension · Finite distributive lattice · Linear sum ·
+Cartesian product · Lexicographic product · Rectangular product
+
+
+1 Introduction
+
+Dimension theory of posets is a branch of order theory that focuses on defining and studying
+the concept of dimension in certain classes of posets. It plays an important role in the study of
+posets. There are dimensions of posets, lattices and frames: order dimension, Krull dimension,
+small inductive dimension, covering dimension, and quasi-covering dimension have been
+studied in [4, 7–10, 12–14, 18–20, 24, 25]. In [10], Charalambous introduced the notion of
+σ -frames and established a meaningful dimension theory for normal σ -frames. In [12], Dube
+et al. developed the theory of covering dimension dim L for finite lattices. Especially, they
+used the notion of minimal covers to characterize the covering dimension for finite lattices.
+In [25], Zhang et al. proved that dim L (L 1 × L 2 ) = max{dim L (L 1 ), dim L (L 2 )} for all
+finite lattices L 1 and L 2 . They gave a negative answer to the question being that whether the
+relation dim L (L 1 ◦ L 2 ) ≤ dim L (L 1 ) + dim L (L 2 ) + 1 holds for all finite lattices L 1 and
+L 2.
+    Notably, Dube et al. proved that for any finite lattice L, dim L (L) = max{or dL (C) |
+C is a minimal cover of L}. Since we do not have an equivalent characterization of minimal
+cover in a finite lattice, it is not straightforward to identify all minimal covers of a finite lattice.
+
+B Chunxu Ji
+    jichunxu@snnu.edu.cn
+    Kaiyun Wang
+    wangkaiyun@snnu.edu.cn
+1   School of Mathematics and Statistics, Shaanxi Normal University, Xi’an 710119, China
+
+
+                                                                                            123
+402                                                                           Order (2025) 42:401–416
+
+
+This may bring a challenge in finding a simple method to calculate the covering dimension of
+finite lattices. Nevertheless, we can deal with this challenge in the setting of finite distributive
+lattices. This is our main motivation.
+    In this paper, we focus on the covering dimension of finite distributive lattices. By the
+Birkhoff’s representation theorem for finite distributive lattices, we prove that for every finite
+distributive lattice L, Max(J (L)) is the unique minimal cover of L, and then we obtain that
+dim L (L) = or dL (Max(J (L))). Based on the relationships between the covering dimension
+of topological spaces and that of bounded distributive lattices, we characterize the covering
+dimension of finite T0 spaces. Finally, we give the sum and product theorems of the covering
+dimension of finite distributive lattices.
+
+
+2 Covering Dimension of Finite Distributive Lattices
+
+Our references for elementary properties of lattices are [11, 21]. Let P be a poset and A ⊆ P.
+A is called a down-set if, whenever x ∈ A, y ∈ P and y ≤ x, we have y ∈ A. For A ⊆ P,
+we write Al = {y ∈ P | y ≤ x for every x ∈ A} and ↓x = {y ∈ P | y ≤ x}. Dually, we can
+define up-set, Au and ↑x. The set of down-sets of P will be denoted by Down(P).
+                                                                                  Obviously,
+(Down(P), ⊆) is a frame. For every A ⊆ Down(P), A = A, A = A. ∅ is the
+bottom element and P is the top element. We use Down(P) to denote the down-set lattice
+(Down(P), ⊆). It is easy to prove that Down(P) is a topology of P, we use D(P) to denote
+the topological space (P, Down(P)).
+   LetP be a poset and Q ⊆ P. If for every a ∈ P, there exists a subset A of Q such that
+a =       A, then Q is called join-dense in P. We use Max(P) to denote the set of all the
+maximal elements of P and Min(P) to denote the set of all the minimal elements of P.
+   Let L be a bounded lattice. The top element and the bottom element of L will be denoted
+by 1 L and 0 L , respectively. L is called prime if x ∧ y = 0 L implies thatx = 0 L or y = 0 L
+for all x, y ∈ L. A subset C of L is said to be a cover of L if 0 L ∈
+                                                                    / L and C = 1 L . A cover
+D of L is a refinement of a cover C, written D        C, if for every d ∈ D, there exists c ∈ C
+such that d ≤ c. It is easy to see that the relation is a quasiorder (reflexive and transitive).
+
+Definition 2.1 (see [10]) Let L be a bounded lattice. The order of a subset C of L is defined
+as follows:
+(1) or dL (C) = −1 if and only if C = {0 L }.
+(2) or dL (C) = k, where k ∈ N0 , if the meet of any k + 2 distinct elements of C is 0 L and
+    there exist k + 1 distinct elements of C whose meet is not 0 L .
+(3) or dL (C) = ∞ if for every k ∈ N0 , there exist k distinct elements of C whose meet is
+    not 0 L .
+
+Definition 2.2 (see [10]) Let BLat be the class of bounded lattices. We define the covering
+dimension function
+   dim L : BLat → {−1, ∞} ∪ N0
+as follows:
+(1) dim L (L) = −1 if and only if L = {0 L }.
+(2) dim L (L) ≤ k, where k ∈ N0 , if every finite cover C of L has a finite refinement R with
+    or dL (R) ≤ k.
+(3) dim L (L) = k, where k ∈ N0 , if dim L (L) ≤ k and dim L (L)  k − 1.
+(4) dim L (L) = ∞ if dim L (L)  ≤ k for any k ∈ {−1} ∪ N0 .
+
+
+123
+Order (2025) 42:401–416                                                                    403
+
+
+Definition 2.3 (see [12]) A cover C of a finite lattice L is minimal if C ⊆ R for every
+refinement R of C.
+
+Definition 2.4 (see [11]) Let L be a lattice. An element x ∈ L is join-irreducible if
+(1) x  = 0 L (in case L has the bottom element 0 L );
+(2) x = a ∨ b implies that x = a or x = b for all a, b ∈ L.
+   We denote the set of all join-irreducible elements of L by J (L).
+
+Definition 2.5 (see [11]) Let P be a poset and x, y ∈ P. We say x is covered by y (or x is a
+lower cover of y), and write x ≺ y, if x < y and x ≤ z < y implies z = x.
+
+Definition 2.6 (see [11]) Let L be a lattice with the bottom element 0 L . a ∈ L is called an
+atom if 0 ≺ a. The set of all atoms of L is denoted by Atom(L).
+
+Proposition 2.7 (see [11]) Let L be a finite lattice. An element is join-irreducible element if
+and only if it has exactly one lower cover.
+
+Corollary 2.8 Let L be a finite lattice. For every a ∈ Atom(L), a is a join-irreducible element
+of L.
+
+Proposition 2.9 (see [11]) Let L be a finite lattice. Then J (L) is join-dense in L.
+
+Proposition 2.10 Let L be a finite lattice and C a minimal cover of L. Then every element
+of C is a join-irreducible element and any two elements of C are incomparable.
+
+Proof Let C be a minimal cover of L. If c∈ C is not a join-irreducible element, by Proposition
+2.9, there exists A ⊆ J (L) such that      A = c, then (C \ {c}) ∪ A is a refinement of C.
+However, C  (C \ {c}) ∪ A, this contradicts with the fact that C is a minimal cover. Suppose
+that a, b ∈ C such that a ≤ b, then C \ {a} is a refinement of C. However, C  C \ {a}, this
+contradicts with the fact that C is a minimal cover.                                         
+                                                                      
+Proposition 2.11 Let L be a finite lattice. Then for every A ⊆ L, A = 0 L if and only if
+A ∩ J (L) = ∅.
+  l
+
+          
+Proof If A = 0 L , then Al ∩ J (L) = ∅. So the necessity holds. Conversely, suppose that
+Al ∩ J (L) = ∅ and there exists x ∈ L such that x  = 0 L and x ≤ a for        every a ∈ A.
+By Proposition 2.9, there exists a non-empty subset B ⊆ J (L) such that B = x. Then
+B ⊆ Al , but this contradicts with the fact that Al ∩ J (L) = ∅. So we do not have x  = 0 L
+as a common lower bound of A, the sufficiency holds.                                         
+
+Proposition 2.12 (see [12]) Let L be a finite lattice. Then
+                   dim L (L) = max{or dL (C) | C is a minimal cover of L}.
+
+Example 2.13 Obviously, the diamond lattice M3 = {⊥, , a, b, c} is a finite lattice, where
+a, b and c are incomparable elements, and ⊥,  are the bottom element and the top element,
+respectively. We can see that {a, b}, {b, c} and {a, c} are the minimal covers of M3 . Then
+              dim L (L) = max{or dL ({a, b}), or dL ({b, c}), or dL ({a, c})} = 0.
+
+  By Example 2.13, we can see that the minimal cover of a finite lattice is not unique. Next,
+we will prove that the minimal cover of a finite distributive lattice is unique.
+
+                                                                                     123
+404                                                                        Order (2025) 42:401–416
+
+
+Proposition 2.14 (see [6]) (Birkhoff’s representation theorem for finite distributive lattices)
+Let L be a finite distributive lattice. Then the map
+                                      ϕ : a  −→ spec(a)
+is an isomorphism between L and Down(J (L)), where spec(a) = {x ∈ J (L) | x ≤ a} =
+↓a ∩ J (L) is the spectrum of a.
+
+Proposition 2.15 Let L be a finite distributive lattice. Then Max(J (L)) is the unique minimal
+cover of L.
+
+Proof It is easy to see that {spec(a)
+                                    | a∈ Max(J (L))} is a cover of Down(J (L)). Let C
+be a cover of Down(J (L)). As C = C = J (L), for each a ∈ Max(J (L)), there exists
+C ∈ C such that a ∈ spec(a) ⊆ C. Thus, {spec(a) | a ∈ Max(J (L))} is a refinement of
+every cover of Down(J (L)). Let cover D be a refinement of {spec(a) | a ∈ Max(J (L))}.
+By the definition of refinement, for every D ∈ D, there exists a ∈ Max(J (L)) such that
+D ⊆ spec(a). However,
+                         if there exist D  ∈ D and a  ∈ Max(J (L)) such that D   spec(a  ),
+  
+a ∈           
+    / D , and a ∈/ D, this contradicts with the fact that D is a cover of Down(J (L)). So the
+refinement of {spec(a) | a ∈ Max(J (L))} is itself. Therefore, we have that {spec(a) | a ∈
+Max(J (L))} is a minimal cover of Down(J (L)). Let C be a minimal cover of Down(J (L)).
+As {spec(a) | a ∈ Max(J (L))} is a refinement of C , C ⊆ {spec(a) | a ∈ Max(J (L))}. But
+{spec(a) | a ∈ Max(J (L))} is a minimal cover of Down(J (L)). So C = {spec(a) | a ∈
+Max(J (L))}. Therefore, we can conclude that {spec(a) | a ∈ Max(J (L))} is the unique
+minimal cover of Down(J (L)).
+    By Proposition 2.14, ϕ : a  → spec(a) is an isomorphism between L to Down(J (L)),
+then
+                                              
+    ϕ −1 ({spec(a) | a ∈ Max(J (L))}) = { spec(a) | a ∈ Max(J (L))} = Max(J (L))
+
+is the unique minimal cover of L.                                                              
+
+   By Propositions 2.12 and 2.15, we can obtain the following theorem.
+
+Theorem 2.16 Let L be a finite distributive lattice. Then dim L (L) = or dL (Max(J (L))).
+
+Remark 2.17 By Proposition 2.15, when L is a finite distributive lattice, the minimal cover
+of L is unique. However, let us consider the pentagon lattice N5 = {⊥, , u, v, w}, where
+u ≤ v, u and v are incomparable with w, and ⊥,  are the bottom element and the top
+element, respectively. Then N5 is not a distributive lattice. It is obvious that the minimal
+cover of N5 is unique. So distributiveness is not a necessary condition for the uniqueness of
+the minimal cover.
+
+   By Proposition 2.11 and Theorem 2.16, we can obtain the following proposition.
+
+Proposition 2.18 Let L be a finite distributive lattice. Then dim L (L) = 0 if and only if
+spec(a) ∩ spec(b) = ∅ for every a, b ∈ Max(J (L)).
+
+Proposition 2.19 Let L be a finite distributive lattice and dim L (L) = k with k ≥ 1. Then
+|L| ≥ 2k+1 + 1.
+
+Proof Suppose that L is a finite distributive lattice and dim L (L) = k with k ≥ 1. By Theorem
+2.16, J (L) must satisfy:
+   (i) the meet of any k + 2 distinct elements of Max(J (L)) is 0 L ,
+
+123
+Order (2025) 42:401–416                                                                    405
+
+
+   (ii) there exist k + 1 distinct elements of Max(J (L)) whose meet is not 0 L .
+By Proposition 2.11, (i) and (ii) are equivalent to (i  ) and (ii  ), respectively.
+   (i  ) there is no join-irreducible element serving as a lower bound for any k + 2 distinct
+elements of Max(J (L)),
+   (ii  ) there exist k+1 distinct elements of Max(J (L)) that share a common join-irreducible
+element as their lower bound.
+   Then |J (L)| ≥ k + 2 and J (L) must have a subposet P = {x0 , x1 , . . . , xk+1 }, where the
+Hasse diagram of P is Fig. 1. By Proposition 2.14, we can conclude that |L| ≥ |Down(P)|. As
+Down(P) = {∅}∪{{x0 }∪ A | A ⊆ {x1 , x2 , . . . , xk+1 }}, we have that |Down(P)| = 2k+1 +1.
+So |L| ≥ 2k+1 + 1.                                                                           
+
+
+Corollary 2.20 Let L be a finite distributive lattice with n elements. Then dim L (L) ≤
+log2 (n − 1) − 1, where   is the ceiling function.
+
+
+Example 2.21 Let L be a finite distributive lattice. The Hasse diagram of L is Fig. 2.
+   Then the Hasse diagram of J (L) is Fig. 3.
+   It is easy to see that Max(J (L)) = {m, o}. Then dim L (L) = or dL ({m, o}) = 1.
+
+
+3 Covering Dimension of Finite T0 Spaces
+
+The covering dimension of finite T0 spaces has been studied extensively (see [2, 3, 15, 16,
+22]). In this section, we will investigate the covering dimension of finite T0 spaces based on
+some properties regarding the covering dimension of finite lattices.
+    Let X be a topological space. A cover of X is a non-empty set of subsets of X , whose
+union is X . A cover A of X is said to be open if all elements of A are open. A cover A of X
+is said to be a refinement of a cover C of X if for every A ∈ A there exists C ∈ C such that
+A ⊆ C.
+    Let X be an Alexandroff space. For every x ∈ X , we use Ux to denote the smallest open
+set containing x.
+
+Definition 3.1 (see [1]) Let X be a T0 space. The specialization order ≤ on X is defined as
+follows:
+                                   x ≤ y iff x ∈ cl({y}),
+where cl({y}) is the closure of {y}.
+
+
+
+
+Fig. 1 Hasse diagram of P
+
+
+                                                                                    123
+406                                                                      Order (2025) 42:401–416
+
+
+
+
+Fig. 2 Hasse diagram of L
+
+
+Remark 3.2 (1) Let X be a finite T0 space and x, y ∈ X . Then x ≤ y iff y ∈ Ux .
+(2) Unless otherwise stated, throughout the paper, whenever an order-theoretic concept is
+    mentioned in the context of a T0 space X , it is to be interpreted with respect to the
+    specialization order on X .
+(3) Let X be an Alexandroff T0 space. Then for every x ∈ X , cl({x}) = ↓x, Ux = ↑x.
+Definition 3.3 (see [17]) Let X be a topological space. Define the order of a family A of
+subsets of X as follows:
+(1) or dT (A)= −1 if and only if A consists of the empty set only.
+(2) or dT (A) = k, where k ∈ N0 , if and only if the intersection of any k+2 distinct elements
+    of A is empty and there exist k+1 distinct elements of A, whose intersection is not empty.
+(3) or dT (A) = ∞, if and only if for every k ∈ N0 , there exist k distinct elements of A,
+    whose intersection is not empty.
+
+Definition 3.4 (see [17]) Let F be the class of all topological spaces. We define the covering
+dimension function
+
+123
+Order (2025) 42:401–416                                                                   407
+
+
+
+
+                          d                        h                 f
+
+
+
+
+Fig. 3 Hasse diagram of J (L)
+
+
+   dimT : F −→ {−1, ∞} ∪ N0
+as follows:
+(1) dim T (X ) ≤ k, where k ∈ {−1} ∪ N0 , iff for every finite open cover C of the space X ,
+    there exists a finite open cover A of X , refinement of C , such that or dT (A) ≤ k.
+(2) dim T (X ) = k, where k ∈ N0 , iff dim T (X ) ≤ k and dim T (X )  k − 1.
+(3) dim T (X ) = ∞ iff there exists no k ∈ {−1} ∪ N0 such that dim T (X ) ≤ k.
+Definition 3.5 (see [11]) Let L be a lattice. A subset F of L is called an filter if
+(1) a, b ∈ F implies a ∧ b ∈ F;
+(2) a ∈ L, b ∈ F and b ≤ a imply a ∈ F.
+Definition 3.6 (see [11]) Let L be a lattice. A filter F of L is said to be prime if for every
+a, b ∈ L, a ∨ b ∈ F implies a ∈ F or b ∈ F.
+   The set of all prime filters of L is denoted by P(L). We write h(a) = {F ∈ P(L) | a ∈ F}.
+Then h is an isomorphism of L with h(L), whose join and meet are set union and intersection,
+respectively. P(L) is given the topology which has h(L) as a base.
+Proposition 3.7 (see [10]) Let L be a bounded distributive lattice. Then dim L (L) =
+dim T (P(L)).
+   It is well known that there is a one-to-one correspondence between join-irreducible ele-
+ments and prime filters when L is a finite distributive lattice. By Proposition 3.7, we have
+the following proposition.
+Proposition 3.8 Let L be a finite distributive lattice. Then dim L (L) = dim T (D(J (L))).
+Proof It suffices to prove that the topological spaces P(L) and D(J (L)) are homeomorphic
+                                                                                      
+when L is a finite distributive lattice. It can be easily seen that the map φ : P  −→ P is a
+bijection between P(L) and J (L). Then φ −1 ( p) = ↑ p for every p ∈ J (L).
+   Claim 1. φ is continuous from P(L) to D(J (L)).
+   Let U be an open set of D(J (L)). By Proposition 2.14, there exists x ∈ L such that
+U = spec(x). We can conclude that φ −1 (spec(x)) = h(x). So φ −1 (U ) is an open set of
+P(L).
+   Claim 2. φ −1 is continuous from D(J (L)) to P(L).
+   Let U be an open set of P(L). Since h(L) is a base of P(L), there exists a subset A ⊆ L
+such that U = a∈A h(a). Since φ is a bijection, we have that
+                                                                        
+           φ(U ) = φ        h(a) =          φ(h(a)) =       spec(a) = spec        A .
+                          a∈A         a∈A              a∈A
+
+
+                                                                                       123
+408                                                                               Order (2025) 42:401–416
+
+
+Then φ(U ) is an open set of D(J (L)).
+  Therefore, φ is a homeomorphism between P(L) and D(J (L)).                                          
+
+Proposition 3.9 (see [10]) Let X be a topological space. Then dim T (X ) = dim L (O(X )),
+where O(X ) is the open set lattice of X .
+
+Proposition 3.10 Let X be a finite T0 space. Then the following statements hold:
+(1) J (O(X )) = {Ux | x ∈ X };
+(2) Max(J (O(X ))) = {Ux | x ∈ Min(X )}.
+
+Proof (1) For every x ∈ X and U , V ∈ O(X ), if Ux = U ∪ V , then x ∈ Ux ⊆ U or
+    x ∈ Ux ⊆ V . Since U ⊆ Ux and V ⊆ Ux , we have that Ux = U or Ux = V . Thus we
+                                   element of O(X ). Conversely, let U be a join-irreducible
+    have that Ux is a join-irreducible
+    element of O(X ). As U = x∈U Ux and U is a finite set, there exists x ∈ U such that
+    U = Ux . So J (O(X )) = {Ux | x ∈ X }.
+(2) By Remark 3.2, Ux ∈ Max(J (O(X ))) ⇐⇒ Ux  U y for each y  = x
+                                          ⇐⇒ y  x for each y  = x
+                                          ⇐⇒ x ∈ Min(X ).
+    So we can conclude that Max(J (O(X ))) = {Ux | x ∈ Min(X )}.                           
+
+Theorem 3.11 Let X be a finite T0 space. Then dim T (X ) = or dT ({Ux | x ∈ Min(X )}).
+
+Proof         dim T (X ) = dim L (O(X ))
+                         = or dL (Max(J (O(X )))) (By Theorem 2.16)
+                         = or dL ({Ux | x ∈ Min(X )}) (By Proposition 3.10)
+                         = or dT ({Ux | x ∈ Min(X )}).                                                
+
+Remark 3.12 By Theorem 3.11, we can also conclude that the algorithm in [23] for computing
+the covering dimension of finite T0 spaces is feasible.
+
+
+4 Sum and Products Theorems
+
+Definition 4.1 (see [11]) Let (L 1 , ≤1 ) and (L 2 , ≤2 ) be disjoint posets. The disjoint union
+L 1  L 2 is the poset (L 1 ∪ L 2 , ≤), where the relation ≤ is defined as follows:
+
+                                            x, y ∈ L 1 and x ≤1 y or
+                            x ≤ y ⇐⇒
+                                            x, y ∈ L 2 and x ≤2 y.
+
+Definition 4.2 (see [11]) Let (L 1 , ≤1 ) and (L 2 , ≤2 ) be disjoint posets. The linear sum L 1 ⊕L 2
+is the poset (L 1 ∪ L 2 , ≤), where the relation ≤ is defined as follows:
+                                         ⎧
+                                         ⎪
+                                         ⎨x, y ∈ L 1 and x ≤1 y or
+                           x ≤ y ⇐⇒ x, y ∈ L 2 and x ≤2 y or
+                                         ⎪
+                                         ⎩
+                                           x ∈ L 1, y ∈ L 2.
+
+   It is easy to see that if (L 1 , ≤1 ) and (L 2 , ≤2 ) are lattices, then L 1 ⊕ L 2 is a lattice.
+
+Proposition 4.3 Let L 1 and L 2 be distributive lattices. Then L 1 ⊕ L 2 is a distributive lattice.
+
+
+123
+Order (2025) 42:401–416                                                                         409
+
+
+Proof It suffices to prove that L 1 ⊕ L 2 does not have a sublattice isomorphic to M3 or N5 .
+Let L 1 ⊕ L 2 have a sublattice M isomorphic to M3 , where M = { p, q, u, v, w} and p, q
+are the bottom element and the top element, respectively. By Definition 4.2, we have that
+{u, v, w} ⊆ L 1 or {u, v, w} ⊆ L 2 . Then M ⊆ L 1 or M ⊆ L 2 , M is a sublattice of L 1 or M
+is a sublattice of L 2 , which contradicts with the fact that L 1 and L 2 are distributive lattices.
+Let L 1 ⊕ L 2 have a sublattice N isomorphic to N5 , where N = {s, t, x, y, z} and s, t are the
+top element and bottom element, respectively. By Definition 4.2, we have that {x, y, z} ⊆ L 1
+or {x, y, z} ⊆ L 2 . Then N ⊆ L 1 or N ⊆ L 2 , N is a sublattice of L 1 or N is a sublattice of
+L 2 , which contradicts with the fact that L 1 and L 2 are distributive lattices. So L 1 ⊕ L 2 is a
+distributive lattice.                                                                             
+Proposition 4.4 Let L be a finite lattice. If L = {0 L } ⊕ (L 1  L 2 ) ⊕ {1 L }(see Fig. 4), then
+           dim L (L) = max{dim L ({0 L } ⊕ L 1 ⊕ {1 L }), dim L ({0 L } ⊕ L 2 ⊕ {1 L })}.
+
+Proof Let C be a minimal cover of L. If C ⊆ {0 L }⊕ L 1 ⊕{1 L }, then C is also a minimal cover
+of {0 L }⊕L 1 ⊕{1 L }, or dL (C) ≤ dim L ({0 L }⊕L 1 ⊕{1 L }). Similarly, if C ⊆ {0 L }⊕L 2 ⊕{1 L },
+we have that or dL (C) ≤ dim L ({0 L }⊕ L 2 ⊕{1 L }). If C  {0 L }⊕ L 1 ⊕{1 L }, then C = {a, b},
+where a ∈ L 1 and b ∈ L 2 , or dL ({a, b}) = 0. Otherwise, without loss of generality, if
+C ⊇ {a, b, c} such that {a, c} ⊆ L 1 and b ∈ L 2 , by Definition 4.1, we have that a ∨ b = 1 L .
+Then {a, b} is a refinement of C, which contradicts with the fact that C is a minimal cover of L.
+Therefore, dim L (L) = max{or dL (C) | C is a minimal cover of L} ≤ max{dim L ({0 L } ⊕
+L 1 ⊕ {1 L }), dim L ({0 L } ⊕ L 2 ⊕ {1 L })}.
+    Let C be a minimal cover of {0 L } ⊕ L 1 ⊕ {1 L } and R be a refinement of C in L. If
+C  = {1 L }, by the definition of refinement, we have that R ⊆ L 1 . Then R is a refinement of C
+in {0 L }⊕ L 1 ⊕{1 L }. As C is a minimal cover of {0 L }⊕ L 1 ⊕{1 L }, C ⊆ R. Then C is a minimal
+cover of L. If C = {1 L }, then or dL (C) = 0. Thus dim L ({0 L } ⊕ L 1 ⊕ {1 L }) ≤ dim L (L).
+Similarly, we can prove that dim L ({0 L } ⊕ L 2 ⊕ {1 L }) ≤ dim L (L). Then max{dim L ({0 L } ⊕
+
+
+                                                     L
+
+
+
+
+                                   L                             L
+
+
+
+
+Fig. 4 L = {0 L } ⊕ (L 1  L 2 ) ⊕ {1 L }
+
+
+                                                                                        123
+410                                                                               Order (2025) 42:401–416
+
+
+L 1 ⊕ {1 L }), dim L ({0 L } ⊕ L 2 ⊕ {1 L })} ≤ max{or dL (C) | C is a minimal cover of L} =
+dim L (L).
+   Therefore, dim L (L) = max{dim L ({0 L } ⊕ L 1 ⊕ {1 L }), dim L ({0 L } ⊕ L 2 ⊕ {1 L })}. 
+
+Proposition 4.5 Let L 1 and L 2 be bounded lattices. Then the following statements hold:
+(1) 0 L 2 ∈ J (L 1 ⊕ L 2 );
+(2) If a ∈ J (L 1 ), then a ∈ J (L 1 ⊕ L 2 );
+(3) If b ∈ J (L 2 ), then b ∈ J (L 1 ⊕ L 2 );
+(4) J (L 1 ⊕ L 2 ) = {0 L 2 } ∪ J (L 1 ) ∪ J (L 2 ).
+
+Proof (1) Assume that there exist x, y ∈ L 1 ∪ L 2 such that 0 L 2 = x ∨ y, but x  = 0 L 2 and
+    y  = 0 L 2 . By Definition 4.2, we have that x, y ∈ L 1 . Therefore, x ∨ y ≤ 1 L 1 < 0 L 2 ,
+    which contradicts with the fact that 0 L 2 = x ∨ y.
+(2) Let x, y ∈ L 1 ∪ L 2 such that a = x ∨ y. If x ∈ L 2 or y ∈ L 2 , then a < 0 L 2 ≤ x ∨ y,
+    which contradicts with the fact that a = x ∨ y. Therefore, x, y ∈ L 1 . Since a ∈ J (L 1 ),
+    we have that x = a or y = a. So a ∈ J (L 1 ⊕ L 2 ).
+(3) Let x, y ∈ L 1 ∪ L 2 such that b = x ∨ y. If x and y are both in L 1 , then x ∨ y ≤ 1 L 1 < b,
+    which contradicts with the fact that b = x ∨ y. Therefore, x ∈ L 2 or y ∈ L 2 . If x, y ∈ L 2 ,
+    since b ∈ J (L 2 ), we have that x = b or y = b. Then b ∈ J (L 1 ⊕ L 2 ). If x ∈ L 1 and
+    y ∈ L 2 , then b = x ∨ y = y, and thus b ∈ J (L 1 ⊕ L 2 ). If x ∈ L 2 and y ∈ L 1 , then
+    b = x ∨ y = x. So b ∈ J (L 1 ⊕ L 2 ).
+(4) By (1), (2) and (3), we have that {0 L 2 } ∪ J (L 1 ) ∪ J (L 2 ) ⊆ J (L 1 ⊕ L 2 ). It suffices to
+    prove that J (L 1 ⊕ L 2 ) ⊆ {0 L 2 } ∪ J (L 1 ) ∪ J (L 2 ). Let c ∈ J (L 1 ⊕ L 2 ) and c  = 0 L 2 .
+    If c ∈ L 1 , then for every x, y ∈ L 1 , when c = x ∨ y, we have that c = x or c = y. Thus
+    c ∈ J (L 1 ). If c ∈ L 2 , then for every x, y ∈ L 2 , when c = x ∨ y, we have that c = x or
+    c = y. Thus c ∈ J (L 2 ). Therefore, J (L 1 ⊕ L 2 ) ⊆ {0 L 2 } ∪ J (L 1 ) ∪ J (L 2 ).           
+
+Theorem 4.6 Let L 1 and L 2 be finite distributive lattices. Then
+                             dim L (L 1 ⊕ L 2 ) = |Max(J (L 2 ))| − 1.
+
+Proof By Definition 4.2 and Proposition 4.5, we have that Max(J (L 1 ⊕L 2 )) = Max(J (L 2 )).
+Since 0 L 2 is a common lower bound of Max(J (L 2 )), according to Theorem 2.16, we have
+that dim L (L 1 ⊕ L 2 ) = or dL (Max(J (L 2 ))) = |Max(J (L 2 ))| − 1.                     
+
+Definition 4.7 (see [11]) Let (L 1 , ≤1 ) and (L 2 , ≤2 ) be posets. The Cartesian product L 1 × L 2
+is the poset (L 1 × L 2 , ≤), where the relation ≤ is defined as follows:
+                          (x1 , x2 ) ≤ (y1 , y2 ) ⇐⇒ x1 ≤1 y1 , x2 ≤2 y2 .
+   It is easy to see that if L 1 and L 2 are lattices, then L 1 × L 2 is a lattice, where
+(x1 , x2 ) ∨ (y1 , y2 ) = (x1 ∨ y1 , x2 ∨ y2 ) and (x1 , x2 ) ∧ (y1 , y2 ) = (x1 ∧ y1 , x2 ∧ y2 )
+for every (x1 , x2 ), (y1 , y2 ) ∈ L 1 × L 2 .
+
+Proposition 4.8 Let L 1 and L 2 be distributive lattices. Then L 1 × L 2 is a distributive lattice.
+
+Proposition 4.9 Let L 1 and L 2 be bounded lattices. Then
+              J (L 1 × L 2 ) = {(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(0 L 1 , y) | y ∈ J (L 2 )}.
+
+Proof Let x ∈ J (L 1 ) and suppose that there exist (a1 , b1 ), (a2 , b2 ) ∈ L 1 × L 2 such that
+(a1 , b1 ) ∨ (a2 , b2 ) = (x, 0 L 2 ). As (a1 , b1 ) ∨ (a2 , b2 ) = (a1 ∨ a2 , b1 ∨ b2 ) = (x, 0 L 2 ),
+
+123
+Order (2025) 42:401–416                                                                                       411
+
+
+a1 ∨ a2 = x and b1 ∨ b2 = 0 L 2 . Thus we have that a1 = x or a2 = x, b1 = b2 = 0 L 2 . So
+(x, 0 L 2 ) is a join-irreducible element of L 1 × L 2 .
+    It can also be proved that (0 L 1 , y) is a join-irreducible element of L 1 ×L 2 when y ∈ J (L 2 ).
+    If x = 0 L 1 and y ∈  / J (L 2 ), then there exist a, b ∈ L 2 such that a, b  = y and a ∨ b = y.
+Since (0 L 1 , a)  = (0 L 1 , y) and (0 L 1 , b)  = (0 L 1 , y), but (0 L 1 , a) ∨ (0 L 1 , b) = (0 L 1 , y), we
+can conclude that (0 L 1 , y) is not a join-irreducible element of L 1 × L 2 .
+    It can also be proved that (x, 0 L 2 ) is not a join-irreducible element of L 1 × L 2 when
+x∈ / J (L 1 ).
+    If x  = 0 L 1 and y  = 0 L 2 , then (x, 0 L 2 ) ∨ (0 L 1 , y) = (x, y). So (x, y) is not a join-
+irreducible element of L 1 × L 2 .                                                                               
+
+Theorem 4.10 Let L 1 and L 2 be finite distributive lattices. Then
+
+             dim L (L 1 × L 2 ) = max{or dL (Max(J (L 1 ))), or dL (Max(J (L 2 )))}.
+
+Proof By Theorem 2.16 and Proposition 4.9, we suffice to prove that
+
+                 or dL (Max({(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(0 L 1 , y) | y ∈ J (L 2 )}))
+
+                        = max{or dL (Max(J (L 1 ))), or dL (Max(J (L 2 )))}.
+
+Suppose that or dL (Max(J (L 1 ))) = k1 , or dL (Max(J (L 2 ))) = k2 and k1 ≥ k2 . Since
+or dL (Max(J (L 1 ))) = k1 , there exist k  1 + 1 distinct elements {x 1 , x 2 , . . . , x k1 +1 } ⊆
+Max({(x, 0 L 2 ) | x ∈ J (L 1 )}) such that {x1 , x2 , . . . , xk1 +1 }  = (0 L 1 , 0 L 2 ). By Defini-
+tion 4.7, we have that a and b is incomparable for every a ∈ {(x, 0 L 2 ) | x ∈ J (L 1 )} and
+every b ∈ {(0 L 1 , y) | y ∈ J (L 2 )}. Then
+
+                      Max({(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(0 L 1 , y) | y ∈ J (L 2 )})
+
+                = Max({(x, 0 L 2 ) | x ∈ J (L 1 )}) ∪ Max({(0 L 1 , y) | y ∈ J (L 2 )}).
+
+Therefore,
+
+       {x1 , x2 , . . . , xk1 +1 } ⊆ Max({(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(0 L 1 , y) | y ∈ J (L 2 )}).
+
+So we find the k1 + 1 distinct elements of Max{{(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(0 L 1 , y) | y ∈
+J (L 2 )}} such that its meet is not (0 L 1 , 0 L 2 ).
+   For any k1 + 2 distinct elements {x1 , x2 , . . . , xk1 +2 } ⊆ Max({(x, 0 L 2 ) | x ∈ J (L 1 )} ∪
+{(0 L 1 , y) | y ∈ J (L 2 )}), if {x1 , x2 , . . . , xk1 +2 } ⊆ Max({(x, 0 L 2 ) | x ∈ J (L 1 )}) or
+{x1 , 
+      x2 , . . . , xk1 +2 } ⊆ Max({(0 L 1 , y) | y ∈ J (L 2 )}), by the definition of or dL , we have
+that {x1 , x2 , . . . , xk1 +2 } = (0 L 1 , 0 L 2 ). If there
+                                                          exist xi ∈ Max({(x, 0 L 2 ) | x ∈ J (L 1 )})
+and x j ∈ Max({(0 L 1 , y) | y ∈ J (L 2 )}), then {x1 , x2 , . . . , xk1 +2 } ≤ xi ∧ x j = (0 L 1 , 0 L 2 ).
+So the meet of any k1 + 2 distinct elements {x1 , x2 , . . . , xk1 +2 } ⊆ Max{{(x, 0 L 2 ) | x ∈
+J (L 1 )} ∪ {(0 L 1 , y) | y ∈ J (L 2 )}} is (0 L 1 , 0 L 2 ).                                           
+
+
+Definition 4.11 (see [11]) Let (L 1 , ≤1 ) and (L 2 , ≤2 ) be lattices. The lexicographic product
+L 1 ◦ L 2 is the poset (L 1 × L 2 , ≤) where the relation ≤ is defined as follows:
+
+                                                          x1 <1 y1 or
+                        (x1 , x2 ) ≤ (y1 , y2 ) ⇐⇒
+                                                          x1 = y1 and x2 ≤2 y2 .
+
+
+                                                                                                    123
+412                                                                                   Order (2025) 42:401–416
+
+
+   Let (L 1 , ≤1 ) and (L 2 , ≤2 ) be bounded lattices. It is easy to see that
+                                                ⎧
+                                                ⎪
+                                                ⎪ (x1 , x2 ), if x1 <1 y1
+                                                ⎪
+                                                ⎨(y , y ), if y < x
+                                                     1 2           1 1 1
+                      (x1 , x2 ) ∧ (y1 , y2 ) =
+                                                ⎪
+                                                ⎪ (x   , x   ∧ y  ), if x1 = y1
+                                                ⎪
+                                                ⎩
+                                                     1     2    2
+                                                  (x1 ∧ y1 , 1 L 2 ), if x1 || y1
+and                                             ⎧
+                                                ⎪
+                                                ⎪ (x1 , x2 ), if y1 <1 x1
+                                                ⎪
+                                                ⎨(y , y ), if x < y
+                                                     1 2           1 1 1
+                      (x1 , x2 ) ∨ (y1 , y2 ) =
+                                                ⎪
+                                                ⎪ (x  , x   ∨ y   ), if x1 = y1
+                                                ⎪
+                                                ⎩
+                                                     1 2        2
+                                                  (x1 ∨ y1 , 0 L 2 ), if x1 || y1 .
+
+Remark 4.12 Let L 1 be a Boolean lattice with four elements, and let L 2 be a chain with two
+elements. It is obvious that L 1 and L 2 are distributive lattices, but L 1 ◦ L 2 is not a distribu-
+tive lattice. So the lexicographic product of bounded distributive lattices is not necessarily
+distributive lattice.
+
+Proposition 4.13 Let L 1 and L 2 be bounded lattices. If x ∈ J (L 1 ), then (x, 0 L 2 ) ∈ J (L 1 ◦
+L 2 ).
+
+Proof Suppose that there exist (a1 , a2 ), (b1 , b2 ) ∈ L 1 ◦ L 2 such that (x, 0 L 2 ) = (a1 , a2 ) ∨
+(b1 , b2 ).
+  (i) If b1 < a1 , then (x, 0 L 2 ) = (a1 , a2 ) ∨ (b1 , b2 ) = (a1 , a2 ).
+ (ii) If a1 < b1 , then (x, 0 L 2 ) = (a1 , a2 ) ∨ (b1 , b2 ) = (b1 , b2 ).
+(iii) If a1 = b1 , then (x, 0 L 2 ) = (a1 , a2 ) ∨ (b1 , b2 ) = (a1 , a2 ∨ b2 ), (x, 0 L 2 ) = (a1 , a2 ).
+(iv) If a1 || b1 , then (x, 0 L 2 ) = (a1 , a2 ) ∨ (b1 , b2 ) = (a1 ∨ b1 , 0 L 2 ). Since x ∈ J (L 1 ),
+      x = a1 or x = b1 . However, this contradicts with the fact that a1 || b1 , so this situation
+      does not exist.
+Then we can conclude that (x, 0 L 2 ) is a join-irreducible element of L 1 ◦ L 2 .                        
+
+Proposition 4.14 Let L 1 and L 2 be bounded lattices. Then {(x, y) | x ∈ L 1 , y ∈ J (L 2 )} ⊆
+J (L 1 ◦ L 2 ).
+
+Proof Suppose that x ∈ L 1 , y ∈ J (L 2 ) and there exist (a1 , a2 ), (b1 , b2 ) ∈ L 1 ◦ L 2 such that
+(a1 , a2 ) ∨ (b1 , b2 ) = (x, y).
+  (i) If b1 < a1 , then (a1 , a2 ) ∨ (b1 , b2 ) = (a1 , a2 ) = (x, y).
+ (ii) If a1 < b1 , then (a1 , a2 ) ∨ (b1 , b2 ) = (b1 , b2 ) = (x, y).
+(iii) If a1 = b1 , then (a1 , a2 ) ∨ (b1 , b2 ) = (a1 , a2 ∨ b2 ) = (x, y). As y ∈ J (L 2 ), (a1 , a2 ) =
+      (x, y) or (b1 , b2 ) = (x, y).
+(iv) If a1 || b1 , then (x, y) = (a1 , a2 ) ∨ (b1 , b2 ) = (a1 ∨ b1 , 0 L 2 ). Since 0 L 2 ∈
+                                                                                           / J (L 2 ), this
+      situation does not exist.
+So we can conclude that (x, y) is a join-irreducible element of L 1 ◦ L 2 .                               
+
+Proposition 4.15 Let L 1 and L 2 be bounded lattices. Then
+
+           J (L 1 ◦ L 2 ) = {(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(x, y) | x ∈ L 1 , y ∈ J (L 2 )}.
+
+
+123
+Order (2025) 42:401–416                                                                                          413
+
+
+Proof By Propositions 4.13 and 4.14, we have that
+            {(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(x, y) | x ∈ L 1 , y ∈ J (L 2 )} ⊆ J (L 1 ◦ L 2 ).
+    If x ∈/ J (L 1 ), then there exist a, b ∈ L 1 such that x = a ∨ b but x  = a, x  = b. Thus, we
+have that (x, 0 L 2 ) = (a, 0 L 2 ) ∨ (b, 0 L 2 ). Since (x, 0 L 2 )  = (a, 0 L 2 ) and (x, 0 L 2 )  = (b, 0 L 2 ),
+(x, 0 L 2 ) ∈
+            / J (L 1 ◦ L 2 ) when x ∈ / J (L 1 ).
+    If x ∈ L 1 , y  = 0 L 2 and y ∈/ J (L 2 ), then there exist a, b ∈ L 2 such that y = a ∨ b but
+y  = a and y  = b. Thus, we have that (x, y) = (x, a) ∨ (x, b). Since (x, a)  = (x, y) and
+(x, b)  = (x, y), (x, y) ∈  / J (L 1 ◦ L 2 ) when y  = 0 L 2 and y ∈    / J (L 2 ).
+    Therefore, we prove that a ∈       / J (L 1 ◦ L 2 ) when a ∈         / {(x, 0 L 2 ) | x ∈ J (L 1 )} and
+a∈ / {(x, y) | x ∈ L 1 , y ∈ J (L 2 )}. So J (L 1 ◦ L 2 ) = {(x, 0 L 2 ) | x ∈ J (L 1 )} ∪ {(x, y) | x ∈
+L 1 , y ∈ J (L 2 )}.                                                                                              
+
+Theorem 4.16 Let L 1 be a finite lattice and let L 2 be a finite distributive lattice. Then
+                                 dim L (L 1 ◦ L 2 ) = |Max(J (L 2 ))| − 1.
+
+Proof Since L 2 is a finite distributive lattice, {1 L 1 } ◦ L 2 is a finite distributive lattice. As
+                       Max(J ({1 L 1 } ◦ L 2 )) = {(1 L 1 , y) | y ∈ Max(J (L 2 ))},
+by Proposition 2.15, {(1 L 1 , y) | y ∈ Max(J (L 2 ))} is the unique minimal cover of {1 L 1 }◦ L 2 .
+It is obvious that {(1 L 1 , y) | y ∈ Max(J (L 2 ))} is a cover of L 1 ◦ L 2 . Let C be a cover of
+L 1 ◦ L 2 such that C          {(1 L 1 , y) | y ∈ Max(J (L 2 ))}. By Definition 4.11, we have that
+(1 L 1 , 0 L 2 ) is an upper bound of C ∩ ((L 1 ◦ L 2 ) \ ({1 L 1 } ◦ L 2 )). Then
+                                  
+                                        C ∩ ({1 L 1 } ◦ L 2 ) = (1 L 1 , 1 L 2 ),
+
+and thus C ∩ ({1 L 1 } ◦ L 2 ) is a cover of {1 L } ◦ L 2 . Since
+                     C ∩ ({1 L 1 } ◦ L 2 )      C       {(1 L 1 , y) | y ∈ Max(J (L 2 ))},
+we have that
+                      {(1 L 1 , y) | y ∈ Max(J (L 2 ))} ⊆ C ∩ ({1 L 1 } ◦ L 2 ) ⊆ C.
+So {(1 L 1 , y) | y ∈ Max(J (L 2 ))} is a minimal cover of L 1 ◦ L 2 .
+   Let D be a minimal cover of L 1 ◦ L 2 . Assume that D  {1 L 1 } ◦ L 2 . Then
+                                   D ∩ ((L 1 ◦ L 2 ) \ ({1 L 1 } ◦ L 2 ))  = ∅.
+By Definition 4.11, we have that (1 L 1 , 0 L 2 ) is an upper bound of D∩((L 1 ◦L 2 )\({1 L 1 }×L 2 )).
+Then                         
+                                 D ∩ ({1 L 1 } ◦ L 2 ) = (1 L 1 , 1 L 2 ).
+
+Clearly, D ∩ ({1 L 1 } ◦ L 2 )          D. Since D is a minimal cover, we can conclude that D ⊆
+D ∩ ({1 L 1 } ◦ L 2 ). This contradicts with the fact that D ∩ ((L 1 ◦ L 2 ) \ ({1 L 1 } ◦ L 2 ))  = ∅. So
+D ⊆ {1 L 1 } ◦ L 2 . Let F be a refinement of D in {1 L 1 } ◦ L 2 . Then F is a cover of L 1 ◦ L 2 .
+Since D is a minimal cover of L 1 ◦ L 2 , we have that D ⊆ F. So D is also a minimal cover
+of {1 L 1 } ◦ L 2 . As {(1 L 1 , y) | y ∈ Max(J (L 2 ))} is the unique minimal cover of {1 L 1 } ◦ L 2 ,
+we can obtain that
+                                    D = {(1 L 1 , y) | y ∈ Max(J (L 2 ))}.
+Thus {(1 L 1 , y) | y ∈ Max(J (L 2 ))} is the unique minimal cover of L 1 ◦ L 2 .
+
+                                                                                                       123
+414                                                                                  Order (2025) 42:401–416
+
+
+   As (1 L 1 , 0 L 2 ) is a lower bound of {(1 L 1 , y) | y ∈ Max(J (L 2 ))},
+
+        dim L (L 1 ◦ L 2 ) = or dL ({(1 L 1 , y) | y ∈ Max(J (L 2 ))}) = |Max(J (L 2 ))| − 1.
+
+                                                                                                         
+
+Definition 4.17 (see [5]) Let (L 1 , ≤1 ) and (L 2 , ≤2 ) be bounded lattices. The rectangular
+product L 1 L 2 is the poset (L 1 L 2 , ≤), where
+
+             L 1 L 2 = {(x, y) ∈ L 1 × L 2 | x  = 0 L 1 and y  = 0 L 2 } ∪ {(0 L 1 , 0 L 2 )}
+
+and the relation ≤ is defined as follows:
+
+                         (x1 , x2 ) ≤ (y1 , y2 ) ⇐⇒ x1 ≤1 y1 and x2 ≤2 y2 ,
+
+for every (x1 , x2 ), (y1 , y2 ) ∈ (L 1 L 2 , ≤).
+   It is easy to see that
+
+                                  (x1 ∧ y1 , x2 ∧ y2 ), if x1 ∧ y1  = 0 L 1 and x2 ∧ y2  = 0 L 2
+      (x1 , x2 ) ∧ (y1 , y2 ) =
+                                  (0 L 1 , 0 L 2 ), otherwise
+
+and (x1 , x2 ) ∨ (y1 , y2 ) = (x1 ∨ y1 , x2 ∨ y2 ).
+
+Proposition 4.18 Let L 1 and L 2 be finite lattices. Then
+
+J (L 1 L 2 ) = {(x, b) | x ∈ J (L 1 ), b ∈ Atom(L 2 )}∪{(a, y) | a ∈ Atom(L 1 ), y ∈ J (L 2 )}.
+
+Proof Let x ∈ J (L 1 ) and b ∈ Atom(L 2 ). If there exist (a1 , b1 ), (a2 , b2 ) ∈ L 1 L 2 such
+that (a1 , b1 ) ∨ (a2 , b2 ) = (x, b), then by Definition 4.17, we have that (a1 , b1 ) ∨ (a2 , b2 ) =
+(a1 ∨ a2 , b1 ∨ b2 ) = (x, b), a1 ∨ a2 = x and b1 ∨ b2 = b. Since x ∈ J (L 1 ), we have that
+a1 = x or a2 = x, b1 = b2 = b. So (x, b) is a join-irreducible element of L 1 L 2 .
+   It can also be proved that (a, y) is a join-irreducible element of L 1 L 2 when a ∈
+Atom(L 1 ) and y ∈ J (L 2 ).
+   If a ∈/ Atom(L 1 ) and b ∈    / Atom(L 2 ), then there exist a  ∈ Atom(L 1 ) such that a  < a
+and b ∈ Atom(L 2 ) such that b < b. Therefore, we have that (a, b ) ∨ (a  , b) = (a, b),
+       
+
+(a, b) is not a join-irreducible element of L 1 L 2 .
+   If a ∈ Atom(L 1 ) and y ∈        / J (L 2 ), then there exist c, d ∈ L 2 such that c, d  = y and
+c ∨ d = y. Since (a, c)  = (a, y), (a, d)  = (a, y) and (a, c) ∨ (a, d) = (a, y), we have that
+(a, y) is not a join-irreducible element of L 1 L 2 .
+   It can also be proved that (x, b) is not a join-irreducible element of L 1 L 2 when x ∈          /
+J (L 1 ) and b ∈ Atom(L 2 ).
+   It is obvious that (0 L 1 , 0 L 2 ) is not a join-irreducible element of L 1 L 2 .               
+
+Proposition 4.19 (see [5]) Let L 1 and L 2 be bounded lattices. Then the following statements
+are equivalent:
+(1) L 1 L 2 is distributive.
+(2) L 1 and L 2 are distributive and
+      (a) L 1 or L 2 is isomorphic to 2 (2 is a chain with two elements) or
+      (b) L 1 and L 2 are prime.
+
+Proposition 4.20 Let L be a finite lattice. Then L is prime if and only if |Atom(L)| = 1.
+
+
+123
+Order (2025) 42:401–416                                                                               415
+
+
+Proof Suppose that L is prime. As L is a finite lattice, Atom(L)  = ∅. Assume that
+|Atom(L)| > 1. Then there exist two distinct elements a, b ∈ Atom(L) such that a ∧b = 0 L ,
+which contradicts with the fact that L is prime. So |Atom(L)| = 1. Conversely, assume that
+L is not prime. Then there exist a  = 0 L and b  = 0 L such that a ∧ b = 0 L . Since L is a
+finite lattice, there exist {a1 , a2 , . . . , am | m ∈ N0 }, {b1 , b2 , . . . , bn | n ∈ N0 } ⊆ L such
+that 0 L ≺ a1 ≺ a2 · · · ≺ am = a and 0 L ≺ b1 ≺ b2 · · · ≺ bn = b. If a1 = b1 , then
+0 L < a1 ≤ a ∧ b, which contradicts with the fact that a ∧ b = 0 L . So a1  = b1 . It is obvious
+that a1 , b1 ∈ Atom(L). However, this contradicts with the fact that |Atom(L)| = 1. Thus L
+is prime.                                                                                            
+
+Theorem 4.21 Let L 1 and L 2 be finite prime distributive lattices. Then
+                    dim L (L 1 L 2 ) = |Max(J (L 1 ))| + |Max(J (L 2 ))| − 1.
+
+Proof By Proposition 4.20, we can conclude that there is only one atom in each of L 1 and
+L 2 , which we denote as a1 and a2 respectively. Then we have that J (L 1 L 2 ) = {(x, a2 ) |
+x ∈ J (L 1 )} ∪ {(a1 , y) | y ∈ J (L 2 )}. Since atom is a join-irreducible element, (a1 , a2 ) is the
+smallest element of {(x, a2 ) | x ∈ J (L 1 )} ∪ {(a1 , y) | y ∈ J (L 2 )}. By Definition 4.17, we
+can conclude that for every a ∈ {(x, a2 ) | x ∈ J (L 1 )} and every b ∈ {(a1 , y) | y ∈ J (L 2 )}
+such that a, b  = (a1 , a2 ), a and b are incomparable. Then
+                      Max({(x, a2 ) | x ∈ J (L 1 )} ∪ {(a1 , y) | y ∈ J (L 2 )})
+                = Max({(x, a2 ) | x ∈ J (L 1 )}) ∪ Max({(a1 , y) | y ∈ J (L 2 )}).
+   As (a1 , a2 ) is the common lower bound of Max({(x, a2 ) | x ∈ J (L 1 )}) ∪ Max({(a1 , y) |
+y ∈ J (L 2 )}) and L 1 L 2 is a finite distributive lattice, by Theorem 2.16, we have that
+                        dim L (L 1 L 2 )
+                      = or dL (Max(J (L 1 L 2 )))
+                      = or dL (Max({(x, a2 ) | x ∈ J (L 1 )}) ∪ Max({(a1 , y) | y ∈ J (L 2 )}))
+                      = |Max(J (L 1 ))| + |Max(J (L 2 ))| − 1.                                  
+Acknowledgements The authors would like to thank the referee for carefully checking the original draft and
+giving us many helpful suggestions for improvements.
+
+Author Contributions Kaiyun Wang: Writing -original draft&review & editing, Chunxu Ji: Writing - original
+draft&review & editing.
+
+Funding This work is supported by the National Natural Science Foundation of China (Grant nos. 12331016,
+12471438).
+
+Data Availability No datasets were generated or analysed during the current study.
+
+
+Declarations
+
+Conflict of Interest None
+
+Competing Interests The authors declare no competing interests.
+
+
+References
+ 1. Alexandroff, P.: Diskrete Räume. Matematicheskij Sbornik NS 2(3), 501–519 (1937)
+
+
+                                                                                             123
+416                                                                                   Order (2025) 42:401–416
+
+
+ 2. Bass, D.W.: Covering dimension and quasi-order spaces. Journal of the London Mathematical Society
+    s2–1(1), 505–508 (1969)
+ 3. Berghammer, R., Winter, M.: Order- and graph-theoretic investigation of dimensions of finite topological
+    spaces and Alexandroff spaces. Monatshefte für Mathematik 190(1), 33–78 (2019)
+ 4. Beshimov, R.B., Georgiou, D.N., Sereti, F.: The small inductive dimension of finite lattices through
+    matrices. Comput. Appl. Math. 42(4), 145 (2023)
+ 5. Bennett, M.K.: Rectangular products of lattices. Discret. Math. 79(3), 235–249 (1990)
+ 6. Birkhoff, G.: Rings of sets. Duke Math. J. 3(3), 443–454 (1937)
+ 7. Boyadzhiev, D., Georgiou, D.N., Megaritis, A.C., Sereti, F.: A study of a covering dimension of finite
+    lattices. Appl. Math. Comput. 333, 276–285 (2018)
+ 8. Boyadzhiev, D., Georgiou, D.N., Megaritis, A.C., Sereti, F.: A study of the quasi covering dimension of
+    finite lattices. Comput. Appl. Math. 38, 1–18 (2019)
+ 9. Brijlall, D., Baboolal, D.: Some aspects of dimension theory of frames, Indian Journal of. Pure Appl.
+    Math. 39(5), 375–402 (2008)
+10. Charalambous, M.G.: Dimension theory for σ -frames. J. Lond. Math. Soc. 2(1), 149–160 (1974)
+11. Davey, B.A., Priestley, H.A.: Introduction to Lattices and Order. Cambridge University Press, Cambridge
+    (2002)
+12. Dube, T., Georgiou, D.N., Megaritis, A.C., Moshokoa, S.P.: A study of covering dimension for the class
+    of finite lattices. Discret. Math. 338(7), 1096–1110 (2015)
+13. Dube, T., Megaritis, A.C., Sereti, F.: Studying the Krull dimension of finite lattices under the prism of
+    matrices. Filomat 31(10), 2901–2915 (2017)
+14. Dube, T., Georgiou, D.N., Megaritis, A.C., Naidoo, I., Sereti, F.: Covering dimension and universality
+    property on frames, Order, 1-22 (2022)
+15. Georgiou, D.N., Megaritis, A.C.: Covering dimension and finite spaces. Appl. Math. Comput. 218(7),
+    3122–3130 (2011)
+16. Georgiou, D.N., Han, S.E., Megaritis, A.C.: Dimensions of the type dim and Alexandroff spaces. J.
+    Egyptian Math. Soc. 21(3), 311–317 (2013)
+17. Georgiou, D.N., Megaritis, A.C.: An algorithm of polynomial order for computing the covering dimension
+    of a finite space. Appl. Math. Comput. 231, 276–283 (2014)
+18. Georgiou, D.N., Iliadis, S.D., Megaritis, A.C., Sereti, F.: Universality property and dimension for frames.
+    Order 37, 427–444 (2020)
+19. Georgiou, D.N., Megaritis, A.C., Sereti, F.: A study of the order dimension of a poset using matrices.
+    Quaest. Math. 39(6), 797–814 (2016)
+20. Georgiou, D.N., Megaritis, A.C., Prinos, G., Sereti, F.: A study of the small inductive dimension in the
+    area of finite lattices, Order, 1-25 (2023)
+21. Grätzer, G.: Lattice Theory: Foundation. Springer, Heidelberg (2011)
+22. Megaritis, A.C.: Relative dimension r-dim and finite spaces. Applied General Topology 13(1), 91–102
+    (2012)
+23. Wang, K.Y., Wang, H.X., Yang, X.F.: Covering dimension of finite topological spaces. Comput. Appl.
+    Math. 43, 212 (2024)
+24. Zhang, H.F., Zhou, M., Zhang, G.J.: Correction to “A study of covering dimension for the class of finite
+    lattices”[Discrete Mathematics 338 (2015) 1096–1110]. Discret. Math. 339(6), 1722–1723 (2016)
+25. Zhang, H.F., Zhou, M., Zhang, G.J.: Answer to some open questions on covering dimension for finite
+    lattices. Discret. Math. 340(5), 1086–1091 (2017)
+
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under
+a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted
+manuscript version of this article is solely governed by the terms of such publishing agreement and applicable
+law.
+
+
+
+
+123
+
