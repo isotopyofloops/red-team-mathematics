@@ -1,0 +1,1060 @@
+Computational and Applied Mathematics (2019) 38:109
+https://doi.org/10.1007/s40314-019-0885-6
+
+
+
+
+A study of the quasi covering dimension of finite lattices
+
+D. Boyadzhiev1 · D. Georgiou2 · A. Megaritis3 · F. Sereti2
+
+Received: 4 November 2018 / Revised: 25 March 2019 / Accepted: 13 May 2019 / Published online: 22 May 2019
+© SBMAC - Sociedade Brasileira de Matemática Aplicada e Computacional 2019
+
+
+
+Abstract
+The notion of dimension for posets has been studied extensively (see, for example, Bae in
+J Korean Math Soc 36(1):15–36, 1999, Dube et al. in Discr Math 338:1096–1110, 2015,
+Gierz et al. in A compendium of continuous lattices. Springer, Berlin, 1980, Trotter in Com-
+binatorics and partially ordered sets: dimension theory. Johns Hopkins University Press,
+Baltimore, 1992, Vinokurov in Soviet Math Dokl 168(3):663–666, 1966, Zhang et al. in
+Discr Math 340(5):1086–1091, 2017). Moreover, in the view of matrix theory, some of
+these dimensions, such as the order dimension, the Krull dimension and the covering dimen-
+sion, have been studied using the so-called order and incidence matrices (see Boyadzhiev
+et al. in Appl Math Comput 333:276–285, 2018, Dube et al. in Filomat 31(10):2901–2915,
+2017, Georgiou et al. in Quaest Math 39(6):797–814, 2016). In this paper, we define a new
+dimension for finite lattices, called the quasi covering dimension, and we study many of its
+properties. We characterize it using matrices and we present an algorithm for computing this
+dimension.
+
+Keywords Quasi covering dimension · Quasi cover · Finite lattice · Dense element ·
+Matrix theory
+
+Mathematics Subject Classification 06A07
+
+
+
+Communicated by Carlos Hoppen.
+
+B D. Georgiou
+    georgiou@math.upatras.gr
+    D. Boyadzhiev
+    doychinb@abv.bg
+    A. Megaritis
+    thanasismeg13@gmail.com
+    F. Sereti
+    seretifot@gmail.com
+1   Department of Applied Mathematics and Modeling, Faculty of Mathematics and Informatics,
+    University of Plovdiv, Plovdiv, Bulgaria
+2   Department of Mathematics, University of Patras, 265 00 Patras, Greece
+3   Department of Computer Engineering, Technological Educational Institute of Peloponnese,
+    231 00 Sparta, Greece
+
+
+                                                                                 123
+109   Page 2 of 18                                                               D. Boyadzhiev et al.
+
+
+1 Introduction
+
+The dimension theory of frames (especially, their covering dimension, their small inductive
+dimension and their large inductive dimension) attracted the interest of many researchers
+such as Charalambous, Gilmour, Banaschewski, Brijlall, Baboolal (see Banaschewski and
+Gilmour 1989; Brijlall and Baboolal 2008, 2010; Charalambous 1974).
+    Recently, this theory was enriched by the study in Georgiou et al. (2019), where a new
+dimension for frames, which is called the quasi covering dimension, was defined and many
+of its properties were investigated.
+    In this paper, we develop a theory for the quasi covering dimension of finite lattices,
+proving many results.
+    Moreover, it is known that finite posets and studies of their dimensions have important
+roles in discrete mathematics. This role is based on matrix algebra and algorithms (see Yáñez
+and Montero 1999). For example, the order dimension, the Krull dimension and the covering
+dimension have been studied using matrices (see Boyadzhiev et al. 2018; Dube et al. 2017;
+Georgiou et al. 2016).
+    Therefore, we complete our paper by studying the quasi covering dimension of finite
+lattices in the view of matrix algebra. Both order matrices and incidence matrices play
+important roles in this study.
+    Especially, in Sect. 2, we remind basic definitions and notations from dimension theory of
+finite lattices and matrix theory. In Sect. 3, we define the quasi covering dimension for finite
+lattices and in Sect. 4, we compare several of its properties. In Sect. 5, since the meaning
+of the dense element of an arbitrary finite lattice will play an essential role in this study, we
+characterize it in terms of incidence matrices. Finally, in Sect. 6, we present an algorithm for
+computing the quasi covering dimension of an arbitrary finite lattice.
+
+
+2 Preliminaries
+
+In this section we recall some definitions and notations that are needed in the rest of our
+study. We mention that in what follows, by X = {x 1 , . . . , xn } we mean a finite lattice (X , ⩽)
+for which x1 = 0 X and xn = 1 X are the least and the greatest element of X , respectively.
+Additionally, for an element x of X , we use the notation of ↓x = {y ∈ X : y ⩽ x}.
+                                                                                        
+Definition 1 Let X be a finite lattice. A subset C of X is called a cover of X if C = xn
+and x1 ∈/ C. A cover D of X is called a refinement of a cover C of X if for each d ∈ D there
+exists c ∈ C such that d ⩽ c.
+
+Definition 2 Let X be a finite lattice. The order of a subset C of X , ord(C), is defined to be
+k, where k ∈ {0, 1, . . .}, if and only if the infimum of any k + 2 distinct elements of C is x 1
+and there exist k + 1 distinct elements of C whose infimum is not x 1 .
+
+Definition 3 The function dim, called covering dimension, with domain the class of all finite
+lattices and range the set {0, 1, . . .}, is defined as follows:
+
+(1) dim(X ) ≤ k, where k ∈ {0, 1, . . .}, if and only if for every cover C of X , there exists a
+    cover R of X such that R is a refinement of C and ord(R) ≤ k.
+(2) dim(X ) = k, where k ∈ {1, 2, . . .}, if dim(X ) ≤ k and dim(X )  k − 1.
+
+
+
+123
+A study of the quasi covering dimension of finite lattices                               Page 3 of 18   109
+
+Fig. 1 The finite lattice (X , ⩽)                                                            x7
+
+
+
+                                                                                x5                      x6
+
+
+                                                                                              x4
+
+
+                                                                                x2                      x3
+
+
+
+                                                                                             x1
+
+
+                                                                            ⩽
+Definition 4 Let (X , ⩽) be a finite lattice. The n × n matrix TX = (ti j ), where
+                                                  
+                                                   1,        if xi ⩽ x j
+                                           ti j =
+                                                   0,        otherwise
+
+                                                                                         ⩽
+is called the incidence matrix of X . The n columns of the incidence matrix TX are denoted by
+      ⩽                ⩽                                                            ⩽         ⩽
+c1 (TX ), . . . , cn (TX ). Furthermore, in what follows, by the notion of max(ci (TX )+c j (TX )),
+                                                                                     ⩽         ⩽
+where i, j ∈ {1, . . . , n}, we shall mean the maximum element of the matrix ci (TX )+c j (TX ).
+
+                                                                            ⩽
+Definition 5 Let (X , ⩽) be a finite lattice. The n × n matrix A X = (ai j ), where
+                                                ⎧
+                                                ⎪
+                                                ⎪ 1,          if i = j
+                                                ⎪
+                                                ⎨2,           if xi < x j
+                                         ai j =
+                                                ⎪
+                                                ⎪ −2,         if x j < xi
+                                                ⎪
+                                                ⎩
+                                                  0,          if xi  x j
+
+                                                                                     ⩽
+is called the order matrix of X . The n rows of the order matrix A X are denoted by
+     ⩽                  ⩽                                                  ⩽                    ⩽
+r1 (A X ), . . . , rn (A X ). The set of all elements of the order matrix A X is denoted by E (A X ).
+We state that for the simplicity of the writing if α is an element of a matrix A (respectively,
+α is not an element of a matrix A) we shall write α ∈ A (respectively, α ∈        / A).
+
+Example 1 Let (X , ⩽) be the finite lattice represented in Fig. 1.
+                            ⩽                           ⩽
+Then the incidence matrix TX and the order matrix A X of X are given, as follows, respec-
+tively:
+               ⎛                ⎞                  ⎛                       ⎞
+                  1111111                             1 2 2 2 2 2 2
+               ⎜0 1 0 1 1 1 1⎟                     ⎜ −2 1 0 2 2 2 2 ⎟
+               ⎜                ⎟                  ⎜                       ⎟
+               ⎜0 0 1 1 1 1 1⎟                     ⎜ −2 0 1 2 2 2 2 ⎟
+           ⩽   ⎜                ⎟             ⩽    ⎜                       ⎟
+         TX = ⎜                 ⎟                  ⎜
+               ⎜ 0 0 0 1 1 1 1 ⎟ and A X = ⎜ −2 −2 −2 1 2 2 2 ⎟ .
+                                                                           ⎟
+               ⎜0 0 0 0 1 0 1⎟                     ⎜ −2 −2 −2 −2 1 0 2 ⎟
+               ⎜                ⎟                  ⎜                       ⎟
+               ⎝0 0 0 0 0 1 1⎠                     ⎝ −2 −2 −2 −2 0 1 2 ⎠
+                  0000001                             −2 −2 −2 −2 −2 −2 1
+
+
+                                                                                123
+109   Page 4 of 18                                                              D. Boyadzhiev et al.
+
+
+3 The quasi covering dimension of finite lattices
+
+In this section, we define the quasi covering dimension of an arbitrary finite lattice and we
+present basic of its properties.
+Definition 6 (Gierz
+                et al. 1980) Let X be a finite lattice. A subset C of X is called a quasi
+cover of X if C = x, where x is a dense element of X (that is, x ∧ y  = 0 X , for every
+y ∈ X \{0 X }).
+               Two quasi
+                      covers C1 and C2 of X are called similar (in short, we write
+C1 ∼ C2 ) if C1 = C2 . A quasi cover D of X is called a refinement of a quasi cover C
+of X if for each d ∈ D there exists c ∈ C such that d ⩽ c.
+
+Definition 7 The function dimq , called quasi covering dimension, with domain the class of
+all finite lattices and range the set {0, 1, . . .}, is defined as follows:
+(1) dimq (X ) ≤ k, where k ∈ {0, 1, . . .}, if and only if for every quasi cover C of X , there
+    exists a quasi cover R of X such that C ∼ R, R is a refinement of C and ord(R) ≤ k.
+(2) dimq (X ) = k, where k ∈ {1, 2, . . .}, if dimq (X ) ≤ k and dimq (X )  k − 1.
+
+Proposition 1 For every finite lattice X we have
+                     dimq (X ) = max{dim(↓x) : x is a dense element of X }.
+
+Proof We shall prove the inequality
+                     dimq (X ) ≤ max{dim(↓x) : x is a dense element of X }.
+Let max{dim(↓x) : x is a dense element of X } =      k, where k ∈ {0, 1, . . .}. We prove that
+dimq (X ) ≤ k. Let C be a quasi cover of X , that is C = x, where x is a dense element of X .
+Since 1↓x = x, the set C is a cover of the lattice ↓x. By assumption we have dim(↓x) ≤ k.
+                     cover R of ↓x, which refines the cover C and satisfies the inequality
+Thus, there exists a 
+ord(R) ≤ k. Since      R = x, R is a quasi cover of X , which is similar to C. Therefore,
+dimq (X ) ≤ k.
+   Conversely, we shall prove the inequality
+                     max{dim(↓x) : x is a dense element of X } ≤ dimq (X ).
+We suppose that dimq (X ) = k, where k ∈ {0, 1, . . .}, and we prove that the maximum value
+of {dim(↓x) : x is a dense element of X } is less than or equal to k. Let x 0 bea dense element
+of X . It suffices to prove that dim(↓x0 ) ≤ k. Let C be a cover of ↓x0 , that is C = x0 . Since
+x0 is a dense element of X , the set C is a quasi cover of X . Additionally, since dimq (X ) = k,
+there exists a quasi cover R of X , which refines C, is similar to C and satisfies the relation
+ord(R) ≤ k. Since, R ∼ C, the set R is a cover of the lattice ↓x0 . Therefore, dim(↓x0 ) ≤ k.
+
+
+Remark 1 (1) For every finite lattice X we have dim(X ) ≤ dimq (X ).
+(2) Isomorphic finite lattices have the same quasi covering dimension.
+(3) If 1 X is the only dense element of X , then dim(X ) = dimq (X ).
+
+Example 2 (1) For the finite lattices which are represented in Fig. 2 we have dim(X ) =
+    dimq (X ) = 0 and dim(Y ) = 0, dimq (Y ) = 1.
+(2) For the finite lattice which is represented in Fig. 3 we have dim(X ) = 1 and dimq (X ) =
+    2.
+
+
+123
+A study of the quasi covering dimension of finite lattices                           Page 5 of 18   109
+
+Fig. 2 The finite lattices (X , ⩽1 )                                                   y6
+and (Y , ⩽2 )
+
+
+
+                                                                                          y5
+
+                                                             x4
+                                                                             y3                     y4
+
+
+                                                 x2                     x3                y2
+
+
+
+                                                             x1                        y1
+                                                         (a) (X,   1)              (b) (Y,     2)
+
+
+Fig. 3 The finite lattice (X , ⩽)                                                      x11
+
+
+
+                                                                              x9                    x10
+
+
+                                                                              x6          x7        x8
+
+
+                                                                              x3          x4        x5
+
+
+                                                                                          x2
+
+
+
+                                                                                       x1
+
+
+Proposition 2 For any k ∈ {1, 2, . . .}, there exists a finite lattice X (k) with dimq (X (k)) = k
+and dim(X (k)) = 1.
+Proof Let Ak = {a0 , a1 , a2 , . . . , ak } and P (Ak ) be the power set of Ak . We now consider the
+finite lattice X (k) = P (Ak ) ∪ {b, 0 X (k) , 1 X (k) } (see Fig. 4) which is endowed by the partial
+order ⩽ for which:
+  (i) 0 X (k) ⩽ x ⩽ 1 X (k) , for every x ∈ X (k),
+ (ii) x ⩽ y ⇔ x ⊆ y, for every x, y ∈ P (Ak ),
+(iii) x  b, for every x ∈ X (k)\{∅, b, 0 X (k) , 1 X (k) }.
+Suppose that k ∈ {1, 2, . . .}. Since every cover of X (k) contains b, dim(X (k)) = 1. By
+Proposition 1 we have
+       dimq (X (k)) = max{dim(↓x) : x is dense element of X (k)} = dim(↓Ak ) = k.
+
+
+Remark 2 We observe that there exists a sublattice Y of a finite lattice X such that dimq (Y ) >
+dimq (X ) as shown in Fig. 5.
+
+                                                                              123
+109    Page 6 of 18                                                             D. Boyadzhiev et al.
+
+Fig. 4 The lattice (X (k), ⩽)                                  1X(k)
+
+
+
+
+                                                                Ak
+
+
+
+
+                                                              P(Ak )
+                                                                                                  b
+
+
+
+
+                                                                 ∅
+
+
+
+
+                                                               0X(k)
+
+Fig. 5 The finite lattice (X , ⩽)                                                  x9
+
+
+
+                                                                                      x8
+
+
+                                                                        x6                      x7
+
+
+                                                                                      x5
+
+
+                                                                        x2            x3        x4
+
+
+
+                                                                                   x1
+
+
+Indeed, we have dimq (X ) = 0. But, for the sublattice Y = {x3 , x5 , x6 , x7 , x8 , x9 } we have
+dimq (Y ) = 1. Thus, we have the following proposition.
+
+Proposition 3 Let X be a finite lattice and Y be a sublattice of X . If every dense element of Y
+is also a dense element of X , then dimq (Y ) ≤ dimq (X ). Moreover, if Y and X have exactly
+the same dense elements, then dimq (Y ) = dimq (X ).
+
+Proof Suppose that every dense element of Y is also a dense element of X . By Proposition 1
+there exists a dense element y0 of Y such that dimq (Y ) = dim(↓y0 ). By assumption y0 is a
+dense element of X . Therefore,
+      dimq (Y ) = dim(↓y0 ) ≤ max{dim(↓x) : x is a dense element of X } = dimq (X ).
+
+123
+A study of the quasi covering dimension of finite lattices                              Page 7 of 18   109
+
+
+Now, suppose that Y and X have the same dense elements. By Proposition 1 there exists a
+dense element x0 of X such that dimq (X ) = dim(↓x0 ). By assumption x0 is a dense element
+of Y . Therefore,
+     dimq (X ) = dim(↓x0 ) ≤ max{dim(↓y) : y is a dense element of Y } = dimq (Y ).
+
+
+
+   We complete this section introducing a different characterization of the quasi covering
+dimension of an arbitrary finite lattice X .
+Remark 3 The relation ∼ presenting the similarity of two quasi coverings is an equivalence
+relation on the finite lattice X . We denote by qc(X , ∼) the collection of all equivalence
+classes under ∼. Every equivalence class is completely determined by a dense element x and
+is denoted by cx , that is
+                          cx = {{xi1 , . . . , xim } ⊆ X : xi1 ∨ · · · ∨ xim = x}.
+
+Definition 8 Let cx ∈ qc(X , ∼). A quasi cover C ∈ cx of X is called cx -minimal cover if
+C ⊆ R for every refinement R of C with R ∈ cx .
+
+Lemma 1 If X is a finite lattice and C is a quasi cover of X with C ∈ cx and x ∈
+                                                                               / C, then
+there exists a cx -minimal cover R of X which refines C and x ∈
+                                                              / R.
+
+Proof We consider the set
+                   C  = {y ∈ C : there does not exist z ∈ C such that y < z}.
+Then, C  ∈ cx , C  is an antichain and C  ⊆ C. If C  is a cx -minimal cover of X , then we are
+done. If C  is not a cx -minimal cover of X , then there exists a refinement R1 of C  such that
+R1 ∈ cx and C   R1 (clearly, x ∈        / R1 ). Without loss of generality, we can assume that R1 is
+an antichain. Let xi1 ∈ C  \R1 . If R1 is a cx -minimal cover of X , then we are done. If R1 is
+not a cx -minimal cover of X , then there exists a refinement R2 of R1 such that R2 ∈ cx and
+R1  R2 . (clearly, x ∈      / R2 ). Let xi2 ∈ R1 \R2 . Then, xi1  = xi2 . If R2 is a cx -minimal cover of
+X , then we are done. If R2 is not a cx -minimal cover of X , then there exists a refinement R3
+of R2 such that R3 ∈ cx and R2  R3 (clearly, x ∈           / R3 ). Let xi3 ∈ R2 \R3 . Then, xi2  = xi3 .
+We shall prove that xi1  = xi3 . Let suppose that xi1 = xi3 . Since xi3 ∈ R2 , xi1 ∈            / R1 and
+R2 refines R1 , there exists r1 ∈ R1 such that xi1 < r1 . Moreover, since R1 refines C  and
+r1 ∈ R1 , there exists c ∈ C  such that r1 ⩽ c . Thus, xi1 < c , which is a contradiction since
+C  is an antichain. Therefore, xi1  = xi3 . Following this way, we produce an infinite sequence
+xi1 , xi2 , xi3 , . . . of distinct elements of X , which is a contradiction since X is a finite set.
+Thus, there exists a cx -minimal cover R of X which refines C and x ∈               / R.
+
+Proposition 4 Let X be a finite lattice and k ∈ {0, 1, . . .}. Then, dimq (X ) ≤ k if and only if
+for every cx ∈ qc(X , ∼), each cx -minimal cover C of X satisfies the relation ord(C) ≤ k.
+
+Proof Let dimq (X ) ≤ k, cx ∈ qc(X , ∼) and C be a cx -minimal cover of X . We prove that
+ord(C) ≤ k. Since dimq (X ) ≤ k, there exists a refinement R of C which is similar to C
+and satisfies the relation ord(R) ≤ k. If R = C, then we are done. If R  = C, since C is
+a cx -minimal cover of X and R ∈ cx which refines C, by Definition 8, we have C ⊆ R.
+Therefore, ord(C) ≤ k.
+   Conversely, we prove that dimq (X ) ≤ k. Let C be a quasi cover of X . That is, C ∈ cx , for
+some cx ∈ qc(X , ∼). Clearly, if x ∈ C, then {x} is a quasi cover of X , which is a refinement
+
+                                                                                123
+109   Page 8 of 18                                                                    D. Boyadzhiev et al.
+
+
+of C, is similar to C and ord({x}) = 0 ≤ k. If x ∈  / C, then, by Lemma 1, there exists a
+cx -minimal cover R of X , which refines C and x ∈
+                                                 / R. Therefore, by assumption ord(R) ≤ k
+and thus, dimq (X ) ≤ k.
+Corollary 1 For every finite lattice X we have
+                       dimq (X ) = max{ord(C) : C ∈ cx ∈ qc(X , ∼)}.
+Proof It follows directly by Proposition 4.
+Proposition 5 Let cx ∈ qc(X , ∼). Then, every cx -minimal cover of X is an antichain.
+Proof Let C be a cx -minimal cover of X . We prove that C is an antichain. In contrast, if
+there exist two distinct elements xi and x j of C such that xi ⩽ x j , then the set R = C\{xi }
+is a quasi cover of X , which refines C, is similar to C and R ∈ cx . Since C is a cx -minimal
+cover of X , we have C ⊆ R, which is a contradiction. Therefore, C is an antichain.
+
+
+4 Properties of the quasi covering dimension of finite lattices
+
+In this section, we study certain properties of the quasi covering dimension of different finite
+lattices. Especially, having two finite lattices, we study the quasi covering dimension of their
+linear sum, Cartesian product, lexicographic product and finally, of their rectangular product.
+
+Definition 9 (Davey and Priestley 2002) The linear sum X ⊕ Y of two partially ordered sets
+(X , ⩽1 ) and (Y , ⩽2 ), where X ∩ Y = ∅, is the partially ordered set (X ∪ Y , ⩽), where the
+relation ⩽ is defined as follows:
+                                    ⎧
+                                    ⎪
+                                    ⎨x, y ∈ X and x ⩽1 y
+                           x ⩽ y ⇔ x, y ∈ Y and x ⩽2 y
+                                    ⎪
+                                    ⎩
+                                      x ∈ X, y ∈ Y .
+Clearly, if (X , ⩽1 ) and (Y , ⩽2 ) are finite lattices, then (X ⊕ Y , ⩽) is also a finite lattice.
+Remark 4 (1) The example in Fig. 6 verifies the claim
+                                   dimq (X ⊕ Y )  = dimq (Y ⊕ X ).
+    Indeed, we have dimq (X ) = dimq (Y ) = 0. Furthermore, dimq (Y ⊕ X ) = 0 and
+    dimq (X ⊕ Y ) = 1. Thus, dimq (X ⊕ Y )  = dimq (Y ⊕ X ).
+(2) The example in Fig. 7 verifies that the assertion
+                             dimq (X ⊕ Y ) ≤ dimq (X ) + dimq (Y ) + 1
+      does not hold for all the finite lattices X and Y .
+      Indeed, we have dimq (X ) = dimq (Y ) = 0 and dimq (X ⊕ Y ) = 2. Thus,
+                            dimq (X ⊕ Y )  dimq (X ) + dimq (Y ) + 1.
+
+Definition 10 (Davey and Priestley 2002) The Cartesian product of two partially ordered
+sets (X , ⩽1 ) and (Y , ⩽2 ) is the partially ordered set (X × Y , ⩽), where the relation ⩽ is
+defined as follows:
+                       (x1 , y1 ) ⩽ (x2 , y2 ) ⇔ x1 ⩽1 x2 and y1 ⩽2 y2 .
+We state that if (X , ⩽1 ) and (Y , ⩽2 ) are finite lattices, then (X × Y , ⩽) is also a finite lattice.
+
+123
+A study of the quasi covering dimension of finite lattices                                      Page 9 of 18     109
+
+                                                                     x2                           y4
+
+
+
+                                                                      x1              y2                         y3
+
+                                 y4
+                                                                      y4                            y1
+
+      x2
+                   y2                         y3      y2                         y3                 x2
+
+
+
+      x1                         y1                                  y1                           x1
+(a) (X,                                                                                                     ∗)
+            1)               (b) (Y,   2)                    (c) (Y ⊕ X,   )               (d) (X ⊕ Y,
+
+Fig. 6 The finite lattices (X , ⩽1 ), (Y , ⩽2 ), (Y ⊕ X , ⩽) and (X ⊕ Y , ⩽∗ )
+
+                                                                                       y8
+
+
+
+                                                                           y5              y6          y7
+
+                                                 y8
+                                                                           y2              y3          y4
+
+
+                                  y5               y6           y7                         y1
+
+                 x2
+                                  y2               y3           y4                         x2
+
+
+
+                 x1                              y1                                    x1
+           (a) (X,      1)                  (b) (Y,     2)                       (c) (X ⊕ Y, )
+
+Fig. 7 The finite lattices (X , ⩽1 ), (Y , ⩽2 ) and (X ⊕ Y , ⩽)
+
+
+
+    To compute the quasi covering dimension of the Cartesian product X × Y of two finite
+lattices X and Y , we compare the following two results which can, easily, be proved.
+
+Lemma 2 Let (x, y) ∈ X × Y . Then, ↓(x, y) = ↓x × ↓y.
+
+Proof Is an immediate consequence of the following:
+
+                  (a, b) ∈ ↓(x, y) ⇔ (a, b) ⩽ (x, y) ⇔ a ⩽1 x and b ⩽2 y
+                                        ⇔ a ∈ ↓x and b ∈ ↓y ⇔ (a, b) ∈ ↓x × ↓y.
+
+
+
+                                                                                      123
+109   Page 10 of 18                                                                      D. Boyadzhiev et al.
+
+
+Lemma 3 Let (x, y) ∈ X × Y . Then, (x, y) is a dense element of X × Y if and only if x and
+y are dense elements of X and Y , respectively.
+
+Proof First we observe that for every (x1 , y1 ), (x2 , y2 ) ∈ X × Y we have
+ (x1 , y1 ) ∧ (x2 , y2 ) = (x1 ∧ x2 , y1 ∧ y2 ) and (x1 , y1 ) ∨ (x2 , y2 ) = (x1 ∨ x2 , y1 ∨ y2 ).
+Suppose that (x, y) is a dense element of X × Y and we prove that x is a dense element of
+X . Let x  ∈ X \{0 X }. We consider the element (x  , 0Y ) of X × Y . Then, (x  , 0Y )  = 0 X ×Y
+and since (x, y) is a dense element of X × Y ,
+           (x, y) ∧ (x  , 0Y )  = 0 X ×Y ⇔ (x ∧ x  , y ∧ 0Y )  = (0 X , 0Y )
+                                           ⇔ (x ∧ x  , 0Y )  = (0 X , 0Y ) ⇔ x ∧ x   = 0 X .
+Similarly we can prove that y is a dense element of Y .
+   Conversely, suppose that x and y are dense elements of X and Y , respectively. Let (x  , y  ) ∈
+X × Y \{0 X ×Y }. Then, x   = 0 X or y   = 0Y . Therefore, x ∧ x   = 0 X or y ∧ y   = 0Y . Thus,
+(x, y) ∧ (x  , y  ) = (x ∧ x  , y ∧ y  )  = 0 X ×Y and the proof of the lemma is complete.
+
+Proposition 6 Let X and Y be finite lattices. Then,
+                            dimq (X × Y ) = max{dimq (X ), dimq (Y )}.
+
+Proof By Proposition 1 we have
+        dimq (X × Y ) = max{dim(↓(x, y)) : (x, y) is a dense element in X × Y }.
+By Lemmas 2 and 3 we have
+           dimq (X × Y ) = max{dim(↓x × ↓y) : x and y are dense in X and Y }
+and by Zhang et al. (2017) we have
+      dimq (X × Y ) = max{max{dim(↓x), dim(↓y)} : x and y are dense in X and Y }.
+Thus, adapting Proposition 1 for the quasi covering dimension of X and Y we get
+                            dimq (X × Y ) = max{dimq (X ), dimq (Y )}.
+
+
+
+Remark 5 (1) Let X and Y be finite lattices. Then, we obtain that dimq (X × Y ) = 0 if and
+    only if dimq (X ) = dimq (Y ) = 0.
+(2) If X and Y are finite lattices, then
+                              dimq (X × Y ) < dimq (X ) + dimq (Y ) + 1.
+(3) If X 1 , . . . , X n are finite lattices, then
+                      dimq (X 1 × . . . × X n ) = max{dimq (X 1 ), . . . , dimq (X n )}.
+
+Definition 11 (Davey and Priestley 2002) The lexicographic product X  Y of two lattices
+(X , ⩽1 ) and (Y , ⩽2 ) is the lattice (X × Y , ⩽), where the relation ⩽ is defined as follows:
+                                                 
+                                                   x1 <1 x2 or
+                       (x1 , y1 ) ⩽ (x2 , y2 ) ⇔
+                                                   x1 = x2 and y1 ⩽2 y2 .
+
+
+123
+A study of the quasi covering dimension of finite lattices                                          Page 11 of 18   109
+
+                                                                                 (x2 , y8 )
+
+
+
+
+                                                                  (x2 , y5 )           (x2 , y6 )      (x2 , y7 )
+
+
+
+
+                                                                  (x2 , y2 )           (x2 , y3 )      (x2 , y4 )
+
+
+
+
+                                                                                       (x2 , y1 )
+
+
+
+
+                                           y8                                          (x1 , y8 )
+
+
+
+
+                              y5              y6         y7       (x1 , y5 )           (x1 , y6 )      (x1 , y7 )
+
+
+
+              x2
+                              y2              y3         y4       (x1 , y2 )           (x1 , y3 )      (x1 , y4 )
+
+
+
+
+              x1                           y1
+                                                                                 (x1 , y1 )
+          (a) (X,     1)               (b) (Y,     2)
+                                                                               (c) (X Y, )
+Fig. 8 The finite lattices (X , ⩽1 ), (Y , ⩽2 ) and (X  Y , ⩽)
+
+
+Remark 6 The example in Fig. 8 verifies that the inequality
+                              dimq (X  Y ) ≤ dimq (X ) + dimq (Y ) + 1
+does not hold for all the finite lattices X and Y .
+Indeed, we have dimq (X ) = dimq (Y ) = 0 and dimq (X  Y ) = 2. Thus, the inequality
+dimq (X  Y ) ≤ dimq (X ) + dimq (Y ) + 1 does not hold.
+
+Definition 12 (Bae 1994, 1999; Bennett 1990) The rectangular product of two lattices
+(X , ⩽1 ) and (Y , ⩽2 ) is the lattice (X Y , ⩽), where
+                   X Y = {(x, y) ∈ X × Y : x  = x1 and y  = y1 } ∪ {(x1 , y1 )}
+and the relation ⩽ is defined as follows:
+                           (x1 , y1 ) ⩽ (x2 , y2 ) ⇔ x1 ⩽1 x2 and y1 ⩽2 y2 .
+
+Remark 7 The example in Fig. 9 shows that the inequality
+                                   dimq (X Y ) ≤ dimq (X ) + dimq (Y )
+does not hold for all the finite lattices.
+   Indeed, we have dimq (X ) = dimq (Y ) = 0 and dimq (X Y ) = 1. Thus, the inequality
+dimq (X Y ) ≤ dimq (X ) + dimq (Y ) does not hold.
+
+
+                                                                                       123
+109    Page 12 of 18                                                                            D. Boyadzhiev et al.
+
+                                                                        (x3 , y3 )
+
+
+
+                   x3                     y3             (x2 , y3 )                        (x3 , y2 )
+
+
+                       x2                    y2                               (x2 , y2 )
+
+
+
+                   x1                     y1                            (x1 , y1 )
+
+               (a) (X,      1)        (b) (Y,       2)                (c) (X Y, )
+Fig. 9 The finite lattices (X , ⩽1 ), (Y , ⩽2 ) and (X Y , ⩽)
+
+
+5 A characterization of dense elements using matrices
+
+In this section we characterize the dense elements of an arbitrary finite lattice (X =
+{x1 , . . . , xn }, ⩽) using matrices.
+Notation 1 (Boyadzhiev et al. 2018) We denote by Bm = (bm
+                                                        i ) the n × 1 matrix, where
+
+                                     
+                                       m, if i = 1
+                                bm =
+                                 i
+                                       0, otherwise.
+
+Proposition 7 Let X be a finite lattice and xi ∈ X , where i ∈ {2, . . . , n} be an arbitrary
+element of X . Then, xi is a dense element of X if and only if
+                            ⩽            ⩽
+               max(ci (TX ) + c j (TX ) − B1 ) = 2, for every j ∈ {2, . . . , n}\{i}.
+
+Proof Let xi ∈ X be a dense element of X , where i ∈ {2, . . . , n}, j ∈ {2, . . . , n}\{i} and
+                   ⩽         ⩽
+k = max(ci (TX ) + c j (TX ) − B1 ). Clearly, k > 0 and by the corresponding definitions of
+                          ⩽
+the incidence matrix TX and the matrix B1 we have either k = 1 or k = 2. Since xi is a
+dense element of X , we have xi ∧ x j  = x1 . We set xm = xi ∧ x j , where m ∈ {2, . . . , n}.
+Then, xm ⩽ xi and xm ⩽ x j , or equivalently, tmi = tm j = 1. Additionally, xm  = x1 . Thus,
+b1m = 0. Therefore, tmi + tm j − b1m = 2 and so k = 2.
+                                               ⩽            ⩽
+   Conversely, we suppose that max(ci (TX ) + c j (TX ) − B1 ) = 2, for every j ∈
+{2, . . . , n}\{i} and we prove that the element xi is dense in X . For that, we assume that the
+element xi is not dense in X . Then, there exists q ∈ {2, . . . , n}\{i} such that xi ∧ xq = x1 .
+                             ⩽           ⩽
+By assumption, max(ci (TX ) + cq (TX ) − B1 ) = 2. Thus, there exists s ∈ {2, . . . , n} such
+that tsi + tsq − b1 = 2. The last means that tsi = tsq = 1 and b1s = 0, or equivalent xs ⩽ xi ,
+                     s
+
+xs ⩽ xq and xs  = x1 . Therefore, xs < xi ∧ xq and so xs < x1 , which is a contradiction.
+Thus, xi is a dense element of X .
+
+Algorithm 1 Let (X = {x1 , . . . , xn }, ⩽) be a finite lattice. The algorithm which finds the set
+D(X ) of all dense elements of X is consisted by the following steps:
+                                                ⩽                ⩽                                      ⩽
+      Step 1: Find the n columns c1 (TX ), . . . , cn (TX ) of the incidence matrix TX of X and
+      go to Step 2.
+
+123
+A study of the quasi covering dimension of finite lattices                    Page 13 of 18   109
+
+Fig. 10 The finite lattice (X , ⩽)                                                x8
+
+
+
+                                                                        x6                    x7
+
+
+                                                                                     x5
+
+
+                                                                        x2           x3       x4
+
+
+
+                                                                                  x1
+
+
+
+     Step 2: Set k = 0, i = 2 and go to Step 3.
+                           ⩽          ⩽
+     Step 3: If max(ci (TX ) + c j (TX ) − B1 ) = 2, for every j ∈ {2, . . . , n}\{i}, then put
+     xi = xik and go to step 4. Otherwise, go to Step 5.
+     Step 4: Put k → k + 1 (that is, replace the old k with k + 1) and go to Step 5.
+     Step 5: If i < n, then put i → i + 1 (that is, replace the old i with i + 1) and go to Step
+     3. Otherwise, go to Step 6.
+     Step 6: Create the set D(X ) = {xi0 , . . . , xik }.
+
+
+Example 3 Let (X , ⩽) be the finite lattice represented in Fig. 10.
+                       ⩽
+The incidence matrix TX of X is the following matrix:
+
+                                                ⎛           ⎞
+                                              11111111
+                                            ⎜0 1 0 0 1 1 1 1⎟
+                                            ⎜               ⎟
+                                            ⎜0 0 1 0 1 1 1 1⎟
+                                            ⎜               ⎟
+                                        ⩽   ⎜0 0 0 1 1 1 1 1⎟
+                                            ⎜
+                                       TX = ⎜               ⎟.
+                                                            ⎟
+                                            ⎜0 0 0 0 1 1 1 1⎟
+                                            ⎜0 0 0 0 0 1 0 1⎟
+                                            ⎜               ⎟
+                                            ⎝0 0 0 0 0 0 1 1⎠
+                                              00000001
+
+
+Following Algorithm 1 we have that the dense elements of X are the elements x 5 , x6 , x7 and
+x8 . For example the element x5 is dense in X since
+
+                                       ⎛ ⎞                              ⎛ ⎞
+                                         1                                1
+                                       ⎜2⎟                              ⎜1⎟
+                                       ⎜ ⎟                              ⎜ ⎟
+                                       ⎜1⎟                              ⎜2⎟
+                                       ⎜ ⎟                              ⎜ ⎟
+                 ⩽          ⩽          ⎜1⎟        ⩽          ⩽          ⎜1⎟
+                                           ⎟
+            c5 (TX ) + c2 (TX ) − B1 = ⎜ ⎟ , c5 (TX ) + c3 (TX ) − B1 = ⎜
+                                       ⎜
+                                                                        ⎜1⎟,
+                                                                            ⎟
+                                         1
+                                       ⎜ ⎟                              ⎜ ⎟
+                                       ⎜0⎟                              ⎜0⎟
+                                       ⎜ ⎟                              ⎜ ⎟
+                                       ⎝0⎠                              ⎝0⎠
+                                         0                                0
+
+                                                                        123
+109   Page 14 of 18                                                           D. Boyadzhiev et al.
+
+                                      ⎛ ⎞                                  ⎛ ⎞
+                                        1                                   1
+                                      ⎜1⎟                                  ⎜2⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎜1⎟                                  ⎜2⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎜2⎟                                  ⎜ ⎟
+                ⩽          ⩽
+           c5 (TX ) + c4 (TX ) − B1 = ⎜   ⎟ , c5 (T ) + c6 (T ) − B1 = ⎜ 2 ⎟ ,
+                                                    ⩽           ⩽
+                                      ⎜1⎟           X           X          ⎜2⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎜0⎟                                  ⎜1⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎝0⎠                                  ⎝0⎠
+                                        0                                   0
+                                      ⎛ ⎞                                  ⎛ ⎞
+                                        1                                   1
+                                      ⎜2⎟                                  ⎜2⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎜2⎟                                  ⎜2⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                ⩽          ⩽          ⎜ 2⎟⎟         ⩽           ⩽          ⎜2⎟
+           c5 (TX ) + c7 (TX ) − B1 = ⎜     ,
+                                      ⎜2⎟ 5 X c  (T   ) + c  (T
+                                                            8 X   ) − B1 = ⎜ ⎟.
+                                                                           ⎜2⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎜0⎟                                  ⎜1⎟
+                                      ⎜ ⎟                                  ⎜ ⎟
+                                      ⎝1⎠                                  ⎝1⎠
+                                        0                                   1
+                      ⩽       ⩽
+Thus, max(c5 (TX ) + c j (TX ) − B1 ) = 2, for every j = 2, 3, 4, 6, 7, 8. But the element x 3
+is not dense in X since there exists j = 2 such that
+                                                       ⎛ ⎞
+                                                         1
+                                                       ⎜1⎟
+                                                       ⎜ ⎟
+                                                       ⎜1⎟
+                                                       ⎜ ⎟
+                                 ⩽          ⩽          ⎜0⎟
+                            c3 (TX ) + c2 (TX ) − B1 = ⎜
+                                                       ⎜0⎟.
+                                                           ⎟
+                                                       ⎜ ⎟
+                                                       ⎜0⎟
+                                                       ⎜ ⎟
+                                                       ⎝0⎠
+                                                         0
+                  ⩽           ⩽
+Thus, max(c3 (TX ) + c2 (TX ) − B1 ) = 1  = 2.
+
+
+6 An algorithm for computing the quasi covering dimension of finite
+  lattices
+
+In this section we present an algorithm for computing the quasi covering dimension of an
+arbitrary finite lattice (X = {x1 , . . . , xn }, ⩽).
+Definition 13 (Dube et al. 2015) A cover C of X is called minimal if C ⊆ R, for every
+refinement R of C. As we can see in Dube et al. (2015), every minimal cover is an antichain.
+   In the study Boyadzhiev et al. (2018), based on the following relation
+                      dim(X ) = max{ord(C) : C is a minimal cover of X },
+for every finite lattice X , which was proved in the study Dube et al. (2015), we gave two
+algorithms, each one of which computes the set MCov(X ) of all minimal covers of X and the
+covering dimension, dim(X ), of X . For that, we inserted the following definition, proposition
+and notation, respectively.
+
+Definition 14 (Boyadzhiev et al. 2018) Let X be a finite lattice.
+
+123
+A study of the quasi covering dimension of finite lattices                                Page 15 of 18   109
+
+
+(1) An antichain subset C = {x j } of X is said to satisfy the cover condition if the following
+    condition is satisfied:
+                                                    ⩽                 ⩽
+                                        3∈
+                                         / r j (A X ) + (−1) · rn (A X ).
+(2) An antichain subset C = {x j1 , . . . , x jm }, where m ⩾ 2, is said to satisfy the cover
+    condition if the following condition is satisfied:
+                                             ⩽                   ⩽                   ⩽
+                        2m + 2 ∈
+                               / r j1 (A X ) + . . . + r jm (A X ) + (−1) · rn (A X ).
+
+Proposition 8 (Boyadzhiev et al. 2018) Let X be a finite lattice.
+(1) An antichain subset C = {x j } of X is a cover of X if and only if it satisfies the cover
+    condition.
+(2) An antichain subset C = {x j1 , . . . , x jm } of X, where m ⩾ 2, is a cover of X if and only
+    if it satisfies the cover condition.
+
+Notation 2 (Boyadzhiev et al. 2018) If A is an antichain subset of X , then we write
+                               Pl(A) = {x ∈ X : x  a for every a ∈ A}
+and for every xi ∈ X we write
+                                     ↓∗ xi = {x ∈ X : x ⩽ xi }\{0 X }.
+
+Algorithm 2 (Boyadzhiev et al. 2018) Let (X = {x1 , . . . , xn }, ⩽) be a finite lattice, where
+n ⩾ 2. The algorithm which finds the set MCov(X ) of all minimal covers of X consists of
+the following steps.
+                                         ⩽                   ⩽                      ⩽
+     Step 1: Find the n rows r1 (A X ), . . . , rn (A X ) of the order matrix A X of X and go to Step
+     2.
+                            ⩽
+     Step 2: If 0 ∈  / E (A X ), then create MCov(X ) = {{xn }}. Otherwise, go to Step 3.
+     Step 3: Set m = 1 and go to Step 4.
+     Step 4: Find the set Am (X ) of all antichains {x j1 , . . . , x jm } of X which satisfy the cover
+     condition and go to Step 5.
+     Step 5: If m < n − 2, then put m → m + 1 (that is, replace the old m with m + 1) and
+     go to Step 4. Otherwise, go to Step 6.
+     Step 6: If Am (X ) = ∅, for all m = 2, . . . , n − 2, then create MCov(X ) = {{x n }}.
+     Otherwise, go to Step 7.
+     Step 7: Create the set A(X ) = A1 (X ) ∪ . . . ∪ An−2 (X ) and go to Step 8.
+     Step 8: Find the set M(X ) of all sets C = {x j1 , . . . , x jm } ∈ A(X ) such that for every
+     i ∈ {1, . . . , m} the following conditions hold:
+    (1) C\{x ji } does not satisfy the cover condition.
+                                                                             ⩽           ⩽               ⩽
+    (2) If for every k1 , k2 ∈ {1, . . . , n}\{ j1 , . . . , jm }, 1 ∈ rk1 (A X )+rk2 (A X ), 3 ∈ r ji (A X )+
+                ⩽              ⩽             ⩽                    ⩽           ⩽               ⩽            ⩽
+        rk1 (A X ), 3 ∈ r ji (A X ) + rk2 (A X ), 1 ∈ rk1 (A X ) + r jl (A X ), 1 ∈ rk2 (A X ) + r jl (A X ),
+        for every l ∈ {1, . . . , m}\{i}, then (C\{x ji }) ∪ {xk1 , xk2 } does not satisfy the cover
+        condition.
+                                                                         ⩽          ⩽                    ⩽
+    (3) If for every k ∈ {1, . . . , n}\{ j1 , . . . , jm }, 3 ∈ r ji (A X ) + rk (A X ) and 1 ∈ rk (A X ) +
+               ⩽
+        r jl (A X ), for every l ∈ {1, . . . , m}\{i}, then (C\{x ji }) ∪ {xk } does not satisfy the
+        cover condition.
+     Subsequently, go to Step 9.
+
+                                                                                  123
+109    Page 16 of 18                                                                    D. Boyadzhiev et al.
+
+
+      Step 9: Create the set MCov(X ) = M(X ).
+
+Algorithm 3 (Boyadzhiev et al. 2018) Let (X = {x1 , . . . , xn }, ⩽) be a finite lattice.
+                                      ⩽              ⩽                          ⩽                      ⩽
+      Step 1: Find the n rows r1 (A X ), . . . , rn (A X ) of the order matrix A X of X . If 0 ∈
+                                                                                               / E (A X ),
+      then print dim(X ) = 0. Otherwise, go to Step 2. 
+      Step 2: Apply Algorithm 2 to find the set A(X ) = n−2         m=1 Am (X ) and go to Step 3.
+      Step 3: If Am (X ) = ∅, for all m = 2, . . . , n − 2, then print dim(X ) = 0. Otherwise, go
+      to Step 4.
+      Step 4: Apply Algorithm 2 to find the set M(X ) and go to Step 5.
+                                           ⩽                 ⩽                               ⩽
+      Step 5: Find the n columns c1 (TX ), . . . , cn (TX ) of the incidence matrix TX of X and
+      go to Step 6.
+      Step 6: For each m ∈ {1, . . . , n − 2}, find
+                                 ⩽                    ⩽
+       dm = max{max(c j1 (TX ) + . . . + c jm (TX ) − Bm ) − 1 : {x j1 , . . . , x jm } ∈ M(X )}.
+      If Am (X ) ∩ M(X ) = ∅, for some m, then put dm = 0. Go to Step 7.
+      Step 7: Print dim(X ) = max{d1 , d2 , . . . , dn−2 }.
+
+Proposition 9 Let X be a finite lattice and x be a dense element of X .
+(1) If
+                                 ⩽                   ⩽
+       L x = max{max(c j1 (TX ) + . . . + c jm (TX ) − Bm ) − 1 : {x j1 , . . . , x jm } ∈ M(↓x)},
+    then dim(↓x) = L x .
+(2) If Q = max{L x : x is a dense element of X }, then dimq (X ) = Q.
+
+Proof (1) It similar to the proof of Boyadzhiev et al. (2018, Theorem 5.2).
+(2) It follows by Proposition 1 and the statement (1) of this proposition.
+
+   Adapting Algorithms 1, 2, and 3 we can compute the covering dimension dim(↓x) for
+every dense element x of an arbitrary finite lattice X . According to Proposition 1, this leads
+to a computation of the quasi covering dimension, dimq (X ), of X .
+Algorithm 4 Let (X = {x1 , . . . , xn }, ⩽) be a finite lattice.
+      Step 1: Apply Algorithm 1 to find the set D(X ) = {xi0 , . . . , xik } of all dense elements
+      of X.
+      Step 2: Set s = 0 and go to Step 3.
+      Step 3: Find the set ↓xis = {x j : a jis ∈ {1, 2}} and go to Step 4.
+      Step 4: Apply Algorithm 3 to find the qs = dim(↓xis ) and go to Step 5.
+      Step 5: If s < k, then put s → s + 1 (that is, replace the old s with s + 1) and go to Step
+      3. Otherwise, go to Step 6.
+      Step 6: Print dimq (X ) = max{q0 , q1 , . . . , qk }.
+
+Example 4 (1) We consider the finite lattice (X , ⩽) which is represented in Fig. 11.
+
+      Following Algorithm 1 we have D(X ) = {x2 , x3 , x4 , x5 , x6 }. Additionally, follow-
+      ing Algorithms 2 and 3 we have M(↓x2 ) = {{x2 }} with q0 = dim(↓x2 ) = 0,
+      M(↓x 3 ) = {{x 3 }} with q1 = dim(↓x 3 ) = 0, M(↓x 4 ) = {{x 4 }} with q2 = dim(↓x 4 ) =
+      0, M(↓x5 ) = {{x5 }} with q3 = dim(↓x5 ) = 0 and M(↓x6 ) = {{x4 , x5 }} with
+      q4 = dim(↓x6 ) = 1. Thus, dimq (X ) = max{q0 , q1 , q2 , q3 , q4 } = 1.
+
+123
+A study of the quasi covering dimension of finite lattices                            Page 17 of 18   109
+
+Fig. 11 The finite lattice (X , ⩽)                                                         x6
+
+
+
+                                                                               x4                     x5
+
+
+                                                                                             x3
+
+
+                                                                                             x2
+
+
+
+                                                                                           x1
+
+Fig. 12 The finite lattice (X , ⩽)                                                         x9
+
+
+
+                                                                               x6            x7       x8
+
+
+                                                                               x3            x4       x5
+
+
+                                                                                             x2
+
+
+
+                                                                                           x1
+
+
+(2) We consider the finite lattice (X , ⩽) which is represented in Fig. 12.
+
+      Following Algorithm 1 we have D(X ) = {x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 } and following
+      Algorithms 2 and 3 we have M(↓xi ) = {{xi }} and qi−2 = dim(↓xi ) = 0, for every
+      i = 2, 3, 4, 5, M(↓x6 ) = {{x4 , x5 }} with q4 = dim(↓x6 ) = 1, M(↓x7 ) = {{x3 , x5 }}
+      with q5 = dim(↓x7 ) = 1, M(↓x8 ) = {{x3 , x4 }} with q6 = dim(↓x8 ) = 1
+      and M(↓x9 ) = {{x3 , x4 , x5 }} with q7 = dim(↓x9 ) = 2. Therefore, dimq (X ) =
+      max{q0 , q1 , q2 , q3 , q4 , q5 , q6 , q7 } = 2.
+
+
+
+Conclusion
+
+In this paper, we insert a new dimension for finite lattices, called the quasi covering dimen-
+sion. We study many properties of this dimension and we characterize it using matrices. An
+algorithm for computing the quasi covering dimension of an arbitrary finite lattice completes
+our study.
+
+Acknowledgements The authors would like to thank both reviewers for the careful reading of the paper and
+the useful comments. The fourth author of this paper F. Sereti (with Scholarship Code: 2547) would like to
+thank the General Secretariat for Research and Technology (GSRT) and the Hellenic Foundation for Research
+and Innovation (HFRI) for the financial support of this study. katětov
+
+
+                                                                               123
+109   Page 18 of 18                                                                      D. Boyadzhiev et al.
+
+
+References
+Bae DR (1994) Properties of lattices preserved by taking rectangular products. Commun Korean Math Soc
+      9(1):37–47
+Bae DR (1999) The dimension of rectangular product of lattices. J Korean Math Soc 36(1):15–36
+Banaschewski B, Gilmour G (1989) Stone–Čech compactification and dimension theory for regular σ -frames.
+      J Lond Math Soc 39(2):1–8
+Bennett MK (1990) Rectangular products of lattices. Discr Math 79:235–249
+Boyadzhiev D, Georgiou DN, Megaritis AC, Sereti F (2018) A study of a covering dimension of finite lattices.
+      Appl Math Comput 333:276–285
+Brijlall D, Baboolal D (2008) Some aspects of dimension theory of frames. Indian J Pure Appl Math 39(5):375–
+      402
+Brijlall D, Baboolal D (2010) The katětov–Morita theorem for the dimension of metric frames. Indian J Pure
+      Appl Math 41(3):535–553
+Charalambous MG (1974) Dimension theory of σ -frames. J Lond Math Soc 8(2):149–160
+Davey BA, Priestley HA (2002) Introduction to lattices and order. Cambridge University Press, Cambridge
+Dube T, Georgiou DN, Megaritis AC, Moshokoa SP (2015) A study of covering dimension for the class of
+      finite lattices. Discr Math 338:1096–1110
+Dube T, Georgiou DN, Megaritis AC, Sereti F (2017) Studying the Krull dimension of finite lattices under the
+      prism of martices. Filomat 31(10):2901–2915
+Georgiou DN, Megaritis AC, Sereti F (2016) A study of the order dimension of a poset through the matrix
+      theory. Quaest Math 39(6):797–814
+Georgiou D, Kougias I, Megaritis A, Prinos G, Sereti F (2019) A study of a new dimension for frames. Topol
+      Appl (accepted for publication)
+Gierz G, Hofmann KH, Keimel K, Lawson JD, Mislove M, Scott DS (1980) A compedium of continuous
+      lattices. Springer, Berlin
+Trotter WT (1992) Combinatorics and partially ordered sets: dimension theory. Johns Hopkins University
+      Press, Baltimore
+Vinokurov VG (1966) A lattice method of defining dimension. Soviet Math Dokl 168(3):663–666
+Yáñez J, Montero J (1999) A poset dimension algorithm. J Algorithms 30(1):185–208
+Zhang H, Zhou M, Zhang G (2017) Answer to some open problems on covering dimension for finite lattices.
+      Discr Math 340(5):1086–1091
+
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+
+
+
+
+123
+
