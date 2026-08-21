@@ -27,10 +27,12 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 **Journal:** Order 41(2):437-461, 2024
 **DOI:** 10.1007/s11083-023-09638-6
 
-**Risk level:** MEDIUM
-**Rationale:** The small inductive dimension (ind) is defined independently of the covering dimension. However, the paper likely compares ind with dim and dim_q, and may use the faulty algorithms for computational examples. Need full text to determine whether any claims depend on Algorithm 3.9/5.4 outputs.
+**Risk level:** ~~MEDIUM~~ → **BACKGROUND / USES SOUND RESULT**
+**Rationale:** Small inductive dimension (ind) defined independently of covering dimension. Uses min covers operationally for ind but set-theoretically (Dube-style). Hand dim comparisons in examples. No Alg 3.9 reprint.
 
-**Status:** PENDING — need full text
+**Alethon full-text audit (2026-08-21, `alethon-001C-ind-papers-triage.md`):** Pass 1: uses min covers operationally — medium heat. Pass 2: set-theoretic/Dube-style, no algorithm reprint. Cleared.
+
+**Status:** CLEARED — no faulty algorithm inheritance
 
 ### 2. Quasi covering dimension of finite distributive lattices (Filomat, 2025)
 
@@ -51,10 +53,12 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 **Authors:** D. N. Georgiou, Y. Hattori, A. C. Megaritis, F. Sereti
 **Journal:** Applied General Topology 27(1), April 2026
 
-**Risk level:** HIGH
-**Rationale:** Introduces large inductive dimension (Ind) for finite lattices "based on minimal covers." If the minimal-cover computation uses the 2018/2019 algorithms, any computational results are affected. The definition of Ind itself may be independent, but the matrix characterization and algorithms likely inherit.
+**Risk level:** ~~HIGH~~ → **BACKGROUND ONLY**
+**Rationale:** Published form of arXiv:2503.22007. Defines Ind via definition-level minimal covers, no matrix MC conditions, no algorithm reprint.
 
-**Status:** PENDING — need full text
+**Alethon full-text audit (2026-08-21, `alethon-001C-ind-papers-triage.md`):** Confirmed identical to arXiv preprint. Pass 2 clear — no matrix MC, no Alg reprint.
+
+**Status:** CLEARED — published version confirms arXiv clearance
 
 ### 4. The realm of finite lattices in combination with a new dimension (arXiv, 2025)
 
@@ -113,17 +117,20 @@ These are upstream references and are NOT part of the blast radius:
 
 | # | Paper | Year | Authors | Risk | Status |
 |---|-------|------|---------|------|--------|
-| 1 | Small inductive dimension (Order) | 2024 | Same group + Prinos | MEDIUM | PENDING |
+| 1 | Small inductive dimension (Order) | 2024 | Same group + Prinos | ~~MEDIUM~~ BACKGROUND | CLEARED (Alethon) |
 | 2 | Quasi covering dim, distributive (Filomat) | 2025 | Huang, Wang | ~~HIGH~~ SOUND/INDEP | CLEARED (Alethon) |
-| 3 | Large inductive dimension (AGT) | 2026 | Same group + Hattori | HIGH | PENDING |
+| 3 | Large inductive dimension (AGT) | 2026 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
 | 4 | Realm of finite lattices (arXiv) | 2025 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
 | 5 | New dimension, Topol. Appl. | 2019 | Same group | MEDIUM | PENDING (locate) |
 | 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | ~~LOW-MED~~ BACKGROUND | CLEARED (Alethon) |
 
-**Key observation (updated 2026-08-21):** Of 6 downstream papers, 3 are now CLEARED (arXiv:2503.22007, Filomat 2025 Huang–Wang, Order 2025 Wang–Ji) — all use definition-level minimal covers or Prop 1 (sound) with independent computational routes. The blast radius has narrowed to the Georgiou–Megaritis–Sereti core group papers that may reprint matrix algorithms: small inductive dimension (Order 2024) and large inductive dimension (AGT 2026, published version). Papers outside the Georgiou group independently developed Birkhoff/J(L) routes that bypass the faulty algorithm entirely.
+**Key observation (updated 2026-08-21, final):** Of 6 downstream papers identified, **5 are CLEARED** after full-text audit — none reprint the faulty algorithms. The directional bug (row-sum vs row-difference) is **contained within the original 2018 and 2019 papers**. No computational inheritance has been found outside papers that actually copy Alg 2-4. Definition-level "minimal cover" language is widespread and sound; all downstream authors either use Dube 2015 set-theoretic definitions or the sound Prop 1 ground-truth route with independent computational methods (Birkhoff/J(L), width formulas).
+
+Paper #5 (Topol. Appl. 2019, Georgiou et al., "accepted for publication") remains unlocated. Given the pattern — even Georgiou-group papers use definition-level approaches in their other dimension papers — this is unlikely to reprint the faulty algorithm, but should be confirmed.
 
 **Next steps:**
-1. Obtain full texts of papers #2, #3, #4 (highest risk)
-2. For each: trace whether dim/dim_q values are computed from definitions or from algorithms
-3. For each: check whether worked examples would produce different values under the corrected algorithm
-4. Identify any papers outside this group that cite the 2018/2019 papers (broader search needed)
+1. ~~Obtain full texts of papers #2, #3, #4 (highest risk)~~ DONE — all cleared
+2. ~~For each: trace whether dim/dim_q values are computed from definitions or from algorithms~~ DONE — all definition-level
+3. Locate paper #5 (Topol. Appl. 2019) and confirm
+4. Broader citation search beyond the initial 6 papers (Google Scholar, Semantic Scholar forward-citation crawl)
+5. Search for independent implementations of Algorithms 3.9/5.4 (code repositories, computational algebra systems)

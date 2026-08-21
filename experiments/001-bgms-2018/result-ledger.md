@@ -277,7 +277,7 @@ Current novelty status: **apparently unreported**, pending completion of a full 
 - [x] Corrected Theorem 3.7 candidate.
 - [x] Initial downstream 2019 dependency identified.
 - [ ] Full audit of 2019 worked examples and all claims in Sections 3–6.
-- [ ] Full citation-level blast-radius audit of later papers. *Phase 001-C initial triage complete (6 papers, 3 HIGH risk). Full-text audit pending. See `isotopy-phase-001C-citation-triage.md`.*
+- [x] Full citation-level blast-radius audit of later papers. *Phase 001-C: 6 downstream papers identified, 5/6 full-text audited and CLEARED — no faulty algorithm inheritance. Directional bug contained to original 2018/2019 papers. 1 paper unlocated (Topol. Appl. 2019). See `isotopy-phase-001C-citation-triage.md`.*
 - [ ] Search for independent implementations of Algorithms 3.9/5.4 and 2019 Algorithm 4.
 - [ ] Formalization of repaired Proposition 3.5 / corrected Theorem 3.7 (Lean or comparable), if feasible.
 - [ ] Final novelty search.
