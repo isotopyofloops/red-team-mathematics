@@ -60,12 +60,12 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 **Authors:** D. N. Georgiou, Y. Hattori, A. C. Megaritis, F. Sereti
 **arXiv:** 2503.22007 (March 2025)
 
-**Risk level:** HIGH (lineage) → PENDING (operational dependency)
+**Risk level:** ~~HIGH~~ → **BACKGROUND ONLY**
 **Rationale:** Likely a preprint version of paper #3 above, or a companion paper. Abstract mentions "minimal covers" and relations with covering dimension.
 
-**Alethon spot-check (2026-08-21, `alethon-001C-arxiv-2503.22007-triage.md`):** Full text fetched. Defines Ind via definition-level minimal covers (Dube 2015 sense), NOT via the faulty matrix algorithm. No reprint of Algorithms 3.9/5.4 or order-matrix MC conditions found. Citation of 2018 appears bibliographic, not operational. Tentative downgrade to BACKGROUND / USES SOUND RESULT. Remaining risks: (1) numerical dim/dim_q values in examples may have been computed via faulty algorithm, (2) whether minimal-cover lists were produced by hand or by algorithm, (3) identity with AGT 2026 published version.
+**Alethon spot-check (2026-08-21, `alethon-001C-arxiv-2503.22007-triage.md`):** Full text fetched. Defines Ind via definition-level minimal covers (Dube 2015 sense), NOT via the faulty matrix algorithm. No reprint of Algorithms 3.9/5.4 or order-matrix MC conditions found. Citation of 2018 is bibliographic, not operational. Follow-up: no dim_q anywhere in the paper; covering dim examples use hand-listed covers from Dube 2015 definition. The directional bug path does not fire. Residual risk is ordinary hand-enumeration error, not the systematic defect.
 
-**Status:** SPOT-CHECKED — needs deeper audit before ledger change
+**Status:** CLEARED — background citation only. Remaining check: identity with AGT 2026 published version.
 
 ### 5. A study of a new dimension for finite lattices (Georgiou, 2019)
 
@@ -112,7 +112,7 @@ These are upstream references and are NOT part of the blast radius:
 | 1 | Small inductive dimension (Order) | 2024 | Same group + Prinos | MEDIUM | PENDING |
 | 2 | Quasi covering dim, distributive (Filomat) | 2025 | Same group | HIGH | PENDING |
 | 3 | Large inductive dimension (AGT) | 2026 | Same group + Hattori | HIGH | PENDING |
-| 4 | Realm of finite lattices (arXiv) | 2025 | Same group + Hattori | HIGH→PENDING | SPOT-CHECKED (Alethon) |
+| 4 | Realm of finite lattices (arXiv) | 2025 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
 | 5 | New dimension, Topol. Appl. | 2019 | Same group | MEDIUM | PENDING (locate) |
 | 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | LOW-MEDIUM | PENDING |
 
