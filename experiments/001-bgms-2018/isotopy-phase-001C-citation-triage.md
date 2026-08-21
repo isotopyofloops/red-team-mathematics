@@ -73,15 +73,19 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 
 **Status:** CLEARED — background citation only. Remaining check: identity with AGT 2026 published version.
 
-### 5. A study of a new dimension for finite lattices (Georgiou, 2019)
+### 5. A study of a new dimension for frames (Topol. Appl. 275, 2020)
 
-**Full title:** "A study of a new dimension for finite lattices" (cited in 2019 paper references as Georgiou et al., accepted for publication, Topol. Appl.)
-**Authors:** D. Georgiou, I. Kougias, A. Megaritis, A. Prinos, G. Sereti, F. (2019)
+**Full title:** "A study of a new dimension for frames"
+**Authors:** D. N. Georgiou, I. Kougias, A. C. Megaritis, A. Prinos, F. Sereti
+**Journal:** Topology and its Applications 275 (2020) 106995
+**Note:** The 2019 CAM bibliography cited this as "A study of a new dimension for **finite lattices**" — the actual title says "**frames**." Title correction caught by Alethon (2026-08-21).
 
-**Risk level:** MEDIUM
-**Rationale:** Listed in the 2019 paper's bibliography as "(accepted for publication)." May be the small inductive dimension paper or a precursor.
+**Risk level:** ~~MEDIUM~~ → **N/A (FRAMES)**
+**Rationale:** This is a frames paper, not a finite lattice paper. Frames (complete Heyting algebras / complete lattices with infinite distributivity) are a different setting from the finite lattice context where the order-matrix algorithms operate. The faulty Algorithms 3.9/5.4 are specific to finite lattices with explicit order matrices — they do not apply to the frames setting.
 
-**Status:** PENDING — need to identify and locate
+**Alethon location (2026-08-21, `alethon-001C-paper5-located.md`):** Title correction + journal identification. Outside lattice algorithm blast radius.
+
+**Status:** CLEARED — frames setting, outside finite-lattice algorithm pipeline
 
 ---
 
@@ -121,16 +125,14 @@ These are upstream references and are NOT part of the blast radius:
 | 2 | Quasi covering dim, distributive (Filomat) | 2025 | Huang, Wang | ~~HIGH~~ SOUND/INDEP | CLEARED (Alethon) |
 | 3 | Large inductive dimension (AGT) | 2026 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
 | 4 | Realm of finite lattices (arXiv) | 2025 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
-| 5 | New dimension, Topol. Appl. | 2019 | Same group | MEDIUM | PENDING (locate) |
+| 5 | New dimension for frames (Topol. Appl.) | 2020 | Same group + Kougias | ~~MEDIUM~~ N/A | CLEARED (frames) |
 | 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | ~~LOW-MED~~ BACKGROUND | CLEARED (Alethon) |
 
-**Key observation (updated 2026-08-21, final):** Of 6 downstream papers identified, **5 are CLEARED** after full-text audit — none reprint the faulty algorithms. The directional bug (row-sum vs row-difference) is **contained within the original 2018 and 2019 papers**. No computational inheritance has been found outside papers that actually copy Alg 2-4. Definition-level "minimal cover" language is widespread and sound; all downstream authors either use Dube 2015 set-theoretic definitions or the sound Prop 1 ground-truth route with independent computational methods (Birkhoff/J(L), width formulas).
-
-Paper #5 (Topol. Appl. 2019, Georgiou et al., "accepted for publication") remains unlocated. Given the pattern — even Georgiou-group papers use definition-level approaches in their other dimension papers — this is unlikely to reprint the faulty algorithm, but should be confirmed.
+**Key observation (updated 2026-08-21, COMPLETE):** All 6 downstream papers identified are **CLEARED**. The directional bug (row-sum vs row-difference) is **contained within the original 2018 and 2019 papers**. No computational inheritance has been found outside papers that actually copy Alg 2-4. Definition-level "minimal cover" language is widespread and sound; all downstream authors either use Dube 2015 set-theoretic definitions or the sound Prop 1 ground-truth route with independent computational methods (Birkhoff/J(L), width formulas). Paper #5 turned out to be a frames paper (title misread from bibliography as "finite lattices"), outside the finite-lattice algorithm pipeline entirely.
 
 **Next steps:**
 1. ~~Obtain full texts of papers #2, #3, #4 (highest risk)~~ DONE — all cleared
 2. ~~For each: trace whether dim/dim_q values are computed from definitions or from algorithms~~ DONE — all definition-level
-3. Locate paper #5 (Topol. Appl. 2019) and confirm
+3. ~~Locate paper #5 (Topol. Appl.)~~ DONE — frames paper (Topol. Appl. 275, 2020), outside blast radius
 4. Broader citation search beyond the initial 6 papers (Google Scholar, Semantic Scholar forward-citation crawl)
 5. Search for independent implementations of Algorithms 3.9/5.4 (code repositories, computational algebra systems)
