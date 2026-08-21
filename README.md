@@ -16,12 +16,12 @@ Red-Team Mathematics is a structured protocol for stress-testing published proof
 
 ### Experiment 000 — Calibration
 
-**Target:** DGMM (2023), Theorem 3.4 (covering dimension of ordinal sums).  
+**Target:** DGMM (2015), Theorem 3.4 (existence of finite lattices of each covering dimension).  
 **Result:** Known defect recovered by 3 independent agents. All 3 produced valid certificates. Calibration passed — the protocol detects real errors.
 
 ### Experiment 001 — BGMS (2018)
 
-**Target:** Beran, Georgiou, Megaritis, Sergioli. "A study of a covering dimension of finite lattices." *Applied Mathematics and Computation* 333 (2018) 276–285.  
+**Target:** Boyadzhiev, Georgiou, Megaritis, Sereti. "A study of a covering dimension of finite lattices." *Applied Mathematics and Computation* 333 (2018) 276–285.  
 **Status:** Blind phase complete. Collaborative verification in progress.  
 **Finding:** Theorem 3.7 uses row addition (symmetric, tests comparability) where the lattice condition requires row subtraction (asymmetric, tests directed order). 4/4 independent auditors converged on the same defect. Downstream propagation confirmed to Algorithm 5.4.
 
@@ -42,10 +42,15 @@ Samantha White (ssrpw2@gmail.com)
 
 ```
 experiments/
-  000-calibration/          # Experiment 000 (DGMM 2023)
+  000-calibration/          # Experiment 000 (DGMM 2015)
+    alethon-theorem-3.4-audit.md
   001-bgms-2018/            # Experiment 001 (BGMS 2018)
     isotopy-structural-audit.md
     isotopy-fable-repair-audit.md
+    alethon-adversarial-search.md
+    alethon-certificates-n5-l6.md
+    alethon-collab-review.md
+    lattice_check.py
 ```
 
 ## License
