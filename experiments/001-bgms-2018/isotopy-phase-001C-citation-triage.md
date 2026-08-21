@@ -87,6 +87,20 @@ These carry the highest risk. The same researchers who wrote the 2018/2019 paper
 
 **Status:** CLEARED — frames setting, outside finite-lattice algorithm pipeline
 
+### 7. The small inductive dimension of finite lattices through matrices (CAM, 2023)
+
+**Full title:** "The small inductive dimension of finite lattices through matrices"
+**Authors:** R. B. Beshimov, D. N. Georgiou, F. Sereti
+**Journal:** Computational and Applied Mathematics 42 (2023) 145
+**Note:** Found by Alethon during novelty/implementation pass — outside the initial 6-paper list.
+
+**Risk level:** **USES FAULTY ALGORITHM**
+**Rationale:** Algorithm 3, Step 3 explicitly states: "Apply Algorithm 3.9 of (Boyadzhiev et al. 2018) to create the set MCov(L)." Both pass 1 and pass 2 fire. Same research group (Georgiou, Sereti overlap with 2018 authors + Beshimov).
+
+**Alethon full-text audit (2026-08-21, `alethon-novelty-implementation-pass.md`):** Pass 1: operational use of Alg 3.9 — high heat. Pass 2: explicit algorithm reprint by name. AFFECTED.
+
+**Status:** AFFECTED — inherits faulty Algorithm 3.9. Correction note must address this paper.
+
 ---
 
 ## Papers by other authors
@@ -127,12 +141,15 @@ These are upstream references and are NOT part of the blast radius:
 | 4 | Realm of finite lattices (arXiv) | 2025 | Same group + Hattori | ~~HIGH~~ BACKGROUND | CLEARED (Alethon) |
 | 5 | New dimension for frames (Topol. Appl.) | 2020 | Same group + Kougias | ~~MEDIUM~~ N/A | CLEARED (frames) |
 | 6 | Covering dim, distributive (Order) | 2025 | Wang, Ji | ~~LOW-MED~~ BACKGROUND | CLEARED (Alethon) |
+| 7 | Small ind. dim. through matrices (CAM) | 2023 | Beshimov, Georgiou, Sereti | **USES FAULTY ALGORITHM** | **AFFECTED** (Alethon) |
 
-**Key observation (updated 2026-08-21, COMPLETE):** All 6 downstream papers identified are **CLEARED**. The directional bug (row-sum vs row-difference) is **contained within the original 2018 and 2019 papers**. No computational inheritance has been found outside papers that actually copy Alg 2-4. Definition-level "minimal cover" language is widespread and sound; all downstream authors either use Dube 2015 set-theoretic definitions or the sound Prop 1 ground-truth route with independent computational methods (Birkhoff/J(L), width formulas). Paper #5 turned out to be a frames paper (title misread from bibliography as "finite lattices"), outside the finite-lattice algorithm pipeline entirely.
+**Key observation (updated 2026-08-21, REVISED):** Of the initial 6 downstream papers, all 6 are CLEARED. However, **Alethon's novelty/implementation pass found a 7th paper** — Beshimov–Georgiou–Sereti, CAM 42 (2023) 145 — that explicitly calls "Algorithm 3.9 of (Boyadzhiev et al. 2018)" in its Algorithm 3 Step 3. This paper **inherits the faulty algorithm** and revises the containment claim: the directional bug propagates to at least **three papers** (2018, 2019, 2023 CAM). The broader citation crawl continues — more "Apply Algorithm 3.9" hits may exist.
+
+Definition-level "minimal cover" language remains widespread and sound; all non-affected downstream authors use Dube 2015 set-theoretic definitions or the sound Prop 1 route.
 
 **Next steps:**
 1. ~~Obtain full texts of papers #2, #3, #4 (highest risk)~~ DONE — all cleared
 2. ~~For each: trace whether dim/dim_q values are computed from definitions or from algorithms~~ DONE — all definition-level
 3. ~~Locate paper #5 (Topol. Appl.)~~ DONE — frames paper (Topol. Appl. 275, 2020), outside blast radius
-4. Broader citation search beyond the initial 6 papers (Google Scholar, Semantic Scholar forward-citation crawl)
-5. Search for independent implementations of Algorithms 3.9/5.4 (code repositories, computational algebra systems)
+4. **IN PROGRESS:** Broader citation search — Alethon sweeping "Apply Algorithm 3.9 of Boyadzhiev" phrase + forward cites. Already found paper #7 (CAM 2023).
+5. ~~Search for independent implementations of Algorithms 3.9/5.4~~ Alethon: none found (code repos).
