@@ -158,5 +158,5 @@ Definition-level "minimal cover" language remains widespread and sound; all non-
 4. ~~Phrase sweep for "Apply Algorithm 3.9 of Boyadzhiev"~~ DONE (Alethon) — only Beshimov CAM 2023. No other call sites.
 5. ~~Search for independent implementations of Algorithms 3.9/5.4~~ DONE (Alethon) — none found (code repos).
 6. ~~Semantic Scholar forward cites~~ DONE (Alethon) — 7+4 cites, all accounted for.
-7. Broader Google Scholar crawl (Isotopy) — coverage beyond SS's indexed set.
-8. Ji–Wang Topol. Appl. 2026 — full text triage (spaces domain, likely n/a).
+7. ~~Broader Google Scholar crawl (Isotopy)~~ DONE — confirms SS results. No additional Alg 3.9 users found. Ji–Wang 2026 uses independent width/Max(X) formula (n/a). Wang–Wang–Yang CAM 2024 has own T₀-space algorithm (n/a). Containment set unchanged.
+8. ~~Ji–Wang Topol. Appl. 2026~~ CONFIRMED n/a — uses specialization-order width formula, independent of lattice matrix algorithms.
