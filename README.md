@@ -52,6 +52,9 @@ experiments/
     alethon-adversarial-search.md # Adversarial theorem search (Alethon)
     alethon-certificates-n5-l6.md # N5 and L6 certificates (Alethon)
     alethon-collab-review.md    # Collaborative review (Alethon)
+    fable-certificate-A-N5.md   # Canonical N5 certificate (Fable)
+    fable-certificate-B-0-plus-N5.md  # Canonical {0}⊕N5 + ∅ case-split (Fable)
+    fable-note-certificate-B-patch.md # Fable note: fourth defect class
     2019-blast-radius.md        # Downstream propagation to 2019 paper
     verify_certificates.py      # Independent finite checker (Rheon, Python)
     lattice_check.py            # Lattice verification (Alethon)

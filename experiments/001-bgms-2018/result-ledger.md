@@ -83,7 +83,7 @@ That sum test admits strict comparability in either direction, so elements **abo
 
 The five-element pentagon `N5` falsifies the `minimal => MC1–MC3` direction.
 
-Canonical certificate: `certificate-A-N5.md`.
+Canonical certificate: `fable-certificate-A-N5.md` (also `alethon-certificates-n5-l6.md`).
 
 ### Repair candidate
 
@@ -119,7 +119,7 @@ It depends explicitly on Theorem 3.7. On the six-element lattice `{0}⊕N5`, the
 
 **Status:** FALSE AS PRINTED.
 
-Canonical six-element certificate: `certificate-B-0-plus-N5.md`.
+Canonical six-element certificate: `fable-certificate-B-0-plus-N5.md` (also `alethon-certificates-n5-l6.md`).
 
 For `L6 = {0}⊕N5`:
 
@@ -145,9 +145,21 @@ Together with the surviving order computation, this means the defect can discard
 
 These depend on the faulty Theorem 3.7 characterization and require correction wherever they identify matrix-selected sets with the true minimal covers.
 
-## Additional specification issue: singleton Step 8
+## Additional specification issue: singleton Step 8 / ∅-underspecification
 
-Algorithm 3.9 includes `m=1` candidates in Step 8, where MC1 asks whether `C\{x_{j_i}} = ∅` satisfies the “cover condition.” Definition 3.3 defines that predicate for singletons and antichains of size at least two, not for the empty set. This is a separate edge-case/specification gap. It is not the source of the main directionality defect.
+**Status:** FALSE AS PRINTED (under-specified); fourth defect class for the correction note.
+
+Algorithm 3.9 includes `m=1` candidates in Step 8, where MC1 asks whether `C\{x_{j_i}} = ∅` satisfies the “cover condition.” Definition 3.3 defines that predicate for singletons and antichains of size at least two, **not for the empty set**. On any interesting non-chain lattice whose candidate set includes the singleton top cover alongside larger antichain covers, the printed procedure is literally undefined at that point.
+
+Fable’s patched Certificate B (`fable-certificate-B-0-plus-N5.md`) case-splits every executable reading on `{0}⊕N₅`:
+
+- (a) natural completion (∅ fails cover condition) → `{1}` killed by printed MC2 → `M(X)=∅` → Alg 5.4 prints 0
+- (b) singleton retained → `ord({1})=0` from Def 2.2 → prints 0
+- (c) no completion → procedure returns nothing (defect, not rescue)
+
+In every executable interpretation the printed procedure outputs **0**; the genuine minimal cover carrying dim=1 is rejected unambiguously by the directional bug, so no singleton-edge resolution recovers the right answer. The case-split is a strengthening, not a hedge.
+
+This is minor next to the directional bug but belongs in the correction note: implementers of a repaired Algorithm 3.9 need an explicit ∅-convention, and the hole independently corroborates that running code would have surfaced it.
 
 ---
 

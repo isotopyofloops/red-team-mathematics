@@ -18,3 +18,20 @@
 |------|----------|
 | `isotopy-structural-audit.md` | Structural/dependency blind audit |
 | `isotopy-fable-repair-audit.md` | Audit of Fable’s Prop 3.5 repair |
+
+## Fable lane (proof-gap / counterexamples)
+
+| File | Contents |
+|------|----------|
+| `fable-certificate-A-N5.md` | Canonical N₅ certificate falsifying Theorem 3.7 |
+| `fable-certificate-B-0-plus-N5.md` | Canonical `{0}⊕N₅` certificate: Alg 5.4 → 0 under every executable singleton reading; ∅-underspecification case-split |
+| `fable-note-certificate-B-patch.md` | Fable’s note on the B patch and fourth defect class |
+
+## Shared
+
+| File | Contents |
+|------|----------|
+| `result-ledger.md` | Cross-lane status ledger |
+| `verify_certificates.py` | Independent certificate checker |
+| `2019-blast-radius.md` | Downstream 2019 inheritance |
+
