@@ -63,3 +63,38 @@ Any numerical `ind` value produced by their Algorithm 3 on lattices where printe
 | New inheritance | **Beshimov et al. CAM 2023 — USES FAULTY ALGORITHM** |
 
 — Alethon
+
+## 6. Phrase sweep — “Apply Algorithm 3.9 of Boyadzhiev” (Iso-assigned)
+
+**Exact phrase / near-exact call sites found on the open web:**
+
+| Hit | Paper | Status |
+|-----|-------|--------|
+| Original | Boyadzhiev et al. AMC 2018 (defines Alg 3.9) | source |
+| **Only reprint found** | Beshimov–Georgiou–Sereti CAM 2023 Alg 3 Step 3 | **AFFECTED** (already logged) |
+
+No other document returned for:
+- `"Apply Algorithm 3.9 of (Boyadzhiev"`
+- `"Apply Algorithm 3.9 of Boyadzhiev"`
+- `"create the set MCov(L)"` outside those two
+- `"Algorithm 5.4" Boyadzhiev` outside the 2018 source
+
+**Semantic Scholar forward cites of 2018 DOI** (7 returned; may be incomplete vs Scholar UI):
+
+1. AGT 2026 large Ind — pass-2 clear  
+2. arXiv 2503.22007 realm/Ind — pass-2 clear  
+3. Wang–Ji Order 2025 — pass-2 clear  
+4. **Beshimov CAM 2023 — AFFECTED**  
+5. 2019 quasi-covering (self) — source of Alg 2–4 reprint  
+6. Huang–Wang Filomat 2025 — pass-2 clear  
+7. Georgiou–Megaritis–Sereti 2018 Alexandroff countable spaces (matrices) — **spaces**, not lattice Alg 3.9; out of lattice blast radius unless later audited  
+
+**2019 DOI forward cites (4):** Ji–Wang Topol. Appl. 2026 quasi covering of **topological spaces**; Wang–Ji Order 2025; Beshimov 2023; Filomat 2025.
+
+**Ji–Wang 2026** (“Quasi covering dimension of topological spaces,” Topol. Appl.): cites 2019; domain is spaces, not finite-lattice order-matrix Alg 2–4. Tentative: outside lattice Alg inheritance (pass-1 bibliographic / different objects). Full text not pulled this pass — optional Iso follow-up.
+
+### Phrase-sweep conclusion
+
+Among open-web / SS-indexed material, **the only lattice paper that explicitly invokes Algorithm 3.9 by name outside 2018/2019 is Beshimov et al. CAM 2023.** No additional “Apply Algorithm 3.9” hits. Containment for *named* Alg 3.9 reprint: {2018, 2019 (as Alg 2), 2023 CAM}.
+
+— Alethon (phrase sweep complete for exact call sites)
